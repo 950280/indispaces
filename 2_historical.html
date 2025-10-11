@@ -1,0 +1,3562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Culture | indiscapes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!--  nav bar  -->
+    <header>
+      <nav class="navbar">
+        <!--  logo  -->
+        <div class="nav-left">
+          <img
+            src="./images/logo_2.png"
+            alt="logo"
+            width="180px"
+            height="60px"
+          />
+        </div>
+        <!------------   nav items  ------------->
+        <!--  big screens  -->
+        <ul class="nav-right">
+          <li>
+            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="about.html" target="_blank"
+              ><i class="fa fa-info-circle"></i> About</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" target="_blank"
+              ><i class="fa fa-envelope"></i> Contact</a
+            >
+          </li>
+        </ul>
+
+        <!--     search    -->
+        <div class="nav-center">
+          <form id="searchForm">
+            <input
+              type="text"
+              placeholder="search places"
+              id="searchInput"
+              onkeyup="searchPlaces()"
+            />
+            <button type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+
+        <!------------  items  ------------->
+        <!--  On small screens  -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+      </nav>
+    </header>
+
+    <!----------category 2----------->
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+      <img
+        src="./images/2_Historical/culture_cover.jpg"
+        alt="India Landscape"
+      />
+      <div class="hero-text">
+        <h1>Heritage & Culture</h1>
+        <p>
+          Step into the rich tapestry of India’s history, temples, and timeless
+          traditions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Subcategories -->
+    <section class="subcategory">
+      <h2>Temples & Religious Places</h2>
+      <div class="placesContainer">
+        <div class="places-grid">
+          <!-- Vaishno Devi Temple -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/Vaishno_1.jpg"
+              alt="Vaishno Devi Temple"
+            />
+            <h3>Vaishno Devi Temple</h3>
+            <h6>Jammu & Kashmir</h6>
+            <p>
+              One of the most sacred shrines dedicated to Goddess Vaishno Devi,
+              nestled in the Trikuta Mountains. The trek itself is a spiritual
+              and adventurous journey.
+            </p>
+            <button onclick="openModal('vaishnoDeviModal')">Read More</button>
+          </div>
+
+          <!-- Golden Temple  -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/Golden_Temple_1.jpg"
+              alt="Golden Temple"
+            />
+            <h3>Golden Temple</h3>
+            <h6>Amritsar</h6>
+            <p>
+              A stunning gurudwara with golden architecture, serene waters of
+              Amrit Sarovar, and soul-touching kirtans. Symbol of equality and
+              brotherhood; central shrine for Sikhs worldwide.
+            </p>
+            <button onclick="openModal('goldenModal')">Read More</button>
+          </div>
+
+          <!-- Kashi Vishwanath Temple  -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/Kashi_1.jpg"
+              alt="Kashi Vishwanath Temple"
+            />
+            <h3>Kashi Vishwanath Temple</h3>
+            <h6>Uttar Pradesh</h6>
+            <p>
+              Dedicated to Lord Shiva, located on the banks of the sacred Ganga.
+              Pilgrims believe a visit here grants “moksha” (liberation).
+            </p>
+            <button onclick="openModal('kashiModal')">Read More</button>
+          </div>
+
+          <!--  Tirupati Balaji   -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/Tirupati_1.jpg"
+              alt="Tirupati Balaji"
+            />
+            <h3>Tirupati Balaji</h3>
+            <h6>Andhra Pradesh</h6>
+            <p>
+              World’s richest and most visited temple, dedicated to Lord
+              Venkateswara (form of Vishnu). The temple receives lakhs of
+              devotees daily; strong belief that wishes are fulfilled here.
+            </p>
+            <button onclick="openModal('tirupatiModal')">Read More</button>
+          </div>
+
+          <!-- Somnath Temple  -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/Somnath_1.webp"
+              alt="Somnath Temple"
+            />
+            <h3>Somnath Temple</h3>
+            <h6>Gujarat</h6>
+            <p>
+              First among the 12 Jyotirlinga shrines of Lord Shiva, standing
+              tall on the Arabian Sea coast. Offers a blend of devotion,
+              history, and beautiful sea views.
+            </p>
+            <button onclick="openModal('somnathModal')">Read More</button>
+          </div>
+
+          <!-- Jagannath Temple   -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/Jagannath_1.jpg"
+              alt="Jagannath Temple"
+            />
+            <h3>Jagannath Temple</h3>
+            <h6>Odisha</h6>
+            <p>
+              Famous for the annual Rath Yatra (Chariot Festival) when Lord
+              Jagannath, Balabhadra, and Subhadra are taken out in massive
+              chariots.
+            </p>
+            <button onclick="openModal('jagannathModal')">Read More</button>
+          </div>
+        </div>
+      </div>
+      <p id="noResults" style="display: none; text-align: center">
+        No matching places found.
+      </p>
+    </section>
+
+    <!-------------Palaces & Forts----------->
+    <section class="subcategory">
+      <h2>Palaces & Forts</h2>
+      <div class="placesContainer">
+        <div class="places-grid">
+          <!-- Amber Fort (Amer Fort) -->
+          <div class="place-card">
+            <img src="./images/2_Historical/Amber_1.webp" alt="Amber Fort" />
+            <h3>Amber Fort</h3>
+            <h6>Jaipur</h6>
+            <p>
+              Stunning blend of Mughal and Rajput architecture, intricate mirror
+              work, elephant rides, and evening light shows.
+            </p>
+            <button onclick="openModal('amberModal')">Read More</button>
+          </div>
+
+          <!-- Mehrangarh Fort -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/Mehrangarh_1.jpg"
+              alt="Mehrangarh Fort"
+            />
+            <h3>Mehrangarh Fort</h3>
+            <h6>Rajasthan</h6>
+            <p>
+              Massive fort rising from a hill, with grand courtyards, museum,
+              and breathtaking views of the “Blue City.”
+            </p>
+            <button onclick="openModal('mehrangarhModal')">Read More</button>
+          </div>
+
+          <!-- City Palace, Udaipur  -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/City_Palace_1.webp"
+              alt="City Palace"
+            />
+            <h3>City Palace</h3>
+            <h6>Rajasthan</h6>
+            <p>
+              A royal complex on Lake Pichola, known for balconies, courtyards,
+              and the famous Lake Palace view.
+            </p>
+            <button onclick="openModal('cityModal')">Read More</button>
+          </div>
+
+          <!--  Mysore Palace   -->
+          <div class="place-card">
+            <img src="./images/2_Historical/Mysore_1.jpg" alt="Mysore Palace" />
+            <h3>Mysore Palace</h3>
+            <h6>Karnataka</h6>
+            <p>
+              One of India’s most visited palaces, illuminated with 100,000
+              lights every Sunday night. Indo-Saracenic style, vibrant
+              paintings, and grand durbar halls.
+            </p>
+            <button onclick="openModal('mysoreModal')">Read More</button>
+          </div>
+
+          <!-- Red Fort, Delhi  -->
+          <div class="place-card">
+            <img src="./images/2_Historical/Red_Fort_1.webp" alt="Red Fort" />
+            <h3>Red Fort</h3>
+            <h6>Delhi</h6>
+            <p>
+              UNESCO World Heritage site, symbol of India’s independence.
+              Beautiful Mughal gardens, Diwan-i-Khas, and evening sound & light
+              show.
+            </p>
+            <button onclick="openModal('redModal')">Read More</button>
+          </div>
+
+          <!-- Golconda Fort, Hyderabad  -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/Golconda_Fort_1.jpg"
+              alt="Golconda Fort"
+            />
+            <h3>Golconda Fort</h3>
+            <h6>Hyderabad</h6>
+            <p>
+              Famous for its acoustics (clap at entrance heard at the top),
+              secret passages, and grand ruins. Evening light & sound show
+              narrating the fort’s history.
+            </p>
+            <button onclick="openModal('golcondaModal')">Read More</button>
+          </div>
+        </div>
+      </div>
+      <p id="noResults" style="display: none; text-align: center">
+        No matching places found.
+      </p>
+    </section>
+
+    <!------------- Museums & Historical Sites ----------->
+    <section class="subcategory">
+      <h2>Museums & Historical Sites</h2>
+      <div class="placesContainer">
+        <div class="places-grid">
+          <!-- Taj Mahal  -->
+          <div class="place-card">
+            <img src="./images/top_10/1_Taj_Mahal.jpeg" alt="Taj Mahal" />
+            <h3>Taj Mahal</h3>
+            <h6>Agra</h6>
+            <p>
+              World-famous symbol of love, stunning white marble architecture,
+              UNESCO World Heritage Site. Sunrise & full moon views are
+              breathtaking.
+            </p>
+            <button onclick="openModal('tajmahalModal')">Read More</button>
+          </div>
+
+          <!-- Ajanta & Ellora Caves  -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/Ajanta_1.jpg"
+              alt="Ajanta & Ellora Caves"
+            />
+            <h3>Ajanta & Ellora Caves</h3>
+            <h6>Maharashtra</h6>
+            <p>
+              Rock-cut caves with Buddhist, Hindu, and Jain temples & art.
+              Ajanta’s paintings & Ellora’s Kailasa Temple are world-famous.
+            </p>
+            <button onclick="openModal('ajantaModal')">Read More</button>
+          </div>
+
+          <!-- Konark Sun Temple  -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/Konark_1.jpg"
+              alt="Konark Sun Temple"
+            />
+            <h3>Konark Sun Temple</h3>
+            <h6>Odisha</h6>
+            <p>
+              13th-century chariot-shaped temple dedicated to the Sun God.
+              Konark Dance Festival & intricate carvings.
+            </p>
+            <button onclick="openModal('konarkModal')">Read More</button>
+          </div>
+
+          <!-- Victoria Memorial   -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/Victoria_1.jpg"
+              alt="Victoria Memorial"
+            />
+            <h3>Victoria Memorial</h3>
+            <h6>West Bengal</h6>
+            <p>
+              Stunning white marble building surrounded by gardens, showcasing
+              British-era history & art. Museum with paintings, weapons,
+              manuscripts, and British Raj relics.
+            </p>
+            <button onclick="openModal('victoriaModal')">Read More</button>
+          </div>
+
+          <!-- Indian Museum   -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/Indian_Museum_1.jpg"
+              alt="Indian Museum"
+            />
+            <h3>Indian Museum</h3>
+            <h6>West Bengal</h6>
+            <p>
+              India’s largest museum with fossils, mummies, coins & Mughal art.
+              Egyptian mummy & ancient artifacts.
+            </p>
+            <button onclick="openModal('indianModal')">Read More</button>
+          </div>
+
+          <!-- Sanchi Stupa    -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/Sanchi_Stupa_1.jpg"
+              alt="Sanchi Stupa"
+            />
+            <h3>Sanchi Stupa</h3>
+            <h6>Madhya Pradesh</h6>
+            <p>
+              One of the oldest stone structures in India, a UNESCO site.
+              Buddhist stupas, monasteries & gateways with carvings.
+            </p>
+            <button onclick="openModal('sanchiModal')">Read More</button>
+          </div>
+        </div>
+      </div>
+      <p id="noResults" style="display: none; text-align: center">
+        No matching places found.
+      </p>
+    </section>
+
+    <!---------------Festivals & Cultural Events-------------->
+    <section class="subcategory">
+      <h2>Festivals & Cultural Events</h2>
+      <div class="placesContainer">
+        <div class="places-grid">
+          <!-- Diwali – Festival of Lights -->
+          <div class="place-card">
+            <img src="./images/2_Historical/Diwali_1.png" alt="Diwali" />
+            <h3>Diwali</h3>
+            <h6>All over India</h6>
+            <p>
+              Festival of Lights. Streets, homes, and temples glow with millions
+              of diyas (lamps) and fireworks. Markets buzz with sweets, clothes,
+              and gifts.
+            </p>
+            <button onclick="openModal('diwaliModal')">Read More</button>
+          </div>
+
+          <!-- Holi – Festival of Colors   -->
+          <div class="place-card">
+            <img src="./images/2_Historical/Holi_1.webp" alt="Holi" />
+            <h3>Holi</h3>
+            <h6>North India</h6>
+            <p>
+              Tourists love throwing colors, cultural dances, Holika bonfire and
+              enjoying bhang & sweets in a lively atmosphere.
+            </p>
+            <button onclick="openModal('holiModal')">Read More</button>
+          </div>
+
+          <!-- Durga Puja   -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/Durga_Puja_1.jpeg"
+              alt="Durga Puja"
+            />
+            <h3>Durga Puja</h3>
+            <h6>West Bengal</h6>
+            <p>
+              Gigantic artistic pandals, idol displays, cultural performances,
+              and food streets—Kolkata comes alive!
+            </p>
+            <button onclick="openModal('durgaModal')">Read More</button>
+          </div>
+
+          <!-- Pushkar Camel Fair – Rajasthan  -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/Pushkar_1.jpg"
+              alt="Pushkar Camel Fair"
+            />
+            <h3>Pushkar Camel Fair</h3>
+            <h6>Rajasthan</h6>
+            <p>
+              A unique cultural and livestock fair with decorated camels, desert
+              music, folk dance, and hot-air balloon rides.
+            </p>
+            <button onclick="openModal('pushkarModal')">Read More</button>
+          </div>
+
+          <!-- Navratri & Garba – Gujarat  -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/Navratri_1.webp"
+              alt="Navratri & Garba – Gujarat"
+            />
+            <h3>Navratri & Garba</h3>
+            <h6>Gujarat</h6>
+            <p>
+              9 nights of non-stop traditional dance (Garba & Dandiya),
+              devotional music, and colorful outfits. Giant dance grounds,
+              decorated temples, fasting, and midnight feasts.
+            </p>
+            <button onclick="openModal('navratriModal')">Read More</button>
+          </div>
+
+          <!-- Pongal / Makar Sankranti  -->
+          <div class="place-card">
+            <img
+              src="./images/2_Historical/Pongal_1.jpg"
+              alt="Pongal / Makar Sankranti"
+            />
+            <h3>Pongal / Makar Sankranti</h3>
+            <h6>Tamil Nadu & India-wide</h6>
+            <p>
+              Harvest festival celebrated with sugarcane, kolams (rangoli), and
+              traditional feasts. In north India, people fly colorful kites.
+            </p>
+            <button onclick="openModal('pongalModal')">Read More</button>
+          </div>
+        </div>
+      </div>
+      <p id="noResults" style="display: none; text-align: center">
+        No matching places found.
+      </p>
+    </section>
+
+    <!------------------------MODALS------------------------->
+    <!------------------VAISHNO DEVI TEMPLE MODAL------------------>
+    <div id="vaishnoDeviModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('vaishnoDeviModal')"
+          >&times;</span
+        >
+        <h2>🛕 Vaishno Devi Temple – Jammu & Kashmir</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/2_Historical/Vaishno_1.jpg"
+            alt="Vaishno Devi Temple"
+          />
+          <img
+            src="./images/2_Historical/Vaishno_2.jpg"
+            alt="Vaishno Devi Temple"
+          />
+          <p>
+            One of the holiest Hindu pilgrimage sites in India, Vaishno Devi
+            Temple is nestled in the Trikuta Hills near Katra. Millions of
+            devotees visit every year to seek the blessings of Mata Vaishno
+            Devi, believed to grant wishes to those who come with a pure heart.
+            Apart from spirituality, the journey itself—trekking through scenic
+            mountains—creates a blend of faith, adventure, and natural beauty.
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              According to legend, Mata Vaishnavi (incarnation of Goddess Durga)
+              meditated in the cave here for years. The shrine contains three
+              naturally formed rock heads (Pindis) representing Maha Kali, Maha
+              Lakshmi, and Maha Saraswati.
+            </li>
+            <li>
+              The shrine was rediscovered about 700 years ago by a saint, and
+              since then, it has been a major pilgrimage center.
+            </li>
+            <li>
+              What attracts tourists most is the spiritual aura of the cave, the
+              12 km trek from Katra to Bhawan, and the scenic Himalayan views
+              along the way.
+            </li>
+            <li>
+              Modern facilities like battery cars, ponies, palkis, and a ropeway
+              (to Bhairon Temple) make the journey comfortable for all age
+              groups.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>March to October – Pleasant weather for the trek.</li>
+            <li>
+              Winter months (Nov–Feb) are beautiful too, but can be very cold
+              and snowy (perfect for those who want fewer crowds).
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/Vaishno_3.jpg"
+            alt="Vaishno Devi Temple"
+          />
+          <img
+            src="./images/2_Historical/Vaishno_4.jpg"
+            alt="Vaishno Devi Temple"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Darshan of Mata Vaishno Devi (Bhawan) – The sacred cave with the
+              holy Pindis.
+            </li>
+            <li>
+              Ardhkuwari Cave (Garbh Joon) – Believed to be the place where Mata
+              meditated for 9 months.
+            </li>
+            <li>
+              Bhairon Temple – Pilgrimage is considered incomplete without
+              visiting this temple (accessible by trek or ropeway).
+            </li>
+            <li>
+              Banganga & Charan Paduka – Important points on the trekking route
+              with mythological significance.
+            </li>
+            <li>
+              Katra Town – Local markets for dry fruits, woollens, and religious
+              souvenirs.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Rajma Chawal – Iconic J&K dish.</li>
+            <li>Kaladi Kulcha – Local Dogra cheese snack.</li>
+            <li>Dry Fruit Barfi – Sweet treat loved by tourists.</li>
+          </ul>
+          <img
+            src="./images/2_Historical/Vaishno_5.jpg"
+            alt="Vaishno Devi Temple"
+          />
+          <img
+            src="./images/2_Historical/Vaishno_6.jpg"
+            alt="Vaishno Devi Temple"
+          />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>Arrive in Katra → Evening explore Katra market.</li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Early morning start trek (or use pony/ropeway) → Darshan at Bhawan
+              → Visit Ardhkuwari Cave & Bhairon Temple → Return to Katra.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Rest & depart OR continue journey to nearby destinations
+              (Patnitop, Jammu City, or Srinagar).
+            </li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Register for Yatra Parchi (pilgrimage slip) online or at
+              Katra—it’s mandatory.
+            </li>
+            <li>Wear comfortable shoes for trekking.</li>
+            <li>Nights can get chilly; carry light woollens even in summer.</li>
+            <li>
+              The trek is well-lit and secure; food & water stalls are available
+              throughout.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="vaishnoWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------GOLDEN TEMPLE MODAL------------------>
+    <div id="goldenModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('goldenModal')">&times;</span>
+        <h2>🛕 Golden Temple – Amritsar, Punjab</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/2_Historical/Golden_Temple_1.jpg"
+            alt="Golden Temple"
+          />
+          <img
+            src="./images/2_Historical/Golden_Temple_2.jpg"
+            alt="Golden Temple"
+          />
+          <p>
+            The Golden Temple (Harmandir Sahib) is one of the most sacred places
+            for Sikhs and a symbol of peace and spirituality for all faiths. Its
+            glittering golden façade, serene water pool (Amrit Sarovar), and
+            soulful Gurbani hymns create an unforgettable spiritual atmosphere.
+            It’s not just a religious site but also a global symbol of equality
+            and service.
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Built in the 16th century by Guru Arjan Dev Ji, the 5th Sikh Guru.
+            </li>
+            <li>
+              The temple was designed with four entrances, symbolizing openness
+              to all religions and communities.
+            </li>
+            <li>
+              The dome is covered with 750 kg of pure gold, giving it the name
+              “Golden Temple.”
+            </li>
+            <li>
+              Langar (community kitchen) serves free meals to over 50,000 people
+              daily, regardless of caste, religion, or status – a tradition of
+              selfless service (Seva).
+            </li>
+            <li>
+              The Amrit Sarovar (holy water tank) is believed to have healing
+              properties.
+            </li>
+            <li>
+              At night, the golden reflection in the water creates a magical
+              view.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October – March: Pleasant weather, ideal for sightseeing.</li>
+            <li>
+              Early morning (4–5 am) for the mesmerizing Palki Sahib Ceremony.
+            </li>
+            <li>
+              Nighttime is also magical when the temple glows with lights.
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/Golden_Temple_3.jpg"
+            alt="Golden Temple"
+          />
+          <img
+            src="./images/2_Historical/Golden_Temple_4.jpg"
+            alt="Golden Temple"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Darshan (visit the sanctum) – Feel the spiritual energy inside the
+              temple.
+            </li>
+            <li>Walk around Amrit Sarovar – Peaceful and reflective.</li>
+            <li>
+              Attend Langar – Sit and eat with thousands of devotees (a
+              must-experience!).
+            </li>
+            <li>
+              Visit Akal Takht – The seat of Sikh temporal authority, inside the
+              complex.
+            </li>
+            <li>
+              Witness Palki Sahib Ceremony – Guru Granth Sahib Ji is carried in
+              a golden palanquin with devotional music.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Langar at Golden Temple – Simple yet soulful vegetarian meal.
+            </li>
+            <li>Amritsari Kulcha with Chole – Famous stuffed bread.</li>
+            <li>Makki di Roti & Sarson da Saag – Punjabi winter specialty.</li>
+            <li>Amritsari Fish Fry – Crispy & spicy local favorite.</li>
+            <li>Lassi (Sweet or Salted) – Creamy, served in tall glasses.</li>
+          </ul>
+          <img
+            src="./images/2_Historical/Golden_Temple_5.jpg"
+            alt="Golden Temple"
+          />
+          <img
+            src="./images/4_Urban/Amritsari_Kulcha_7.jpg"
+            alt="Golden Temple"
+          />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>Morning: Golden Temple (darshan + langar)</li>
+            <li>Afternoon: Jallianwala Bagh (5-min walk from temple)</li>
+            <li>Evening: Partition Museum (history lovers will enjoy)</li>
+            <li>Night: Golden Temple again (for illuminated night view)</li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>Morning: Gobindgarh Fort (cultural shows + history)</li>
+            <li>
+              Afternoon: Explore local bazaars (Hall Bazaar, Katra Jaimal Singh)
+              → Try Amritsari Kulcha, Lassi
+            </li>
+            <li>
+              Evening: Wagah Border (flag-lowering ceremony between India &
+              Pakistan)
+            </li>
+          </ul>
+          <h3>Day 3 (optional):</h3>
+          <ul class="guide-list">
+            <li>
+              Day trip to Tarn Taran Sahib or Anandpur Sahib (important Sikh
+              shrines nearby).
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/Golden_Temple_7.jpg"
+            alt="Golden Temple"
+          />
+          <img
+            src="./images/2_Historical/Golden_Temple_8.jpg"
+            alt="Golden Temple"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Always cover your head (scarves are available at entry).</li>
+            <li>Remove shoes before entering the complex.</li>
+            <li>No smoking or alcohol is allowed near the temple.</li>
+            <li>
+              Visit twice – morning & night – for two completely different
+              experiences.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="goldenTempleWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------KASHI VISHWANATH TEMPLE MODAL------------------>
+    <div id="kashiModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('kashiModal')">&times;</span>
+        <h2>🛕 Kashi Vishwanath Temple – Varanasi, Uttar Pradesh</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/2_Historical/Kashi_1.jpg"
+            alt="Kashi Vishwanath Temple"
+          />
+          <img
+            src="./images/2_Historical/Kashi_2.jpg"
+            alt="Kashi Vishwanath Temple"
+          />
+          <p>
+            One of the 12 Jyotirlingas of Lord Shiva, considered the holiest
+            among them. Situated on the banks of the sacred Ganga River, it is
+            believed that a visit here leads to moksha (liberation). A spiritual
+            hub where faith, culture, and tradition blend with ancient history.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Originally built centuries ago, the temple has been rebuilt
+              several times due to invasions, with the current structure dating
+              back to the 18th century by Queen Ahilyabai Holkar of Indore.
+            </li>
+            <li>
+              The gold-plated spire and dome, donated by Maharaja Ranjit Singh
+              (Sikh ruler of Punjab), is a major attraction.
+            </li>
+            <li>
+              Pilgrims believe that just one darshan of Lord Vishwanath is
+              spiritually fulfilling.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October to March (pleasant weather).</li>
+            <li>
+              Festivals like Mahashivratri and Dev Deepawali are especially
+              magical, though crowded.
+            </li>
+            <li>
+              Early morning darshan (Mangala Aarti) is highly recommended.
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/Kashi_3.jpg"
+            alt="Kashi Vishwanath Temple"
+          />
+          <img
+            src="./images/2_Historical/Kashi_4.jpg"
+            alt="Kashi Vishwanath Temple"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Kashi Vishwanath Temple – Attend the Mangala Aarti (early morning)
+              or Ganga Aarti (evening).
+            </li>
+            <li>Dashashwamedh Ghat – Famous for grand evening Ganga Aarti.</li>
+            <li>
+              Manikarnika Ghat – Ancient cremation ghat, symbolizing the cycle
+              of life and death.
+            </li>
+            <li>
+              Sarnath (10 km away) – Where Lord Buddha gave his first sermon.
+            </li>
+            <li>
+              Banaras Hindu University (BHU) – Explore the Bharat Kala Bhavan
+              Museum.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Kachori Sabzi (breakfast delight).</li>
+            <li>Banarasi Paan – Iconic and must-try.</li>
+            <li>Malaiyyo (a winter delicacy, sweet frothy dessert).</li>
+            <li>Chaat varieties like Tamatar Chaat & Chooda Matar.</li>
+          </ul>
+          <img
+            src="./images/4_Urban/varanasi_7.jpg"
+            alt="Kashi Vishwanath Temple"
+          />
+          <img
+            src="./images/2_Historical/Kashi_6.jpg"
+            alt="Kashi Vishwanath Temple"
+          />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Darshan at Kashi Vishwanath → Stroll through Vishwanath Gali
+              (shopping + local snacks) → Evening Ganga Aarti at Dashashwamedh
+              Ghat.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning boat ride on Ganga → Visit Manikarnika & Assi Ghat →
+              Explore BHU & Bharat Kala Bhavan → Street food walk.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Half-day trip to Sarnath → Return for shopping (Banarasi sarees &
+              handicrafts).
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/Kashi_7.webp"
+            alt="Kashi Vishwanath Temple"
+          />
+          <img
+            src="./images/2_Historical/Kashi_8.jpg"
+            alt="Kashi Vishwanath Temple"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Carry valid ID proof for temple entry.</li>
+            <li>Dress modestly; traditional wear is best.</li>
+            <li>
+              Keep cash handy (small notes) for local markets & street food.
+            </li>
+            <li>Hire a local guide for deep cultural insights.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="kashiWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------TIRUPATI BALAJI MODAL------------------>
+    <div id="tirupatiModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('tirupatiModal')">&times;</span>
+        <h2>🛕 Tirupati Balaji Temple – Andhra Pradesh</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/2_Historical/Tirupati_1.jpg"
+            alt="Tirupati Balaji Temple"
+          />
+          <img
+            src="./images/2_Historical/Tirupati_2.jpg"
+            alt="Tirupati Balaji Temple"
+          />
+          <p>
+            One of the richest and most visited temples in the world, dedicated
+            to Lord Venkateswara (an incarnation of Lord Vishnu). Known as the
+            “Spiritual Capital of Andhra Pradesh”, it attracts millions of
+            pilgrims every year for blessings, divine darshan, and cultural
+            experience.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The temple is located in Tirumala Hills, part of the ancient
+              Seshachalam Hills.
+            </li>
+            <li>
+              Legends say Lord Vishnu took the form of Venkateswara here to save
+              mankind during Kali Yuga.
+            </li>
+            <li>
+              Devotees offer their hair as a symbol of surrender – one of the
+              world’s largest hair donation centers.
+            </li>
+            <li>
+              The temple earns huge donations, often in gold and money,
+              symbolizing the faith people have.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              September to February – Pleasant weather for darshan and
+              sightseeing.
+            </li>
+            <li>
+              Festivals like Brahmotsavam (Sept/Oct) and Vaikunta Ekadashi
+              (Dec/Jan) are grand and spiritual.
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/Tirupati_5.jpg"
+            alt="Tirupati Balaji Temple"
+          />
+          <img
+            src="./images/2_Historical/Tirupati_6.jpg"
+            alt="Tirupati Balaji Temple"
+          />
+          <p class="highlight">Special Attractions Nearby:</p>
+          <ul class="guide-list">
+            <li>
+              Sri Venkateswara Temple (Main Balaji Temple) – The soul of
+              Tirupati.
+            </li>
+            <li>
+              Sri Padmavathi Ammavari Temple (Tiruchanur) – Dedicated to Goddess
+              Lakshmi (must-visit before Balaji darshan).
+            </li>
+            <li>
+              Sri Govindarajaswami Temple – Historic and beautiful temple in
+              Tirupati town.
+            </li>
+            <li>
+              Sri Kapila Theertham – A temple with waterfalls, dedicated to Lord
+              Shiva.
+            </li>
+            <li>
+              Silathoranam (Natural Rock Arch) – A rare geological wonder on
+              Tirumala hills.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Tirupati Laddu (prasadam) – World-famous and a must-taste.</li>
+            <li>
+              Pulihora (tamarind rice) and curd rice – Traditional temple foods.
+            </li>
+            <li>
+              Street-side dosa, idli, pongal, and filter coffee – South Indian
+              favorites.
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/Tirupati_3.webp"
+            alt="Tirupati Balaji Temple"
+          />
+          <img
+            src="./images/2_Historical/Tirupati_4.jpg"
+            alt="Tirupati Balaji Temple"
+          />
+          <h2>Roadmap for (2 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive at Tirupati → Visit Padmavathi Ammavari Temple (Tiruchanur)
+              → Evening local temples & food.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Early morning climb or bus to Tirumala Hills → Balaji Darshan →
+              Visit Silathoranam & Papavinasam Teertham → Evening return.
+            </li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Book darshan tickets online in advance to avoid long queues.
+            </li>
+            <li>Wear traditional / modest clothing inside the temple.</li>
+            <li>Expect crowds during festivals – plan travel & stay early.</li>
+            <li>Carry minimal luggage as temple entry has security checks.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="tirupatiWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------SOMNATH TEMPLE MODAL------------------>
+    <div id="somnathModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('somnathModal')">&times;</span>
+        <h2>🛕 Somnath Temple – Gujarat</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/2_Historical/Somnath_1.webp"
+            alt="Somnath Temple"
+          />
+          <img src="./images/2_Historical/Somnath_3.jpg" alt="Somnath Temple" />
+          <p>
+            One of the 12 Jyotirlingas of Lord Shiva, Somnath Temple is
+            considered the “Shrine Eternal” – rebuilt multiple times after being
+            destroyed by invaders. Located on the Arabian Sea coast, it’s not
+            just a spiritual hub but also offers stunning ocean views, making it
+            both sacred and scenic.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              First built in gold by Lord Soma (Moon God), then rebuilt in
+              silver by Ravana, wood by Lord Krishna, and finally stone by the
+              Solanki rulers.
+            </li>
+            <li>
+              Invaded and plundered multiple times (Mahmud of Ghazni, Alauddin
+              Khilji, etc.), yet it was always reconstructed—symbol of faith and
+              resilience.
+            </li>
+            <li>
+              The light & sound show in the evening narrates its history
+              beautifully—highly recommended.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October – March (pleasant winter season).</li>
+            <li>
+              Monsoon is also good if you like greenery, but avoid peak summer
+              (April–June).
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Somnath_4.jpg" alt="Somnath Temple" />
+          <img src="./images/2_Historical/Somnath_5.jpg" alt="Somnath Temple" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Somnath Temple Darshan & Aarti – Spiritual highlight.</li>
+            <li>Light & Sound Show (after sunset).</li>
+            <li>
+              Triveni Sangam – Confluence of 3 holy rivers (Hiran, Kapila,
+              Saraswati).
+            </li>
+            <li>
+              Bhalka Tirth – Where Lord Krishna was accidentally shot by an
+              arrow.
+            </li>
+            <li>Somnath Beach – Peaceful strolls by the Arabian Sea.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Gujarati Thali (with dhokla, thepla, kadhi, khichdi).</li>
+            <li>Khaman-Dhokla & Fafda-Jalebi (popular snacks).</li>
+            <li>Shrikhand & Basundi for dessert lovers.</li>
+            <li>
+              Fresh coconut water & chaas (buttermilk)—local refreshing drinks.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Somnath_2.jpg" alt="Somnath Temple" />
+          <img src="./images/2_Historical/Somnath_7.jpg" alt="Somnath Temple" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Reach Somnath → Somnath Temple darshan → Evening aarti & light
+              show → Walk at Somnath Beach.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Triveni Sangam, Bhalka Tirth, and Prabhas Patan Museum →
+              Relax with local food.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Day trip to Gir National Park (1.5 hrs away) → Evening return.
+            </li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Dress modestly inside the temple.</li>
+            <li>Photography is not allowed inside the temple.</li>
+            <li>Keep cash handy for local food & markets.</li>
+            <li>
+              Try to attend morning or evening aarti for the full experience.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="somnathWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------JAGANNATH TEMPLE MODAL------------------>
+    <div id="jagannathModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('jagannathModal')"
+          >&times;</span
+        >
+        <h2>🛕 Jagannath Temple – Puri, Odisha</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/2_Historical/Jagannath_1.jpg"
+            alt="Jagannath Temple"
+          />
+          <img
+            src="./images/2_Historical/Jagannath_2.jpg"
+            alt="Jagannath Temple"
+          />
+          <p>
+            One of the Char Dham pilgrimage sites (a must-visit in Hinduism).
+            Dedicated to Lord Jagannath (a form of Lord Vishnu/Krishna). Famous
+            worldwide for the Rath Yatra (Chariot Festival) when huge wooden
+            chariots carry the deities through the streets.
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Known as the "White Pagoda", it’s a symbol of Odisha’s Kalinga
+              architecture.
+            </li>
+            <li>
+              The temple kitchen is considered the largest in the world, cooking
+              for over 25,000 people daily using traditional clay pots.
+            </li>
+            <li>
+              Unique rituals like Mahaprasad (holy food) and the mysterious flag
+              that always flies opposite the wind direction fascinate tourists.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to February – Pleasant weather, ideal for exploring.
+            </li>
+            <li>June/July – To witness the grand Rath Yatra festival.</li>
+          </ul>
+          <img
+            src="./images/2_Historical/Jagannath_3.webp"
+            alt="Jagannath Temple"
+          />
+          <img
+            src="./images/2_Historical/Jagannath_5.jpg"
+            alt="Jagannath Temple"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>agannath Temple – Main darshan & Mahaprasad.</li>
+            <li>Puri Beach – Famous for golden sands & camel rides.</li>
+            <li>Konark Sun Temple (UNESCO site) – Just 35 km away.</li>
+            <li>
+              Chilika Lake (Satapada) – Spot Irrawaddy dolphins & enjoy boat
+              rides.
+            </li>
+            <li>
+              Raghurajpur Heritage Village – Known for Pattachitra paintings &
+              local crafts.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              🍲 Mahaprasad (Ananda Bazar inside temple) – sacred food cooked in
+              earthen pots.
+            </li>
+            <li>🥥 Poda Pitha – sweet made of rice & jaggery.</li>
+            <li>
+              🐟 Chenna Poda – baked cottage cheese dessert, Odisha’s pride.
+            </li>
+            <li>🥭 Ambila – traditional sweet & sour dish.</li>
+            <li>Local seafood at Puri beachside stalls.</li>
+          </ul>
+          <img
+            src="./images/2_Historical/Jagannath_4.jpg"
+            alt="Jagannath Temple"
+          />
+          <img
+            src="./images/2_Historical/Jagannath_6.jpg"
+            alt="Jagannath Temple"
+          />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Jagannath Temple → Eat Mahaprasad → Evening at Puri Beach.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning drive to Konark Sun Temple → Chandrabhaga Beach → Return
+              to Puri.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Chilika Lake (Satapada) → Dolphin spotting → Evening
+              shopping at Raghurajpur village.
+            </li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Non-Hindus are not allowed inside the main temple but can view
+              from Raghunandan Library rooftop nearby.
+            </li>
+            <li>Dress modestly, follow temple rules.</li>
+            <li>Early morning is best for darshan to avoid long queues.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="jagannathWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------AMBER FORT MODAL------------------>
+    <div id="amberModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('amberModal')">&times;</span>
+        <h2>🏰 Amber Fort (Amer Fort), Jaipur – Rajasthan</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/2_Historical/Amber_1.webp" alt="Amber Fort" />
+          <img src="./images/2_Historical/Amber_7.jpg" alt="Amber Fort" />
+          <p>
+            Amber Fort is one of Rajasthan’s most iconic forts, known for its
+            grand architecture, artistic carvings, and panoramic views of Maota
+            Lake. A blend of Hindu and Mughal architecture, it’s a perfect spot
+            for history buffs, photographers, and anyone wanting to experience
+            royal Rajasthani heritage.
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Built in 1592 by Raja Man Singh I, Amber Fort served as the
+              residence of Rajput Maharajas.
+            </li>
+            <li>
+              Famous for its Sheesh Mahal (Mirror Palace), Diwan-i-Aam (Hall of
+              Public Audience), and beautifully frescoed walls and ornate gates.
+            </li>
+            <li>
+              Its elephant rides to the main entrance are a major tourist
+              attraction.
+            </li>
+            <li>
+              The fort also hosts light and sound shows in the evening,
+              narrating Jaipur’s history in a magical setting.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October to March – Pleasant weather and clear skies.</li>
+            <li>Summers can be extremely hot, so avoid April–June.</li>
+          </ul>
+          <img src="./images/2_Historical/Amber_2.jpg" alt="Amber Fort" />
+          <img src="./images/2_Historical/Amber_4.jpg" alt="Amber Fort" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Sheesh Mahal (Mirror Palace) – Stunning mirror work inside the
+              fort.
+            </li>
+            <li>Ganesh Pol Gate – Colorful frescoes and carvings.</li>
+            <li>
+              Diwan-i-Aam & Diwan-i-Khas – Halls of public and private audience.
+            </li>
+            <li>Maota Lake – Picturesque views from the fort.</li>
+            <li>
+              Evening Light & Sound Show – History comes alive with
+              storytelling.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Dal Baati Churma – Traditional Rajasthani thali.</li>
+            <li>Ghevar – Sweet specialty, especially in Jaipur.</li>
+            <li>
+              Kachori & Pyaz ki Sabzi – Local snack to try in street markets.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Amber_3.webp" alt="Amber Fort" />
+          <img src="./images/2_Historical/Amber_6.jpg" alt="Amber Fort" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Jaipur → Check-in → Explore City Palace & Jantar Mantar.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Amber Fort early morning visit → Elephant ride → Sheesh Mahal →
+              Lunch → Jaigarh Fort (nearby) → Evening Light & Sound Show.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Hawa Mahal → Local bazaars (Johari & Bapu Bazaar) → Try street
+              foods → Depart.
+            </li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Start early to avoid crowds at Amber Fort.</li>
+            <li>Wear comfortable shoes; lots of walking and stairs.</li>
+            <li>Carry water and a hat in summer.</li>
+            <li>
+              Photography is allowed but sometimes restricted in interiors.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="amberWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------MEHRANGARH FORT MODAL------------------>
+    <div id="mehrangarhModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('mehrangarhModal')"
+          >&times;</span
+        >
+        <h2>🏰 Mehrangarh Fort – Jodhpur, Rajasthan</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/2_Historical/Mehrangarh_4.webp"
+            alt="Mehrangarh Fort"
+          />
+          <img
+            src="./images/2_Historical/Mehrangarh_5.jpg"
+            alt="Mehrangarh Fort"
+          />
+          <p>
+            Mehrangarh Fort is one of the largest and most magnificent forts in
+            India, perched 410 feet above the city. Its massive walls, intricate
+            carvings, and panoramic views of the Blue City make it an unmissable
+            attraction. The fort is not just a historical monument—it’s a living
+            museum of Rajasthani culture, art, and royalty.
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Built in 1459 by Rao Jodha, the fort has a rich history of
+              battles, royal families, and architectural marvels.
+            </li>
+            <li>
+              Houses palaces, temples, courtyards, and museums with artifacts
+              like royal costumes, weapons, paintings, and antiques.
+            </li>
+            <li>
+              Famous spots inside the fort: Moti Mahal (Pearl Palace), Phool
+              Mahal (Flower Palace), Sheesh Mahal (Mirror Palace), and Chamunda
+              Mataji Temple.
+            </li>
+            <li>
+              Cultural performances and traditional music often happen in the
+              fort premises, adding to its charm.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather for sightseeing. Summers
+              (April–June) can be extremely hot.
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/Mehrangarh_2.webp"
+            alt="Mehrangarh Fort"
+          />
+          <img
+            src="./images/2_Historical/Mehrangarh_7.png"
+            alt="Mehrangarh Fort"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Mehrangarh Museum – See royal artifacts and learn about Marwar
+              history.
+            </li>
+            <li>
+              Panoramic city views – Watch the sun rise or set over the Blue
+              City.
+            </li>
+            <li>
+              Zip-lining & Adventure – Experience adrenaline activities around
+              the fort walls.
+            </li>
+            <li>
+              Nearby Jaswant Thada – A marble cenotaph with beautiful gardens
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Makhaniya Lassi – Creamy, sweet, and refreshing.</li>
+            <li>Pyaaz Kachori – Spicy onion-filled pastry.</li>
+            <li>Mirchi Bada – Fried chili snack.</li>
+            <li>Laal Maas – Spicy Rajasthani mutton curry.</li>
+          </ul>
+          <img src="./images/4_Urban/Dal_Baati_7.webp" alt="Mehrangarh Fort" />
+          <img
+            src="./images/2_Historical/Mehrangarh_3.webp"
+            alt="Mehrangarh Fort"
+          />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Jodhpur → Visit Mehrangarh Fort → Explore fort museums →
+              Sunset views.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Jaswant Thada → Umaid Bhawan Palace → Clock Tower & Sardar
+              Market → Try local foods.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Optional day trip to Osian (desert temples) or Mandore Gardens →
+              Departure.
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/Mehrangarh_6.jpg"
+            alt="Mehrangarh Fort"
+          />
+          <img
+            src="./images/2_Historical/Mehrangarh_8.jpg"
+            alt="Mehrangarh Fort"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Wear comfortable shoes; the fort involves steep climbs.</li>
+            <li>Carry water and sunscreen in summer.</li>
+            <li>
+              Hire a local guide or audio guide to understand the rich history.
+            </li>
+            <li>Early morning or late afternoon is best for photography.</li>
+            <li>Entry fee applicable; cameras may have extra charges.</li>
+            <li>Avoid weekends if you want less crowd.</li>
+            <li>Local handicrafts and souvenirs are excellent keepsakes.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="mehrangarhWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------CITY PALACE MODAL------------------>
+    <div id="cityModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('cityModal')">&times;</span>
+        <h2>🏰 City Palace – Udaipur, Rajasthan</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/2_Historical/City_Palace_4.jpg"
+            alt="City Palace"
+          />
+          <img
+            src="./images/2_Historical/City_Palace_2.jpg"
+            alt="City Palace"
+          />
+          <p>
+            City Palace is the crown jewel of Udaipur, showcasing the grandeur
+            of the Mewar dynasty. It’s one of the largest palace complexes in
+            Rajasthan, blending Rajasthani and Mughal architectural styles with
+            intricately carved balconies, towers, and courtyards. A must-visit
+            for history lovers, photographers, and anyone wanting to experience
+            royal heritage.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Built over 400 years ago by Maharana Udai Singh II, the palace
+              complex has been expanded by successive rulers.
+            </li>
+            <li>
+              Houses museums, galleries, and royal artifacts including weapons,
+              paintings, and vintage royal cars.
+            </li>
+            <li>
+              Features the famous Mor Chowk (Peacock Courtyard) with stunning
+              mosaic peacock designs.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather for sightseeing and lake
+              views.
+            </li>
+            <li>
+              Summers can be very hot; monsoon is moderate but adds a green
+              charm.
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/City_Palace_3.jpg"
+            alt="City Palace"
+          />
+          <img
+            src="./images/2_Historical/City_Palace_5.jpg"
+            alt="City Palace"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>City Palace Museum – Explore royal history and artifacts.</li>
+            <li>
+              Mor Chowk & Zenana Mahal – Beautiful courtyards and peacock
+              mosaics.
+            </li>
+            <li>Crystal Gallery – Stunning collection of crystal artifacts.</li>
+            <li>
+              Lake Pichola Viewpoints – Enjoy sunset views from palace
+              balconies.
+            </li>
+            <li>
+              Cultural Performances – Traditional Rajasthani music and dance in
+              evenings.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Dal Baati Churma – Traditional Rajasthani delicacy.</li>
+            <li>Ghewar – Sweet dessert, especially during festivals.</li>
+            <li>Laal Maas – Spicy mutton dish for meat lovers.</li>
+            <li>Rajasthani Thali – Complete royal meal experience.</li>
+          </ul>
+          <img
+            src="./images/2_Historical/City_Palace_6.webp"
+            alt="City Palace"
+          />
+          <img src="./images/4_Urban/Dal_Baati_5.webp" alt="City Palace" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Udaipur → Check-in → Evening boat ride on Lake Pichola →
+              Sunset views of City Palace.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Explore City Palace (museum, courtyards, Mor Chowk) → Visit
+              Crystal Gallery → Evening cultural performance.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Explore nearby attractions like Jagdish Temple, Saheliyon Ki Bari,
+              and Fateh Sagar Lake → Local market shopping → Depart.
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/City_Palace_7.jpg"
+            alt="City Palace"
+          />
+          <img
+            src="./images/2_Historical/City_Palace_8.webp"
+            alt="City Palace"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Wear comfortable shoes; there’s a lot of walking on uneven
+              surfaces.
+            </li>
+            <li>Hire a local guide for historical insights.</li>
+            <li>
+              Morning or late afternoon visits give better light for photos and
+              fewer crowds.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="cityPalaceWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------MYSORE PALACE MODAL------------------>
+    <div id="mysoreModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('mysoreModal')">&times;</span>
+        <h2>🏰 Mysore Palace – Mysuru, Karnataka</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/2_Historical/Mysore_5.jpg" alt="Mysore Palace" />
+          <img src="./images/2_Historical/Mysore_4.jpg" alt="Mysore Palace" />
+          <p>
+            Mysore Palace is one of India’s most iconic royal monuments and a
+            top tourist attraction in Karnataka. Known for its stunning
+            Indo-Saracenic architecture, lavish interiors, and beautifully
+            illuminated evenings, the palace offers a glimpse into the grandeur
+            of the Wodeyar dynasty, who ruled Mysore for centuries. It’s perfect
+            for history buffs, architecture lovers, and culture enthusiasts.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The palace combines Hindu, Muslim, Rajput, and Gothic styles,
+              making it architecturally unique.
+            </li>
+            <li>
+              Durbar Hall and the ornate ceilings, stained glass, and
+              gold-plated domes are highlights.
+            </li>
+            <li>
+              The palace is famous for the Dussehra festival, where it’s
+              decorated with thousands of lights, attracting thousands of
+              tourists.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October to March – Pleasant weather for sightseeing.</li>
+            <li>
+              Evenings are magical when the palace is lit with thousands of
+              bulbs (especially during weekends or festivals).
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Mysore_3.jpg" alt="Mysore Palace" />
+          <img src="./images/2_Historical/Mysore_6.webp" alt="Mysore Palace" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Durbar Hall – Admire royal artifacts and paintings.</li>
+            <li>
+              Palace illumination – Visit after sunset for a magical experience.
+            </li>
+            <li>
+              Chamundi Hill & Chamundeshwari Temple – Short drive from the
+              palace, panoramic city views.
+            </li>
+            <li>St. Philomena’s Church – Nearby Gothic-style church.</li>
+            <li>
+              Local Markets – Devaraja Market for spices, silk, and handicrafts.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Mysore Pak – Traditional sweet made of ghee and sugar.</li>
+            <li>Ragi Mudde – Healthy millet-based staple.</li>
+            <li>Benne Dosa & Filter Coffee – Must-try local breakfast.</li>
+          </ul>
+          <img src="./images/2_Historical/Mysore_8.jpg" alt="Mysore Palace" />
+          <img src="./images/2_Historical/Mysore_7.webp" alt="Mysore Palace" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Mysuru → Visit Mysore Palace → Evening palace
+              illumination → Explore local eateries.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Chamundi Hill & Temple → St. Philomena’s Church → Devaraja Market
+              shopping → Try Mysore Pak at famous sweet shops.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>Visit Karanji Lake or Rail Museum → Depart.</li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Photography allowed only in palace grounds, not inside certain
+              halls.
+            </li>
+            <li>
+              Comfortable walking shoes recommended for exploring palace and
+              nearby attractions.
+            </li>
+            <li>
+              Weekends and festival seasons can be crowded, so start early.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="mysorePalaceWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------RED FORT MODAL------------------>
+    <div id="redModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('redModal')">&times;</span>
+        <h2>🏰 Red Fort – Delhi</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/2_Historical/Red_Fort_4.jpg" alt="Red Fort" />
+          <img src="./images/2_Historical/Red_Fort_8.webp" alt="Red Fort" />
+          <p>
+            The Red Fort is an iconic symbol of India’s history and
+            independence, a UNESCO World Heritage Site, and one of Delhi’s most
+            visited landmarks. Its massive red sandstone walls, intricate Mughal
+            architecture, and sprawling courtyards make it a must-see for
+            history buffs, photographers, and culture lovers.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Built in 1638 by Mughal Emperor Shah Jahan, it served as the main
+              residence of the Mughal emperors for almost 200 years.
+            </li>
+            <li>
+              The fort showcases Mughal architecture at its finest: massive
+              walls, decorative gates, marble palaces, and the famous
+              Diwan-i-Aam (Hall of Public Audience).
+            </li>
+            <li>
+              Special attractions inside: Lahore Gate, Rang Mahal, Mumtaz Mahal,
+              and the museums that display Mughal artifacts.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather, clear skies, and ideal for
+              walking around.
+            </li>
+            <li>
+              Avoid the peak summer months (April–June) due to Delhi’s heat.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Red_Fort_2.jpg" alt="Red Fort" />
+          <img src="./images/2_Historical/Red_Fort_5.webp" alt="Red Fort" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Lahore Gate – Main entrance and iconic photo spot.</li>
+            <li>
+              Diwan-i-Aam & Diwan-i-Khas – Explore the grandeur of Mughal
+              courts.
+            </li>
+            <li>
+              Rang Mahal & Mumtaz Mahal – Beautifully decorated palaces inside
+              the fort.
+            </li>
+            <li>
+              Light & Sound Show (Evening) – Learn the history of the fort in a
+              magical setup.
+            </li>
+            <li>
+              Shopping & Street Food Nearby – Chandni Chowk is right around the
+              corner.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Paranthe Wali Gali – Stuffed parathas.</li>
+            <li>Jalebi & Rabri – Sweet delights.</li>
+            <li>
+              Kebabs & Chole Bhature – Authentic Delhi street food experience.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Chole Bhature-2.webp" alt="Red Fort" />
+          <img src="./images/4_Urban/varanasi_11.jpg" alt="Red Fort" />
+          <h2>Roadmap for Travelers</h2>
+          <h3>Morning:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive at Red Fort → Explore Lahore Gate → Diwan-i-Aam → Rang
+              Mahal.
+            </li>
+          </ul>
+          <h3>Afternoon:</h3>
+          <ul class="guide-list">
+            <li>
+              Walk through the inner courtyards → Visit Mumtaz Mahal → Fort
+              museums.
+            </li>
+          </ul>
+          <h3>Evening:</h3>
+          <ul class="guide-list">
+            <li>
+              Enjoy Light & Sound Show (if interested) → Head to Chandni Chowk
+              for street food and local shopping.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Red_Fort_6.jpg" alt="Red Fort" />
+          <img src="./images/2_Historical/Red_Fort_7.jpg" alt="Red Fort" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Entry fee applies for foreigners; carry ID proof for locals.
+            </li>
+            <li>
+              Photography allowed in most areas, but flash may be restricted
+              inside museums.
+            </li>
+            <li>
+              Combine Red Fort visit with Jama Masjid (5 min walk) and Chandni
+              Chowk for a full historic Delhi experience.
+            </li>
+            <li>
+              Wear comfortable shoes; the fort is vast and involves a lot of
+              walking.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="redFortWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------GOLCONDA FORT MODAL------------------>
+    <div id="golcondaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('golcondaModal')">&times;</span>
+        <h2>🏰 Golconda Fort – Hyderabad, Telangana</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/2_Historical/Golconda_Fort_1.jpg"
+            alt="Golconda Fort"
+          />
+          <img
+            src="./images/2_Historical/Golconda_Fort_7.jpg"
+            alt="Golconda Fort"
+          />
+          <p>
+            Golconda Fort is one of India’s most magnificent and historically
+            rich forts. Known for its grand architecture, acoustic marvels, and
+            royal history, it is a must-visit for history buffs, photographers,
+            and culture enthusiasts. The fort’s sprawling ruins, intricate
+            gates, and panoramic city views make it a perfect day-trip from
+            Hyderabad.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The fort is known for its ingenious acoustics—a clap at the main
+              gate can be heard at the Shah Burj located 1 km away!
+            </li>
+            <li>
+              Tourists are drawn to its massive gates, palaces, mosques, and
+              underground tunnels, offering a glimpse into medieval Indian
+              architecture and royal life.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather, ideal for exploring outdoors.
+            </li>
+            <li>
+              Try to visit late afternoon to catch the sunset over the fort
+              walls.
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/Golconda_Fort_3.webp"
+            alt="Golconda Fort"
+          />
+          <img
+            src="./images/2_Historical/Golconda_Fort_4.webp"
+            alt="Golconda Fort"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Light and Sound Show – Evening shows narrate the fort’s history
+              dramatically.
+            </li>
+            <li>
+              Climb the Ramparts – Stunning 360° views of Hyderabad and the
+              surrounding hills.
+            </li>
+            <li>
+              Photography & Sunset – Best spots near Bala Hisar or the top of
+              the fort.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Hyderabadi Biryani – A must-try authentic delicacy.</li>
+            <li>
+              Irani Chai & Osmania Biscuits – Perfect for a relaxing tea break.
+            </li>
+            <li>Haleem – Seasonal treat if visiting during Ramadan.</li>
+          </ul>
+          <img
+            src="./images/4_Urban/Hyderabadi_Biryani_3.jpg"
+            alt="Golconda Fort"
+          />
+          <img
+            src="./images/2_Historical/Golconda_Fort_8.jpg"
+            alt="Golconda Fort"
+          />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Hyderabad → Check-in → Evening stroll at Charminar &
+              Laad Bazaar.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              : Morning at Golconda Fort → Explore Qutb Shahi Tombs → Light and
+              Sound Show at Golconda → Dinner with Hyderabadi Biryani.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit nearby attractions like Salar Jung Museum or Hussain Sagar
+              Lake → Depart.
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/Golconda_Fort_2.jpg"
+            alt="Golconda Fort"
+          />
+          <img
+            src="./images/2_Historical/Golconda_Fort_6.jpg"
+            alt="Golconda Fort"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Wear comfortable shoes; the climb can be steep.</li>
+            <li>Carry water and sunscreen during daytime visits.</li>
+            <li>
+              Hiring a local guide is recommended for rich historical insights.
+            </li>
+            <li>Avoid monsoon season as the fort can be slippery.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="golcondaWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------TAJ MAHAL MODAL------------------>
+    <div id="tajmahalModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('tajmahalModal')">&times;</span>
+        <h2>🕌 Taj Mahal – Agra, Uttar Pradesh</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/top_10/1_Taj_Mahal.jpeg" alt="Taj Mahal" />
+          <img src="./images/2_Historical/Taj_Mahal_6.jpg" alt="Taj Mahal" />
+          <p>
+            The Taj Mahal is one of the Seven Wonders of the World and India’s
+            most iconic monument. Known as the “monument of love,” it is admired
+            worldwide for its stunning white marble architecture, intricate
+            carvings, and symmetrical gardens. Every traveler visiting India
+            considers it a must-see destination.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Famous for its Mughal architecture, inlaid gemstones, and
+              reflective pools that mirror the monument beautifully.
+            </li>
+            <li>
+              The Taj Mahal’s sunrise and sunset views offer a magical
+              experience for photographers and tourists alike.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather, ideal for sightseeing and
+              photography.
+            </li>
+            <li>
+              Summer (April–June) can be extremely hot, and monsoon
+              (July–September) brings occasional heavy rains.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Taj_Mahal_4.jpg" alt="Taj Mahal" />
+          <img src="./images/2_Historical/Taj_Mahal_5.jpg" alt="Taj Mahal" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Taj Mahal Main Complex – Explore the central dome, gardens, and
+              reflective pools.
+            </li>
+            <li>
+              Mehtab Bagh – Perfect spot for sunset photos of the Taj from
+              across the Yamuna River.
+            </li>
+            <li>
+              Local Markets – Shop for marble handicrafts, leather goods, and
+              souvenirs.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Petha – Sweet made from ash gourd (Agra’s specialty).</li>
+            <li>Bedai & Jalebi – Traditional breakfast treats.</li>
+            <li>
+              Mughlai Cuisine – Try local kebabs, biryani, and Mughlai curries.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Taj_Mahal_9.jpg" alt="Taj Mahal" />
+          <img src="./images/2_Historical/Taj_Mahal_3.webp" alt="Taj Mahal" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Agra → Check-in → Explore local markets & try Petha.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Early morning visit to Taj Mahal → Explore Agra Fort → Lunch at
+              local Mughlai restaurant → Sunset at Mehtab Bagh.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Optional visit to Itmad-ud-Daulah (Baby Taj) → Depart for next
+              destination (Delhi or Fatehpur Sikri).
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Taj_Mahal_7.jpg" alt="Taj Mahal" />
+          <img src="./images/2_Historical/Taj_Mahal_8.jpg" alt="Taj Mahal" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Tickets can be booked online to avoid queues.</li>
+            <li>
+              Sunrise visit is highly recommended for fewer crowds and stunning
+              photos.
+            </li>
+            <li>
+              Dress comfortably and respectfully; carry water and sunscreen.
+            </li>
+            <li>Keep some cash for local markets.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="tajWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------AJANTA & ELLORA CAVES MODAL------------------>
+    <div id="ajantaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('ajantaModal')">&times;</span>
+        <h2>🏛️ Ajanta & Ellora Caves – Maharashtra</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/2_Historical/Ajanta_1.jpg" alt="Ajanta Cave" />
+          <img src="./images/2_Historical/Ajanta_2.jpg" alt="Ajanta Cave" />
+          <p>
+            Ajanta and Ellora are UNESCO World Heritage Sites and among India’s
+            most remarkable examples of ancient rock-cut architecture. They
+            showcase stunning cave temples, intricate sculptures, and exquisite
+            paintings dating back centuries, reflecting India’s rich religious
+            and artistic heritage. These sites attract history buffs, art
+            lovers, and anyone fascinated by ancient culture.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Ajanta Caves (2nd century BCE – 480 CE) – Buddhist rock-cut caves
+              famous for their vibrant murals depicting the life of Buddha,
+              Jataka tales, and ancient monastic life.
+            </li>
+            <li>
+              Ellora Caves (5th–10th century CE) – A mix of Buddhist, Hindu, and
+              Jain caves, including the magnificent Kailasa Temple, carved
+              entirely from a single rock.
+            </li>
+            <li>
+              The caves reflect India’s religious harmony, craftsmanship, and
+              ancient engineering brilliance.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October to March – Pleasant weather for sightseeing.</li>
+            <li>
+              Avoid monsoon (June–September) as some areas may be slippery.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Ajanta_3.jpg" alt="Ajanta Cave" />
+          <img src="./images/2_Historical/Ajanta_4.jpg" alt="Ajanta Cave" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Ajanta Caves – Explore 30+ caves with murals and statues.</li>
+            Ellora Caves – Visit Kailasa Temple (Cave 16), Buddhist caves, and
+            Jain caves.
+            <li>
+              Photography – Capturing murals, sculptures, and rock-cut
+              architecture.
+            </li>
+            <li>
+              Local Culture – Explore nearby towns for handicrafts and local
+              markets.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Try Maharashtrian thali, misal pav, poha, and vada pav at local
+              eateries.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Mumbai_8.jpg" alt="Ajanta Cave" />
+          <img src="./images/2_Historical/Ajanta_9.jpg" alt="Ajanta Cave" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive at Ajanta → Visit main caves → Sunset at nearby viewpoint →
+              Stay overnight nearby.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Travel to Ellora → Explore Kailasa Temple → Visit other Buddhist
+              and Jain caves → Evening local food tasting.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Optional visit to Aurangabad (Bibi Ka Maqbara, Panchakki) →
+              Depart.
+            </li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Wear comfortable walking shoes – caves involve stairs and uneven
+              surfaces.
+            </li>
+            <li>Carry water and snacks; food options inside are limited.</li>
+            <li>
+              Hire a local guide or audio guide to understand the history and
+              art better.
+            </li>
+            <li>Respect the heritage sites – no touching murals at Ajanta.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="ajantaWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------KONARK SUN TEMPLE MODAL------------------>
+    <div id="konarkModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('konarkModal')">&times;</span>
+        <h2>🌞 Konark Sun Temple – Odisha</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/2_Historical/Konark_2.jpg" alt="Konark Temple" />
+          <img src="./images/2_Historical/Konark_6.webp" alt="Konark Temple" />
+          <p>
+            Konark Sun Temple is one of India’s most iconic monuments and a
+            UNESCO World Heritage Site. Built in the shape of a colossal
+            chariot, with intricately carved stone wheels and horses, it is
+            dedicated to Surya, the Sun God. The temple is a masterpiece of
+            Kalinga architecture, drawing history lovers, photographers, and
+            cultural enthusiasts alike. Its magnificent sculptures and massive
+            structure leave every visitor in awe.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Built in 13th century by King Narasimhadeva I, the temple
+              symbolizes the grandeur of the Eastern Ganga dynasty.
+            </li>
+            <li>
+              Famous for intricate stone carvings depicting gods, dancers,
+              musicians, and everyday life of that era.
+            </li>
+            <li>
+              Its wheel of the chariot, with 24 spokes, is believed to function
+              as a sun dial, reflecting the ancient scientific knowledge.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather for sightseeing and
+              photography.
+            </li>
+            <li>
+              Avoid monsoon season (July–September) due to heavy rains and
+              waterlogging.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Konark_3.jpg" alt="Konark Temple" />
+          <img src="./images/2_Historical/Konark_4.webp" alt="Konark Temple" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Main Temple Complex – Marvel at the Sun God’s chariot and detailed
+              carvings.
+            </li>
+            <li>
+              Konark Archaeological Museum – Learn more about the temple’s
+              history and see preserved sculptures.
+            </li>
+            <li>
+              Chandrabhaga Beach – A beautiful nearby beach for sunset views.
+            </li>
+            <li>
+              Local Handicrafts – Buy appliqué work, terracotta items, and
+              Odisha handicrafts.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Chhena Poda – Odisha’s famous baked cheese dessert.</li>
+            <li>Dalma – Lentil and vegetable stew cooked with local spices.</li>
+            <li>
+              Seafood specialties – Fresh fish and prawns from the nearby
+              coastal region.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Konark_9.webp" alt="Konark Temple" />
+          <img src="./images/2_Historical/Konark_10.jpg" alt="Konark Temple" />
+          <h2>Roadmap for (2 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Konark → Visit Sun Temple → Explore Konark Museum →
+              Evening at Chandrabhaga Beach.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Puri Jagannath Temple (nearby, 35 km) → Try local cuisine →
+              Optional Raghurajpur Artist Village for crafts → Depart.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Konark_5.webp" alt="Konark Temple" />
+          <img src="./images/2_Historical/Konark_7.webp" alt="Konark Temple" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Wear comfortable shoes for walking around the temple complex.
+            </li>
+            <li>Carry water and sunscreen—it can get sunny and hot.</li>
+            <li>
+              Respect photography rules inside certain parts of the temple.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="konarkWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------VICTORIA MEMORIAL MODAL------------------>
+    <div id="victoriaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('victoriaModal')">&times;</span>
+        <h2>🌟 Victoria Memorial – Kolkata, West Bengal</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/2_Historical/Victoria_1.jpg"
+            alt="Victoria Memorial"
+          />
+          <img
+            src="./images/2_Historical/Victoria_2.webp"
+            alt="Victoria Memorial"
+          />
+          <p>
+            The Victoria Memorial is an iconic symbol of Kolkata, blending
+            British and Mughal architecture in pristine white marble. It’s one
+            of India’s most famous monuments and a must-visit for history buffs,
+            photographers, and culture lovers. The lush gardens and serene
+            atmosphere make it perfect for a relaxing stroll or a cultural day
+            out.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Built between 1906 and 1921 in memory of Queen Victoria, it now
+              serves as a museum showcasing art, artifacts, and historical
+              relics from the British era.
+            </li>
+            <li>
+              The memorial is known for its stunning Indo-Saracenic
+              architecture, beautiful domes, and intricate sculptures.
+            </li>
+            <li>
+              The gardens around the memorial are vast and well-maintained,
+              offering seasonal flower displays and scenic views.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October to March – Pleasant weather for sightseeing.</li>
+            <li>
+              Early morning or late afternoon – Ideal for photography and
+              avoiding crowds.
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/Victoria_3.jpg"
+            alt="Victoria Memorial"
+          />
+          <img
+            src="./images/2_Historical/Victoria_4.webp"
+            alt="Victoria Memorial"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Main Memorial Hall – Marble statues and historical artifacts.
+            </li>
+            <li>
+              Museum Galleries – Paintings, manuscripts, and colonial-era
+              exhibits.
+            </li>
+            <li>Gardens & Fountains – Perfect for a stroll or picnic.</li>
+            <li>
+              Light & Sound Show (Evening) – Highlights historical significance.
+            </li>
+            <li>Nearby St. Paul’s Cathedral – A quick heritage visit.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Kathi Rolls at New Market area</li>
+            <li>Rosogolla & Sandesh – Kolkata’s famous sweets</li>
+            <li>Puchka / Golgappa – Street food delight</li>
+          </ul>
+          <img
+            src="./images/4_Urban/Chole_Bhature_4.jpg"
+            alt="Victoria Memorial"
+          />
+          <img src="./images/4_Urban/Rasgulla_2.jpg" alt="Victoria Memorial" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Kolkata → Victoria Memorial → Gardens → Evening light
+              show.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              St. Paul’s Cathedral → Indian Museum → New Market for shopping &
+              local food.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Explore nearby Howrah Bridge, Marble Palace, and local street food
+              spots.
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/Victoria_5.jpg"
+            alt="Victoria Memorial"
+          />
+          <img
+            src="./images/2_Historical/Victoria_6.jpg"
+            alt="Victoria Memorial"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Entry fees apply for the museum; gardens are cheaper.</li>
+            <li>
+              Wear comfortable shoes – the memorial and gardens are best
+              explored on foot.
+            </li>
+            <li>
+              Photography is allowed outside; some museum sections may have
+              restrictions.
+            </li>
+            <li>
+              Combine your visit with nearby cultural spots for a full Kolkata
+              experience.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="victoriaWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------INDIAN MUSEUM MODAL------------------>
+    <div id="indianModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('indianModal')">&times;</span>
+        <h2>🏛️ Indian Museum – Kolkata, West Bengal</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/2_Historical/Indian_Museum_2.jpg"
+            alt="Indian Museum"
+          />
+          <img
+            src="./images/2_Historical/Indian_Museum_3.webp"
+            alt="Indian Museum"
+          />
+          <p>
+            The Indian Museum, established in 1814, is the oldest and largest
+            museum in India and one of the finest in Asia. It’s a treasure trove
+            for history, art, and culture lovers, offering a glimpse into
+            India’s rich heritage from ancient to modern times. The museum is
+            ideal for travelers interested in archaeology, anthropology, natural
+            history, and art.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The museum houses fossils, mummies, Mughal paintings, sculptures,
+              and tribal artifacts, making it a must-visit for history buffs.
+            </li>
+            <li>
+              Ancient Egyptian mummy and rare Buddhist relics attract global
+              tourists.
+            </li>
+            <li>
+              Art & Archaeology Gallery – Ancient sculptures, coins, and
+              paintings.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather for sightseeing in Kolkata.
+            </li>
+            <li>
+              Avoid April–June if you want to skip Kolkata’s intense summer
+              heat.
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/Indian_Museum_6.jpg"
+            alt="Indian Museum"
+          />
+          <img
+            src="./images/2_Historical/Indian_Museum_4.JPG"
+            alt="Indian Museum"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Explore Ancient Indian sculptures & coins.</li>
+            <li>See the Egyptian mummy and unique fossils.</li>
+            <li>Check out the tribal artifacts and paintings.</li>
+            <li>
+              Walk around Victoria Memorial or Maidan nearby after the museum
+              visit.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Street food: Puchka (Kolkata’s version of pani puri), kathi rolls.
+            </li>
+            <li>Sweets: Rosogolla, Sandesh, Mishti Doi.</li>
+            <li>
+              Cafés: Flurys & Peter Cat for classic Kolkata snacks and
+              continental fare.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Rasgulla_8.webp" alt="Indian Museum" />
+          <img src="./images/4_Urban/Chole_Bhature_4.jpg" alt="Indian Museum" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning: Indian Museum → Spend 2–3 hours exploring galleries
+            </li>
+            <li>
+              Afternoon: Lunch at a local café → Visit Maidan Park and Victoria
+              Memorial.
+            </li>
+            <li>
+              Evening: Stroll around New Market / Park Street for shopping and
+              snacks.
+            </li>
+          </ul>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Explore Marble Palace, St. Paul’s Cathedral, or Howrah Bridge if
+              you have more time.
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/Indian_Museum_5.jpg"
+            alt="Indian Museum"
+          />
+          <img
+            src="./images/2_Historical/Indian_Museum_7.jpg"
+            alt="Indian Museum"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Allocate 2–3 hours minimum to cover main galleries.</li>
+            <li>Photography is allowed in some sections; check signs.</li>
+            <li>Wear comfortable shoes—the museum is large.</li>
+            <li>Nearby metro: Esplanade / Park Street for easy access.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="indianMuseumWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------SANCHI STUPA MODAL------------------>
+    <div id="sanchiModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('sanchiModal')">&times;</span>
+        <h2>🕌 Sanchi Stupa – Madhya Pradesh</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/2_Historical/Sanchi_Stupa_6.jpg"
+            alt="Sanchi Stupa"
+          />
+          <img
+            src="./images/2_Historical/Sanchi_Stupa_7.jpg"
+            alt="Sanchi Stupa"
+          />
+          <p>
+            Sanchi Stupa is one of India’s most iconic Buddhist monuments and a
+            UNESCO World Heritage Site. It’s famous for its ancient
+            architecture, intricately carved gateways (toranas), and historical
+            significance. A visit here gives travelers a glimpse into India’s
+            rich Buddhist heritage, making it a must-see for history buffs,
+            photographers, and spiritual travelers alike.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The Great Stupa (Stupa No. 1) is surrounded by four intricately
+              carved gateways, depicting scenes from Buddha’s life and Jataka
+              tales.
+            </li>
+            <li>
+              The site also includes smaller stupas, temples, and monasteries.
+            </li>
+            <li>
+              Tourists are drawn here for its serene environment, stunning
+              carvings, and historical aura.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather, ideal for sightseeing and
+              photography.
+            </li>
+            <li>
+              Summers (April–June) can be hot; monsoon (July–September) can be
+              humid.
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/Sanchi_Stupa_4.jpg"
+            alt="Sanchi Stupa"
+          />
+          <img
+            src="./images/2_Historical/Sanchi_Stupa_5.jpg"
+            alt="Sanchi Stupa"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Great Stupa (Stupa No.1) – Marvel at the dome and detailed
+              toranas.
+            </li>
+            <li>
+              Other Smaller Stupas & Temples – Explore Stupas 2–4 and the nearby
+              monasteries.
+            </li>
+            <li>
+              Sanchi Museum – See ancient artifacts, sculptures, and relics.
+            </li>
+            <li>
+              Photography & Nature Walks – Enjoy peaceful surroundings and lush
+              greenery.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Bhutte ka Kees – A savory corn dish native to Madhya Pradesh.
+            </li>
+            <li>Poha & Jalebi – Popular breakfast snack in the region.</li>
+            <li>
+              Dal Bafla – Traditional dish similar to dal baati, must-try if
+              available locally.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Marble_5.jpg" alt="Sanchi Stupa" />
+          <img
+            src="./images/2_Historical/Sanchi_Stupa_9.webp"
+            alt="Sanchi Stupa"
+          />
+          <h2>Roadmap for (2 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive at Sanchi → Check-in → Visit Great Stupa and nearby smaller
+              stupas → Evening walk around the site.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Sanchi Museum → Explore nearby temples and monasteries → Try
+              local food → Depart for Bhopal or other nearby destinations.
+            </li>
+          </ul>
+          <img
+            src="./images/2_Historical/Sanchi_Stupa_2.jpg"
+            alt="Sanchi Stupa"
+          />
+          <img
+            src="./images/2_Historical/Sanchi_Stupa_8.jpg"
+            alt="Sanchi Stupa"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              UNESCO World Heritage Site – maintain decorum and avoid touching
+              carvings.
+            </li>
+            <li>Comfortable footwear recommended; lots of walking involved.</li>
+            <li>Early morning is best for photography and avoiding crowds.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="sanchiWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------DIWALI MODAL------------------>
+    <div id="diwaliModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('diwaliModal')">&times;</span>
+        <h2>🪔 Diwali – Festival of Lights</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/2_Historical/Diwali_2.webp" alt="Diwali" />
+          <img src="./images/2_Historical/Diwali_4.jpg" alt="Diwali" />
+          <p>
+            Diwali, celebrated across India, is one of the most vibrant and
+            joyful festivals in the world. It symbolizes the victory of light
+            over darkness and good over evil. Streets, homes, and markets light
+            up with thousands of diyas (oil lamps), fairy lights, and colorful
+            decorations, creating a magical atmosphere that every traveler
+            should experience at least once.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Diwali has mythological roots, mainly linked to the return of Lord
+              Rama to Ayodhya after 14 years of exile and defeating Ravana.
+            </li>
+            <li>
+              In northern India, it’s celebrated with sparkling fireworks and
+              sweets; in western India, it’s linked to businesses closing
+              accounts and starting new ledgers; in southern India, it marks the
+              defeat of demon Narakasura.
+            </li>
+            <li>
+              Special attractions include temple visits, lighting diyas at
+              ghats, Rangoli art, and community celebrations.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              Late October to Early November (Diwali date changes yearly
+              according to the lunar calendar)
+            </li>
+            <li>
+              Even a few days around the festival give travelers a glimpse of
+              the full experience.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Diwali_7.jpg" alt="Diwali" />
+          <img src="./images/2_Historical/Diwali_3.webp" alt="Diwali" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Attend Diwali Melas (fairs) – Local markets bustling with crafts,
+              sweets, and lights.
+            </li>
+            <li>
+              Visit Temples and Ghats – Evening rituals and lighting diyas on
+              riverbanks.
+            </li>
+            <li>
+              Watch Fireworks – Major cities like Jaipur, Delhi, Mumbai,
+              Varanasi put on spectacular displays.
+            </li>
+            <li>
+              Experience Local Homes – Participate in small community
+              celebrations if possible.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Sweets: Ladoo, Gulab Jamun, Jalebi, Kaju Katli, and Soan Papdi
+            </li>
+            <li>Snacks: Chakli, Mathri, Namakpara, and Samosas</li>
+            <li>Special Drinks: Thandai in some regions</li>
+          </ul>
+          <img src="./images/2_Historical/Diwali_8.jpg" alt="Diwali" />
+          <img src="./images/2_Historical/Diwali_6.jpg" alt="Diwali" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in your chosen city → Evening walk through decorated
+              markets and streets → Try local sweets.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning temple visit → Afternoon shopping at Diwali fairs →
+              Evening fireworks and diyas lighting by rivers or ghats.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Explore cultural events → Try regional Diwali snacks → Depart
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Diwali_9.jpg" alt="Diwali" />
+          <img src="./images/2_Historical/Diwali_10.webp" alt="Diwali" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Carry cash for small local purchases at markets.</li>
+            <li>
+              Be mindful of fireworks safety, especially in crowded areas.
+            </li>
+            <li>
+              Respect local customs and rituals when entering homes or temples.
+            </li>
+            <li>Wear comfortable festive clothes and enjoy the colors!</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="diwaliWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------HOLI MODAL------------------>
+    <div id="holiModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('holiModal')">&times;</span>
+        <h2>🌸 Holi – Festival of Colors (Mathura & Vrindavan, North India)</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/2_Historical/Holi_5.jpg" alt="Holi" />
+          <img src="./images/2_Historical/Holi_4.jpg" alt="Holi" />
+          <p>
+            Holi in Mathura & Vrindavan is the most vibrant and authentic
+            celebration of the festival in India. It’s not just about
+            colors—it’s about living the mythology of Lord Krishna & Radha,
+            celebrated with music, dance, rituals, and food. Here, Holi isn’t
+            one day, but a week-long cultural extravaganza, attracting thousands
+            of Indian and international travelers every year.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Mathura is the birthplace of Lord Krishna, while Vrindavan is
+              where he spent his childhood with Radha and the gopis.
+            </li>
+            <li>
+              Holi here recreates the divine love story of Krishna & Radha, with
+              traditions like Lathmar Holi (women playfully hitting men with
+              sticks in Barsana).
+            </li>
+            <li>
+              Temples like Banke Bihari and Dwarkadheesh host grand Holi events
+              with flowers, gulal, and devotional songs.
+            </li>
+            <li>
+              Tourists are drawn to the blend of spirituality + fun + tradition
+              that makes this Holi unlike anywhere else in the world.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              March (dates vary each year) – The days before Holi are filled
+              with unique rituals and events.
+            </li>
+            <li>
+              Arrive 3–4 days before the main Holi day to experience everything.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Holi_9.jpg" alt="Holi" />
+          <img src="./images/2_Historical/Holi_1.webp" alt="Holi" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Banke Bihari Temple, Vrindavan – Famous for Phoolon ki Holi (Holi
+              with flowers).
+            </li>
+            <li>
+              Dwarkadheesh Temple, Mathura – Traditional rituals and grand Holi
+              processions.
+            </li>
+            <li>
+              Barsana & Nandgaon Villages – Experience Lathmar Holi, where women
+              chase men with sticks.
+            </li>
+            <li>
+              River Yamuna Ghats – Evening aartis (lamp ceremonies) with
+              colorful crowds.
+            </li>
+            <li>
+              Street Processions – Folk music, dance, and gulal showers
+              everywhere.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Gujiya – A sweet dumpling filled with khoya & dry fruits.</li>
+            <li>
+              Thandai with Bhaang – Traditional festive drink, sometimes infused
+              with cannabis leaves (consume responsibly!).
+            </li>
+            <li>
+              Kachoris, jalebis, lassi – Popular street food during the
+              celebrations.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Holi_8.jpg" alt="Holi" />
+          <img src="./images/2_Historical/Holi_6.jpg" alt="Holi" />
+          <h2>Roadmap for (3-4 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Mathura → Evening Yamuna Aarti → Explore local markets.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>Visit Barsana → Witness Lathmar Holi → Return to Mathura.</li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Vrindavan → Banke Bihari Temple Holi → Enjoy street food & evening
+              festivities.
+            </li>
+          </ul>
+          <h3>Day 4:</h3>
+          <ul class="guide-list">
+            <li>
+              Join Dwarkadheesh Temple procession → Celebrate with locals →
+              Depart.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Holi_3.jpg" alt="Holi" />
+          <img src="./images/2_Historical/Holi_7.jpg" alt="Holi" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Wear white clothes you don’t mind getting stained.</li>
+            <li>Keep cameras/phones protected (ziplock bags).</li>
+            <li>Respect local customs inside temples.</li>
+            <li>Book hotels in advance (very crowded season).</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="holiWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------DURGA PUJA MODAL------------------>
+    <div id="durgaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('durgaModal')">&times;</span>
+        <h2>🙏Durga Puja – The Grand Kolkata Festival (West Bengal)</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/2_Historical/Durga_Puja_1.jpeg" alt="Durga Puja" />
+          <img src="./images/2_Historical/Durga_Puja_4.jpg" alt="Durga Puja" />
+          <p>
+            Durga Puja in Kolkata isn’t just a festival—it’s an emotion.
+            Recognized by UNESCO as an Intangible Cultural Heritage, it
+            transforms the entire city into one big art gallery and carnival.
+            Streets glow with lights, beautifully decorated pandals (temporary
+            temples) rise everywhere, and the city doesn’t sleep for 5 days.
+            It’s the best time to experience Kolkata’s culture, devotion, art,
+            and food in one go.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Today, community pujas (known as Baroari / Sarbojanin Puja) are
+              the highlight—huge themed pandals with innovative art and idols.
+            </li>
+            <li>
+              Tourists are drawn to the artistic pandals, creative idols, grand
+              processions, dhak (traditional drums), and cultural programs.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              The main festival is 5 days (Sasthi to Dashami) – usually in
+              September or October (dates change every year as per the lunar
+              calendar).
+            </li>
+            <li>Nights are the most magical—perfect for pandal-hopping.</li>
+          </ul>
+          <img src="./images/2_Historical/Durga_Puja_5.jpg" alt="Durga Puja" />
+          <img src="./images/2_Historical/Durga_Puja_2.jpg" alt="Durga Puja" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Pandal Hopping – Visit iconic pujas like Bagbazar, College Square,
+              Kumartuli, Santosh Mitra Square, Ekdalia Evergreen, Suruchi
+              Sangha.
+            </li>
+            <li>
+              Cultural Performances – Street plays, traditional dances, dhak
+              beats.
+            </li>
+            <li>
+              Visarjan (Immersion Procession) – Last day’s grand farewell of
+              Goddess Durga on the Ganges.
+            </li>
+            <li>Shopping – Sarees, handicrafts, and festive fashion.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Kolkata Kathi Rolls</li>
+            <li>Puchka (Kolkata Pani Puri)</li>
+            <li>Shorshe Ilish (Hilsa fish in mustard sauce)</li>
+            <li>Mishthi Doi (Sweet curd)</li>
+            <li>Sandesh & Roshogolla – iconic Bengali sweets</li>
+            <li>
+              Bhog Khichuri & Labra (special temple offering served during Puja)
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Durga_Puja_7.webp" alt="Durga Puja" />
+          <img src="./images/2_Historical/Durga_Puja_8.webp" alt="Durga Puja" />
+          <h2>Roadmap for Travelers</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrival → Evening pandal hopping in North Kolkata (Bagbazar,
+              Kumartuli, College Square).
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Explore South Kolkata pujas (Deshapriya Park, Ekdalia Evergreen,
+              Suruchi Sangha) → Street food tour.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning at Belur Math / Dakshineswar Temple → Evening
+              pandal-hopping → Witness cultural shows.
+            </li>
+          </ul>
+          <h3>Day 4:</h3>
+          <ul class="guide-list">
+            <li>
+              Shopping (New Market, Gariahat) → Try sweets & rolls → Night-time
+              pandal tour.
+            </li>
+          </ul>
+          <h3>Day 5:</h3>
+          <ul class="guide-list">
+            <li>
+              Witness Sindoor Khela (women’s vermilion ritual) → Follow the
+              immersion procession at the Ganges.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Durga_Puja_3.jpg" alt="Durga Puja" />
+          <img src="./images/2_Historical/Durga_Puja_6.jpg" alt="Durga Puja" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Wear comfortable shoes—you’ll walk a lot.</li>
+            <li>Nights get crowded; keep essentials light.</li>
+            <li>
+              Try local street food stalls near pandals for the real taste.
+            </li>
+            <li>
+              Don’t miss the last day immersion—it’s emotional and
+              unforgettable.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="durgaPujaWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------PUSHKAR CAMEL FAIR MODAL------------------>
+    <div id="pushkarModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('pushkarModal')">&times;</span>
+        <h2>🐪Pushkar Camel Fair – Rajasthan</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/2_Historical/Pushkar_1.jpg" alt="Pushkar" />
+          <img src="./images/2_Historical/Pushkar_2.jpg" alt="Pushkar" />
+          <p>
+            The Pushkar Camel Fair is one of the largest livestock fairs in the
+            world, held every year in the holy town of Pushkar, Rajasthan. What
+            makes it unique is not just the buying and selling of thousands of
+            camels, horses, and cattle—but the vibrant cultural celebration with
+            folk music, dance, competitions, and religious rituals. It’s a
+            once-in-a-lifetime mix of spirituality + festivity + desert
+            adventure.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Pushkar is one of the oldest cities in India, home to the sacred
+              Pushkar Lake and the rare Brahma Temple.
+            </li>
+            <li>
+              The fair began centuries ago as a trading event for livestock but
+              evolved into a grand cultural festival that now attracts travelers
+              worldwide.
+            </li>
+            <li>
+              Highlights include camel races, longest mustache contest,
+              turban-tying competitions, folk performances, and colorful
+              bazaars.
+            </li>
+            <li>
+              Tourists are fascinated by the fusion of desert culture,
+              spirituality, and carnival vibes.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              The fair usually takes place in October–November (Kartik Purnima).
+            </li>
+            <li>
+              Cool winter evenings, cultural activities, and holy rituals at
+              Pushkar Lake make this the ideal time.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Pushkar_4.jpg" alt="Pushkar" />
+          <img src="./images/2_Historical/Pushkar_6.jpg" alt="Pushkar" />
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Dal Baati Churma – Traditional Rajasthani delicacy.</li>
+            <li>
+              Malpua with Rabri – Sweet dish often enjoyed during the fair.
+            </li>
+            <li>Gatte ki Sabzi & Ker Sangri – Authentic desert flavors.</li>
+            <li>
+              Don’t miss street food stalls with kachoris, lassis, and spicy
+              snacks.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Pushkar_5.webp" alt="Pushkar" />
+          <img src="./images/2_Historical/Pushkar_7.jpg" alt="Pushkar" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Pushkar → Evening aarti at Pushkar Lake → Visit Brahma
+              Temple.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Explore Camel Fair → Camel races, cultural shows → Try local
+              Rajasthani food → Sunset at Savitri Temple Hill.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Ajmer Sharif Dargah (15 km away) → Explore Ajmer city →
+              Return / onward journey.
+            </li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Book your stay early, as hotels/tents fill fast during the fair.
+            </li>
+            <li>Carry a camera—the fair is a photographer’s paradise.</li>
+            <li>
+              Respect local religious customs, especially around Pushkar Lake.
+            </li>
+            <li>
+              Keep cash handy for shopping (handicrafts, jewelry, camel-leather
+              items).
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="pushkarWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------NAVRATRI & GARBA MODAL------------------>
+    <div id="navratriModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('navratriModal')">&times;</span>
+        <h2>✨Navratri & Garba – Gujarat</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/2_Historical/Navratri_5.jpg" alt="Navratri" />
+          <img src="./images/2_Historical/Navratri_4.jpg" alt="Navratri" />
+          <p>
+            Navratri in Gujarat is not just a festival, it’s the longest dance
+            festival in the world (9 nights of celebration). The highlight is
+            Garba and Dandiya Raas, where thousands of people dress in vibrant
+            traditional outfits, dance in circles with unmatched energy, and
+            celebrate Goddess Durga. It’s a cultural experience that blends
+            devotion, music, dance, food, and festivity.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Navratri (meaning Nine Nights) is dedicated to the worship of
+              Goddess Durga in her different forms.
+            </li>
+            <li>
+              Garba originated centuries ago in Gujarat as a devotional dance
+              performed around a clay pot (Garbo) symbolizing life and divinity.
+            </li>
+            <li>
+              Today, it has grown into grand stadium-scale events in cities like
+              Ahmedabad, Vadodara, and Surat, attracting tourists from India and
+              abroad.
+            </li>
+            <li>
+              The speciality lies in colorful chaniya cholis (for women),
+              kediyas (for men), live folk music, and synchronized group dances
+              that last till midnight.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              Navratri festival dates vary each year (usually
+              September–October).
+            </li>
+            <li>
+              Best cities for authentic Garba: Ahmedabad, Vadodara, Surat,
+              Rajkot.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Navratri_2.webp" alt="Navratri" />
+          <img src="./images/2_Historical/Navratri_3.jpg" alt="Navratri" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Garba Nights – Join locals in traditional dress, dance to live
+              folk music.
+            </li>
+            <li>
+              Vadodara’s United Way Garba – Asia’s biggest Garba celebration.
+            </li>
+            <li>Ahmedabad’s Manek Chowk – Night street food paradise.</li>
+            <li>Heritage Walk in Ahmedabad – Explore pol houses & temples.</li>
+            <li>Shopping – Traditional outfits, bandhani dupattas, jewelry.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Fafda–Jalebi (iconic Navratri combo breakfast).</li>
+            <li>Khaman Dhokla – soft, spongy snack.</li>
+            <li>Handvo & Thepla – traditional Gujarati flavors.</li>
+            <li>Undhiyu – mixed vegetable delicacy (seasonal).</li>
+            <li>
+              Gujarati Thali – complete platter with dal, shaak, rotis, farsan,
+              sweets
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Navratri_7.webp" alt="Navratri" />
+          <img src="./images/2_Historical/Navratri_6.jpg" alt="Navratri" />
+          <h2>Roadmap for (5-6 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Ahmedabad → Explore Sabarmati Ashram & Kankaria Lake →
+              Evening street food at Manek Chowk.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Adalaj Stepwell & Akshardham Temple → Evening Garba in
+              Ahmedabad.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Drive to Vadodara → Explore Laxmi Vilas Palace → Evening Garba at
+              United Way.
+            </li>
+          </ul>
+          <h3>Day 4:</h3>
+          <ul class="guide-list">
+            <li>
+              Optional trip to Champaner–Pavagadh (UNESCO site) → Evening Garba.
+            </li>
+          </ul>
+          <h3>Day 5:</h3>
+          <ul class="guide-list">
+            <li>
+              Rajkot / Surat for regional Garba flavor → Try local food &
+              shopping.
+            </li>
+          </ul>
+          <h3>Day 6:</h3>
+          <ul class="guide-list">
+            <li>Return from Ahmedabad.</li>
+          </ul>
+          <img src="./images/2_Historical/Navratri_8.jpg" alt="Navratri" />
+          <img src="./images/2_Historical/Navratri_9.webp" alt="Navratri" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Dress in traditional colorful attire – it’s part of the
+              experience.
+            </li>
+            <li>Book Garba passes in advance for big events.</li>
+            <li>Be ready for late-night celebrations (till 2–3 AM).</li>
+            <li>Stay hydrated and try the local street food.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="navratriWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------PONGAL/MAKR SANKRANTI MODAL------------------>
+    <div id="pongalModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('pongalModal')">&times;</span>
+        <h2>🌾Pongal / Makar Sankranti – Tamil Nadu & India-wide</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/2_Historical/Pongal_7.jpg" alt="Pongal" />
+          <img src="./images/2_Historical/Pongal_5.jpg" alt="Pongal" />
+          <p>
+            Pongal is the harvest festival of Tamil Nadu, celebrated with
+            grandeur, colors, and deep cultural roots. It coincides with Makar
+            Sankranti, observed across India, marking the sun’s northward
+            journey (Uttarayan) and the start of the harvest season. For
+            travelers, it’s the perfect time to witness traditional Indian
+            culture, rituals, music, dance, and feasts all in one festival.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              It’s dedicated to Surya (Sun God) and symbolizes gratitude to
+              nature for a bountiful harvest.
+            </li>
+            <li>
+              Bhogi Pongal – Bonfires, discarding old belongings (new
+              beginnings).
+            </li>
+            <li>Surya Pongal – Main festival, thanking the Sun God.</li>
+            <li>
+              Mattu Pongal – Honoring cattle (decorated cows, bull-taming sport
+              “Jallikattu” in Madurai).
+            </li>
+            <li>
+              Kaanum Pongal – Family reunions, social gatherings, picnics.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>January 13–16 every year.</li>
+            <li>
+              Weather in Tamil Nadu is pleasant and cool, perfect for travel.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Pongal_3.webp" alt="Pongal" />
+          <img src="./images/2_Historical/Pongal_9.jpg" alt="Pongal" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Colorful Kolams (rangolis) drawn at entrances.</li>
+            <li>Traditional folk dances like Karagattam & Kummi.</li>
+            <li>
+              Bull-taming sport (Jallikattu) – a thrilling event unique to Tamil
+              Nadu.
+            </li>
+            <li>
+              The atmosphere is festive, communal, and deeply traditional.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Pongal (Sweet & Ven Pongal) – Rice cooked with milk, jaggery,
+              ghee, and cashews.
+            </li>
+            <li>Sugarcane – Chewed fresh during the festival.</li>
+            <li>
+              Medu Vada, Sambar, Payasam – Traditional Tamil festive dishes.
+            </li>
+            <li>
+              Til-gud laddoos & chikki – Popular during Sankranti across India.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/pongal_2.jpg" alt="Pongal" />
+          <img src="./images/2_Historical/Pongal_4.jpg" alt="Pongal" />
+          <h2>Roadmap for (4 days)</h2>
+          <h3>Day 1 (Bhogi Pongal, Jan 13):</h3>
+          <ul class="guide-list">
+            <li>
+              Be in Chennai or Madurai → witness bonfires, kolam-making, and
+              folk songs.
+            </li>
+          </ul>
+          <h3>Day 2 (Surya Pongal, Jan 14):</h3>
+          <ul class="guide-list">
+            <li>
+              Visit temples (Kapaleeshwarar Temple in Chennai or Meenakshi
+              Temple in Madurai) → join locals in Pongal cooking rituals.
+            </li>
+          </ul>
+          <h3>Day 3 (Mattu Pongal, Jan 15):</h3>
+          <ul class="guide-list">
+            <li>
+              Travel to Madurai/Tiruchirapalli → watch Jallikattu and decorated
+              cattle processions.
+            </li>
+          </ul>
+          <h3>Day 4 (Kaanum Pongal, Jan 16):</h3>
+          <ul class="guide-list">
+            <li>
+              Go for a picnic with locals → Marina Beach in Chennai or Vaigai
+              River banks in Madurai.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Pongal_8.jpg" alt="Pongal" />
+          <img src="./images/2_Historical/Pongal_6.jpg" alt="Pongal" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Respect local traditions, ask before photographing rituals.</li>
+            <li>
+              Wear traditional attire (saree, veshti) to blend in during
+              temple/festival visits.
+            </li>
+            <li>Book accommodations early—festivals bring crowds.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="pongalWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!--  footer  -->
+    <footer>
+      <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="categories.html">Categories</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: info@indiscapes.com</p>
+          <p>Phone: +91 9876543210</p>
+          <p>Location: Hyderabad, India</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>© 2025 IndiScapes | All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!--   Javascript  -->
+    <script src="script.js"></script>
+  </body>
+</html>

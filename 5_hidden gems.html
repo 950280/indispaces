@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offbeat & Hidden Gems | indiscapes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!--  nav bar  -->
+    <header>
+      <nav class="navbar">
+        <!--  logo  -->
+        <div class="nav-left">
+          <img
+            src="./images/logo_2.png"
+            alt="logo"
+            width="180px"
+            height="60px"
+          />
+        </div>
+        <!------------   nav items  ------------->
+        <!--  big screens  -->
+        <ul class="nav-right">
+          <li>
+            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="about.html" target="_blank"
+              ><i class="fa fa-info-circle"></i> About</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" target="_blank"
+              ><i class="fa fa-envelope"></i> Contact</a
+            >
+          </li>
+        </ul>
+        <!--     search    -->
+        <div class="nav-center">
+          <form id="searchForm">
+            <input
+              type="text"
+              placeholder="search places"
+              id="searchInput"
+              onkeyup="searchPlaces()"
+            />
+            <button type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+
+        <!------------  items  ------------->
+        <!--  On small screens  -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+      </nav>
+    </header>
+
+    <!----------category 5----------->
+    <!-- Hero Section -->
+    <section class="about-hero">
+      <img src="./images/5_Hidden/offbeat_cover.webp" alt="India Landscape" />
+      <div class="hero-text">
+        <h1>Offbeat & Hidden Gems</h1>
+        <p>Uncover India’s secret escapes, far from the usual tourist paths.</p>
+      </div>
+    </section>
+
+    <!-- Subcategories -->
+    <section class="subcategory">
+      <h2>Underrated Towns & Villages</h2>
+      <div class="placesContainer">
+        <div class="places-grid">
+          <!--  Ziro  -->
+          <div class="place-card">
+            <img src="./images/5_Hidden/Ziro_1.jpg" alt="Ziro" />
+            <h3>Ziro</h3>
+            <h6>Arunachal Pradesh</h6>
+            <p>
+              Serene valley surrounded by pine forests & rice fields, home to
+              the Apatani tribe. Music + culture + untouched beauty.
+            </p>
+            <button onclick="openModal('ziroModal')">Read More</button>
+          </div>
+
+          <!-- Mawlynnong  -->
+          <div class="place-card">
+            <img src="./images/5_Hidden/Mawlynnong_1.jpg" alt="Mawlynnong" />
+            <h3>Mawlynnong</h3>
+            <h6>Meghalaya</h6>
+            <p>
+              Known as “Asia’s Cleanest Village.” Beautiful waterfalls, root
+              bridges, and eco-friendly lifestyle. Living root bridges, bamboo
+              skywalk with views of Bangladesh border.
+            </p>
+            <button onclick="openModal('mawlynnongModal')">Read More</button>
+          </div>
+
+          <!--   Majuli   -->
+          <div class="place-card">
+            <img src="./images/5_Hidden/Majuli_1.jpg" alt="Majuli" />
+            <h3>Majuli</h3>
+            <h6>Assam</h6>
+            <p>
+              World’s largest river island on the Brahmaputra, cultural hotspot
+              of Assamese traditions. Satras (monasteries), Vaishnavite culture,
+              tribal festivals, pottery.
+            </p>
+            <button onclick="openModal('majuliModal')">Read More</button>
+          </div>
+
+          <!--   Kasar Devi    -->
+          <div class="place-card">
+            <img src="./images/5_Hidden/Kasar_1.jpg" alt="Kasar Devi" />
+            <h3>Kasar Devi</h3>
+            <h6>Uttarakhand</h6>
+            <p>
+              Peaceful Himalayan village with spiritual vibes, perfect for
+              meditation & trekking.
+            </p>
+            <button onclick="openModal('kasarDeviModal')">Read More</button>
+          </div>
+
+          <!--   Chettinad   -->
+          <div class="place-card">
+            <img src="./images/5_Hidden/Chettinad_1.jpg" alt="Chettinad" />
+            <h3>Chettinad</h3>
+            <h6>Tamil Nadu</h6>
+            <p>
+              Unique heritage mansions, spicy cuisine, and traditional Tamil
+              culture. Chettinad cuisine, antique shopping, temple architecture.
+            </p>
+            <button onclick="openModal('chettinadModal')">Read More</button>
+          </div>
+
+          <!-- Khimsar  -->
+          <div class="place-card">
+            <img src="./images/5_Hidden/Khimsar_1.jpg" alt="Khimsar" />
+            <h3>Khimsar</h3>
+            <h6>Rajasthan</h6>
+            <p>
+              Desert village with sand dunes, camel safaris, and Khimsar Fort
+              (now a heritage hotel). Offbeat desert experience without
+              Jaisalmer’s crowds.
+            </p>
+            <button onclick="openModal('khimsarModal')">Read More</button>
+          </div>
+        </div>
+      </div>
+      <p id="noResults" style="display: none; text-align: center">
+        No matching places found.
+      </p>
+    </section>
+
+    <!-------------Unique Natural Wonders----------->
+    <section class="subcategory">
+      <h2>Unique Natural Wonders</h2>
+      <div class="placesContainer">
+        <div class="places-grid">
+          <!--  Living Root Bridges  -->
+          <div class="place-card">
+            <img
+              src="./images/5_Hidden/Living_Root_1.jpg"
+              alt="Living Root Bridges"
+            />
+            <h3>Living Root Bridges</h3>
+            <h6>Meghalaya</h6>
+            <p>
+              Grown naturally by Khasi tribes, these bridges are alive and
+              strengthen with age — truly one-of-a-kind.
+            </p>
+            <button onclick="openModal('livingModal')">Read More</button>
+          </div>
+
+          <!-- Magnetic Hill  -->
+          <div class="place-card">
+            <img src="./images/5_Hidden/Magnetic_1.jpg" alt="Magnetic Hill" />
+            <h3>Magnetic Hill</h3>
+            <h6>Ladakh</h6>
+            <p>
+              Cars seem to roll uphill without power — a fascinating optical
+              illusion. Unique gravity-defying phenomenon, surrounded by stark
+              Ladakh beauty.
+            </p>
+            <button onclick="openModal('magneticModal')">Read More</button>
+          </div>
+
+          <!--  Chilika Lake’s Irrawaddy Dolphins  -->
+          <div class="place-card">
+            <img
+              src="./images/5_Hidden/Chilika_1.jpg"
+              alt="Chilika Lake’s Irrawaddy Dolphins"
+            />
+            <h3>Chilika Lake’s Irrawaddy Dolphins</h3>
+            <h6>Odisha</h6>
+            <p>
+              Asia’s largest lagoon, home to playful Irrawaddy dolphins and
+              thousands of migratory birds. World’s largest wintering ground for
+              birds.
+            </p>
+            <button onclick="openModal('chilikaModal')">Read More</button>
+          </div>
+
+          <!--   Balancing Rock (Krishna’s Butterball)    -->
+          <div class="place-card">
+            <img
+              src="./images/5_Hidden/Balancing_Rock_1.jpg"
+              alt="Balancing Rock (Krishna’s Butterball)"
+            />
+            <h3>Balancing Rock (Krishna’s Butterball)</h3>
+            <h6>Tamil Nadu</h6>
+            <p>
+              A massive granite boulder precariously balanced on a slope for
+              centuries. Defies logic, never moved even during cyclones or
+              earthquakes.
+            </p>
+            <button onclick="openModal('balancingModal')">Read More</button>
+          </div>
+
+          <!-- Marble Rocks at Bhedaghat   -->
+          <div class="place-card">
+            <img
+              src="./images/5_Hidden/Marble_1.jpg"
+              alt="Marble Rocks at Bhedaghat"
+            />
+            <h3>Marble Rocks at Bhedaghat</h3>
+            <h6>Madhya Pradesh</h6>
+            <p>
+              Tall white marble cliffs rising beside the Narmada River, glowing
+              under moonlight. Stunning boat rides through marble gorges,
+              moonlit beauty.
+            </p>
+            <button onclick="openModal('marbleModal')">Read More</button>
+          </div>
+
+          <!--  Lonar Crater Lake  -->
+          <div class="place-card">
+            <img src="./images/5_Hidden/Lonar_1.jpg" alt="Lonar Crater Lake" />
+            <h3>Lonar Crater Lake</h3>
+            <h6>Maharashtra</h6>
+            <p>
+              World’s only high-soda lake formed by a meteor impact 50,000 years
+              ago. A mix of saline + alkaline water, surrounded by ancient
+              temples.
+            </p>
+            <button onclick="openModal('lonarModal')">Read More</button>
+          </div>
+
+          <!--  Sand Dunes of Rajasthan (Thar Desert)  -->
+          <div class="place-card">
+            <img
+              src="./images/5_Hidden/Sand_Dunes_1.jpg"
+              alt="Sand Dunes (Thar Desert)"
+            />
+            <h3>Sand Dunes (Thar Desert)</h3>
+            <h6>Rajasthan</h6>
+            <p>
+              Rolling golden sands as far as the eye can see, perfect for camel
+              safaris, desert camping, cultural folk shows, and stargazing under
+              the clear desert sky.
+            </p>
+            <button onclick="openModal('sandModal')">Read More</button>
+          </div>
+        </div>
+      </div>
+      <p id="noResults" style="display: none; text-align: center">
+        No matching places found.
+      </p>
+    </section>
+
+    <!--------------------MODALS---------------->
+    <!------------------Ziro MODAL------------------>
+    <div id="ziroModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('ziroModal')">&times;</span>
+        <h2>🌿 Ziro – Arunachal Pradesh</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/5_Hidden/Ziro_1.jpg" alt="Ziro" />
+          <img src="./images/5_Hidden/Ziro_6.jpg" alt="Ziro" />
+          <p>
+            Ziro is a serene valley town surrounded by rice fields, pine hills,
+            and tribal villages. Known for its laid-back vibe, stunning
+            landscapes, and rich tribal culture, it’s the kind of place that
+            gives travellers an escape from touristy crowds. Recognized as a
+            UNESCO World Heritage Site (tentative list), Ziro is both naturally
+            beautiful and culturally deep.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Home to the Apatani tribe, known for sustainable farming (wet rice
+              + fish culture) and unique traditions.
+            </li>
+            <li>
+              The tribe is famous for their face tattoos and nose plugs
+              (traditional practice, now fading).
+            </li>
+            <li>
+              Ziro is gaining fame worldwide for the Ziro Music Festival (held
+              annually in September), a hippie-style open-air event amidst rice
+              fields.
+            </li>
+            <li>
+              Speciality for tourists: A mix of authentic tribal lifestyle,
+              natural beauty, and artsy vibes without the rush of big tourist
+              circuits.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>September (for Ziro Music Festival).</li>
+            <li>
+              March–May & October–November for pleasant weather, green
+              landscapes, and trekking.
+            </li>
+            <li>Avoid June–August (heavy rains).</li>
+          </ul>
+          <img src="./images/5_Hidden/Ziro_5.jpg" alt="Ziro" />
+          <img src="./images/5_Hidden/Ziro_4.jpg" alt="Ziro" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Apatani Villages (Hong, Hari, Bamin) – Experience tribal homes &
+              lifestyle.
+            </li>
+            <li>
+              Talley Valley Wildlife Sanctuary – Bamboo & orchid forests,
+              trekking trails.
+            </li>
+            <li>Ziro Music Festival – Open-air indie music fest (Sept).</li>
+            <li>
+              Pine Hills & Rice Fields – Perfect for cycling & photography.
+            </li>
+            <li>Local Craft Shops – Bamboo & cane handicrafts.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Apong – Local rice beer.</li>
+            <li>
+              Pika Pila – Traditional pickle made with bamboo shoot & pork fat.
+            </li>
+            <li>Bamboo shoot dishes – Staple of Apatani cuisine.</li>
+            <li>
+              Smoked meat curries – Pork & chicken cooked with tribal spices.
+            </li>
+            <li>
+              Simple but hearty rice-and-fish meals straight from the fields.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Ziro_3.jpg" alt="Ziro" />
+          <img src="./images/5_Hidden/Ziro_7.jpg" alt="Ziro" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Ziro → Evening walk through rice fields & pine groves →
+              Try local dinner with Apong.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Apatani villages → Explore Talley Valley Wildlife Sanctuary
+              → Sunset at Ziro Valley viewpoint.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              If in September, attend Ziro Music Festival; otherwise, go cycling
+              around the valley & shop for local crafts → Depart.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Ziro_8.jpg" alt="Ziro" />
+          <img src="./images/5_Hidden/Ziro_9.jpg" alt="Ziro" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Ziro requires Inner Line Permit (ILP) for non-Arunachal Indian
+              visitors and Protected Area Permit for foreigners.
+            </li>
+            <li>Stay in homestays to enjoy authentic hospitality.</li>
+            <li>Carry cash (ATMs are limited).</li>
+            <li>Respect tribal customs—ask before taking photos.</li>
+          </ul>
+          <p class="tip">
+            👉 Ziro is not just a destination, it’s a cultural retreat in the
+            lap of nature 🌿.
+          </p>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="ziroWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Mawlynnong MODAL------------------>
+    <div id="mawlynnongModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('mawlynnongModal')"
+          >&times;</span
+        >
+        <h2>🏞️ Mawlynnong – Meghalaya (“Asia’s Cleanest Village”)</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/5_Hidden/Mawlynnong_1.jpg" alt="Mawlynnong" />
+          <img src="./images/5_Hidden/Living_Root_3.jpg" alt="Mawlynnong" />
+          <p>
+            Known as “God’s Own Garden”, Mawlynnong is celebrated as the
+            cleanest village in Asia (awarded in 2003). Beyond its title, it
+            offers serene beauty, eco-friendly lifestyle, and warm Khasi
+            hospitality. For travellers seeking an offbeat escape, it’s a
+            refreshing mix of nature, culture, and simplicity.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The village belongs to the Khasi tribe, known for their
+              matrilineal society (lineage is traced through women).
+            </li>
+            <li>
+              Cleanliness is deeply rooted in their lifestyle: every household
+              contributes to keeping the surroundings spotless.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              March to September – Lush greenery, waterfalls in full flow.
+            </li>
+            <li>October to February – Pleasant, cool weather.</li>
+          </ul>
+          <img src="./images/5_Hidden/Mawlynnong_3.jpg" alt="Mawlynnong" />
+          <img src="./images/5_Hidden/Mawlynnong_4.jpg" alt="Mawlynnong" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Living Root Bridges (nearby Riwai village, natural wonders woven
+              by tree roots).
+            </li>
+            <li>
+              Sky View Tower – bamboo structure offering panoramic views of
+              Bangladesh plains.
+            </li>
+            <li>
+              Eco-tourism: Stay in homestays, experience organic farming, and
+              learn Khasi traditions.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Jadoh – Khasi rice cooked with meat.</li>
+            <li>Tungrymbai – Fermented soybean chutney.</li>
+            <li>Dohneiiong – Pork curry with black sesame.</li>
+            <li>Rice & bamboo shoot curries – Local, earthy flavors.</li>
+            <li>
+              Fresh pineapples, jackfruit, and betel leaf are village staples.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Mawlynnong_9.jpg" alt="Mawlynnong" />
+          <img src="./images/5_Hidden/Mawlynnong_10.jpg" alt="Mawlynnong" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>Arrive in Shillong → Drive (~3 hrs) to Mawlynnong.</li>
+            <li>
+              Evening walk around the village → explore bamboo dustbins, flower
+              gardens, and clean lanes.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>Morning: Visit Living Root Bridge (Riwai).</li>
+            <li>
+              Afternoon: Sky View Tower for panoramic India–Bangladesh border
+              views.
+            </li>
+            <li>Evening: Try Khasi dinner at a local homestay.</li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Day trip to Dawki (Umngot River) for crystal-clear boating
+              experience before heading back.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Mawlynnong_8.jpg" alt="Mawlynnong" />
+          <img src="./images/5_Hidden/Mawlynnong_7.jpg" alt="Mawlynnong" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Respect local customs—avoid littering (strictly maintained).
+            </li>
+            <li>Homestays give the most authentic experience.</li>
+            <li>Carry cash; card facilities are limited.</li>
+            <li>
+              The village is small—1–2 days are enough, best combined with Dawki
+              & Shillong.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="mawlynnongWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Majuli MODAL------------------>
+    <div id="majuliModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('majuliModal')">&times;</span>
+        <h2>🏞️ Majuli, Assam – The World’s Largest River Island</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/5_Hidden/Majuli_1.jpg" alt="Majuli" />
+          <img src="./images/5_Hidden/Majuli_5.jpg" alt="Majuli" />
+          <p>
+            Majuli is the world’s largest inhabited river island (on the mighty
+            Brahmaputra) and one of India’s most offbeat cultural gems. It
+            combines natural beauty, unique traditions, and eco-friendly
+            lifestyle—perfect for travellers who want to escape crowded tourist
+            circuits and experience authentic Assam.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Majuli has been the cultural capital of Assam since the 16th
+              century when the saint Srimanta Sankardev established
+              neo-Vaishnavite monasteries called Satras.
+            </li>
+            <li>
+              These Satras preserve traditional art forms like Sattriya dance (a
+              classical Indian dance form) and mask-making.
+            </li>
+            <li>
+              The island is a hotspot for migratory birds, scenic sunsets, and
+              slow village life.
+            </li>
+            <li>
+              What attracts tourists: spiritual retreats, tribal cultures
+              (Mising tribe), lush green paddy fields, and handloom weaving.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather, festivals, and best
+              birdwatching.
+            </li>
+            <li>Avoid monsoons (June–September) – floods are common.</li>
+          </ul>
+          <img src="./images/5_Hidden/Majuli_2.jpg" alt="Majuli" />
+          <img src="./images/5_Hidden/Majuli_4.jpg" alt="Majuli" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Majuli = Culture + Nature + Peace in one place.</li>
+            <li>Unique blend of tribal traditions & Vaishnavite heritage.</li>
+            <li>One of India’s best underrated offbeat escapes.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Pitha – Rice-based sweet snack.</li>
+            <li>Tenga Fish Curry – A tangy Assamese specialty.</li>
+            <li>Rice beer (Apong) – Traditional brew of the Mising tribe.</li>
+            <li>Lai xaak (mustard greens) and smoked fish dishes.</li>
+          </ul>
+          <img src="./images/5_Hidden/Majuli_3.jpg" alt="Majuli" />
+          <img src="./images/5_Hidden/Majuli_10.webp" alt="Majuli" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            Arrive by ferry from Jorhat → Explore local Satras (Kamalabari
+            Satra, Auniati Satra). Evening walk by the Brahmaputra riverbank for
+            sunset.
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            Visit mask-making village (Samaguri Satra). Explore Mising tribal
+            villages → try local weaving, taste Apong. Birdwatching at beel
+            (wetlands).
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Cycling through paddy fields → visit more Satras → ferry back to
+              Jorhat.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Majuli_6.jpg" alt="Majuli" />
+          <img src="./images/5_Hidden/Majuli_9.jpg" alt="Majuli" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Ferry rides are the only way in/out – check timings in advance.
+            </li>
+            <li>Carry cash; ATMs are scarce.</li>
+            <li>Respect monastery rules (dress modestly).</li>
+            <li>Go slow—Majuli is best experienced unhurried.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="majuliWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Kasar Devi MODAL------------------>
+    <div id="kasarDeviModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('kasarDeviModal')"
+          >&times;</span
+        >
+        <h2>🏞️ Kasar Devi – Uttarakhand</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/5_Hidden/Kasar_1.jpg" alt="Kasar Devi" />
+          <img src="./images/5_Hidden/Kasar_2.jpg" alt="Kasar Devi" />
+          <p>
+            Perched near Almora in Uttarakhand, Kasar Devi is a serene Himalayan
+            village that offers peace, panoramic views of the Nanda Devi,
+            Trishul, and Panchachuli peaks, and a touch of mysticism. Unlike
+            crowded hill stations, it’s quiet, spiritual, and perfect for slow
+            travellers, writers, artists, and seekers.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The place falls on the Van Allen Belt (a gap in Earth’s magnetic
+              field), believed to create strong spiritual and cosmic
+              energy—similar to Stonehenge and Machu Picchu.
+            </li>
+            <li>
+              During the 1960s–70s, it was part of the Hippie Trail, attracting
+              artists, poets, and thinkers worldwide. Bob Dylan, Cat Stevens,
+              and Allen Ginsberg are said to have visited.
+            </li>
+            <li>
+              Speciality for tourists: Blend of Himalayan views, meditation
+              spots, village simplicity, and spiritual vibes.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October to March – Crisp winter skies, snow on peaks.</li>
+            <li>
+              April to June – Pleasant weather, ideal for walks and treks.
+            </li>
+            <li>Avoid July–September (heavy monsoon).</li>
+          </ul>
+          <img src="./images/5_Hidden/Kasar_3.jpg" alt="Kasar Devi" />
+          <img src="./images/5_Hidden/Kasar_4.jpg" alt="Kasar Devi" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Offbeat, quiet, and spiritually powerful village.</li>
+            <li>Known for magnetic field energy + hippie legacy.</li>
+            <li>
+              Offers Himalayan views + Kumaoni culture + meditation escapes.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Aloo ke Gutke – Spiced potato dish.</li>
+            <li>Bhatt ki Churdkani – Traditional black soybean curry.</li>
+            <li>Bal Mithai & Singori – Famous Kumaoni sweets.</li>
+            <li>
+              Simple pahadi thali with seasonal greens, mandua (ragi) roti, and
+              fresh chutneys.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Kasar_9.jpg" alt="Kasar Devi" />
+          <img src="./images/5_Hidden/Kasar_5.jpg" alt="Kasar Devi" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Almora → Drive to Kasar Devi → Evening walk in the
+              village → Sunset view of Himalayan peaks.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning meditation at Kasar Devi Temple → Explore Crank’s Ridge
+              (hippie trail with pine forests and viewpoints) → Try local pahadi
+              meals.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Day trip to Binsar Wildlife Sanctuary (30 min away) for
+              birdwatching and nature trails → Return for stargazing in Kasar
+              Devi.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Kasar_7.jpg" alt="Kasar Devi" />
+          <img src="./images/5_Hidden/Kasar_8.jpg" alt="Kasar Devi" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Stay in homestays or eco-cottages for the true village vibe.
+            </li>
+            <li>Carry warm clothes—nights get chilly even in summer.</li>
+            <li>
+              Best for solo travellers, writers, and those seeking peace, not
+              for luxury seekers.
+            </li>
+            <li>Respect local culture and temple traditions.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="kasarWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Chettinad MODAL------------------>
+    <div id="chettinadModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('chettinadModal')"
+          >&times;</span
+        >
+        <h2>🏡 Chettinad, Tamil Nadu</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/5_Hidden/Chettinad_1.jpg" alt="Chettinad" />
+          <img src="./images/5_Hidden/Chettinad_3.jpg" alt="Chettinad" />
+          <p>
+            Chettinad is not just a town but a cluster of villages in Tamil
+            Nadu, famous for its heritage mansions, unique cuisine, and
+            old-world charm. Far from the touristy crowd, it offers travelers a
+            peek into aristocratic Tamil heritage with palatial houses, antique
+            markets, and authentic Chettinad food.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Chettinad was the homeland of the Chettiar community, wealthy
+              traders who dealt in spices, gems, and finance across Southeast
+              Asia.
+            </li>
+            <li>
+              Their prosperity is seen in the Chettinad mansions – sprawling
+              homes with Burma teak, Italian marble, Belgian glass, and
+              intricate carvings.
+            </li>
+            <li>
+              The region is often called an open-air museum for its
+              architecture, temples, and antique heritage.
+            </li>
+            <li>
+              Speciality for tourists: Explore abandoned palaces, colorful
+              Athangudi tiles, antique shops, and temples without the rush of
+              typical tourist spots.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              November to February – Pleasant winter weather to explore on foot.
+            </li>
+            <li>Summers can be very hot, so best avoided.</li>
+          </ul>
+          <img src="./images/5_Hidden/Chettinad_2.jpg" alt="Chettinad" />
+          <img src="./images/5_Hidden/Chettinad_4.jpg" alt="Chettinad" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Chettinad = heritage mansions + spicy cuisine + antique charm.
+            </li>
+            <li>
+              Perfect for those who love history, culture, and offbeat
+              experiences.
+            </li>
+            <li>
+              It’s a slower, quieter journey into India’s hidden traditions.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Chettinad Chicken & Fish Curry – Known for fiery spices and
+              freshly ground masalas.
+            </li>
+            <li>Kuzhi Paniyaram – Crispy rice-lentil dumplings.</li>
+            <li>
+              Karaikudi Special Dosa & Idiyappam – Served with spicy chutneys.
+            </li>
+            <li>Seviyan Payasam (Vermicelli Kheer) – Traditional dessert.</li>
+            <li>Filter Coffee – Strong and aromatic, a must-try.</li>
+          </ul>
+          <img src="./images/5_Hidden/Chettinad_7.jpg" alt="Chettinad" />
+          <img src="./images/4_Urban/Amritsari_Kulcha_4.jpg" alt="Chettinad" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1 – Heritage & Architecture</h3>
+          <ul class="guide-list">
+            <li>Start at Karaikudi (the main town).</li>
+            <li>
+              Visit Chettinad Mansions (like Chettinad Palace, Kanadukathan
+              village homes).
+            </li>
+            <li>Explore Athangudi Tile Factories (handmade colorful tiles).</li>
+            <li>Evening walk in antique markets.</li>
+          </ul>
+          <h3>Day 2 – Culture & Food</h3>
+          <ul class="guide-list">
+            <li>
+              Morning: Visit local temples (Pillaiyarpatti Karpaga Vinayakar
+              Temple).
+            </li>
+            <li>Afternoon: Cooking demo / food trail of Chettinad cuisine.</li>
+            <li>
+              Evening: Stroll through heritage streets capturing old
+              architecture.
+            </li>
+          </ul>
+          <h3>Day 3</h3>
+          <ul class="guide-list">
+            <li>
+              Short drive to Madurai (Meenakshi Temple) or Trichy (Rockfort
+              Temple) to extend cultural exploration.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Chettinad_8.jpg" alt="Chettinad" />
+          <img src="./images/5_Hidden/Chettinad_9.jpg" alt="Chettinad" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Stay in heritage homestays or Chettinad mansions for authentic
+              experience.
+            </li>
+            <li>
+              Carry light cotton clothes but modest attire for temple visits.
+            </li>
+            <li>Bargain politely in antique markets.</li>
+            <li>
+              Try at least one local cooking experience – food is the soul of
+              Chettinad.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="chettinadWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Khimsar MODAL------------------>
+    <div id="khimsarModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('khimsarModal')">&times;</span>
+        <h2>🏜️ Khimsar, Rajasthan – Offbeat Desert Charm</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/5_Hidden/Khimsar_1.jpg" alt="Khimsar" />
+          <img src="./images/5_Hidden/Khimsar_2.jpg" alt="Khimsar" />
+          <p>
+            Khimsar is an underrated desert village tucked on the edge of the
+            Thar Desert. Unlike crowded Jaisalmer, Khimsar offers a more
+            peaceful, authentic Rajasthani experience—forts, sand dunes, and
+            village life all in one place. It’s perfect for travelers seeking
+            offbeat Rajasthan with a mix of heritage and raw desert beauty.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Khimsar Fort: Built in the 16th century by Rao Karamsiji (a
+              descendant of Rao Jodha, founder of Jodhpur). Now a heritage
+              hotel, it still reflects the grandeur of Rajput architecture.
+            </li>
+            <li>
+              The fort and nearby dunes make Khimsar a unique blend of history +
+              desert adventure.
+            </li>
+            <li>
+              Speciality for tourists: Stay in the fort, do jeep safaris, camel
+              rides, and experience desert village culture without the heavy
+              tourist rush.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Khimsar_6.jpg" alt="Khimsar" />
+          <img src="./images/5_Hidden/Khimsar_4.jpg" alt="Khimsar" />
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant, cool desert weather (ideal for
+              safaris).
+            </li>
+            <li>Avoid peak summer (April–June).</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Dal Baati Churma – Classic Rajasthani meal.</li>
+            <li>Ker Sangri ki Sabzi – Unique desert bean dish.</li>
+            <li>
+              Gatte ki Sabzi, Bajre ki Roti, Laal Maas (spicy mutton curry).
+            </li>
+            <li>Rajasthani sweets like Ghevar & Malpua.</li>
+          </ul>
+          <img src="./images/5_Hidden/Khimsar_7.jpg" alt="Khimsar" />
+          <img src="./images/5_Hidden/Khimsar_5.jpg" alt="Khimsar" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3></h3>
+          <ul class="guide-list">
+            <li>Check into Khimsar Fort (stay inside heritage walls).</li>
+            <li>
+              Evening camel ride / jeep safari to the sand dunes → Sunset dinner
+              in the desert.
+            </li>
+          </ul>
+          <h3></h3>
+          <ul class="guide-list">
+            <li>
+              Visit Panchala Black Buck Reserve (wildlife safari, spot
+              endangered black bucks).
+            </li>
+            <li>Explore local villages → interact with artisans.</li>
+            <li>Try authentic Rajasthani thali for lunch.</li>
+            <li>
+              Evening at leisure → Cultural folk dance show (if staying at
+              fort/dunes).
+            </li>
+          </ul>
+          <h3></h3>
+          <ul class="guide-list">
+            <li>
+              Take a day trip to Nagaur Fort or head towards Jodhpur (90 km) to
+              extend your Rajasthan trip.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Khimsar_3.jpg" alt="Khimsar" />
+          <img src="./images/5_Hidden/Khimsar_9.webp" alt="Khimsar" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Book Khimsar Fort stay in advance for the full royal experience.
+            </li>
+            <li>Carry warm clothes in winter nights (desert gets cold).</li>
+            <li>For photography, sunrise & sunset in dunes are magical.</li>
+            <li>
+              Khimsar is best for those who love quiet, authentic,
+              non-commercial Rajasthan.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="khimsarWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Living Root Bridges MODAL------------------>
+    <div id="livingModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('livingModal')">&times;</span>
+        <h2>🌉 Living Root Bridges – Meghalaya</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/5_Hidden/Living_Root_1.jpg"
+            alt="Living Root Bridges"
+          />
+          <img
+            src="./images/5_Hidden/Living_Root_2.jpg"
+            alt="Living Root Bridges"
+          />
+          <p>
+            The Living Root Bridges of Meghalaya are a rare wonder you won’t
+            find anywhere else in the world. Made by guiding the roots of
+            ancient rubber trees (Ficus elastica) across streams and rivers,
+            these natural bridges are grown, not built – taking 15–20 years to
+            form but lasting for centuries. They’re a mix of nature + human
+            ingenuity, making them one of the most offbeat and magical
+            experiences in India.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Built by the Khasi and Jaintia tribes centuries ago to cross
+              swollen rivers during monsoons.
+            </li>
+            <li>
+              The most famous is the Double Decker Root Bridge in Nongriat
+              village, which is over 200 years old.
+            </li>
+            <li>
+              Speciality: These bridges are living, self-strengthening
+              structures that get sturdier as they grow.
+            </li>
+            <li>
+              UNESCO has recognized them as part of Meghalaya’s cultural
+              heritage.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October to April – Clear skies, pleasant for trekking.</li>
+            <li>
+              Avoid peak monsoon (June–Sept) – though lush, trails can be
+              slippery.
+            </li>
+          </ul>
+          <img
+            src="./images/5_Hidden/Living_Root_3.jpg"
+            alt="Living Root Bridges"
+          />
+          <img
+            src="./images/5_Hidden/Living_Root_4.jpg"
+            alt="Living Root Bridges"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Trek to Nongriat Village – to see the iconic Double Decker Bridge.
+            </li>
+            <li>
+              Explore single root bridges in Mawlynnong, Riwai, and Cherrapunji.
+            </li>
+            <li>
+              Combine visit with natural pools & waterfalls nearby (Rainbow
+              Falls, Nohkalikai Falls).
+            </li>
+            <li>
+              Interact with locals to learn about sustainable tribal traditions.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Jadoh – Red rice cooked with meat/spices.</li>
+            <li>Dohneiiong – Pork with black sesame.</li>
+            <li>Tungrymbai – Fermented soybean chutney.</li>
+            <li>
+              Smoked meat, bamboo shoot dishes, and local rice beer (Kyat).
+            </li>
+            <li>
+              Street snacks in Shillong like Momos & Chowmein show local-North
+              East fusion.
+            </li>
+          </ul>
+          <img
+            src="./images/5_Hidden/Living_Root_7.jpg"
+            alt="Living Root Bridges"
+          />
+          <img
+            src="./images/5_Hidden/Living_Root_8.jpg"
+            alt="Living Root Bridges"
+          />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1 (Shillong):</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive → Explore cafes & local food → Ward’s Lake / Police Bazaar.
+            </li>
+          </ul>
+          <h3>Day 2 (Cherrapunji):</h3>
+          <ul class="guide-list">
+            <li>
+              Travel to Sohra → Visit Nohkalikai Falls & Mawsmai Caves → Stay
+              overnight.
+            </li>
+          </ul>
+          <h3>Day 3 (Nongriat Trek):</h3>
+          <ul class="guide-list">
+            <li>
+              Trek to the Double Decker Living Root Bridge → Continue to Rainbow
+              Falls → Overnight stay in Nongriat homestay.
+            </li>
+          </ul>
+          <h3>Day 4:</h3>
+          <ul class="guide-list">
+            <li>
+              Trek back → Stop at Mawlynnong (Asia’s cleanest village) & Riwai
+              Root Bridge → Return to Shillong.
+            </li>
+          </ul>
+          <img
+            src="./images/5_Hidden/Living_Root_5.jpg"
+            alt="Living Root Bridges"
+          />
+          <img
+            src="./images/5_Hidden/Living_Root_6.jpg"
+            alt="Living Root Bridges"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Be prepared for steep treks (3,000+ steps) – carry water and good
+              shoes.
+            </li>
+            <li>Stay in local homestays for the best experience.</li>
+            <li>Respect the eco-system: don’t carve or damage the roots.</li>
+            <li>
+              Carry cash – card/digital payments may not work in remote
+              villages.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="rootBridgesWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Magnetic hill MODAL------------------>
+    <div id="magneticModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('magneticModal')">&times;</span>
+        <h2>🏔️ Magnetic Hill – Ladakh</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/5_Hidden/Magnetic_1.jpg" alt="Magnetic Hill" />
+          <img src="./images/5_Hidden/Magnetic_3.jpg" alt="Magnetic Hill" />
+          <p>
+            Magnetic Hill is one of India’s most mysterious natural wonders.
+            Here, vehicles appear to defy gravity and roll uphill without any
+            engine power. This optical illusion, combined with Ladakh’s surreal
+            landscapes, makes it a must-visit offbeat attraction for adventure
+            lovers and curious travellers.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Locals believe the hill has magnetic properties strong enough to
+              pull vehicles uphill.
+            </li>
+            <li>
+              Scientists explain it as an optical illusion—the layout of the
+              land makes a downhill slope look like it’s uphill.
+            </li>
+            <li>
+              Historically, it was part of the Srinagar–Leh highway, where
+              travellers would stop in awe.
+            </li>
+            <li>
+              Speciality for tourists: It’s one of the few places in the world
+              where you can experience gravity-defying fun firsthand.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              May to September – Roads are open, skies are clear, and Ladakh’s
+              landscapes are at their best.
+            </li>
+            <li>Winters (Oct–Apr) bring heavy snow, making access tough.</li>
+          </ul>
+          <img src="./images/5_Hidden/Magnetic_4.jpg" alt="Magnetic Hill" />
+          <img src="./images/5_Hidden/Magnetic_5.jpg" alt="Magnetic Hill" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Gurudwara Pathar Sahib – Just 3 km from Magnetic Hill, a serene
+              spiritual stop.
+            </li>
+            <li>
+              Sangam (Confluence of Zanskar & Indus Rivers) – Stunning viewpoint
+              where two rivers meet.
+            </li>
+            <li>
+              Leh Palace & Shanti Stupa – For cultural and panoramic city views.
+            </li>
+            <li>
+              Hall of Fame Museum (Leh) – Tribute to Indian Army’s bravery.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Thukpa (noodle soup) – Warm, hearty Himalayan dish.</li>
+            <li>Momos – Steamed dumplings with spicy chutney.</li>
+            <li>
+              Butter Tea (Salted Yak Butter Tea) – Unique Tibetan influence.
+            </li>
+            <li>Skyu – Traditional Ladakhi pasta stew.</li>
+            <li>Apricot-based jams & juices – Local specialty.</li>
+          </ul>
+          <img src="./images/1_Natural/tiger_hill_8.webp" alt="Magnetic Hill" />
+          <img src="./images/5_Hidden/Magnetic_6.webp" alt="Magnetic Hill" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Leh → Acclimatize → Evening visit to Shanti Stupa & Leh
+              Market.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Start early → Drive to Magnetic Hill (30 km from Leh) → Try the
+              “gravity test” → Visit Gurudwara Pathar Sahib → Stop at Sangam
+              viewpoint → Return to Leh.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Explore Leh Palace, Hall of Fame Museum, and local food joints.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Magnetic_8.webp" alt="Magnetic Hill" />
+          <img src="./images/5_Hidden/Magnetic_7.jpg" alt="Magnetic Hill" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Carry warm clothes; even in summer, Ladakh can get chilly.</li>
+            <li>Drink plenty of water to avoid altitude sickness.</li>
+            <li>Roads are winding—hire a local driver if not confident.</li>
+            <li>
+              The “magnetic pull” is actually an illusion, but the experience is
+              real fun!
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="magneticHillWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Chilika MODAL------------------>
+    <div id="chilikaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('chilikaModal')">&times;</span>
+        <h2>🐬 Chilika Lake & Irrawaddy Dolphins – Odisha</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/5_Hidden/Chilika_8.png" alt="Chilika Lake" />
+          <img src="./images/5_Hidden/Chilika_2.jpeg" alt="Chilika Lake" />
+          <p>
+            Chilika Lake is Asia’s largest brackish water lagoon and one of the
+            world’s most important wetlands. The biggest attraction here is
+            spotting the playful Irrawaddy dolphins, a rare species found in
+            only a handful of places worldwide. For travelers, it’s a blend of
+            unique wildlife, scenic beauty, birdwatching, and cultural
+            villages—making it a true offbeat gem in India.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Chilika is mentioned in ancient texts and maritime history as a
+              major trade and fishing hub.
+            </li>
+            <li>
+              Irrawaddy Dolphins: Unlike ocean dolphins, they thrive in brackish
+              water—making Chilika one of the few places globally to see them.
+            </li>
+            <li>
+              The lake is also a paradise for migratory birds, with thousands
+              flocking here from Siberia and Central Asia every winter.
+            </li>
+            <li>
+              Tourists are drawn to its eco-tourism, dolphin spotting, boating,
+              bird sanctuaries, and rustic fishing villages.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              November to February – Pleasant weather & peak bird migration
+              season.
+            </li>
+            <li>Dolphin sightings are best in the calm mornings.</li>
+          </ul>
+          <img src="./images/5_Hidden/Chilika_5.jpg" alt="Chilika Lake" />
+          <img src="./images/5_Hidden/Chilika_4.jpg" alt="Chilika Lake" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Dolphin Watching: Boat rides from Satpada or Rambha to spot
+              Irrawaddy dolphins.
+            </li>
+            <li>
+              Birding at Mangalajodi: Thousands of migratory birds,
+              photographers’ paradise.
+            </li>
+            <li>
+              Kalijai Temple (on an island): Famous for legends & cultural
+              importance.
+            </li>
+            <li>
+              Nalabana Bird Sanctuary: Declared a bird sanctuary, accessible in
+              winter.
+            </li>
+            <li>Eco-stay in Fishing Villages: Experience rural Odisha life.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Chilika Crab Curry – A specialty of the lake region.</li>
+            <li>Prawn Malai Curry – Rich coastal delicacy.</li>
+            <li>
+              Odisha Thali – Rice, dalma (lentil-vegetable curry), saga bhaja
+              (fried greens), and sweets.
+            </li>
+            <li>Chhena Poda – Odisha’s famous baked cheese dessert.</li>
+          </ul>
+          <img src="./images/5_Hidden/Chilika_3.jpg" alt="Chilika Lake" />
+          <img src="./images/5_Hidden/Chilika_9.jpg" alt="Chilika Lake" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive at Puri/Bhubaneswar → Travel to Satpada → Evening boat ride
+              for sunset + dolphins.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Early morning birding at Mangalajodi Wetlands → Visit Nalabana
+              Bird Sanctuary → Explore Kalijai Temple island.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Stay in eco-villages → Interact with locals → Try fresh seafood →
+              Relax by the lagoon.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Chilika_6.jpg" alt="Chilika Lake" />
+          <img src="./images/5_Hidden/Chilika_7.jpg" alt="Chilika Lake" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Go for government-approved eco-boats (avoid speedboats—they
+              disturb dolphins).
+            </li>
+            <li>Carry binoculars & camera for birdwatching.</li>
+            <li>Start boat rides early morning for best dolphin sightings.</li>
+            <li>
+              Combine with nearby Puri & Konark (Golden Triangle of Odisha) for
+              a complete trip.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="chilikaWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Balancing rock MODAL------------------>
+    <div id="balancingModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('balancingModal')"
+          >&times;</span
+        >
+        <h2>🪨 Balancing Rock (Krishna’s Butterball),Tamil Nadu</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/5_Hidden/Balancing_Rock_1.jpg"
+            alt="Balancing Rock"
+          />
+          <img
+            src="./images/5_Hidden/Balancing_Rock_2.webp"
+            alt="Balancing Rock"
+          />
+          <p>
+            The Balancing Rock, famously called Krishna’s Butterball, is a
+            mystical geological wonder in Mahabalipuram that defies gravity.
+            This massive boulder, about 6 meters high and 5 meters wide, rests
+            on a tiny sloping surface — yet it has never rolled down for over
+            1,200 years, even through earthquakes and storms! It’s an offbeat
+            marvel that amazes both science and mythology lovers. The spot also
+            offers stunning views and a peaceful natural setting perfect for
+            photos, picnics, and curiosity seekers.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              According to legend, Lord Krishna tried to steal butter from the
+              heavens, and this rock is said to be a piece of it — hence the
+              name “Krishna’s Butterball.”
+            </li>
+            <li>
+              Historically, it dates back to the Pallava dynasty (7th century
+              CE), who ruled Mahabalipuram and built the rock-cut temples
+              nearby.
+            </li>
+            <li>
+              The rock has resisted multiple attempts to move it — including one
+              by the British Governor in 1908, who failed to dislodge it even
+              with seven elephants!
+            </li>
+            <li>
+              The specialty is how this giant stone balances naturally on a
+              gentle slope without support — a true geological mystery.
+            </li>
+          </ul>
+          <img
+            src="./images/5_Hidden/Balancing_Rock_3.jpg"
+            alt="Balancing Rock"
+          />
+          <img
+            src="./images/5_Hidden/Balancing_Rock_4.jpg"
+            alt="Balancing Rock"
+          />
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>November to February – Pleasant weather and clear skies.</li>
+            <li>
+              Early morning or late evening for best lighting and fewer crowds.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <p>Mahabalipuram is a seaside town known for:</p>
+            <li>Fresh seafood: grilled fish, prawn curry, crab fry.</li>
+            <li>South Indian specials: Idli, Dosa, Filter Coffee.</li>
+            <li>
+              Street eats: Tender coconut, peanut sundal, and banana chips near
+              the beach.
+            </li>
+          </ul>
+          <img
+            src="./images/5_Hidden/Balancing_Rock_5.webp"
+            alt="Balancing Rock"
+          />
+          <img
+            src="./images/5_Hidden/Balancing_Rock_6.jpg"
+            alt="Balancing Rock"
+          />
+          <h2>Roadmap for (2 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>Reach Mahabalipuram (1.5 hrs from Chennai).</li>
+            <li>
+              Start your morning at Krishna’s Butterball – watch sunrise and
+              click photos.
+            </li>
+            <li>
+              Walk to nearby heritage sites: Arjuna’s Penance, Five Rathas,
+              Shore Temple – all within walking distance.
+            </li>
+            <li>Have lunch at a seaside café (try local seafood).</li>
+          </ul>
+          <h3>Evening:</h3>
+          <ul class="guide-list">
+            <li>
+              Stroll along Mahabalipuram Beach, shop for handmade stone carvings
+              & souvenirs.
+            </li>
+            <li>Enjoy a sunset view from Shore Temple.</li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Tiger Caves & Crocodile Bank nearby before heading back to
+              Chennai.
+            </li>
+          </ul>
+          <img
+            src="./images/5_Hidden/Balancing_Rock_7.jpg"
+            alt="Balancing Rock"
+          />
+          <img
+            src="./images/5_Hidden/Balancing_Rock_8.jpg"
+            alt="Balancing Rock"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Carry a hat & sunscreen — it gets sunny in the afternoons.</li>
+            <li>Visit early morning for cooler weather and fewer tourists.</li>
+            <li>Great for photographers, geology enthusiasts, and families.</li>
+            <li>
+              Combine with other ancient monuments — all UNESCO World Heritage
+              sites.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="butterballWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Marble rocks MODAL------------------>
+    <div id="marbleModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('marbleModal')">&times;</span>
+        <h2>🏞️ Marble Rocks at Bhedaghat – Madhya Pradesh</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/5_Hidden/Marble_1.jpg" alt="Marble Rocks" />
+          <img src="./images/5_Hidden/Marble_2.jpg" alt="Marble Rocks" />
+          <p>
+            Tucked near Jabalpur, the Marble Rocks of Bhedaghat are a
+            mesmerizing stretch where the Narmada River cuts through towering
+            100-foot-high marble cliffs. As sunlight hits the rocks, the river
+            shimmers in shades of white, pink, and bluish-gray, creating a
+            surreal, dreamlike landscape. It’s a hidden gem that offers a
+            peaceful, romantic, and cinematic experience — a perfect escape for
+            nature lovers and photographers.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The Marble Rocks have been formed over millions of years as the
+              Narmada carved its path through soft marble, creating deep gorges
+              and stunning cliffs.
+            </li>
+            <li>
+              Locally called “Safaid Pahad”, they’ve been a source of
+              inspiration for poets, artists, and even filmmakers — scenes from
+              Bollywood classics like Jis Desh Mein Ganga Behti Hai were shot
+              here.
+            </li>
+            <li>
+              Speciality: The rocks change colors with sunlight and moonlight,
+              offering completely different views during the day and at night
+              (especially during moonlit boat rides).
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Cool, pleasant weather; perfect for boat rides.
+            </li>
+            <li>
+              Avoid monsoon (July–September) when boat rides may be closed due
+              to high water levels.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Marble_3.jpg" alt="Marble Rocks" />
+          <img src="./images/5_Hidden/Marble_4.jpg" alt="Marble Rocks" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Boat Ride through Marble Gorge – The most magical experience,
+              especially at sunset or under the moon.
+            </li>
+            <li>
+              Dhuandhar Waterfall – Just nearby; the Narmada plunges
+              dramatically, creating a misty “smoke-like” effect.
+            </li>
+            <li>
+              Cable Car Ride – Aerial view of the waterfall and marble cliffs.
+            </li>
+            <li>
+              Marble Craft Market – Local artisans carve mini sculptures and
+              souvenirs from the same marble rocks.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Poha & Jalebi – Classic Madhya Pradesh breakfast.</li>
+            <li>Bhutte Ka Kees – Spiced corn dish unique to the region.</li>
+            <li>Samosa, Kachori & Lassi – Popular street eats.</li>
+            <li>
+              Narmada Fish Curry (for non-vegetarians) – Fresh, flavorful, and
+              local.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Marble_5.jpg" alt="Marble Rocks" />
+          <img
+            src="./images/2_Historical/Sanchi_Stupa_9.webp"
+            alt="Marble Rocks"
+          />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive at Jabalpur → Visit Dhuandhar Waterfall → Take cable car
+              for aerial views → Evening boat ride in the marble gorge (sunset).
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning Marble market visit → Explore Chausath Yogini Temple
+              (historic, scenic hilltop view of the Narmada).
+            </li>
+            <li>
+              Afternoon → Try local street food → Depart or head to Mandla /
+              Kanha National Park (optional nature extension).
+            </li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Hire local guides for storytelling boat rides—they narrate myths
+              and local legends beautifully.
+            </li>
+            <li>Best time for photography: Sunrise & moonlit evenings.</li>
+            <li>Carry light jackets (evenings near river can be cool).</li>
+            <li>Don’t miss full-moon boat ride — it’s pure magic.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="marbleRocksWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Lonar Crater Lake MODAL------------------>
+    <div id="lonarModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('lonarModal')">&times;</span>
+        <h2>🌌 Lonar Crater Lake – Maharashtra</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/5_Hidden/Lonar_1.jpg" alt="Lonar Crater Lake" />
+          <img src="./images/5_Hidden/Lonar_2.jpg" alt="Lonar Crater Lake" />
+          <p>
+            Lonar Lake is a rare meteorite impact crater turned into a
+            mesmerizing saline-soda lake, formed nearly 50,000 years ago when a
+            meteor struck Earth! It’s one of only four hyper-velocity impact
+            craters in basalt rock found anywhere in the world. The lake glows
+            in shades of green and turquoise, surrounded by dense forests,
+            ancient temples, and diverse wildlife — making it a dream spot for
+            nature lovers, photographers, and science enthusiasts.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The crater was formed by a meteor impact traveling at a speed of
+              around 90,000 km/h.
+            </li>
+            <li>
+              Mentioned in ancient Hindu texts like the Skanda Purana, Lonar was
+              once considered a divine site.
+            </li>
+            <li>
+              The lake has two distinct water zones—one saline and one
+              alkaline—existing side by side!
+            </li>
+            <li>
+              Scientists and geologists from NASA and the Geological Survey of
+              India have studied it due to its rare ecosystem and magnetic
+              properties.
+            </li>
+            <li>
+              Nearby, you’ll find temples built in Hemadpanti style dating back
+              to the Chalukya dynasty.
+            </li>
+            <li>A true mix of science, spirituality, and natural mystery.</li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather for exploration and
+              photography.
+            </li>
+            <li>Avoid peak summer and monsoon (too hot or muddy trails).</li>
+          </ul>
+          <img src="./images/5_Hidden/Lonar_3.jpg" alt="Lonar Crater Lake" />
+          <img src="./images/5_Hidden/Lonar_4.png" alt="Lonar Crater Lake" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Stunning color-changing lake waters (depending on sunlight & algae
+              levels).
+            </li>
+            <li>
+              Lonar Wildlife Sanctuary – home to peacocks, gazelles, and
+              migratory birds.
+            </li>
+            <li>
+              Daitya Sudan Temple – a beautiful ancient temple dedicated to Lord
+              Vishnu.
+            </li>
+            <li>Ideal for offbeat travel, trekking, and astrophotography.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Misal Pav – Spicy Maharashtrian breakfast.</li>
+            <li>Pithla Bhakri – Local rustic meal.</li>
+            <li>Poha, Vada Pav, and Batata Wada – Quick roadside snacks.</li>
+            <li>
+              Try fresh sugarcane juice & buttermilk for a refreshing local
+              touch.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Lonar_5.webp" alt="Lonar Crater Lake" />
+          <img src="./images/5_Hidden/Lonar_6.jpg" alt="Lonar Crater Lake" />
+          <h2>Roadmap for (2 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>Reach Aurangabad / Jalna → drive to Lonar town (4–5 hrs).</li>
+            <li>
+              Visit Lonar Crater Lake viewpoint → explore Daitya Sudan Temple.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning trek around crater rim & forest trail → spot wildlife &
+              birds.
+            </li>
+            <li>Visit Lonar Lake Museum → learn about geological facts.</li>
+            <li>
+              Lunch at local dhaba → return to Aurangabad or stay overnight.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Lonar_7.jpg" alt="Lonar Crater Lake" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Carry good trekking shoes — the crater descent is steep.</li>
+            <li>Don’t swim in the lake (chemical composition is harsh).</li>
+            <li>
+              Hire a local guide to learn about myths, science, and temple
+              history.
+            </li>
+            <li>Early morning & sunset times are best for photography.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="lonarWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Sand Dunes MODAL------------------>
+    <div id="sandModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('sandModal')">&times;</span>
+        <h2>
+          🏜️ Sand Dunes of Rajasthan (Thar Desert – Jaisalmer, Bikaner, Jodhpur)
+        </h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/5_Hidden/Sand_Dunes_1.jpg" alt="Sand Dunes" />
+          <img src="./images/5_Hidden/Sand_Dunes_2.jpg" alt="Sand Dunes" />
+          <p>
+            The Thar Desert, stretching across Rajasthan, is one of India’s most
+            mesmerizing natural wonders — an endless sea of golden sand
+            shimmering under the desert sun. The sand dunes here offer a rare
+            blend of raw natural beauty, cultural charm, and desert adventure,
+            making them a must-visit for those seeking something offbeat yet
+            magical. It’s not just sand — it’s stories, sunsets, and starry
+            nights that bring the desert to life.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The Thar Desert, also known as the Great Indian Desert, has been
+              part of the ancient Indus Valley trade route and a witness to
+              Rajput valor and caravan tales.
+            </li>
+            <li>Golden sand dunes that change shades with the sunlight.</li>
+            <li>Camel safaris, folk music, and Rajasthani cultural nights.</li>
+            <li>
+              Luxury desert camps offering a mix of tradition and comfort.
+            </li>
+            <li>Unpolluted night skies – ideal for stargazing.</li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to February – Pleasant, cool nights and warm sunny days.
+            </li>
+            <li>Avoid May–July (extremely hot summers).</li>
+          </ul>
+          <img src="./images/5_Hidden/Sand_Dunes_3.png" alt="Sand Dunes" />
+          <img src="./images/5_Hidden/Sand_Dunes_4.jpg" alt="Sand Dunes" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Sam Sand Dunes (Jaisalmer) – Most famous, with golden dunes and
+              evening cultural shows.
+            </li>
+            <li>
+              Khuri Dunes (Jaisalmer) – Quieter, more authentic desert village
+              experience.
+            </li>
+            <li>Lekhraj Dunes (Bikaner) – Offbeat and peaceful.</li>
+            <li>
+              Osian (near Jodhpur) – Desert meets temples; perfect for short
+              camel safaris.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Dal Baati Churma – Traditional Rajasthani meal, hearty and
+              flavorful.
+            </li>
+            <li>Ker Sangri – Unique desert bean and berry dish.</li>
+            <li>
+              Gatte ki Sabzi, Bajra Roti, and Laal Maas (spicy mutton curry).
+            </li>
+            <li>Ghevar & Malpua – Must-try sweets.</li>
+            <li>Don’t miss masala chai under the desert stars!</li>
+          </ul>
+          <img src="./images/5_Hidden/Sand_Dunes_5.jpeg" alt="Sand Dunes" />
+          <img src="./images/5_Hidden/Sand_Dunes_6.jpg" alt="Sand Dunes" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1 – Jaisalmer:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Jaisalmer Fort & Patwon ki Haveli → Evening camel safari at
+              Sam Sand Dunes → Sunset view + Rajasthani folk dance at desert
+              camp.
+            </li>
+          </ul>
+          <h3>Day 2 – Khuri Village:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning jeep safari → Experience local village life & handicrafts
+              → Dinner under the stars.
+            </li>
+          </ul>
+          <h3>Day 3 – Bikaner / Jodhpur:</h3>
+          <ul class="guide-list">
+            <li>
+              Drive to Bikaner for Junagarh Fort & camel breeding farm, or
+              Jodhpur for Mehrangarh Fort + Osian Desert → Camel safari and
+              temple visit.
+            </li>
+          </ul>
+          <img src="./images/5_Hidden/Sand_Dunes_7.jpg" alt="Sand Dunes" />
+          <img src="./images/5_Hidden/Sand_Dunes_8.jpg" alt="Sand Dunes" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Wear light cottons during the day, warm clothes at night.</li>
+            <li>Carry a scarf or bandana – desert winds can be strong.</li>
+            <li>Choose eco-friendly camps that respect local culture.</li>
+            <li>
+              Don’t miss sunrise or sunset — it’s when the dunes are most
+              photogenic.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="sandDunesWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!--  footer  -->
+    <footer>
+      <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="categories.html">Categories</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: info@indiscapes.com</p>
+          <p>Phone: +91 9876543210</p>
+          <p>Location: Hyderabad, India</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>© 2025 IndiScapes | All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!--   Javascript  -->
+    <script src="script.js"></script>
+  </body>
+</html>

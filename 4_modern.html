@@ -1,0 +1,3946 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern & Urban Attractions | indiscapes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!--  nav bar  -->
+    <header>
+      <nav class="navbar">
+        <!--  logo  -->
+        <div class="nav-left">
+          <img
+            src="./images/logo_2.png"
+            alt="logo"
+            width="180px"
+            height="60px"
+          />
+        </div>
+        <!------------   nav items  ------------->
+        <!--  big screens  -->
+        <ul class="nav-right">
+          <li>
+            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="about.html" target="_blank"
+              ><i class="fa fa-info-circle"></i> About</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" target="_blank"
+              ><i class="fa fa-envelope"></i> Contact</a
+            >
+          </li>
+        </ul>
+
+        <!--     search    -->
+        <div class="nav-center">
+          <form id="searchForm">
+            <input
+              type="text"
+              placeholder="search places"
+              id="searchInput"
+              onkeyup="searchPlaces()"
+            />
+            <button type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+
+        <!------------  items  ------------->
+        <!--  On small screens  -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+      </nav>
+    </header>
+
+    <!----------category 4----------->
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+      <img src="./images/4_Urban/modern_cover.jpg" alt="India Landscape" />
+      <div class="hero-text">
+        <h1>Modern & Urban Attractions</h1>
+        <p>
+          Discover the vibrant cities, parks, and lifestyle spots buzzing with
+          energy.
+        </p>
+      </div>
+    </section>
+
+    <!-- Subcategories -->
+    <section class="subcategory">
+      <h2>Cities & Urban Spots</h2>
+      <div class="placesContainer">
+        <div class="places-grid">
+          <!-- Delhi  -->
+          <div class="place-card">
+            <img src="./images/4_Urban/Delhi_1.jpg" alt="Delhi" />
+            <h3>Delhi</h3>
+            <h6>The Heart of India</h6>
+            <p>
+              Blend of ancient history (Red Fort, Qutub Minar) and modern vibes
+              (Connaught Place, malls, nightlife). Street food (chaat, parathas,
+              kebabs), bustling bazaars, heritage walks.
+            </p>
+            <button onclick="openModal('delhiModal')">Read More</button>
+          </div>
+
+          <!-- Mumbai  -->
+          <div class="place-card">
+            <img src="./images/4_Urban/Mumbai_1.jpg" alt="Mumbai" />
+            <h3>Mumbai</h3>
+            <h6>The City of Dreams</h6>
+            <p>
+              Bollywood, Marine Drive, Gateway of India, nightlife, luxury
+              shopping. Street food (vada pav, pav bhaji), beaches, film city
+              tours.
+            </p>
+            <button onclick="openModal('mumbaiModal')">Read More</button>
+          </div>
+
+          <!-- Bengaluru   -->
+          <div class="place-card">
+            <img src="./images/4_Urban/Bengaluru_1.jpg" alt="Bengaluru" />
+            <h3>Bengaluru</h3>
+            <h6>The Garden & IT City</h6>
+            <p>
+              Known for parks, pubs, cafes, and tech hubs. Close to Mysore &
+              Coorg for weekend trips. Microbreweries, young culture, pleasant
+              weather.
+            </p>
+            <button onclick="openModal('bengaluruModal')">Read More</button>
+          </div>
+
+          <!--  Chennai    -->
+          <div class="place-card">
+            <img src="./images/4_Urban/chennai_2.jpg" alt="Chennai" />
+            <h3>Chennai</h3>
+            <h6>Gateway to South India</h6>
+            <p>
+              Marina Beach, temples, cultural performances, and South Indian
+              cuisine. Carnatic music, Bharatanatyam dance, authentic filter
+              coffee & dosas.
+            </p>
+            <button onclick="openModal('chennaiModal')">Read More</button>
+          </div>
+
+          <!-- Kolkata   -->
+          <div class="place-card">
+            <img src="./images/4_Urban/Kolkata_1.jpg" alt="Kolkata" />
+            <h3>Kolkata</h3>
+            <h6>The Cultural Capital</h6>
+            <p>
+              Howrah Bridge, Victoria Memorial, Durga Puja, and intellectual
+              vibe. Mishti Doi, rosogolla, street art, colonial architecture.
+            </p>
+            <button onclick="openModal('kolkataModal')">Read More</button>
+          </div>
+
+          <!-- Hyderabad  -->
+          <div class="place-card">
+            <img src="./images/4_Urban/Hyderabad_1.webp" alt="Hyderabad" />
+            <h3>Hyderabad</h3>
+            <h6>The City of Pearls & Biryani</h6>
+            <p>
+              Charminar, Golconda Fort, Ramoji Film City, and IT hubs.Hyderabadi
+              Biryani, pearl shopping, blend of Mughal & modern culture.
+            </p>
+            <button onclick="openModal('hyderabadModal')">Read More</button>
+          </div>
+        </div>
+      </div>
+      <p id="noResults" style="display: none; text-align: center">
+        No matching places found.
+      </p>
+    </section>
+
+    <!-------------Parks & Gardens----------->
+    <section class="subcategory">
+      <h2>Parks & Gardens</h2>
+      <div class="placesContainer">
+        <div class="places-grid">
+          <!-- Lodhi Garden  -->
+          <div class="place-card">
+            <img src="./images/4_Urban/Lodhi_1.jpg" alt="Lodhi Garden" />
+            <h3>Lodhi Garden</h3>
+            <h6>New Delhi</h6>
+            <p>
+              A peaceful escape in the capital city, filled with greenery,
+              walking trails, and tombs from the 15th century. Blend of Mughal
+              architecture and landscaped gardens.
+            </p>
+            <button onclick="openModal('lodhiModal')">Read More</button>
+          </div>
+
+          <!-- Brindavan Gardens  -->
+          <div class="place-card">
+            <img
+              src="./images/4_Urban/Brindavan_1.jpg"
+              alt="Brindavan Gardens"
+            />
+            <h3>Brindavan Gardens</h3>
+            <h6>Karnataka</h6>
+            <p>
+              Famous for its musical fountain show in the evenings. Symmetrical
+              designs, boating, illuminated fountains.
+            </p>
+            <button onclick="openModal('brindavanModal')">Read More</button>
+          </div>
+
+          <!--  Lalbagh Botanical Garden  -->
+          <div class="place-card">
+            <img
+              src="./images/4_Urban/Lalbagh_1.jpg"
+              alt="Lalbagh Botanical Garden"
+            />
+            <h3>Lalbagh Botanical Garden</h3>
+            <h6>Karnataka</h6>
+            <p>
+              Known for its rare collection of tropical plants and annual flower
+              shows. Glass House modeled on London’s Crystal Palace.
+            </p>
+            <button onclick="openModal('lalbaghModal')">Read More</button>
+          </div>
+
+          <!--  Mughal Gardens    -->
+          <div class="place-card">
+            <img src="./images/4_Urban/Mughal_1.jpg" alt="Mughal Gardens" />
+            <h3>Mughal Gardens</h3>
+            <h6>New Delhi</h6>
+            <p>
+              Stunning Mughal-style garden with colorful flowers, fountains, and
+              Mughal canals. Terraced gardens, rose varieties, tulip displays.
+            </p>
+            <button onclick="openModal('mughalModal')">Read More</button>
+          </div>
+
+          <!-- Rock Garden   -->
+          <div class="place-card">
+            <img src="./images/4_Urban/Rock_1.webp" alt="Rock Garden" />
+            <h3>Rock Garden</h3>
+            <h6>Chandigarh</h6>
+            <p>
+              A unique sculpture garden made entirely of recycled materials.
+              Over 5,000 statues created from ceramics, bangles, tiles, and
+              junk.
+            </p>
+            <button onclick="openModal('rockModal')">Read More</button>
+          </div>
+
+          <!-- Shalimar Bagh  -->
+          <div class="place-card">
+            <img src="./images/4_Urban/Shalimar_1.jpg" alt="Shalimar Bagh" />
+            <h3>Shalimar Bagh</h3>
+            <h6>Jammu & Kashmir</h6>
+            <p>
+              One of the most famous Mughal gardens with breathtaking views of
+              Dal Lake. Terraced lawns, fountains, and Chinar trees.
+            </p>
+            <button onclick="openModal('shalimarModal')">Read More</button>
+          </div>
+        </div>
+      </div>
+      <p id="noResults" style="display: none; text-align: center">
+        No matching places found.
+      </p>
+    </section>
+
+    <!-------------Shopping Destinations----------->
+    <section class="subcategory">
+      <h2>Shopping Destinations</h2>
+      <div class="placesContainer">
+        <div class="places-grid">
+          <!--  Chandni Chowk  -->
+          <div class="place-card">
+            <img src="./images/4_Urban/Chandni_1.jpg" alt="Chandni Chowk " />
+            <h3>Chandni Chowk</h3>
+            <h6>Delhi</h6>
+            <p>
+              A paradise for street food lovers and shopaholics. From parathas,
+              chaat, and jalebis to spices, jewelry, and textiles. Old Delhi’s
+              narrow lanes, Mughlai food, and bustling bazaars.
+            </p>
+            <button onclick="openModal('chandniModal')">Read More</button>
+          </div>
+
+          <!-- Johari Bazaar  -->
+          <div class="place-card">
+            <img src="./images/4_Urban/Johari_1.jpg" alt="Johari Bazaar" />
+            <h3>Johari Bazaar</h3>
+            <h6>Rajasthan</h6>
+            <p>
+              Famous for jewelry, gemstones, traditional Rajasthani lehengas,
+              mojris, and handicrafts. Authentic Rajasthani food nearby like dal
+              baati churma, ghewar.
+            </p>
+            <button onclick="openModal('johariModal')">Read More</button>
+          </div>
+
+          <!-- Colaba Causeway  -->
+          <div class="place-card">
+            <img src="./images/4_Urban/Colaba_1.jpg" alt="Colaba Causeway" />
+            <h3>Colaba Causeway</h3>
+            <h6>Mumbai</h6>
+            <p>
+              Street shopping hub + iconic food joints. Clothes, jewelry,
+              antiques, and trendy cafes.
+            </p>
+            <button onclick="openModal('colabaModal')">Read More</button>
+          </div>
+
+          <!--   New Market (Hogg Market)   -->
+          <div class="place-card">
+            <img
+              src="./images/4_Urban/New_Market_1.jpg"
+              alt="New Market (Hogg Market)"
+            />
+            <h3>New Market (Hogg Market)</h3>
+            <h6>Kolkata</h6>
+            <p>
+              A blend of food stalls, textiles, electronics, and sweets. Don’t
+              miss Kolkata’s famous rosogolla, mishti doi, and fish delicacies.
+            </p>
+            <button onclick="openModal('newMarketModal')">Read More</button>
+          </div>
+
+          <!--  MG Road & Commercial Street  -->
+          <div class="place-card">
+            <img
+              src="./images/4_Urban/MG_Road_1.webp"
+              alt="MG Road & Commercial Street"
+            />
+            <h3>MG Road & Commercial Street</h3>
+            <h6>Bengaluru</h6>
+            <p>
+              Best for fashion, branded clothes, handicrafts, and street snacks.
+              South Indian dosas, filter coffee, and pub culture nearby.
+            </p>
+            <button onclick="openModal('MGroadModal')">Read More</button>
+          </div>
+
+          <!--   Laad Bazaar    -->
+          <div class="place-card">
+            <img src="./images/4_Urban/Laad_1.jpg" alt="Laad Bazaar" />
+            <h3>Laad Bazaar</h3>
+            <h6>Hyderabad</h6>
+            <p>
+              Famous for bangles, pearls, perfumes, and traditional Hyderabadi
+              clothing. Hyderabadi biryani, haleem (during Ramadan), and Irani
+              chai.
+            </p>
+            <button onclick="openModal('laadModal')">Read More</button>
+          </div>
+        </div>
+      </div>
+      <p id="noResults" style="display: none; text-align: center">
+        No matching places found.
+      </p>
+    </section>
+
+    <!-------------Food Destinations----------->
+    <section class="subcategory">
+      <h2>Food Destinations</h2>
+      <div class="placesContainer">
+        <div class="places-grid">
+          <!--  Hyderabadi Biryani  -->
+          <div class="place-card">
+            <img
+              src="./images/4_Urban/Hyderabadi_Biryani_1.jpg"
+              alt="Hyderabadi Biryani"
+            />
+            <h3>Hyderabadi Biryani</h3>
+            <h6>Hyderabad</h6>
+            <p>
+              Hyderabadi Dum Biryani, Haleem (during Ramadan), Irani Chai with
+              Osmania biscuits.
+            </p>
+            <button onclick="openModal('biryaniModal')">Read More</button>
+          </div>
+
+          <!-- Amritsari Kulcha & Lassi  -->
+          <div class="place-card">
+            <img
+              src="./images/4_Urban/Amritsari_Kulcha_1.jpg"
+              alt="Amritsari Kulcha & Lassi"
+            />
+            <h3>Amritsari Kulcha & Lassi</h3>
+            <h6>Amritsar</h6>
+            <p>
+              A foodie’s heaven with rich Punjabi flavors and generous portions.
+              Amritsari Kulcha, Butter Chicken, Sarson da Saag & Makki di Roti,
+              Lassi.
+            </p>
+            <button onclick="openModal('kulchaModal')">Read More</button>
+          </div>
+
+          <!-- Rasgulla & Street Food  -->
+          <div class="place-card">
+            <img
+              src="./images/4_Urban/Rasgulla_1.jpg"
+              alt="Rasgulla & Street Food"
+            />
+            <h3>Rasgulla & Street Food</h3>
+            <h6>Kolkata</h6>
+            <p>
+              The city of sweets and street flavors. Rasgulla, Mishti Doi,
+              Puchka (pani puri), Kathi Rolls, Fish Curry.
+            </p>
+            <button onclick="openModal('rasgullaModal')">Read More</button>
+          </div>
+
+          <!--   Awadhi Kebabs & Biryani   -->
+          <div class="place-card">
+            <img
+              src="./images/4_Urban/Kebabs_1.jpg"
+              alt="Awadhi Kebabs & Biryani"
+            />
+            <h3>Awadhi Kebabs & Biryani</h3>
+            <h6>Lucknow</h6>
+            <p>
+              Known for royal Nawabi cuisine. Speciality: Tunday Kebabi, Galouti
+              Kebab, Lucknawi Biryani, Sheermal.
+            </p>
+            <button onclick="openModal('kebabsModal')">Read More</button>
+          </div>
+
+          <!--   Chaat & Street Food Capital   -->
+          <div class="place-card">
+            <img
+              src="./images/4_Urban/Chole_Bhature_1.jpg"
+              alt="Chaat & Street Food Capital"
+            />
+            <h3>Chaat & Street Food Capital</h3>
+            <h6>Delhi</h6>
+            <p>
+              India’s best street food city with flavors from all over India.
+              Chole Bhature, Golgappe, Paranthas (Chandni Chowk), Butter
+              Chicken.
+            </p>
+            <button onclick="openModal('chaatModal')">Read More</button>
+          </div>
+
+          <!--  Dal Baati Churma  -->
+          <div class="place-card">
+            <img
+              src="./images/4_Urban/Dal_Baati_1.jpg"
+              alt="Dal Baati Churma"
+            />
+            <h3>Dal Baati Churma</h3>
+            <h6>Jaipur</h6>
+            <p>
+              Rajasthan’s royal flavors with a spicy twist. Dal Baati Churma,
+              Ghewar (sweet), Laal Maas.
+            </p>
+            <button onclick="openModal('dalBaatiModal')">Read More</button>
+          </div>
+
+          <!--   Seafood & Vindaloo   -->
+          <div class="place-card">
+            <img
+              src="./images/4_Urban/goa_fish_1.webp"
+              alt="Seafood & Vindaloo"
+            />
+            <h3>Seafood & Vindaloo</h3>
+            <h6>Goa</h6>
+            <p>
+              A mix of Indian & Portuguese flavors. Goan Fish Curry, Vindaloo,
+              Bebinca (dessert), Feni (local drink).
+            </p>
+            <button onclick="openModal('seafoodModal')">Read More</button>
+          </div>
+
+          <!--   South Indian Filter Coffee & Dosa  -->
+          <div class="place-card">
+            <img
+              src="./images/4_Urban/dosa_1.jpg"
+              alt="South Indian Filter Coffee & Dosa"
+            />
+            <h3>South Indian Filter Coffee & Dosa</h3>
+            <h6>Chennai</h6>
+            <p>
+              Land of traditional Tamil flavors. Masala Dosa, Idli, Sambhar,
+              Filter Coffee, Chettinad Chicken.
+            </p>
+            <button onclick="openModal('dosaModal')">Read More</button>
+          </div>
+
+          <!--   Street Snacks & Sweets   -->
+          <div class="place-card">
+            <img
+              src="./images/4_Urban/varanasi_1.jpg"
+              alt="Street Snacks & Sweets"
+            />
+            <h3>Street Snacks & Sweets</h3>
+            <h6>Varanasi</h6>
+            <p>
+              Old city vibes with unique food culture. Banarasi Paan, Kachori
+              Sabzi, Tamatar Chaat, Rabri.
+            </p>
+            <button onclick="openModal('sweetsModal')">Read More</button>
+          </div>
+
+          <!--   Vada Pav & Street Eats   -->
+          <div class="place-card">
+            <img
+              src="/images/4_Urban/vada_pav_1.jpg"
+              alt="Vada Pav & Street Eats"
+            />
+            <h3>Vada Pav & Street Eats</h3>
+            <h6>Mumbai</h6>
+            <p>
+              The city of fast flavors, perfect for street food lovers. Vada
+              Pav, Pav Bhaji, Misal Pav, Bombay Sandwich.
+            </p>
+            <button onclick="openModal('vadapavModal')">Read More</button>
+          </div>
+        </div>
+      </div>
+      <p id="noResults" style="display: none; text-align: center">
+        No matching places found.
+      </p>
+    </section>
+
+    <!------------------------MODALS------------------------>
+    <!------------------delhi MODAL------------------>
+    <div id="delhiModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('delhiModal')">&times;</span>
+        <h2>🏙️ Delhi – The Heart of India</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Delhi_1.jpg" alt="Delhi" />
+          <img src="./images/4_Urban/Delhi_2.jpg" alt="Delhi" />
+          <p>
+            Delhi is not just the capital of India but also a blend of ancient
+            heritage and ultra-modern lifestyle. From glitzy malls, art hubs,
+            street markets, rooftop cafes, nightlife, and entertainment zones,
+            it offers the true pulse of urban India. A traveller here gets to
+            see how tradition and modernity coexist.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              A city where you can enjoy world-class shopping, street food,
+              nightlife, luxury, and heritage all within a few kilometers.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October to March – Pleasant weather for sightseeing.</li>
+            <li>
+              Summers (April–June) can be very hot; monsoon (July–September)
+              humid but lively.
+            </li>
+          </ul>
+          <img src="./images/2_Historical/Red_Fort_1.webp" alt="Delhi" />
+          <img src="./images/4_Urban/Delhi_6.jpg" alt="Delhi" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Connaught Place (CP): Delhi’s shopping, café, and nightlife hub.
+            </li>
+            <li>
+              DLF Cyber Hub (Gurgaon): Trendy restaurants, breweries, and
+              entertainment.
+            </li>
+            <li>Select City Walk Mall (Saket): Luxury shopping & events.</li>
+            <li>
+              Kingdom of Dreams (Gurgaon): India’s first live entertainment &
+              theatre complex.
+            </li>
+            <li>
+              Hauz Khas Village: Chic cafés, pubs, art galleries, and lakeside
+              views.
+            </li>
+            <li>
+              India Habitat Centre: Cultural performances, exhibitions, and
+              modern architecture.
+            </li>
+            <li>
+              Delhi Metro Ride: Experience one of the most efficient and modern
+              metro systems in Asia.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Street Food: Chole Bhature (Karol Bagh), Golgappa (CP), Momos
+              (North Campus).
+            </li>
+            <li>Modern Dining: Fusion restaurants in Hauz Khas & Cyber Hub.</li>
+            <li>
+              Mughlai Influence: Butter Chicken (Daryaganj origin), Kebabs,
+              Biryani.
+            </li>
+            <li>Trendy Cafés: Coffee shops in CP & Khan Market.</li>
+          </ul>
+          <img src="./images/4_Urban/Amritsari_Kulcha_6.jpg" alt="Delhi" />
+          <img src="./images/4_Urban/Delhi_7.jpg" alt="Delhi" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1 (Arrival + Evening):</h3>
+          <ul class="guide-list">
+            <li>
+              Connaught Place → Street food + café hopping → India Gate lit up
+              at night.
+            </li>
+          </ul>
+          <h3>Day 2 (Full Day):</h3>
+          <ul class="guide-list">
+            <li>
+              Morning – Hauz Khas Village (lake + brunch café) → Afternoon
+              shopping at Select City Walk → Evening at Cyber Hub for nightlife.
+            </li>
+          </ul>
+          <h3>Day 3 (Optional):</h3>
+          <ul class="guide-list">
+            <li>
+              Kingdom of Dreams show → Explore Khan Market & India Habitat
+              Centre → Sunset walk at Lodhi Art District (street art hub).
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Delhi_3.jpg" alt="Delhi" />
+          <img src="./images/4_Urban/Delhi_4.jpg" alt="Delhi" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Use Delhi Metro / Uber to beat traffic.</li>
+            <li>
+              Delhi has both luxury & budget options—pick what fits your style.
+            </li>
+            <li>
+              Try both street food & fine dining for the real Delhi experience.
+            </li>
+            <li>Nightlife is best around Hauz Khas, Cyber Hub, and CP.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="delhiWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-------------------mumbai MODAL------------------>
+    <div id="mumbaiModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('mumbaiModal')">&times;</span>
+        <h2>🌇 Mumbai – The City of Dreams</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Mumbai_1.jpg" alt="Mumbai" />
+          <img src="./images/4_Urban/Mumbai_6.webp" alt="Mumbai" />
+          <p>
+            Mumbai isn’t just India’s financial capital, it’s the heartbeat of
+            modern India. Known as the City of Dreams, it’s where Bollywood was
+            born, skyscrapers touch the sky, nightlife never ends, and
+            traditions blend seamlessly with a cosmopolitan lifestyle. A city
+            that never sleeps, Mumbai offers urban energy, culture, food,
+            shopping, and seaside charm all in one.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Became a major port city and later evolved into India’s commercial
+              hub.
+            </li>
+            <li>
+              Home of Bollywood (Indian film industry), attracting dreamers from
+              across the country.
+            </li>
+            <li>
+              Modern vibes + historic charm, with glittering skylines, art
+              districts, seaside promenades, and buzzing nightlife.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              November to February – Pleasant weather for city exploration.
+            </li>
+            <li>
+              Avoid July–August (heavy monsoons, though city looks romantic in
+              rains).
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Mumbai_4.jpg" alt="Mumbai" />
+          <img src="./images/4_Urban/Mumbai_5.jpg" alt="Mumbai" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Marine Drive (Queen’s Necklace) – Iconic seaside boulevard, best
+              at sunset.
+            </li>
+            <li>
+              Bandra-Worli Sea Link – An engineering marvel and picture-perfect
+              drive.
+            </li>
+            <li>
+              Colaba Causeway & High Street Phoenix Mall – Shopping heaven from
+              street to luxury.
+            </li>
+            <li>
+              Bandra (Hill Road, Carter Road, Linking Road) – Trendy cafés,
+              street art, nightlife.
+            </li>
+            <li>
+              Gateway of India & Taj Mahal Palace Hotel – Mumbai’s
+              postcard-perfect landmark.
+            </li>
+            <li>Film City (Goregaon) – Bollywood tours for cinema lovers.</li>
+            <li>Juhu Beach – Street food + celebrity spotting.</li>
+            <li>
+              Nariman Point & Lower Parel – Skyscrapers, lounges, and urban
+              glam.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Vada Pav – Mumbai’s signature street snack.</li>
+            <li>Pav Bhaji – Butter-loaded, spicy treat.</li>
+            <li>Bombil Fry (Bombay Duck fish fry) – Coastal delicacy.</li>
+            <li>Bhel Puri & Sev Puri – Tangy beachside snacks.</li>
+            <li>Irani Chai & Bun Maska – Parsi café classics.</li>
+            <li>
+              For luxe dining – Seafood at Trishna, Asian at Yauatcha, rooftop
+              lounges in Lower Parel.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Mumbai_8.jpg" alt="Mumbai" />
+          <img src="./images/4_Urban/vada_pav_1.jpg" alt="Mumbai" />
+          <h2>Roadmap for (3-4 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Gateway of India → Taj Hotel → Colaba Causeway shopping → Evening
+              at Marine Drive.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Bandra (street art, cafés, shopping) → Bandra-Worli Sea Link drive
+              → Sunset at Juhu Beach → Bollywood vibe at Film City tour
+              (optional).
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Nariman Point & South Bombay skyscrapers → Visit Chhatrapati
+              Shivaji Maharaj Terminus (UNESCO site) → Art galleries at Kala
+              Ghoda → Nightlife in Lower Parel.
+            </li>
+          </ul>
+          <h3>Day 4:</h3>
+          <ul class="guide-list">
+            <li>Day trip to Elephanta Caves or Alibaug (ferry ride).</li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Use local trains/metro for a true Mumbai experience (but avoid
+              peak hours).
+            </li>
+            <li>
+              Try both street food and fine dining for a balanced food journey.
+            </li>
+            <li>
+              Mumbai is safe and active 24x7, but keep an eye on belongings in
+              crowded areas.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="mumbaiWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Bengaluru MODAL------------------>
+    <div id="bengaluruModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('bengaluruModal')"
+          >&times;</span
+        >
+        <h2>🏙️ Bengaluru – The Garden & IT City</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Bengaluru_1.jpg" alt="Bengaluru" />
+          <img src="./images/4_Urban/Bengaluru_4.jpg" alt="Bengaluru" />
+          <p>
+            Bengaluru is India’s “Silicon Valley” and Garden City, blending
+            technology, greenery, nightlife, and culture. It’s a hub for
+            startups, IT giants, trendy cafes, rooftop pubs, shopping malls, and
+            parks. Perfect for travellers who want a modern urban escape with a
+            youthful buzz.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Today, it’s a global IT powerhouse and one of the fastest-growing
+              cosmopolitan cities in Asia.
+            </li>
+            <li>
+              Urban Lifestyle – buzzing pubs, shopping streets, and tech parks.
+            </li>
+            <li>
+              Green Spaces – Lalbagh & Cubbon Park balance out the modern chaos.
+            </li>
+            <li>
+              Cultural Blend – mix of Kannada heritage with global influences.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October – February (cool, pleasant weather).</li>
+            <li>Year-round mild climate, but summer afternoons can be warm.</li>
+          </ul>
+          <img src="./images/4_Urban/Bengaluru_3.jpg" alt="Bengaluru" />
+          <img src="./images/4_Urban/Bengaluru_6.jpg" alt="Bengaluru" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>UB City Mall – Luxury shopping, rooftop dining, nightlife.</li>
+            <li>MG Road & Brigade Road – Iconic shopping & café hubs.</li>
+            <li>Indiranagar – Best pubs, breweries, and live music spots.<</li>
+            <li>Church Street – Street art, book cafés, and bistros.</li>
+            <li>Lalbagh Botanical Garden – Glass House & flower shows.</li>
+            <li>Cubbon Park – Morning walks & heritage vibes.</li>
+            <li>
+              Bangalore Palace – Tudor-style architecture, a royal touch in a
+              modern city.
+            </li>
+            <li>Vidhana Soudha – Iconic landmark (state legislature).</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Masala Dosa & Filter Coffee – Classic Karnataka breakfast.</li>
+            <li>Bisi Bele Bath, Vada, Idli – Local staples.</li>
+            <li>MTR (Mavalli Tiffin Room) – Legendary South Indian meals.</li>
+            <li>
+              Microbrewery Craft Beers – Bengaluru is India’s pub capital.
+            </li>
+            <li>
+              Street Eats: V.V. Puram Food Street for chaats, dosas, sweets.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Bengaluru_7.jpg" alt="Bengaluru" />
+          <img src="./images/4_Urban/Bengaluru_2.webp" alt="Bengaluru" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Lalbagh Botanical Garden → Cubbon Park → Vidhana Soudha (photo
+              stop) → Evening at UB City rooftop.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning Bangalore Palace → MG Road & Brigade Road shopping →
+              Evening Indiranagar pub hopping.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Church Street café hopping → Street food at V.V. Puram → Optional:
+              Nandi Hills sunrise trip (~60 km).
+            </li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Traffic is heavy – plan attractions area-wise.</li>
+            <li>
+              Metro is reliable for MG Road, Cubbon Park, and nearby hubs.
+            </li>
+            <li>
+              Try early morning walks in Lalbagh or Cubbon for peaceful vibes.<
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="bengaluruWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Chennai MODAL------------------>
+    <div id="chennaiModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('chennaiModal')">&times;</span>
+        <h2>🌆 Chennai – Gateway to South India</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/chennai_2.jpg" alt="Chennai" />
+          <img src="./images/4_Urban/chennai_3.jpg" alt="Chennai" />
+          <p>
+            Chennai is the capital of Tamil Nadu and one of India’s most vibrant
+            metropolises. Known as the Gateway to South India, it beautifully
+            blends heritage temples, colonial landmarks, beaches, and modern
+            lifestyle hubs. For travellers, it’s a city of contrasts – where you
+            can sip filter coffee in a traditional eatery in the morning, shop
+            in modern malls in the afternoon, and end the day with sunset at
+            Marina Beach.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The city was a key trading port for centuries and later became the
+              cultural capital of Tamil Nadu.
+            </li>
+            <li>
+              Iconic temples & churches (Kapaleeshwarar Temple, San Thome
+              Basilica).
+            </li>
+            <li>Kollywood film industry & buzzing modern lifestyle.</li>
+            <li>
+              Blend of modern IT hubs, skyscrapers, malls, and traditional
+              markets.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              November to February – Pleasant weather, ideal for sightseeing.
+            </li>
+            <li>Summers (Apr–Jun) are hot; monsoons (Jul–Sep) humid.</li>
+          </ul>
+          <img src="./images/4_Urban/chennai_4.jpg" alt="Chennai" />
+          <img src="./images/4_Urban/chennai_5.jpg" alt="Chennai" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Marina Beach & Promenade – Evening strolls, street snacks.</li>
+            <li>
+              Phoenix Marketcity & Express Avenue Mall – Luxury shopping, gaming
+              zones, multiplexes.
+            </li>
+            <li>
+              East Coast Road (ECR) – Trendy cafes, resorts, adventure sports.
+            </li>
+            <li>
+              VGP Universal Kingdom & MGM Dizzee World – Fun amusement parks.
+            </li>
+            <li>
+              IT Corridor (OMR) – Modern skyline, buzzing nightlife, pubs.
+            </li>
+            <li>
+              DakshinaChitra Museum (on ECR) – A modern take on South Indian
+              heritage.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/chennai_6.jpg" alt="Chennai" />
+          <img src="./images/4_Urban/chennai_7.jpg" alt="Chennai" />
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Filter Coffee & Masala Dosa – Chennai staples.</li>
+            <li>Sundal & Murukku – Beachside snacks.</li>
+            <li>Chettinad Cuisine – Spicy curries, chicken & seafood.</li>
+            <li>South Indian thali – Rice with multiple curries & sambar.</li>
+            <li>
+              For modern travellers: trendy cafés and international restaurants
+              line ECR & city malls.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/dosa_2.jpg" alt="Chennai" />
+          <img src="./images/4_Urban/chennai_8.jpg" alt="Chennai" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Explore Marina Beach sunrise → Kapaleeshwarar Temple → San Thome
+              Basilica → Evening at Express Avenue Mall.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Drive along ECR → DakshinaChitra → Lunch at beachside café → Fun
+              at MGM Dizzee World → Sunset at Covelong Beach.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Fort St. George & Government Museum → Phoenix Marketcity
+              (shopping + nightlife).
+            </li>
+          </ul>
+          <img src="./images/4_Urban/chennai_10.webp" alt="Chennai" />
+          <img src="./images/4_Urban/chennai_9.webp" alt="Chennai" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Chennai is well-connected—metro, autos, cabs make travel easy.
+            </li>
+            <li>Dress modestly for temples, but modern areas are liberal.</li>
+            <li>
+              Try a mix of local street eats + modern fine dining to feel both
+              sides of the city.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="chennaiWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Kolkata MODAL------------------>
+    <div id="kolkataModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('kolkataModal')">&times;</span>
+        <h2>🏙️ Kolkata – The Cultural Capital of India</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Kolkata_1.jpg" alt="Kolkata" />
+          <img src="./images/4_Urban/Kolkata_4.jpg" alt="Kolkata" />
+          <p>
+            Kolkata, often called the City of Joy, is the cultural heartbeat of
+            India. It’s where colonial-era architecture, literary heritage,
+            vibrant art, festivals, and modern urban life come together. For
+            travelers, it offers a perfect mix of heritage walks, buzzing city
+            life, book cafés, shopping streets, and foodie delights.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Known as the intellectual hub—home to Nobel laureates like
+              Rabindranath Tagore and Mother Teresa.
+            </li>
+            <li>Blend of old-world charm + modern city vibes.</li>
+            <li>Rich theatre, music, and art scene.</li>
+            <li>
+              Durga Puja festival (Sept–Oct) – UNESCO-recognized, the entire
+              city turns into a carnival with modern pandals, lights, and
+              cultural shows.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to February – Pleasant winter, perfect for sightseeing and
+              festivals.
+            </li>
+            <li>
+              September–October – Best for experiencing Durga Puja in full
+              grandeur.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Kolkata_3.jpg" alt="Kolkata" />
+          <img src="./images/4_Urban/Kolkata_2.jpg" alt="Kolkata" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Victoria Memorial & Maidan – Iconic landmark + city’s green heart.
+            </li>
+            <li>
+              Park Street – Urban nightlife hub; cafés, pubs, and music lounges.
+            </li>
+            <li>
+              New Town & Eco Park – Modern township with art installations,
+              boating, and replica monuments.
+            </li>
+            <li>
+              South City Mall & Quest Mall – Luxury shopping, cinema, food
+              courts.
+            </li>
+            <li>
+              Science City – Futuristic museum, IMAX shows, and urban family
+              fun.
+            </li>
+            <li>
+              Howrah Bridge at night – A modern marvel lit up after sunset.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              food: Puchkas (pani puri), Kathi rolls, Telebhaja (fried snacks).
+            </li>
+            <li>Sweet delights: Rosogolla, Mishti Doi, Sandesh.</li>
+            <li>
+              Urban bites: Coffee at Flurys (iconic café), Mughlai paratha,
+              Biryani (with potato – a Kolkata signature).
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Kolkata_5.jpg" alt="Kolkata" />
+          <img src="./images/4_Urban/Kolkata_6.jpg" alt="Kolkata" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning at Victoria Memorial → Tram/Heritage walk → Park Street
+              nightlife.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Explore Eco Park & New Town → Evening Howrah Bridge lights →
+              Street food tour at Esplanade.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Indian Museum/Science City → Shopping at Quest Mall → Coffee
+              & desserts at Flurys.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Kolkata_8.jpg" alt="Kolkata" />
+          <img src="./images/4_Urban/Kolkata_9.jpg" alt="Kolkata" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Metro & trams are great for exploring like a local.</li>
+            <li>Avoid peak summer (April–June) due to heat and humidity.</li>
+            <li>
+              Try mixing heritage spots with modern hangouts to enjoy the city’s
+              dual vibe.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="kolkataWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Hyderabad MODAL------------------>
+    <div id="hyderabadModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('hyderabadModal')"
+          >&times;</span
+        >
+        <h2>🏙️ Hyderabad – The City of Pearls & Biryani</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Hyderabad_1.webp" alt="Hyderabad" />
+          <img src="./images/4_Urban/Hyderabad_5.jpg" alt="Hyderabad" />
+          <p>
+            Hyderabad is a perfect blend of heritage and modernity. Known
+            worldwide for its IT hubs, luxury malls, and buzzing nightlife, it
+            is also steeped in history with Nizami palaces, lakes, and iconic
+            food culture. For travellers, it’s an urban hotspot where you can
+            enjoy skyscrapers and shopping by day, and heritage walks and
+            biryani feasts by night.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Founded in 1591 by Muhammad Quli Qutb Shah, Hyderabad flourished
+              as a trading hub for diamonds and pearls (hence the name City of
+              Pearls).
+            </li>
+            <li>
+              Today, it’s also called “Cyberabad” thanks to HITEC City – India’s
+              Silicon Valley hub.
+            </li>
+            <li>Pearls & Gems Markets – Laad Bazaar, Pathergatti.</li>
+            <li>
+              Blend of old & new – Charminar lanes to luxury malls like Inorbit
+              & GVK One.
+            </li>
+            <li>Ramoji Film City – One of the world’s largest film studios.</li>
+            <li>Modern Lakeside Hangouts – Hussain Sagar & Necklace Road.</li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to February – Pleasant winter weather, great for
+              sightseeing.
+            </li>
+            <li>Summers (March–June) can be very hot.</li>
+          </ul>
+          <img src="./images/4_Urban/Hyderabad_6.jpg" alt="Hyderabad" />
+          <img src="./images/4_Urban/Hyderabad_7.jpg" alt="Hyderabad" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Charminar & Laad Bazaar – Blend of history + vibrant shopping.
+            </li>
+            <li>HITEC City – Modern IT hub with skyscrapers.</li>
+            <li>Ramoji Film City – Day-long trip for movies, sets, rides.</li>
+            <li>Nehru Zoological Park & Wonderla Theme Park – For families.</li>
+            <li>
+              Inorbit Mall / GVK One Mall / IKEA Hyderabad – Urban shopping
+              experiences.
+            </li>
+            <li>
+              Hussain Sagar Lake & Necklace Road – Evening boat rides + Buddha
+              statue.
+            </li>
+            <li>Shilparamam – Arts & crafts village with urban touch.</li>
+            <li>Gachibowli & Jubilee Hills – Pubs, clubs, and nightlife.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Hyderabadi Biryani – A must-have, world-famous.</li>
+            <li>Haleem (especially during Ramadan).</li>
+            <li>Double Ka Meetha (bread pudding dessert).</li>
+            <li>Irani Chai & Osmania Biscuits – Iconic tea culture.</li>
+            <li>Street food like Mirchi Bajji & Shawarma.</li>
+          </ul>
+          <img
+            src="./images/4_Urban/Hyderabadi_Biryani_1.jpg"
+            alt="Hyderabad"
+          />
+          <img src="./images/4_Urban/Hyderabad_8.webp" alt="Hyderabad" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>Charminar → Laad Bazaar → Evening Irani chai & street food.</li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>Ramoji Film City (full-day experience).</li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              HITEC City & Inorbit Mall → Necklace Road sunset boat ride →
+              Dinner with Hyderabadi biryani.
+            </li>
+          </ul>
+          <h3>Day 4:</h3>
+          <ul class="guide-list">
+            <li>Shilparamam crafts village → Jubilee Hills nightlife.</li>
+          </ul>
+          <img src="./images/4_Urban/Hyderabad_2.jpg" alt="Hyderabad" />
+          <img src="./images/4_Urban/Hyderabad_3.jpg" alt="Hyderabad" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Try local transport like autos & metro rail for short distances.
+            </li>
+            <li>
+              Shopping tip: Bargain at local markets (pearls, bangles,
+              handicrafts).
+            </li>
+            <li>Food tip: Go light before biryani—portions are huge!</li>
+            <li>Evenings are best for lakeside and shopping strolls.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="hyderabadWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-----------------Lodhi MODAL------------------>
+    <div id="lodhiModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('lodhiModal')">&times;</span>
+        <h2>🌿 Lodhi Garden – New Delhi</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Lodhi_1.jpg" alt="Lodhi Garden" />
+          <img src="./images/4_Urban/Lodhi_2.jpg" alt="Lodhi Garden" />
+          <p>
+            Lodhi Garden is one of the most beautiful urban green escapes in New
+            Delhi—a perfect mix of history, architecture, and modern leisure.
+            Spread over 90 acres, it’s not just a garden but a living heritage
+            site where centuries-old monuments stand amidst landscaped lawns and
+            jogging tracks. For travellers, it offers a peaceful break from
+            Delhi’s chaos while still being in the city’s heart.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Key monuments: Mohammed Shah’s Tomb, Sikandar Lodi’s Tomb, Bara
+              Gumbad, and Shish Gumbad.
+            </li>
+            <li>
+              A unique blend of medieval Indo-Islamic architecture with modern
+              walking trails, lakes, and gardens.
+            </li>
+            <li>
+              It’s also a hotspot for Delhi locals—morning walks, yoga sessions,
+              photography, and picnics.
+            </li>
+            <li>
+              Tourists are attracted to the “old meets new” vibe—historic tombs
+              surrounded by a modern urban lifestyle.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant Delhi winter/spring weather, perfect
+              for walks.
+            </li>
+            <li>
+              Early mornings and evenings are the most scenic (sunrise/sunset
+              photography).
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Lodhi_3.webp" alt="Lodhi Garden" />
+          <img src="./images/4_Urban/Lodhi_6.jpg" alt="Lodhi Garden" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Explore Bara Gumbad & Mosque (grand medieval structure).</li>
+            <li>
+              Visit Sikandar Lodi’s Tomb – a forerunner to the Taj Mahal’s
+              garden-tomb style.
+            </li>
+            <li>Picnic or photography session in lush lawns.</li>
+            <li>Birdwatching around the artificial lake.</li>
+            <li>
+              Evening strolls to enjoy the garden lights and peaceful vibes.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Khan Market (5 min away): Trendy cafés, kebabs, North Indian
+              thalis, international cuisines.
+            </li>
+            <li>Street Food in Delhi: Chole Bhature, Aloo Tikki, Golgappas.</li>
+            <li>
+              Fine dining: Lodhi Garden Restaurant (just outside) offers modern
+              global cuisine in a scenic setting.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Lodhi_7.jpg" alt="Lodhi Garden" />
+          <img src="./images/4_Urban/Lodhi_4.jpg" alt="Lodhi Garden" />
+          <h2>Roadmap for (1 day)</h2>
+          <h3>
+            Sunset photography in the garden → Relax with street food near India
+            Gate.
+          </h3>
+          <ul class="guide-list">
+            <li>
+              Start early → Explore Lodhi Garden monuments → Walk/jog around
+              pathways.
+            </li>
+          </ul>
+          <h3>Day 1 (Afternoon):</h3>
+          <ul class="guide-list">
+            <li>Lunch at Khan Market or Lodhi Garden Restaurant.</li>
+          </ul>
+          <h3>Day 1 (Evening):</h3>
+          <ul class="guide-list">
+            <li>
+              Sunset photography in the garden → Relax with street food near
+              India Gate.
+            </li>
+          </ul>
+          <p>If you’re on a Delhi city tour, you can pair Lodhi Garden with:</p>
+          <li>Humayun’s Tomb (15 min away)</li>
+          <li>India Gate & Rajpath (10 min away)</li>
+          <li>National Gallery of Modern Art (close by)</li>
+          <img src="./images/4_Urban/Lodhi_8.jpg" alt="Lodhi Garden" />
+          <img src="./images/4_Urban/Lodhi_5.jpg" alt="Lodhi Garden" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Entry is free and the garden is open from 6 AM to 7:30 PM.</li>
+            <li>Carry a picnic mat or camera for a more relaxed visit.</li>
+            <li>Best explored on foot—wear comfortable shoes.</li>
+            <li>
+              Perfect spot if you want urban greenery + history in one place.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="lodhiWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Brindavan MODAL------------------>
+    <div id="brindavanModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('brindavanModal')"
+          >&times;</span
+        >
+        <h2>🌺 Brindavan Gardens – Mysuru, Karnataka</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Brindavan_1.jpg" alt="Brindavan Gardens" />
+          <img src="./images/4_Urban/Brindavan_2.jpg" alt="Brindavan Gardens" />
+          <p>
+            Brindavan Gardens is one of India’s most iconic urban gardens,
+            famous for its symphonic fountain shows, terraced layouts, and
+            vibrant flower beds. Spread across 60 acres beside the Krishna Raja
+            Sagara (KRS) Dam, it’s a favorite evening hangout for families,
+            couples, and travelers who love illuminated landscapes and urban
+            leisure spaces.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Known for its Mughal-style landscaping: symmetrical pathways,
+              gazebos, musical fountains, and boating.
+            </li>
+            <li>
+              The KRS Dam, adjacent to the gardens, is an engineering marvel
+              built under the reign of Maharaja Krishnaraja Wodeyar IV.
+            </li>
+            <li>Evening musical fountain & light show.</li>
+            <li>Well-laid terraces, botanical patterns, & water channels.</li>
+            <li>Boat rides in illuminated waters.</li>
+            <li>Gardens lit up with thousands of colorful lamps after dusk.</li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October to February – Pleasant evenings, cool weather.</li>
+            <li>
+              Evening hours (6:30 PM – 8:30 PM) are best to enjoy the fountain
+              and light shows.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Brindavan_4.jpg" alt="Brindavan Gardens" />
+          <img src="./images/4_Urban/Brindavan_6.jpg" alt="Brindavan Gardens" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Musical Fountain Show – The star attraction.</li>
+            <li>Boating in the Cauvery river canal.</li>
+            <li>
+              Garden Walks – Explore symmetrically designed lawns and flower
+              beds.
+            </li>
+            <li>View of KRS Dam – Sunset at the dam is mesmerizing.</li>
+            <li>Photography – The illuminated gardens are a visual treat.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Mysore Pak – Iconic sweet.</li>
+            <li>Bisi Bele Bath – Spicy rice-lentil dish.</li>
+            <li>Mysore Masala Dosa – Crispy and flavorful.</li>
+            <li>Street-side chaat & filter coffee near the gardens.</li>
+          </ul>
+          <img src="./images/4_Urban/Brindavan_7.jpg" alt="Brindavan Gardens" />
+          <img src="./images/4_Urban/Brindavan_8.jpg" alt="Brindavan Gardens" />
+          <h2>Roadmap for (1-2 days)</h2>
+          <h3>Day 1 Morning:</h3>
+          <ul class="guide-list">
+            <li>Explore Mysuru Palace & local city attractions.</li>
+          </ul>
+          <h3>Day 1 Evening:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Brindavan Gardens → Take a boat ride → Watch the musical
+              fountain show → Try local food stalls nearby.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>Cover Chamundi Hills, Mysore Zoo, St. Philomena’s Church.</li>
+          </ul>
+          <img src="./images/4_Urban/Brindavan_9.jpg" alt="Brindavan Gardens" />
+          <img src="./images/4_Urban/Brindavan_3.jpg" alt="Brindavan Gardens" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Best to visit just before sunset and stay till the light show.
+            </li>
+            <li>Carry light jackets (cool breeze near the dam).</li>
+            <li>
+              Gardens can get crowded on weekends—plan weekdays for peaceful
+              visits.
+            </li>
+            <li>Combine with a Mysuru city tour for a wholesome experience.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="brindavanWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Lalbagh MODAL------------------>
+    <div id="lalbaghModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('lalbaghModal')">&times;</span>
+        <h2>🌳 Lalbagh Botanical Garden – Bengaluru, Karnataka</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/4_Urban/Lalbagh_1.jpg"
+            alt="Lalbagh Botanical Garden"
+          />
+          <img
+            src="./images/4_Urban/Lalbagh_2.jpg"
+            alt="Lalbagh Botanical Garden"
+          />
+          <p>
+            Lalbagh is one of the most iconic urban green spaces in India,
+            located right in the heart of Bengaluru. It’s not just a garden—it’s
+            a blend of history, horticulture, and urban charm. Tourists love it
+            for its peaceful environment, century-old trees, unique glasshouse
+            shows, and photogenic landscapes, making it the “lungs of
+            Bengaluru.”
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Famous for the Glass House, inspired by London’s Crystal Palace,
+              where biannual flower shows (Jan & Aug) attract thousands.
+            </li>
+            <li>
+              Houses over 1,800 species of plants from across the world,
+              including rare tropical species.
+            </li>
+            <li>
+              Historic Touch: Contains a 2-billion-year-old rock formation, one
+              of the oldest on Earth.
+            </li>
+            <li>
+              Speciality: Mix of history, science, and nature within a buzzing
+              metro city—rare to find elsewhere.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              Morning or Evening (6 AM–9 AM & 4 PM–6 PM) for cooler weather.
+            </li>
+            <li>January & August – Don’t miss the grand Flower Shows.</li>
+            <li>
+              Open all year, but winter months (Nov–Feb) are most pleasant.
+            </li>
+          </ul>
+          <img
+            src="./images/4_Urban/Lalbagh_7.jpg"
+            alt="Lalbagh Botanical Garden"
+          />
+          <img
+            src="./images/4_Urban/Lalbagh_4.jpg"
+            alt="Lalbagh Botanical Garden"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Glass House – Flower shows, architectural marvel.</li>
+            <li>
+              Lalbagh Rock – Prehistoric rock + panoramic view of the city.
+            </li>
+            <li>Lotus Pond & Rose Garden – Perfect photography spots.</li>
+            <li>Bonsai Garden & Topiary Garden – Rare plant displays.</li>
+            <li>
+              Statues of Hyder Ali & Maharaja of Mysore – Blend of history &
+              heritage.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Benne Masala Dosa – Vidyarthi Bhavan, Basavanagudi (close to
+              Lalbagh).
+            </li>
+            <li>
+              Filter Coffee – Iconic Bengaluru cafés like MTR (Mavalli Tiffin
+              Rooms).
+            </li>
+            <li>
+              Street Eats: Vada pav, chaats & fresh fruit stalls outside the
+              garden.
+            </li>
+            <li>
+              If you’re exploring more, try Darshini-style South Indian
+              breakfasts (idli, vada, upma).
+            </li>
+          </ul>
+          <img
+            src="./images/4_Urban/Lalbagh_5.jpg"
+            alt="Lalbagh Botanical Garden"
+          />
+          <img
+            src="./images/4_Urban/Lalbagh_6.webp"
+            alt="Lalbagh Botanical Garden"
+          />
+          <h2>Roadmap for (2 days)</h2>
+          <h3>Day 1 (Morning):</h3>
+          <ul class="guide-list">
+            <li>
+              Start at Lalbagh Garden → Stroll around Glass House → Lotus Pond →
+              Rock viewpoint.
+            </li>
+            <li>Stop for breakfast at MTR (famous since 1924).</li>
+          </ul>
+          <h3>Day 1 (Evening):</h3>
+          <ul class="guide-list">
+            <li>
+              Walk through Basavanagudi → Visit Bull Temple (Nandi Temple)
+              nearby.
+            </li>
+            <li>
+              Dinner in Jayanagar or Basavanagudi for authentic Karnataka meals.
+            </li>
+          </ul>
+          <h3>Day 2 (Optional Add-ons):</h3>
+          <ul class="guide-list">
+            <li>
+              Pair Lalbagh with Cubbon Park or Bangalore Palace for a full
+              “Modern & Heritage Bengaluru” experience.
+            </li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Best enjoyed on foot – wear comfortable walking shoes.</li>
+            <li>Flower shows get crowded → go early for best views.</li>
+            <li>
+              Carry a camera (and water bottle); it’s spread over 240 acres!
+            </li>
+            <li>
+              Combine with nearby South Indian food joints to complete the urban
+              Bengaluru vibe.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="lalbaghWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Mughal MODAL------------------>
+    <div id="mughalModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('mughalModal')">&times;</span>
+        <h2>🌸 Mughal Gardens (Amrit Udyan) – Rashtrapati Bhavan, New Delhi</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Mughal_1.jpg" alt="Mughal Gardens" />
+          <img src="./images/4_Urban/Mughal_3.jpeg" alt="Mughal Gardens" />
+          <p>
+            Hidden within the grand premises of the Rashtrapati Bhavan, Amrit
+            Udyan (formerly Mughal Gardens) is a blend of Mughal, British, and
+            Indian horticultural styles. Often called the “Heart of Rashtrapati
+            Bhavan”, it opens to the public only for a short period each year —
+            making it one of India’s most exclusive natural attractions. A visit
+            here feels like stepping into a royal garden paradise — with
+            geometric flower beds, fountains, and serene pathways surrounded by
+            thousands of blooming flowers.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Inspired by the charbagh style (four-part Mughal layout) seen in
+              the gardens of the Taj Mahal and Shalimar Bagh.
+            </li>
+            <li>
+              Rebranded as “Amrit Udyan” in 2023 to mark India’s Amrit Mahotsav.
+            </li>
+            <li>
+              Spreads over 15 acres, featuring terrace gardens, bonsai gardens,
+              circular gardens, and herbal sections.
+            </li>
+            <li>
+              Known for over 150 varieties of roses, tulips, marigolds, and
+              exotic blooms—best viewed during its limited public opening
+              (Feb–March).
+            </li>
+            <li>
+              The combination of royal design + floral artistry makes it a
+              unique and offbeat attraction even for locals.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              February to March – During “Udyan Utsav” (public opening season).
+            </li>
+            <li>Morning hours are best for cool weather and photography.</li>
+            <li>
+              Entry requires online registration via Rashtrapati Bhavan website.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Mughal_2.jpeg" alt="Mughal Gardens" />
+          <img src="./images/4_Urban/Mughal_4.webp" alt="Mughal Gardens" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Main Mughal Garden – Symmetrical flowerbeds, water channels, and
+              fountains.
+            </li>
+            <li>
+              Circular (Sunken) Garden – Ring-shaped layout with vibrant
+              seasonal blooms.
+            </li>
+            <li>
+              Herbal & Bonsai Gardens – Healing plants and miniature trees.
+            </li>
+            <li>Musical Fountains – Evening illumination adds charm.</li>
+            <li>
+              Gardens of Spiritual Harmony – A newer section inspired by Indian
+              spirituality.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Street chaat & golgappe at Connaught Place.</li>
+            <li>Parathas at Paranthe Wali Gali, Chandni Chowk.</li>
+            <li>Butter Chicken / Kebabs at Karim’s or Gulati Restaurant.</li>
+            <li>Kulfi & Rabri Falooda from Old Delhi.</li>
+          </ul>
+          <img src="./images/4_Urban/Mughal_8.jpg" alt="Mughal Gardens" />
+          <img src="./images/4_Urban/Mughal_6.jpg" alt="Mughal Gardens" />
+          <h2>Roadmap for (1 day)</h2>
+          <h3>Morning:</h3>
+          <ul class="guide-list">
+            <li>
+              Start from India Gate → Rashtrapati Bhavan (Amrit Udyan visit).
+            </li>
+            <li>
+              Explore Central Vista lawns and take photos near the fountains.
+            </li>
+          </ul>
+          <h3>Afternoon:</h3>
+          <ul class="guide-list">
+            <li>Visit National Museum / Janpath Market (5–10 mins drive).</li>
+            <li>
+              Lunch at Connaught Place – try authentic North Indian meals.
+            </li>
+          </ul>
+          <h3>Evening:</h3>
+          <ul class="guide-list">
+            <li>
+              Head to Lodhi Gardens or Humayun’s Tomb – continue the heritage
+              garden theme.
+            </li>
+            <li>Try street food / chai at nearby Khan Market.</li>
+          </ul>
+          <img src="./images/4_Urban/Mughal_7.jpg" alt="Mughal Gardens" />
+          <img src="./images/4_Urban/Mughal_9.webp" alt="Mughal Gardens" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Book entry slots online early (limited availability).</li>
+            <li>Photography allowed only in designated zones.</li>
+            <li>Avoid mid-day visits—it can get hot.</li>
+            <li>Wear comfortable shoes; there’s a lot of walking.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="rashtrapatiWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Rock Garden MODAL------------------>
+    <div id="rockModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('rockModal')">&times;</span>
+        <h2>🏙️ Rock Garden – Chandigarh</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Rock_1.webp" alt="Rock Garden" />
+          <img src="./images/4_Urban/Rock_5.jpg" alt="Rock Garden" />
+          <p>
+            The Rock Garden is one of India’s most creative urban attractions,
+            built entirely from waste materials and recycled items. It’s a
+            magical maze of sculptures, waterfalls, and art installations,
+            making it a must-visit for anyone who loves art, design, and unique
+            urban spaces. Unlike typical city gardens, this is a place where
+            creativity meets sustainability—ideal for photographers, families,
+            and art lovers.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Created in 1957 by Nek Chand, a government official who secretly
+              started building the garden on forest land.
+            </li>
+            <li>
+              Opened officially in 1976, it’s now a 45-acre sculpture garden.
+            </li>
+            <li>
+              Sculptures made of broken ceramics, glass bangles, tiles, bottles,
+              and industrial waste.
+            </li>
+            <li>
+              Artificial waterfalls and winding pathways add to its charm.
+            </li>
+            <li>Recognized worldwide as a masterpiece of “outsider art”.</li>
+            <li>
+              Attracts over 5,000 visitors daily, including international
+              tourists.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather for outdoor exploration.
+            </li>
+            <li>
+              Morning hours for fewer crowds, evening for lighting & cooler
+              breeze.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Rock_6.jpg" alt="Rock Garden" />
+          <img src="./images/4_Urban/Rock_4.jpg" alt="Rock Garden" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Sculpture Displays – Human figures, animals, dancers made from
+              waste.
+            </li>
+            <li>Waterfalls & Bridges – Perfect photo spots.</li>
+            <li>Open-air Theater – Sometimes hosts cultural shows.</li>
+            <li>
+              Nearby – Sukhna Lake (boating, sunset) + Capitol Complex (Le
+              Corbusier’s architecture).
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Chole Bhature – Punjabi-style, spicy and rich.</li>
+            <li>Amritsari Kulcha with butter & lassi.</li>
+            <li>
+              Street foods near Sector 17 market – golgappas, tikki, pav bhaji.
+            </li>
+            <li>Sukhna Lake cafés for a relaxed evening.</li>
+          </ul>
+          <img src="./images/4_Urban/Rock_3.jpg" alt="Rock Garden" />
+          <img src="./images/4_Urban/Rock_2.jpg" alt="Rock Garden" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1 Morning:</h3>
+          <ul class="guide-list">
+            <li>Start at Rock Garden → Explore sculptures & waterfalls.</li>
+          </ul>
+          <h3>Day 1 Afternoon:</h3>
+          <ul class="guide-list">
+            <li>Day 1 Afternoon:</li>
+          </ul>
+          <h3>Day 1 Evening:</h3>
+          <ul class="guide-list">
+            <li>Visit Sector 17 Plaza for shopping + street food.</li>
+          </ul>
+          <h3>Day 2 (Optional):</h3>
+          <ul class="guide-list">
+            <li>Capitol Complex (UNESCO site) + Rose Garden.</li>
+          </ul>
+          <img src="./images/4_Urban/Rock_8.jpg" alt="Rock Garden" />
+          <img src="./images/4_Urban/Rock_7.jpg" alt="Rock Garden" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Entry fee is minimal, tickets can be bought on the spot.</li>
+            <li>Wear comfortable shoes (lots of walking & uneven paths).</li>
+            <li>
+              Photography is allowed—carry a good camera for unique captures.
+            </li>
+            <li>
+              Combine Rock Garden with Sukhna Lake for the best Chandigarh city
+              experience.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="rockGardenWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Shalimar Bagh MODAL------------------>
+    <div id="shalimarModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('shalimarModal')">&times;</span>
+        <h2>🌿 Shalimar Bagh – Srinagar, Jammu & Kashmir</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Shalimar_1.jpg" alt="Shalimar Bagh" />
+          <img src="./images/4_Urban/Shalimar_2.jpg" alt="Shalimar Bagh" />
+          <p>
+            Shalimar Bagh is the largest Mughal garden in Kashmir, and one of
+            the finest examples of Mughal landscape architecture in India. Known
+            as the “Crown of Srinagar”, it’s a place where history, romance, and
+            scenic beauty blend together. Travelers are drawn here for its
+            terraced lawns, flowing fountains, and Chinar tree-lined pathways
+            with Dal Lake as the backdrop—perfect for relaxation and
+            photography.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Built in 1619 by Mughal Emperor Jahangir for his queen, Nur Jahan,
+              as a garden of love.
+            </li>
+            <li>
+              Part of the famous Mughal Garden trio of Srinagar: Shalimar Bagh,
+              Nishat Bagh, and Chashme Shahi.
+            </li>
+            <li>
+              The garden follows the Persian Charbagh style, symbolizing
+              paradise.
+            </li>
+            <li>
+              Tourists are attracted to its romantic legacy, historic charm, and
+              seasonal beauty—especially in autumn when the Chinar leaves turn
+              fiery red and gold.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              March to October – Spring blooms, lush summers, and colorful
+              autumns.
+            </li>
+            <li>
+              Winters (Nov–Feb) can be freezing, but the snow adds a different
+              charm.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Shalimar_3.jpg" alt="Shalimar Bagh" />
+          <img src="./images/4_Urban/Shalimar_4.jpg" alt="Shalimar Bagh" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Stroll through the three terraced levels with fountains and
+              flowerbeds.
+            </li>
+            <li>Enjoy the Dal Lake views right next to the garden.</li>
+            <li>Visit in April–May to see tulip and flower blossoms.</li>
+            <li>
+              Explore nearby Mughal gardens (Nishat Bagh & Chashme Shahi) for a
+              complete heritage walk.
+            </li>
+            <li>
+              Evening walks when the fountains are lit create a magical
+              experience.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Rogan Josh (lamb curry with Kashmiri spices)</li>
+            <li>Gushtaba (meatballs in yogurt gravy)</li>
+            <li>Kahwa (traditional saffron-infused green tea with almonds)</li>
+            <li>Phirni (sweet rice pudding)</li>
+            <li>Try street kebabs around Dal Lake.</li>
+          </ul>
+          <img src="./images/4_Urban/Shalimar_5.jpg" alt="Shalimar Bagh" />
+          <img src="./images/4_Urban/Shalimar_6.jpg" alt="Shalimar Bagh" />
+          <h2>Roadmap for (4 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>Arrive in Srinagar → Dal Lake Shikara ride at sunset.</li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning visit to Shalimar Bagh → Continue to Nishat Bagh & Chashme
+              Shahi → Lunch by Dal Lake → Evening shopping at Lal Chowk.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>Day trip to Gulmarg / Pahalgam for mountain views.</li>
+          </ul>
+          <h3>Day 4:</h3>
+          <ul class="guide-list">
+            <li>Explore Shankaracharya Temple & old Srinagar markets.</li>
+          </ul>
+          <img src="./images/4_Urban/Shalimar_7.jpg" alt="Shalimar Bagh" />
+          <img src="./images/4_Urban/Shalimar_8.jpg" alt="Shalimar Bagh" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Best to visit early morning or late afternoon for fewer crowds.
+            </li>
+            <li>
+              Wear comfortable shoes for walking on the garden’s wide pathways.
+            </li>
+            <li>Photography lovers—autumn is the most scenic season here.</li>
+            <li>
+              Always check local advisories before travel (weather & security
+              updates).
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="shalimarWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Chandni Chowk MODAL------------------>
+    <div id="chandniModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('chandniModal')">&times;</span>
+        <h2>🏙️ Chandni Chowk – Delhi</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Chandni_1.jpg" alt="Chandni Chowk" />
+          <img src="./images/4_Urban/Chandni_7.jpg" alt="Chandni Chowk" />
+          <p>
+            Chandni Chowk is the heart of Old Delhi – a chaotic yet colorful
+            marketplace where history meets modern hustle. For travellers, it’s
+            the best place to experience the true pulse of Delhi – narrow lanes,
+            buzzing bazaars, heritage havelis, and legendary street food stalls.
+            It’s not just shopping, it’s an urban adventure in itself.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The name “Chandni Chowk” means Moonlit Square – it was once a
+              canal-lit market reflecting moonlight.
+            </li>
+            <li>
+              Known as a hub of trade & culture for 300+ years – from silks,
+              spices, jewelry to sweets.
+            </li>
+            <li>
+              Tourists are attracted to its blend of Mughal-era charm + modern
+              Delhi chaos.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October – March: Pleasant weather for walking tours.</li>
+            <li>
+              Visit during the day for shopping & food, evenings for lit-up
+              views.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Chandni_4.jpg" alt="Chandni Chowk" />
+          <img src="./images/4_Urban/Chandni_3.jpg" alt="Chandni Chowk" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Red Fort – Just opposite Chandni Chowk, a UNESCO site.</li>
+            <li>Jama Masjid – India’s largest mosque.</li>
+            <li>Dariba Kalan – Famous for silver jewelry.</li>
+            <li>Khari Baoli – Asia’s largest spice market.</li>
+            <li>Paranthe Wali Gali – Iconic food lane for stuffed parathas.</li>
+            <li>
+              Heritage Havelis & Kinari Bazaar – Great for photography & wedding
+              shopping.
+            </li>
+            <li>
+              Rickshaw Ride – A must to experience the lanes like a local.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Parathas at Paranthe Wali Gali.</li>
+            <li>Jalebi at Old Famous Jalebi Wala.</li>
+            <li>Chaat, Dahi Bhalla, Golgappa from street vendors.</li>
+            <li>
+              Mughlai delicacies like kebabs & biryani near Jama Masjid (Karim’s
+              is iconic).
+            </li>
+            <li>Kulfi (traditional ice cream) at roadside stalls.</li>
+          </ul>
+          <img src="./images/4_Urban/Chandni_5.jpg" alt="Chandni Chowk" />
+          <img src="./images/4_Urban/Chandni_2.jpg" alt="Chandni Chowk" />
+          <h2>Roadmap for Travelers</h2>
+          <h3>Day Trip Plan (Half/Full Day):</h3>
+          <ul class="guide-list">
+            <li>Morning: Start at Red Fort → Walk into Chandni Chowk.</li>
+            <li>
+              Late Morning: Visit Jama Masjid → Rickshaw ride through Dariba
+              Kalan (jewelry lane).
+            </li>
+            <li>Lunch: Karim’s or Paranthe Wali Gali.</li>
+            <li>
+              Afternoon: Explore Khari Baoli spice market & Kinari Bazaar.
+            </li>
+            <li>
+              Evening: Try jalebis & kulfi → Sunset view from Jama Masjid or
+              Fort area.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Chandni_8.jpg" alt="Chandni Chowk" />
+          <img src="./images/4_Urban/Chandni_6.jpg" alt="Chandni Chowk" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Wear comfortable clothes & shoes – lots of walking.</li>
+            <li>
+              Best to go with a local guide / food walk tour for hidden gems.
+            </li>
+            <li>Bargain in bazaars; prices are flexible.</li>
+            <li>Carry cash (small notes), many stalls don’t accept cards.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="chandniWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Johari Bazaar MODAL------------------>
+    <div id="johariModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('johariModal')">&times;</span>
+        <h2>💎 Johari Bazaar – Jaipur, Rajasthan</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Johari_2.jpg" alt="Johari Bazaar" />
+          <img src="./images/4_Urban/Johari_3.webp" alt="Johari Bazaar" />
+          <p>
+            Johari Bazaar is Jaipur’s most famous shopping hub for jewelry and
+            gemstones, blending traditional Rajasthani craftsmanship with a
+            vibrant urban shopping vibe. It’s perfect for tourists who love
+            modern shopping experiences in a culturally rich city. Beyond
+            shopping, the market offers a glimpse into Jaipur’s colorful
+            streets, urban energy, and lively city culture.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Historically, it was known as the gemstone market for royal
+              families, specializing in precious stones, gold, silver, and
+              Kundan jewelry.
+            </li>
+            <li>Rajasthani jewelry – Kundan, Meenakari, and Polki designs.</li>
+            <li>
+              Handicrafts & souvenirs – Bright textiles, embroidered items, and
+              traditional footwear.
+            </li>
+            <li>
+              Urban vibe – Bustling streets with modern cafes, street food, and
+              contemporary shops alongside traditional ones.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather for strolling through crowded
+              bazaars.
+            </li>
+            <li>Avoid peak summer months (April–June) due to extreme heat.</li>
+          </ul>
+          <img src="./images/4_Urban/Johari_8.jpg" alt="Johari Bazaar" />
+          <img src="./images/4_Urban/Johari_9.jpg" alt="Johari Bazaar" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Jewelry Shops – Explore gold, silver, Kundan, and Polki jewelry.
+            </li>
+            <li>Textile & Handicraft Stores – Perfect for souvenirs.</li>
+            <li>
+              City Palace & Jantar Mantar – Just 10–15 mins walk; adds a
+              historical-modern blend.
+            </li>
+            <li>
+              Local Cafes & Rooftop Restaurants – Experience modern Jaipur with
+              traditional flavors.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Pyaaz Kachori & Samosa – Street snacks at the bazaar entrance.
+            </li>
+            <li>Lassi & Churma – Refreshing local drinks and sweets.</li>
+            <li>
+              Dal Baati Churma – Iconic Rajasthani dish in nearby restaurants.
+            </li>
+            <li>
+              Ghewar – Traditional sweet, especially during festive season.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Johari_10.jpeg" alt="Johari Bazaar" />
+          <img src="./images/4_Urban/Johari_5.jpg" alt="Johari Bazaar" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive → Stroll Johari Bazaar → Shop for jewelry & souvenirs →
+              Street food tasting.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning visit to City Palace → Jantar Mantar → Lunch at local
+              rooftop café → Evening shopping in Bapu Bazaar (for textiles &
+              crafts).
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Nahargarh Fort for panoramic city view → Relax at modern
+              cafes → Evening cultural show or light & sound show at Amer Fort.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Johari_4.jpg" alt="Johari Bazaar" />
+          <img src="./images/4_Urban/Johari_7.webp" alt="Johari Bazaar" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Bargaining is common; keep a friendly approach.</li>
+            <li>Carry small cash for street vendors.</li>
+            <li>Wear comfortable shoes, streets are crowded and lively.</li>
+            <li>
+              Early morning or late afternoon is best to avoid heavy tourist
+              rush.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="johariWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Colaba Causeway MODAL------------------>
+    <div id="colabaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('colabaModal')">&times;</span>
+        <h2>🏙️ Colaba Causeway – Mumbai, Maharashtra</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Colaba_1.jpg" alt="Colaba Causeway" />
+          <img src="./images/4_Urban/Colaba_2.jpg" alt="Colaba Causeway" />
+          <p>
+            Colaba Causeway is Mumbai’s vibrant street shopping and cultural
+            hub, perfect for travellers seeking a mix of modern city vibes and
+            old-world charm. It’s a bustling area full of boutiques, street
+            stalls, cafes, and bars, making it a must-visit for shopping
+            enthusiasts, foodies, and urban explorers.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Colaba Causeway was originally constructed in the 19th century to
+              connect the island of Colaba with the mainland.
+            </li>
+            <li>
+              It has grown into a lively commercial street, popular for
+              souvenirs, antiques, and Mumbai-style street culture.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to February – Pleasant weather for walking, shopping, and
+              exploring.
+            </li>
+            <li>
+              Avoid peak monsoon months (June–September) due to heavy rains and
+              crowded streets.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Colaba_3.webp" alt="Colaba Causeway" />
+          <img src="./images/4_Urban/Colaba_4.jpg" alt="Colaba Causeway" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Shopping: Fashion, jewelry, handicrafts, quirky decor, and leather
+              items.
+            </li>
+            <li>
+              Architecture & Culture: Nearby historic buildings and art
+              galleries like Leopold Café and Gateway of India give it a mix of
+              colonial charm + modern urban buzz.
+            </li>
+            <li>
+              Vibrancy: Street performers, cafes, and nightlife make it an
+              attractive urban hotspot.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Leopold Café – Iconic Mumbai cafe, famous for continental & Indian
+              dishes.
+            </li>
+            <li>Bademiya Kebab – Delicious late-night kebabs on the street.</li>
+            <li>
+              Street Food: Pav Bhaji, Vada Pav, Chaat, and Falooda along the
+              street.
+            </li>
+            <li>
+              Seafood Restaurants nearby – Fresh catches from Mumbai’s coast.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Colaba_7.jpg" alt="Colaba Causeway" />
+          <img src="./images/4_Urban/Colaba_8.jpg" alt="Colaba Causeway" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive at Colaba Causeway → Walk the street, explore shops and
+              markets → Street snacks & coffee at Leopold Café → Sunset view at
+              Gateway of India.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Taj Mahal Palace Hotel for heritage vibes → Explore Art
+              galleries & small boutiques → Try local seafood → Evening
+              nightlife or cafes.
+            </li>
+          </ul>
+          <h3>Nearby Spots to Cover:</h3>
+          <ul class="guide-list">
+            <li>
+              Gateway of India – Iconic landmark, boat rides to Elephanta Caves.
+            </li>
+            <li>Marine Drive / Chowpatty Beach – Evening relaxation.</li>
+            <li>
+              Fashion Street / Crawford Market – Alternative urban shopping
+              nearby.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Colaba_5.jpg" alt="Colaba Causeway" />
+          <img src="./images/4_Urban/Colaba_6.jpg" alt="Colaba Causeway" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Bargain smartly at street stalls.</li>
+            <li>
+              Carry comfortable walking shoes; the street is long and crowded.
+            </li>
+            <li>Keep cash handy; some small shops may not accept cards.</li>
+            <li>
+              Early mornings or late afternoons are best to avoid peak crowds.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="colabaWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------New Market MODAL------------------>
+    <div id="newMarketModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('newMarketModal')"
+          >&times;</span
+        >
+        <h2>🛍️ New Market (Hogg Market), Kolkata</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/New_Market_1.jpg" alt="New Market" />
+          <img src="./images/4_Urban/New_Market_7.webp" alt="New Market" />
+          <p>
+            New Market, also called Hogg Market, is Kolkata’s iconic shopping
+            hub since 1874. It’s a bustling urban landmark where locals and
+            tourists alike come for shopping, street food, and vintage charm.
+            For travellers, it’s a perfect mix of modern shopping energy with
+            historic vibes, giving a unique Kolkata experience.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The architecture blends colonial-era charm with narrow, busy
+              alleys full of shops.
+            </li>
+            <li>
+              Variety of goods: clothes, shoes, jewelry, handicrafts, and
+              electronics at affordable prices.
+            </li>
+            <li>
+              Quaint wooden stalls and vibrant street-life make it very
+              photogenic.
+            </li>
+            <li>
+              Famous for ‘Kolkata vibes’ – the chaos, the chatter, and the smell
+              of spices in the air.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather for walking and exploring the
+              market.
+            </li>
+            <li>Weekdays are less crowded than weekends.</li>
+          </ul>
+          <img src="./images/4_Urban/New_Market_3.jpg" alt="New Market" />
+          <img src="./images/4_Urban/New_Market_5.jpeg" alt="New Market" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Shop for souvenirs & local crafts – textiles, leather goods,
+              jewelry.
+            </li>
+            <li>
+              Explore adjacent streets – College Street for books, Bowbazar for
+              antiques.
+            </li>
+            <li>Taste street food & Bengali sweets – a culinary delight.</li>
+            <li>
+              Photography – capture colonial architecture, bustling lanes, and
+              neon shop signs.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Peter Cat’s Chelo Kebab – Iconic restaurant near New Market.
+            </li>
+            <li>Street snacks: Puchkas (pani puri), jhalmuri, kathi rolls.</li>
+            <li>
+              Sweet shops: Sandesh, rasgulla, and mishti doi from nearby shops.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/New_Market_6.jpg" alt="New Market" />
+          <img src="./images/4_Urban/New_Market_2.jpg" alt="New Market" />
+          <h2>Short Roadmap for Travelers:</h2>
+          <ul class="guide-list">
+            <li>
+              Morning: Start at New Market → browse shops → snack on street
+              food.
+            </li>
+            <li>
+              Afternoon: Visit College Street for books or Park Street for
+              lunch.
+            </li>
+            <li>
+              Evening: Head to Prinsep Ghat or Victoria Memorial (5–10 min
+              drive) → relax by the river → enjoy evening lights.
+            </li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Keep cash handy; some small vendors don’t accept cards.</li>
+            <li>
+              Bargaining is common – don’t shy away from negotiating prices.
+            </li>
+            <li>Wear comfortable shoes – alleys are narrow and crowded.</li>
+            <li>Keep an eye on your belongings; it can get busy.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="newMarketWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------MG Road MODAL------------------>
+    <div id="MGroadModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('MGroadModal')">&times;</span>
+        <h2>🏙️ MG Road & Commercial Street – Bengaluru (Karnataka)</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/MG_Road_1.webp" alt="MG Road" />
+          <img src="./images/4_Urban/MG_Road_2.png" alt="MG Road" />
+          <p>
+            These two buzzing hubs are the soul of Bengaluru’s shopping,
+            nightlife, and urban culture. From high-end malls and pubs on MG
+            Road to bargain shopping and street food on Commercial Street,
+            travelers get the perfect mix of modern city vibes + local flavor.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              MG Road (Mahatma Gandhi Road): Once a colonial boulevard known as
+              South Parade, it became one of the city’s most important stretches
+              after Independence. Today, it’s lined with luxury shops, cafes,
+              theaters, pubs, and branded stores.
+            </li>
+            <li>
+              Commercial Street: Dates back to the British era and is one of the
+              oldest and busiest markets in Bengaluru. It’s famous for
+              street-style shopping, trendy clothes, footwear, jewelry, and
+              handicrafts at bargain prices.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>Evenings (4 PM–10 PM) for shopping and nightlife.</li>
+            <li>
+              October–February is the best season (pleasant Bengaluru weather).
+            </li>
+          </ul>
+          <img src="./images/4_Urban/MG_Road_3.jpg" alt="MG Road" />
+          <img src="./images/4_Urban/MG_Road_4.webp" alt="MG Road" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <p>MG Road:</p>
+            <li>1 MG Mall & Garuda Mall (luxury shopping).</li>
+            <li>
+              Pubs, lounges & rooftop cafes (Bengaluru = India’s pub capital
+              🍻).
+            </li>
+            <li>Rangoli Metro Art Center for cultural events.</li>
+            <p>Commercial Street:</p>
+            <li>
+              Street shopping for clothes, footwear, accessories, and antiques.
+            </li>
+            <li>Bargain hunting + exploring tiny local shops.</li>
+            <li>Visit nearby Russell Market for a glimpse of old Bengaluru.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <p>MG Road:</p>
+            <li>
+              VV Puram Food Street (close by) – dosas, chaats, holige (sweet
+              flatbread).
+            </li>
+            <li>Local snacks like pani puri & masala dosa.</li>
+            <p>Commercial Street:</p>
+            <li>
+              Trendy cafes and microbreweries (Toit, Arbor Brewing Company).
+            </li>
+            <li>South Indian filter coffee at Indian Coffee House (iconic).</li>
+            <li>Street ice creams & shawarma for quick bites.</li>
+          </ul>
+          <img src="./images/4_Urban/MG_Road_8.jpg" alt="MG Road" />
+          <img src="./images/4_Urban/MG_Road_9.jpg" alt="MG Road" />
+          <h2>Roadmap for (2 days)</h2>
+          <h3>Day 1 Evening:</h3>
+          <ul class="guide-list">
+            <li>Start at Commercial Street → shop & snack on street food.</li>
+            <li>
+              Walk/bargain at local stores → head to nearby Russell Market for a
+              cultural touch.
+            </li>
+          </ul>
+          <h3>Day 2 Evening:</h3>
+          <ul class="guide-list">
+            <li>Explore MG Road → visit malls, bookstores, and cafes.</li>
+            <li>Have dinner & craft beer at a rooftop pub.</li>
+            <li>
+              End with a late-night stroll along Brigade Road (nearby, full of
+              lights & shops).
+            </li>
+          </ul>
+          <img src="./images/4_Urban/MG_Road_7.jpg" alt="MG Road" />
+          <img src="./images/4_Urban/MG_Road_5.jpg" alt="MG Road" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Wear comfortable shoes (lots of walking).</li>
+            <li>Bargain smartly at Commercial Street.</li>
+            <li>Evenings can get crowded → keep essentials safe.</li>
+            <li>Use Namma Metro (MG Road station) for easy access.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="mgRoadWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Laad Bazaar MODAL------------------>
+    <div id="laadModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('laadModal')">&times;</span>
+        <h2>🛍️ Laad Bazaar – Hyderabad (Telangana)</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Laad_1.jpg" alt="Laad Bazaar" />
+          <img src="./images/4_Urban/Laad_2.jpg" alt="Laad Bazaar" />
+          <p>
+            Laad Bazaar is one of Hyderabad’s most vibrant shopping streets,
+            famous for its glittering bangles, pearls, and bridal wear. Just
+            steps away from the Charminar, this 400-year-old market blends
+            history, culture, and modern shopping vibes—making it a must-visit
+            urban attraction for travellers who love street shopping and
+            cultural immersion.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              “Laad” means lacquer, used to make the iconic lac bangles studded
+              with stones.
+            </li>
+            <li>
+              Today, the bazaar is a hub for wedding shopping—from dazzling
+              bangles and pearls to zari work sarees, sherwanis, and perfumes
+              (attar).
+            </li>
+            <li>
+              Its charm lies in narrow bustling lanes filled with shops lit up
+              like a festival every evening.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              Evenings (4 PM – 11 PM) – Market is fully lit, lively, and cooler.
+            </li>
+            <li>
+              Festive seasons (Ramzan, Diwali, Wedding season) – Best vibes &
+              collection.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Laad_3.jpg" alt="Laad Bazaar" />
+          <img src="./images/4_Urban/Laad_4.jpg" alt="Laad Bazaar" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Hyderabadi Bangles – colorful, intricate, handmade.</li>
+            <li>Pearls & Jewellery – Hyderabad is the “City of Pearls.”</li>
+            <li>Traditional attire – sarees, sherwanis, khada dupattas.</li>
+            <li>Attar shops – natural perfumes with royal legacy.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <p>
+              Since Laad Bazaar is right next to Charminar, you get the best of
+              Hyderabadi street food:
+            </p>
+            <li>Irani Chai & Osmania Biscuits – Café Nimrah is iconic.</li>
+            <li>Hyderabadi Biryani – Paradise / Shadab restaurants nearby.</li>
+            <li>Haleem (during Ramadan) – Famous in this area.</li>
+            <li>Street snacks – kebabs, samosas, lassi.</li>
+          </ul>
+          <img src="./images/4_Urban/Laad_9.jpg" alt="Laad Bazaar" />
+          <img src="./images/4_Urban/Laad_5.jpg" alt="Laad Bazaar" />
+          <h2>Roadmap for Travelers</h2>
+          <h3>Day Plan (Half Day – Urban Attractions Loop):</h3>
+          <ul class="guide-list">
+            <li>Start at Charminar – Explore the monument + click photos.</li>
+            <li>
+              Walk into Laad Bazaar – Shop bangles, pearls, perfumes, wedding
+              wear.
+            </li>
+            <li>
+              Food Stop – Try Irani chai & Osmania biscuits at Nimrah Café.
+            </li>
+            <li>
+              Evening Walk – Visit nearby Mecca Masjid & Chowmahalla Palace
+              (close to Charminar).
+            </li>
+            <li>Dinner – End with Hyderabadi biryani at Shadab/Pardise.</li>
+          </ul>
+          <img src="./images/4_Urban/Laad_7.webp" alt="Laad Bazaar" />
+          <img src="./images/4_Urban/Laad_6.jpg" alt="Laad Bazaar" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Bargain smartly—prices can drop a lot.</li>
+            <li>Market lanes are narrow → best explored on foot.</li>
+            <li>Carry cash; not all shops accept cards.</li>
+            <li>Evening is crowded but atmospheric—ideal for travellers.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="laadBazaarWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------HYD Biryani MODAL------------------>
+    <div id="biryaniModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('biryaniModal')">&times;</span>
+        <h2>🍲 Hyderabad – Land of Hyderabadi Biryani</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/4_Urban/Hyderabadi_Biryani_1.jpg"
+            alt="Hyderabadi Biryani"
+          />
+          <img
+            src="./images/4_Urban/Hyderabadi_Biryani_6.jpg"
+            alt="Hyderabadi Biryani"
+          />
+          <p>
+            Hyderabad isn’t just the “City of Pearls” but also the Food Capital
+            of South India. Known worldwide for its Hyderabadi Biryani, the city
+            blends royal Nizami heritage with modern urban vibes. For
+            travellers, Hyderabad offers mouth-watering food trails, vibrant
+            cafes, bustling night markets, and historic-meets-modern culinary
+            experiences.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Hyderabadi Biryani was introduced by the Nizams of Hyderabad (17th
+              century), blending Mughlai and Andhra cooking styles. Its slow
+              “dum” cooking technique makes it unique.
+            </li>
+            <li>
+              Hyderabad’s food culture is a mix of Persian, Mughlai, Turkish &
+              Telugu influences.
+            </li>
+            <li>
+              Apart from biryani, Hyderabad is famous for its Irani cafés,
+              haleem during Ramadan, and street food hubs that keep the urban
+              culture alive.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to February – Pleasant weather for food trails +
+              sightseeing.
+            </li>
+            <li>Avoid peak summer (March–June).</li>
+          </ul>
+          <img
+            src="./images/4_Urban/Hyderabadi_Biryani_3.jpg"
+            alt="Hyderabadi Biryani"
+          />
+          <img
+            src="./images/4_Urban/Hyderabadi_Biryani_4.webp"
+            alt="Hyderabadi Biryani"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Experience the authentic biryani in old city restaurants.</li>
+            <li>
+              Explore trendy food streets & modern cafés in upscale areas like
+              Jubilee Hills and Gachibowli.
+            </li>
+            <li>
+              Hyderabad’s food is as much about stories & culture as it is about
+              taste.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Hyderabadi Biryani – Paradise, Bawarchi, Shah Ghouse, Hotel
+              Shadab.
+            </li>
+            <li>Haleem (Ramadan season) – Pista House, Shah Ghouse.</li>
+            <li>Irani Chai & Osmania Biscuits – Nimrah Café near Charminar.</li>
+            <li>Pathar ka Gosht – Meat cooked on stone slabs.</li>
+            <li>Double Ka Meetha & Qubani ka Meetha – Traditional desserts.</li>
+            <li>
+              Modern Cafés – Roastery Coffee House, Conçu, Beyond Coffee (for
+              the urban vibe).
+            </li>
+          </ul>
+          <img
+            src="./images/4_Urban/Hyderabadi_Biryani_5.jpg"
+            alt="Hyderabadi Biryani"
+          />
+          <img
+            src="./images/4_Urban/Hyderabadi_Biryani_8.jpg"
+            alt="Hyderabadi Biryani"
+          />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1 (Old City Flavors):</h3>
+          <ul class="guide-list">
+            <li>
+              Breakfast: Irani chai & Osmania biscuits at Nimrah Café
+              (Charminar).
+            </li>
+            <li>Explore Charminar & Laad Bazaar.</li>
+            <li>
+              Lunch: Authentic Hyderabadi Biryani at Hotel Shadab or Shah
+              Ghouse.
+            </li>
+            <li>
+              Evening: Street food at Moazzam Jahi Market (fruits, falooda,
+              kulfi).
+            </li>
+          </ul>
+          <h3>Day 2 (Modern Food Culture):</h3>
+          <ul class="guide-list">
+            <li>Brunch at Roastery Coffee House (Jubilee Hills).</li>
+            <li>Explore Shilparamam (arts village) + Hitech City vibes.</li>
+            <li>
+              Evening: Dinner at Conçu or Olive Bistro for modern dining with
+              city views.
+            </li>
+          </ul>
+          <h3>Day 3 (Fusion & Local Specials):</h3>
+          <ul class="guide-list">
+            <li>
+              Morning walk at Hussain Sagar Lake → try roadside breakfast
+              stalls.
+            </li>
+            <li>Lunch: Pathar ka Gosht + Andhra meals.</li>
+            <li>
+              Evening: Explore Banjara Hills/Jubilee Hills pubs & cafés for
+              modern nightlife dining.
+            </li>
+          </ul>
+          <img
+            src="./images/4_Urban/Hyderabadi_Biryani_7.JPG"
+            alt="Hyderabadi Biryani"
+          />
+          <img
+            src="./images/4_Urban/Hyderabadi_Biryani_9.jpg"
+            alt="Hyderabadi Biryani"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Try biryani in both Old City (authentic, rustic) & modern
+              restaurants (fusion, upscale).
+            </li>
+            <li>
+              Carry cash for old city eateries, many are not card-friendly.
+            </li>
+            <li>
+              If visiting during Ramadan, don’t miss Haleem – it’s a festival in
+              itself!
+            </li>
+          </ul>
+          <p class="tip">
+            👉 Hyderabad gives travellers the perfect blend of royal heritage
+            food + modern café culture, making it a top Urban Food Destination.
+          </p>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="hyderabadiBiryaniWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Kulcha MODAL------------------>
+    <div id="kulchaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('kulchaModal')">&times;</span>
+        <h2>🍽️ Amritsar – Amritsari Kulcha & Lassi</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/4_Urban/Amritsari_Kulcha_2.jpg"
+            alt="Amritsari Kulcha"
+          />
+          <img
+            src="./images/4_Urban/Amritsari_Kulcha_7.jpg"
+            alt="Amritsari Kulcha"
+          />
+          <p>
+            Amritsar is not only home to the Golden Temple but also a foodie’s
+            paradise. The city is world-famous for its Amritsari Kulcha
+            (stuffed, crispy, buttery bread baked in tandoor) and its giant
+            frothy Lassi served in tall steel glasses. Together, they represent
+            the soul of Punjabi street food culture. For travelers, Amritsar
+            offers the chance to explore modern urban food streets alongside
+            cultural gems.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Amritsari Kulcha traces its roots back to the Mughal era, when
+              tandoor-baked breads were introduced and later perfected with
+              Punjabi-style fillings (potato, paneer, onion, cauliflower).
+            </li>
+            <li>
+              Lassi, a yogurt-based drink, has been part of Punjabi tradition
+              for centuries, symbolizing hospitality and refreshment.
+            </li>
+            <li>
+              Tourists are drawn to the authentic food streets (Lawrence Road,
+              Majitha Road, and near Golden Temple) where recipes have been
+              passed down through generations.
+            </li>
+            <li>
+              The speciality is in the generous use of butter, ghee, and spices,
+              making every dish flavorful and unforgettable.
+            </li>
+          </ul>
+          <img
+            src="./images/4_Urban/Amritsari_Kulcha_3.jpg"
+            alt="Amritsari Kulcha"
+          />
+          <img
+            src="./images/4_Urban/Amritsari_Kulcha_4.jpg"
+            alt="Amritsari Kulcha"
+          />
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant winter weather makes food-hopping
+              enjoyable.
+            </li>
+            <li>
+              Summers (April–June) are hot but perfect for chilled lassi breaks.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Chole (spicy chickpeas) served with Kulcha.</li>
+            <li>Makki di Roti & Sarson da Saag (winter special).</li>
+            <li>
+              Butter Chicken, Tandoori Fish, and Kebabs (Mughlai influence).
+            </li>
+            <li>Jalebi & Gulab Jamun from local sweet shops.</li>
+            <li>Street snacks like Amritsari Papad & Pickles.</li>
+          </ul>
+          <img
+            src="./images/4_Urban/Amritsari_Kulcha_5.jpg"
+            alt="Amritsari Kulcha"
+          />
+          <img
+            src="./images/4_Urban/Amritsari_Kulcha_6.jpg"
+            alt="Amritsari Kulcha"
+          />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Amritsar → Evening stroll at Lawrence Road Food Street
+              (try Kulchas, Kebabs, and street chaat).
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Early morning Golden Temple visit → Breakfast with Kulcha-Chole
+              near Golden Temple → Afternoon visit Jallianwala Bagh → Evening
+              enjoy Lassi at Ahuja or Gian di Lassi.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Explore local bazaars for Papad, Pickles, and Wadiyan to take home
+              → Evening Wagah Border ceremony + dinner at a famous Dhaba
+              (Bharawan Da Dhaba / Kesar da Dhaba).
+            </li>
+          </ul>
+          <img
+            src="./images/4_Urban/Amritsari_Kulcha_8.webp"
+            alt="Amritsari Kulcha"
+          />
+          <img src="./images/4_Urban/varanasi_3.jpg" alt="Amritsari Kulcha" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Go hungry – portions are generous!</li>
+            <li>
+              Most famous Kulcha shops close by 3–4 PM, so plan breakfast or
+              early lunch.
+            </li>
+            <li>
+              Lassi glasses are huge, so one may be enough for two people.
+            </li>
+            <li>Wear light clothes if food-hopping in summer.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="amritsariFoodWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Rasgulla MODAL------------------>
+    <div id="rasgullaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('rasgullaModal')">&times;</span>
+        <h2>🍬 Kolkata – Rasgulla & Street Food Paradise</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Rasgulla_2.jpg" alt="Rasgulla" />
+          <img src="./images/4_Urban/Rasgulla_3.jpg" alt="Rasgulla" />
+          <p>
+            Kolkata isn’t just the City of Joy, it’s also the Street Food
+            Capital of India. From melt-in-the-mouth Rasgullas to spicy Kathi
+            rolls and tangy puchkas, the city is a dream for food lovers. For
+            travellers, Kolkata offers a blend of modern urban vibes + nostalgic
+            colonial charm + unbeatable street eats, making every walk a food
+            trail.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Rasgulla (Roshogolla): Though Odisha and Bengal both claim it,
+              Kolkata is world-famous for its soft, spongy, syrup-soaked version
+              that has become an iconic Bengali sweet.
+            </li>
+            <li>
+              Street food culture here grew during colonial times when quick,
+              cheap eats were in demand by office-goers, and over time, it
+              evolved into a city-wide tradition.
+            </li>
+            <li>
+              What attracts tourists: Food variety, heritage cafes, fusion of
+              Mughlai–Bengali–Chinese cuisines, and the buzzing streets full of
+              flavors.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather, perfect for food walks.
+            </li>
+            <li>
+              During Durga Puja (Sept–Oct), street food stalls overflow with
+              festive treats.
+            </li>
+          </ul>
+
+          <img src="./images/4_Urban/Rasgulla_6.jpg" alt="Rasgulla" />
+          <img src="./images/4_Urban/Rasgulla_4.jpg" alt="Rasgulla" />
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Rasgulla & Mishti Doi – Bengal’s sweetest pride.</li>
+            <li>
+              Kathi Rolls (Nizam’s, New Market) – Soft parathas rolled with
+              kebabs & chutneys.
+            </li>
+            <li>
+              Puchkas (Bengali Pani Puri) – Spicier, tangier version of
+              golgappas.
+            </li>
+            <li>Mughlai Paratha – Flaky, stuffed bread with egg/meat.</li>
+            <li>Jhalmuri – Spicy puffed rice street snack.</li>
+            <li>Fish Curry & Rice (Machher Jhol) – Bengal’s staple.</li>
+            <li>
+              Chinese Food (Tangra Chinatown) – Indian-Chinese with a Kolkata
+              twist.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Chole_Bhature_4.jpg" alt="Rasgulla" />
+          <img src="./images/4_Urban/Rasgulla_8.webp" alt="Rasgulla" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1: Heritage & Sweets</h3>
+          <ul class="guide-list">
+            <li>College Street Coffee House (old-world charm)</li>
+            <li>KC Das / Balaram Mullick for Rasgullas & Mishti Doi</li>
+            <li>Walk around Esplanade for evening Kathi rolls</li>
+          </ul>
+          <h3>Day 2: Street Food Trails</h3>
+          <ul class="guide-list">
+            <li>Vivekananda Park → Puchkas & Chaat</li>
+            <li>
+              Park Street → Trendy restaurants + Flurys bakery for desserts
+            </li>
+            <li>Chinatown (Tangra) → Authentic Indo-Chinese dinner</li>
+          </ul>
+          <h3>Day 3: Local Flavors</h3>
+          <ul class="guide-list">
+            <li>
+              Tiretti Bazaar → Early morning Chinese breakfast (dimsums, pork
+              buns)
+            </li>
+            <li>Gariahat Market → Street snacks + shopping</li>
+            <li>Evening riverfront (Prinsep Ghat) → Jhalmuri with sunset</li>
+          </ul>
+          <img src="./images/4_Urban/Rasgulla_9.jpg" alt="Rasgulla" />
+          <img src="./images/4_Urban/Rasgulla_10.jpg" alt="Rasgulla" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Always try street food where there’s a crowd → fresher, safer.
+            </li>
+            <li>Carry cash, as many small vendors don’t accept digital pay.</li>
+            <li>
+              Go on a guided food walk if short on time, they cover hidden gems.
+            </li>
+            <li>
+              Don’t miss combining food with heritage walks – the vibe of old
+              Kolkata adds flavor to the food.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="kolkataFoodWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Kebabs MODAL------------------>
+    <div id="kebabsModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('kebabsModal')">&times;</span>
+        <h2>🍢 Lucknow – Awadhi Kebabs & Biryani</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Kebabs_1.jpg" alt="Awadhi Kebabs" />
+          <img src="./images/4_Urban/Kebabs_2.jpg" alt="Awadhi Kebabs" />
+          <p>
+            Lucknow, the City of Nawabs, is world-famous for its Awadhi cuisine
+            – especially kebabs and biryani. For travellers, it’s not just about
+            food, but an experience of royal hospitality, rich history, and
+            urban charm. Walking through old lanes filled with smoky kebab shops
+            and modern cafés, you get a taste of both heritage and contemporary
+            vibes.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Lucknow was the seat of the Nawabs of Awadh in the 18th century,
+              who brought in Persian cooking styles, refined Mughlai food, and
+              royal feasts.
+            </li>
+            <li>
+              Awadhi cuisine is all about slow-cooking (dum style), fragrant
+              spices, and melt-in-mouth meat dishes.
+            </li>
+            <li>
+              The food culture here is a tourist magnet because it blends
+              heritage recipes with modern food streets and fine-dine
+              experiences.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Kebabs_3.png" alt="Awadhi Kebabs" />
+          <img src="./images/4_Urban/Kebabs_4.jpg" alt="Awadhi Kebabs" />
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather to explore food streets and
+              monuments.
+            </li>
+            <li>Winters are especially magical for evening food walks.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Tunday Kababi – Iconic melt-in-mouth kebabs with 100+ spices.
+            </li>
+            <li>
+              Galouti & Kakori Kebabs – Legendary kebabs with royal origin.
+            </li>
+            <li>
+              Awadhi Biryani – Less spicy, aromatic, cooked in sealed pots.
+            </li>
+            <li>Sheermal & Roomali Roti – Traditional breads.</li>
+            <li>
+              Kulfi Falooda & Makhan Malai – Sweet delicacies unique to Lucknow.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Kebabs_6.webp" alt="Awadhi Kebabs" />
+          <img src="./images/4_Urban/Kebabs_7.jpeg" alt="Awadhi Kebabs" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1 (Evening):</h3>
+          <ul class="guide-list">
+            <li>Start with Hazratganj (urban shopping + café culture).</li>
+            <li>Dinner at Tunday Kababi, Aminabad for authentic kebabs.</li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>Morning heritage walk (Bara Imambara, Rumi Darwaza).</li>
+            <li>Afternoon – Awadhi biryani at Idris or Wahid’s.</li>
+            <li>
+              Evening – Food trail in Chowk area (kebabs, sheermal, sweets).
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Brunch at a modern fusion restaurant (Awadhi cuisine with a
+              twist).
+            </li>
+            <li>
+              Evening – Gomti Riverfront or Ambedkar Park for modern urban
+              vibes.
+            </li>
+          </ul>
+          <img
+            src="./images/4_Urban/Hyderabadi_Biryani_1.jpg"
+            alt="Awadhi Kebabs"
+          />
+          <img src="./images/4_Urban/Kebabs_8.webp" alt="Awadhi Kebabs" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Food streets get crowded → best to go with a local guide or food
+              walk group.
+            </li>
+            <li>
+              Non-vegetarian dishes dominate, but vegetarian options (paneer
+              kebabs, veg biryani) are available.
+            </li>
+            <li>
+              Try both old-city eateries + modern restaurants to get the full
+              experience.
+            </li>
+          </ul>
+          <p class="tip">
+            👉 Lucknow is a paradise for food lovers – where history meets
+            modern city vibes. A traveller leaves with memories of flavors,
+            royal culture, and Nawabi charm.
+          </p>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="lucknowFoodWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Chaat MODAL------------------>
+    <div id="chaatModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('chaatModal')">&times;</span>
+        <h2>🍲 Delhi – Chaat & Street Food Capital of India</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Chole Bhature-2.webp" alt="Street Food" />
+          <img
+            src="./images/4_Urban/Amritsari_Kulcha_6.jpg"
+            alt="Street Food"
+          />
+          <p>
+            Delhi is not just India’s political capital – it’s also the
+            heartbeat of Indian street food culture. Every lane tells a culinary
+            story, from spicy chaats in Chandni Chowk to fusion bites in modern
+            cafés. A trip here is incomplete without indulging in its food
+            streets, where history and flavor blend beautifully.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Delhi’s food culture has evolved through Mughal, Punjabi, and
+              modern influences.
+            </li>
+            <li>
+              Old Delhi (Shahjahanabad) is famous for recipes passed down since
+              Mughal times – kebabs, nihari, and sweets.
+            </li>
+            <li>
+              Post-partition, Punjabi migrants brought hearty flavors like
+              butter chicken and chole bhature.
+            </li>
+            <li>
+              Today, Delhi is known as the Chaat Capital of India, offering
+              tangy, spicy, and crunchy street food that travelers can’t resist.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather for food walks & markets.
+            </li>
+            <li>
+              Winters are extra special for dishes like daulat ki chaat (a
+              frothy winter-only dessert).
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Chole_Bhature_4.jpg" alt="Street Food" />
+          <img src="./images/4_Urban/Chole_Bhature_5.jpg" alt="Street Food" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Chandni Chowk – centuries-old food bazaars.</li>
+            <li>Modern Hauz Khas & Connaught Place cafés – urban food hubs.</li>
+            <li>
+              Fusion culture – From roadside golgappas to international food
+              festivals.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Chaat Varieties: Aloo Tikki, Papdi Chaat, Dahi Bhalla, Golgappa
+              (pani puri).
+            </li>
+            <li>
+              Paranthe Wali Gali Parathas – Stuffed parathas with pickle &
+              lassi.
+            </li>
+            <li>Kebabs & Rolls – Seekh kebabs, Kathi rolls.</li>
+            <li>
+              Butter Chicken & Chole Bhature – Delhi’s iconic hearty meals.
+            </li>
+            <li>Kulfi Falooda & Daulat ki Chaat – Traditional desserts.</li>
+            <li>
+              Modern Cafés: Experiment with Indo-fusion (tandoori momos,
+              peri-peri chaats).
+            </li>
+          </ul>
+          <img src="./images/4_Urban/Chole_Bhature_6.webp" alt="Street Food" />
+          <img src="./images/4_Urban/Chole_Bhature_7.webp" alt="Street Food" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1 – Old Delhi (Traditional):</h3>
+          <ul class="guide-list">
+            <li>
+              Start at Chandni Chowk → Chaat & parathas at Paranthe Wali Gali.
+            </li>
+            <li>Evening → Kebabs at Karim’s near Jama Masjid.</li>
+          </ul>
+          <h3>Day 2 – Modern Delhi (Trendy):</h3>
+          <ul class="guide-list">
+            <li>
+              Afternoon → Café hopping in Connaught Place (try fusion food &
+              coffee).
+            </li>
+            <li>
+              Evening → Hauz Khas Village for a mix of food, nightlife, and lake
+              views.
+            </li>
+          </ul>
+          <h3>Day 3 – Mix & Explore:</h3>
+          <ul class="guide-list">
+            <li>Street eats at Sarojini Nagar or Lajpat Nagar markets.</li>
+            <li>Sweet ending with kulfi falooda at India Gate stalls.</li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Go on a guided food walk in Chandni Chowk for the best experience.
+            </li>
+            <li>Street food is safe if you choose busy, popular stalls.</li>
+            <li>Carry some cash – many small vendors don’t accept cards.</li>
+            <li>
+              Try winter specialties (Daulat ki Chaat) if visiting Dec–Feb.
+            </li>
+          </ul>
+          <p class="tip">
+            👉 In short: Delhi is a mix of history, flavors, and modern vibes –
+            the perfect city for travelers to eat their way through India.
+          </p>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="chaatWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Dal Baati MODAL------------------>
+    <div id="dalBaatiModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('dalBaatiModal')">&times;</span>
+        <h2>🍲 Jaipur – Dal Baati Churma</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/Dal_Baati_1.jpg" alt="Dal Baati Churma" />
+          <img src="./images/4_Urban/Dal_Baati_2.jpg" alt="Dal Baati Churma" />
+          <p>
+            Jaipur, the Pink City of India, is not only famous for its palaces,
+            forts, and markets but also for its royal Rajasthani cuisine. Among
+            all, Dal Baati Churma stands out as the most iconic dish. For any
+            traveller, tasting this dish in Jaipur is as important as visiting
+            Amber Fort—it’s a complete cultural experience on a plate.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Dal Baati Churma has royal roots—it was first made by Rajput
+              soldiers. Baatis (hard wheat balls) were baked under sand while
+              they went to war; later paired with dal and sweet churma.
+            </li>
+            <li>
+              Today, it represents Rajasthani hospitality, served during
+              festivals, weddings, and grand feasts.
+            </li>
+            <li>
+              Tourists are attracted not just by the dish itself but by the
+              traditional thali experience, often served with folk music & dance
+              in Jaipur’s themed restaurants.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather, also coincides with festivals
+              like Diwali & Jaipur Literature Festival.
+            </li>
+            <li>Summers (April–June) are very hot, not ideal.</li>
+          </ul>
+          <img src="./images/4_Urban/Dal_Baati_5.webp" alt="Dal Baati Churma" />
+          <img src="./images/4_Urban/Dal_Baati_4.jpg" alt="Dal Baati Churma" />
+          <p class="highlight">🍴 What Makes It Special for Tourists:</p>
+          <ul class="guide-list">
+            <li>Dal: A mix of lentils, flavored with ghee and spices.</li>
+            <li>Baati: Hard round wheat rolls baked and dipped in ghee.</li>
+            <li>
+              Churma: Sweetened crushed baati with ghee, sugar, or jaggery.
+            </li>
+            <li>
+              Served with accompaniments like ker sangri, gatte ki sabzi, garlic
+              chutney, and buttermilk.
+            </li>
+            <li>It’s flavor-packed, filling, and authentically Rajasthani.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Laal Maas (spicy mutton curry)</li>
+            <li>Ker Sangri ki Sabzi</li>
+            <li>Rajasthani Thali</li>
+            <li>Ghewar (sweet, especially during festivals)</li>
+            <li>Kulhad Lassi at MI Road</li>
+          </ul>
+          <img src="./images/4_Urban/Dal_Baati_6.webp" alt="Dal Baati Churma" />
+          <img src="./images/4_Urban/Dal_Baati_7.webp" alt="Dal Baati Churma" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Afternoon: Visit Chokhi Dhani (cultural village resort) → Enjoy
+              authentic Dal Baati Churma with folk performances.
+            </li>
+            <li>Evening: Walk around MI Road → Try kulhad lassi & snacks.</li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning: Local breakfast at a heritage haveli café (poha, kachori,
+              chai).
+            </li>
+            <li>
+              Afternoon: Explore Johari & Bapu Bazaar → Street food (kachori,
+              samosa, sweets).
+            </li>
+            <li>
+              Evening: Dinner at Laxmi Mishthan Bhandar (LMB) or Rawat Mishthan
+              Bhandar for Dal Baati Churma & ghewar.
+            </li>
+          </ul>
+          <h3>Day 3 (Optional):</h3>
+          <ul class="guide-list">
+            Explore Amber Fort / Nahargarh → End the day with a rooftop dinner
+            overlooking Jaipur city lights.
+          </ul>
+          <img src="./images/4_Urban/Dal_Baati_8.webp" alt="Dal Baati Churma" />
+          <img src="./images/4_Urban/varanasi_3.jpg" alt="Dal Baati Churma" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Always try Dal Baati Churma at authentic Rajasthani eateries
+              (Chokhi Dhani, LMB, Rawat, or heritage havelis).
+            </li>
+            <li>The dish is very rich in ghee → enjoy but pace yourself.</li>
+            <li>
+              Combine food exploration with heritage walks for a complete Jaipur
+              vibe.
+            </li>
+          </ul>
+          <p class="tip">
+            👉 So, Jaipur isn’t just about forts & palaces—it’s also a food
+            destination where Dal Baati Churma tells the story of Rajput valor,
+            tradition, and warm hospitality.
+          </p>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="dalBaatiWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Seafood MODAL------------------>
+    <div id="seafoodModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('seafoodModal')">&times;</span>
+        <h2>🍤 Goa – Seafood & Vindaloo</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/goa_fish_1.webp" alt="Seafood" />
+          <img src="./images/4_Urban/goa_fish_2.jpg" alt="Seafood" />
+          <p>
+            Goa is not just beaches and parties—it’s one of India’s top culinary
+            destinations. With its blend of Portuguese heritage and Konkan
+            flavors, Goa is a paradise for seafood lovers. Vindaloo, a spicy,
+            tangy curry with roots in Portuguese “vinha d’alhos,” is now one of
+            Goa’s signature dishes. For any traveler, Goa offers modern beach
+            cafés, luxury restaurants, and vibrant food markets alongside
+            traditional Goan homes serving authentic recipes.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Goa was under Portuguese rule for 450 years, which heavily
+              influenced its cuisine. Vindaloo, cafreal, and bebinca are direct
+              Portuguese legacies.
+            </li>
+            <li>
+              Seafood is the soul of Goan food—fishermen bring in the fresh
+              catch daily, making dining a sea-to-plate experience.
+            </li>
+            <li>
+              Tourists are attracted by this fusion of heritage + modern
+              gastronomy—beach shacks, craft breweries, fine-dine restaurants,
+              and bustling night markets make Goa unique.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              November to February – Festive vibes, food festivals, beach
+              parties, and great weather.
+            </li>
+            <li>
+              Avoid peak monsoon (July–September) when many beach shacks are
+              closed.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/goa_fish_3.webp" alt="Seafood" />
+          <img src="./images/4_Urban/goa_fish_8.jpg" alt="Seafood" />
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Vindaloo (Pork/Chicken/Fish) – Tangy-spicy curry cooked with
+              vinegar & garlic.
+            </li>
+            <li>
+              Goan Prawn Curry & Rice – Coconut-based curry with fresh prawns.
+            </li>
+            <li>
+              Rava Fried Fish (Kingfish, Pomfret, Mackerel) – Crispy coastal
+              favorite.
+            </li>
+            <li>Xacuti – Rich curry with roasted spices & coconut.</li>
+            <li>Bebinca – Layered Goan dessert.</li>
+            <li>
+              Feni (Cashew Liquor) – Unique Goan spirit for those who want to
+              try local drinks.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/goa_fish_9.jpg" alt="Seafood" />
+          <img src="./images/4_Urban/goa_fish_7.jpg" alt="Seafood" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1 – North Goa (Urban & Modern Eats):</h3>
+          <ul class="guide-list">
+            <li>Start with a Goan breakfast (poi bread, chorizo pav).</li>
+            <li>
+              Explore Panjim city’s restaurants like Mum’s Kitchen, Ritz Classic
+              for authentic seafood.
+            </li>
+            <li>
+              Evening: Candolim/Calangute beach shacks → try vindaloo with sea
+              breeze.
+            </li>
+          </ul>
+          <h3>Day 2 – South Goa (Relaxed Foodie Experience):</h3>
+          <ul class="guide-list">
+            <li>Beach brunch at Palolem / Agonda.</li>
+            <li>Try Rava fried fish & prawn curry in a coastal café.</li>
+          </ul>
+          <h3>Day 3 – Night Markets & Local Flavors:</h3>
+          <ul class="guide-list">
+            <li>
+              Mapusa or Anjuna Flea Market → sample bebinca, Goan sausages.
+            </li>
+            <li>
+              End trip with a beach shack party → seafood BBQ & Feni cocktails.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/goa_fish_5.jpg" alt="Seafood" />
+          <img src="./images/4_Urban/goa_fish_6.jpg" alt="Seafood" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Goa has modern cafés + traditional eateries—try both for a
+              balanced food journey.
+            </li>
+            <li>
+              Always ask for the “catch of the day” for the freshest seafood.
+            </li>
+            <li>
+              Vindaloo can be very spicy—ask for spice levels if you’re not used
+              to heat.
+            </li>
+            <li>
+              Explore beyond tourist hubs; local bakeries & taverns offer hidden
+              gems.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="seafoodWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Dosa MODAL------------------>
+    <div id="dosaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('dosaModal')">&times;</span>
+        <h2>☕Chennai – South Indian Filter Coffee & Dosa</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/dosa_1.jpg" alt="Dosa" />
+          <img src="./images/4_Urban/dosa_8.jpg" alt="Dosa" />
+          <p>
+            Chennai, the capital of Tamil Nadu, is a modern urban hub with a
+            rich culinary heritage. It’s famous for filter coffee, crispy dosas,
+            and traditional South Indian meals, making it a paradise for food
+            lovers. Travelers are drawn here not just for the food but also for
+            cafés, street food culture, and urban vibes with a traditional
+            touch.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              South Indian cuisine here emphasizes rice, lentils, and spices,
+              prepared in time-tested methods.
+            </li>
+            <li>
+              Filter coffee is more than a drink—it’s a ritual, served in a
+              “dabarah-tumbler” set, giving a unique flavor.
+            </li>
+            <li>
+              Dosa is a thin, crispy crepe made from fermented rice and lentils,
+              available in countless variations, from plain to masala dosa
+              stuffed with spiced potatoes.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              November to February – Pleasant weather, ideal for city
+              exploration and street food walks.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/dosa_9.jpg" alt="Dosa" />
+          <img src="./images/4_Urban/dosa_6.jpg" alt="Dosa" />
+          <p class="highlight">🎯 Top Food Spots:</p>
+          <ul class="guide-list">
+            <li>
+              Murugan Idli Shop / Sangeetha / Ratna Cafe – Legendary for dosas
+              and idlis.
+            </li>
+            <li>
+              Café Coffee Day / The Coffee Bean & Tea Leaf / Indian Coffee House
+              – Experience authentic filter coffee.
+            </li>
+            <li>
+              Chennai Marina Beach – Enjoy street snacks like sundal while
+              watching the sunset.
+            </li>
+            <li>
+              Express Avenue & Phoenix Marketcity – Modern malls with multiple
+              restaurants and fusion cuisine.
+            </li>
+            <li>
+              T. Nagar & Mylapore – For traditional sweets, snacks, and
+              authentic South Indian thali meals.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              South Indian Filter Coffee – Served in almost every café, with a
+              rich, aromatic flavor.
+            </li>
+            <li>Dosa varieties: Masala Dosa, Rava Dosa, Set Dosa.</li>
+            <li>Idli & Vada – Soft steamed rice cakes and savory fritters.</li>
+            <li>Chettinad Cuisine – Spicy curries and biryani.</li>
+            <li>
+              Street Snacks: Sundal (chickpea snack), Murukku, Banana Chips.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/dosa_4.jpg" alt="Dosa" />
+          <img src="./images/4_Urban/dosa_5.jpg" alt="Dosa" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive → Explore Marina Beach → Try street snacks → Evening coffee
+              at Indian Coffee House.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Breakfast at Murugan Idli Shop → Visit Kapaleeshwarar Temple →
+              Lunch with South Indian thali → Evening at Express Avenue for
+              fusion cuisine.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Explore Mylapore for sweets & souvenirs → Try Rava Dosa & Filter
+              Coffee → Evening walk on Elliot’s Beach.
+            </li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Start early to enjoy fresh breakfast dosas and coffee.</li>
+            <li>
+              Be ready to explore both street food and modern cafés for a
+              complete experience.
+            </li>
+            <li>
+              Wear comfortable shoes—Chennai streets and markets are best
+              explored on foot.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="filterCoffeeWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Street Snacks & Sweets MODAL------------------>
+    <div id="sweetsModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('sweetsModal')">&times;</span>
+        <h2>🍴 Varanasi – Street Snacks & Sweets</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/varanasi_7.jpg" alt="Varanasi" />
+          <img src="./images/4_Urban/varanasi_11.jpg" alt="Varanasi" />
+          <p>
+            Varanasi, one of the oldest living cities in the world, isn’t just
+            about ghats and spirituality—it’s a food lover’s paradise. The
+            narrow lanes are filled with aromatic street food, sweet shops, and
+            local delicacies that attract both domestic and international
+            tourists. A foodie can experience authentic flavors of Uttar
+            Pradesh, combined with vibrant city life and cultural heritage.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Its street food culture evolved along the ghats, marketplaces, and
+              temples, offering a mix of traditional flavors and festive foods.
+            </li>
+            <li>
+              Speciality lies in chaats, sweets, and unique snacks like Kachori,
+              Tamatar Chaat, and Rabri.
+            </li>
+            <li>
+              Tourists are attracted to the blend of culture + culinary
+              adventure, where every lane tells a story through flavors.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather, perfect for evening food
+              walks.
+            </li>
+            <li>Avoid April–June, as summers are hot and humid.</li>
+          </ul>
+          <img src="./images/4_Urban/varanasi_3.jpg" alt="Varanasi" />
+          <img src="./images/4_Urban/varanasi_4.png" alt="Varanasi" />
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <p>Street Snacks:</p>
+            <li>Tamatar Chaat – Tangy tomato-based chaat, a city specialty.</li>
+            <li>Kachori Sabzi – Spiced lentil-filled pastry with curry.</li>
+            <li>Lassi & Falooda – Refreshing drinks to beat the heat.</li>
+            <li>
+              Chola & Puri, Chaat varieties – Classic Varanasi street eats.
+            </li>
+            <p>Sweets:</p>
+            <li>Banarasi Paan & Petha – Iconic local treats.</li>
+            <li>Rabri & Jalebi – Must-try desserts near Dashashwamedh Ghat.</li>
+            <li>
+              Imarti & Malaiyo (winter specialty) – Unique sweets of Varanasi.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/varanasi_9.jpg" alt="Varanasi" />
+          <img src="./images/4_Urban/varanasi_2.jpg" alt="Varanasi" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive → Evening food walk at Dashashwamedh Ghat → Try Chaat &
+              Paan.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning visit to Kashi Vishwanath Temple → Explore local markets
+              (Chowk area) → Street snacks like Kachori & Lassi.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Take a morning boat ride on the Ganga → Try Malaiyo & Rabri at
+              local sweet shops → Evening stroll along Assi Ghat for snacks and
+              tea.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/varanasi_8.webp" alt="Varanasi" />
+          <img src="./images/4_Urban/varanasi_10.jpg" alt="Varanasi" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Keep small change for street vendors.</li>
+            <li>Carry hand sanitizer & wet wipes for street food tasting.</li>
+            <li>
+              Try to explore lanes early morning or evening for the best food
+              and lesser crowds.
+            </li>
+            <li>
+              Respect local customs around temples and ghats while eating
+              nearby.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="varanasiFoodWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Vada Pav MODAL------------------>
+    <div id="vadapavModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('vadapavModal')">&times;</span>
+        <h2>🍔 Mumbai – Vada Pav & Street Eats</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/4_Urban/vada_pav_2.jpg" alt="Vada Pav" />
+          <img src="./images/4_Urban/vada_pav_4.jpg" alt="Vada Pav" />
+          <p>
+            Mumbai isn’t just India’s financial capital; it’s also the street
+            food capital. The iconic Vada Pav is known as the “Indian burger”
+            and represents the city’s fast-paced, vibrant lifestyle. Exploring
+            Mumbai’s street food lets tourists experience local flavors,
+            bustling lanes, and the city’s urban charm in one bite.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Street food culture in Mumbai evolved with the city’s
+              growth—bringing Pav Bhaji, Bhel Puri, Sev Puri, Frankie, and
+              Kebabs to every corner.
+            </li>
+            <li>
+              Speciality for tourists: Affordable, authentic, and
+              Instagram-worthy street food experience.
+            </li>
+            <li>
+              You also witness the urban chaos + local hustle, which is part of
+              Mumbai’s charm.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to February – Pleasant winter weather, perfect for roaming
+              and snacking.
+            </li>
+            <li>Monsoon is enjoyable too but beware of slippery streets.</li>
+          </ul>
+          <img src="./images/4_Urban/vada_pav_10.jpg" alt="Vada Pav" />
+          <img src="./images/4_Urban/vada_pav_8.jpg" alt="Vada Pav" />
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Vada Pav – Must-try at Shivaji Nagar, Anand Stall, or Ashok Vada
+              Pav.
+            </li>
+            <li>Pav Bhaji – Spicy vegetable mash with buttered pav.</li>
+            <li>
+              Bhel Puri & Sev Puri – Mumbai-style chaat, tangy and crunchy.
+            </li>
+            <li>Frankie / Kathi Rolls – Quick, filling street snack.</li>
+            <li>Bombay Sandwich – Multilayered vegetarian delight.</li>
+            <li>Chai & Cutting Chai – Pair snacks with iconic Mumbai tea.</li>
+          </ul>
+          <img src="./images/4_Urban/Mumbai_8.jpg" alt="Vada Pav" />
+          <img src="./images/4_Urban/vada_pav_6.jpg" alt="Vada Pav" />
+          <h2>Roadmap for Travelers</h2>
+          <h3>Morning:</h3>
+          <ul class="guide-list">
+            <li>
+              Start at Crawford Market / Girgaum Chowpatty – try Bhel Puri, Sev
+              Puri, Pav Bhaji.
+            </li>
+          </ul>
+          <h3>Afternoon:</h3>
+          <ul class="guide-list">
+            <li>Head to Dadar / Shivaji Nagar for authentic Vada Pav.</li>
+            <li>Explore local street lanes near stations for quick bites.</li>
+          </ul>
+          <h3>Evening:</h3>
+          <ul class="guide-list">
+            <li>
+              Marine Drive / Juhu Beach – enjoy Frankies, Bhel Puri, and Chai
+              while watching sunset.
+            </li>
+            <li>
+              Optionally, try colaba food walks for modern fusion street snacks.
+            </li>
+          </ul>
+          <h3>Night:</h3>
+          <ul class="guide-list">
+            <li>
+              Explore Khau Galli / Linking Road for late-night bites & dessert
+              stalls.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/vada_pav_5.jpg" alt="Vada Pav" />
+          <img src="./images/4_Urban/vada_pav_7.jpg" alt="Vada Pav" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Always check hygiene before trying street food; go where locals
+              flock.
+            </li>
+            <li>Carry hand sanitizer & wet wipes.</li>
+            <li>
+              Start with mild spices if you’re not used to Indian street food.
+            </li>
+            <li>Keep cash ready—most stalls don’t accept cards.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="vadaPavWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!--  footer  -->
+    <footer>
+      <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="categories.html">Categories</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: info@indiscapes.com</p>
+          <p>Phone: +91 9876543210</p>
+          <p>Location: Hyderabad, India</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>© 2025 IndiScapes | All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!--   Javascript  -->
+    <script src="script.js"></script>
+  </body>
+</html>

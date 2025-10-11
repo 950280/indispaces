@@ -1,0 +1,2680 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adventure & Outdoor | indiscapes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!--  nav bar  -->
+    <header>
+      <nav class="navbar">
+        <!--  logo  -->
+        <div class="nav-left">
+          <img
+            src="./images/logo_2.png"
+            alt="logo"
+            width="180px"
+            height="60px"
+          />
+        </div>
+        <!------------   nav items  ------------->
+        <!--  big screens  -->
+        <ul class="nav-right">
+          <li>
+            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="about.html" target="_blank"
+              ><i class="fa fa-info-circle"></i> About</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" target="_blank"
+              ><i class="fa fa-envelope"></i> Contact</a
+            >
+          </li>
+        </ul>
+
+        <!--     search    -->
+        <div class="nav-center">
+          <form id="searchForm">
+            <input
+              type="text"
+              placeholder="search places"
+              id="searchInput"
+              onkeyup="searchPlaces()"
+            />
+            <button type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+
+        <!------------  items  ------------->
+        <!--  On small screens  -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+      </nav>
+    </header>
+
+    <!----------category 3----------->
+
+    <section class="about-hero">
+      <img
+        src="./images/3_Adventure/adventure_cover1.jpg"
+        alt="India Landscape"
+      />
+      <div class="hero-text">
+        <h1>Adventure & Outdoor</h1>
+        <p>
+          Thrill seekers rejoice! Explore adventures that get your heart racing.
+        </p>
+      </div>
+    </section>
+
+    <!-- Subcategories -->
+    <section class="subcategory">
+      <h2>Trekking & Hiking Trails</h2>
+      <div class="placesContainer">
+        <div class="places-grid">
+          <!-- Chadar Trek -->
+          <div class="place-card">
+            <img src="./images/3_Adventure/Chadar_1.jpg" alt="Chadar Trek" />
+            <h3>Chadar Trek</h3>
+            <h6>Jammu & Kashmir</h6>
+            <p>
+              Walk over the frozen Zanskar River surrounded by snow-covered
+              mountains — a once-in-a-lifetime adventure. Frozen river trek,
+              sub-zero camping, rare Himalayan views.
+            </p>
+            <button onclick="openModal('chadarModal')">Read More</button>
+          </div>
+
+          <!-- Roopkund Trek  -->
+          <div class="place-card">
+            <img
+              src="./images/3_Adventure/Roopkund_1.jpg"
+              alt="Roopkund Trek "
+            />
+            <h3>Roopkund Trek</h3>
+            <h6>Uttarakhand</h6>
+            <p>
+              Famous for its “Skeleton Lake” where ancient human remains are
+              found. Offers mesmerizing Himalayan views. Alpine meadows, mystery
+              lake at 16,000 ft, Nanda Devi peaks.
+            </p>
+            <button onclick="openModal('roopkundModal')">Read More</button>
+          </div>
+
+          <!-- Hampta Pass Trek  -->
+          <div class="place-card">
+            <img
+              src="./images/3_Adventure/Hampta_1.webp"
+              alt="Hampta Pass Trek"
+            />
+            <h3>Hampta Pass Trek</h3>
+            <h6>Himachal Pradesh</h6>
+            <p>
+              Perfect blend of green valleys, snowfields, and dramatic
+              landscapes. A beginner-friendly Himalayan trek.
+            </p>
+            <button onclick="openModal('hamptaModal')">Read More</button>
+          </div>
+
+          <!--  Valley of Flowers Trek   -->
+          <div class="place-card">
+            <img
+              src="./images/3_Adventure/Valley_1.jpg"
+              alt="Valley of Flowers Trek"
+            />
+            <h3>Valley of Flowers Trek</h3>
+            <h6>Uttarakhand</h6>
+            <p>
+              UNESCO World Heritage Site covered with rare Himalayan flowers &
+              medicinal plants. Natural flower carpets, part of Nanda Devi
+              Biosphere Reserve.
+            </p>
+            <button onclick="openModal('flowersModal')">Read More</button>
+          </div>
+
+          <!-- Rajmachi Trek  -->
+          <div class="place-card">
+            <img
+              src="./images/3_Adventure/Rajmachi_1.jpg"
+              alt="Rajmachi Trek"
+            />
+            <h3>Rajmachi Trek</h3>
+            <h6>Maharashtra</h6>
+            <p>
+              Easy trek with beautiful forts, lush greenery, and waterfalls
+              during monsoon. Popular weekend trek near Mumbai & Pune.
+            </p>
+            <button onclick="openModal('rajmachiModal')">Read More</button>
+          </div>
+
+          <!-- Kedarkantha Trek  -->
+          <div class="place-card">
+            <img
+              src="./images/3_Adventure/Kedarkantha_1.jpg"
+              alt="Kedarkantha Trek"
+            />
+            <h3>Kedarkantha Trek</h3>
+            <h6>Uttarakhand</h6>
+            <p>
+              Known as the “best winter trek,” offering 360° snow-capped
+              Himalayan views. Easy-moderate trek, perfect for first-timers.
+            </p>
+            <button onclick="openModal('kedarkanthaModal')">Read More</button>
+          </div>
+        </div>
+      </div>
+      <p id="noResults" style="display: none; text-align: center">
+        No matching places found.
+      </p>
+    </section>
+
+    <!-------------Wildlife & National Parks----------->
+    <section class="subcategory">
+      <h2>Wildlife & National Parks</h2>
+      <div class="placesContainer">
+        <div class="places-grid">
+          <!-- Jim Corbett National Park -->
+          <div class="place-card">
+            <img
+              src="./images/3_Adventure/Jim_1.jpg"
+              alt="Jim Corbett National Park"
+            />
+            <h3>Jim Corbett National Park</h3>
+            <h6>Uttarakhand</h6>
+            <p>
+              India’s first national park, famous for the Royal Bengal Tiger.
+              Safaris here offer a mix of grasslands, riverbeds, and dense
+              forest.
+            </p>
+            <button onclick="openModal('JimModal')">Read More</button>
+          </div>
+
+          <!-- Ranthambore National Park -->
+          <div class="place-card">
+            <img
+              src="./images/3_Adventure/Ranthambore_1.webp"
+              alt="Ranthambore National Park"
+            />
+            <h3>Ranthambore National Park</h3>
+            <h6>Rajasthan</h6>
+            <p>
+              One of the best places in India to spot tigers in the wild. The
+              backdrop of Ranthambore Fort makes it unique.
+            </p>
+            <button onclick="openModal('ranthamboreModal')">Read More</button>
+          </div>
+
+          <!-- Kaziranga National Park  -->
+          <div class="place-card">
+            <img
+              src="./images/3_Adventure/Kaziranga_1.jpg"
+              alt="Kaziranga National Park"
+            />
+            <h3>Kaziranga National Park</h3>
+            <h6>Assam</h6>
+            <p>
+              Famous for the One-Horned Rhinoceros, a UNESCO World Heritage
+              Site. Dense population of rhinos, wild water buffalo, swamp deer,
+              plus migratory birds.
+            </p>
+            <button onclick="openModal('kazirangaModal')">Read More</button>
+          </div>
+
+          <!--  Gir National Park    -->
+          <div class="place-card">
+            <img src="./images/3_Adventure/Gir_1.png" alt="Gir National Park" />
+            <h3>Gir National Park</h3>
+            <h6>Gujarat</h6>
+            <p>
+              The only natural home of the Asiatic Lion. Apart from lions, it’s
+              home to leopards, hyenas, jackals, and over 300 bird species.
+            </p>
+            <button onclick="openModal('girModal')">Read More</button>
+          </div>
+
+          <!-- Sundarbans National Park  -->
+          <div class="place-card">
+            <img
+              src="./images/3_Adventure/Sundarbans_1.jpg"
+              alt="Sundarbans National Park"
+            />
+            <h3>Sundarbans National Park</h3>
+            <h6>West Bengal</h6>
+            <p>
+              World’s largest mangrove forest, home to the elusive Royal Bengal
+              Tiger that swims! And saltwater crocodiles, fishing cats, plus
+              exotic birdlife.
+            </p>
+            <button onclick="openModal('sundarbansModal')">Read More</button>
+          </div>
+
+          <!-- Periyar National Park  -->
+          <div class="place-card">
+            <img
+              src="./images/3_Adventure/Periyar_1.jpg"
+              alt="Periyar National Park"
+            />
+            <h3>Periyar National Park</h3>
+            <h6>Kerala</h6>
+            <p>
+              Nestled in the Western Ghats, famous for elephant sightings and
+              scenic boat rides on Periyar Lake. Also Nilgiri langurs, tigers,
+              and rare birds. A peaceful blend of wildlife + nature.
+            </p>
+            <button onclick="openModal('periyarModal')">Read More</button>
+          </div>
+        </div>
+      </div>
+      <p id="noResults" style="display: none; text-align: center">
+        No matching places found.
+      </p>
+    </section>
+
+    <!------------- Water Sports & Adventure Activities ----------->
+    <section class="subcategory">
+      <h2>Water Sports & Adventure Activities</h2>
+      <div class="placesContainer">
+        <div class="places-grid">
+          <!-- Scuba Diving  -->
+          <div class="place-card">
+            <img src="./images/3_Adventure/Scuba_1.jpg" alt="Scuba Diving " />
+            <h3>Scuba Diving</h3>
+            <h6>Andaman & Nicobar Islands / Goa</h6>
+            <p>
+              Explore colorful coral reefs, exotic fish, and shipwrecks under
+              crystal-clear waters. Asia’s best diving spots like Havelock
+              Island.
+            </p>
+            <button onclick="openModal('scubaModal')">Read More</button>
+          </div>
+
+          <!-- River Rafting – Rishikesh  -->
+          <div class="place-card">
+            <img src="./images/3_Adventure/River_1.jpg" alt="River Rafting" />
+            <h3>River Rafting</h3>
+            <h6>Uttarakhand</h6>
+            <p>
+              Thrilling rapids of the Ganga, surrounded by scenic mountains and
+              spiritual vibes. One of the world’s best rafting destinations.
+            </p>
+            <button onclick="openModal('riverModal')">Read More</button>
+          </div>
+
+          <!-- Parasailing   -->
+          <div class="place-card">
+            <img
+              src="./images/3_Adventure/Parasailing_1.jpg"
+              alt="Parasailing "
+            />
+            <h3>Parasailing</h3>
+            <h6>Goa</h6>
+            <p>
+              Fly above the Arabian Sea while enjoying stunning beach views.
+              Perfect mix of thrill and beauty.
+            </p>
+            <button onclick="openModal('parasailingModal')">Read More</button>
+          </div>
+
+          <!--   Kayaking   -->
+          <div class="place-card">
+            <img
+              src="./images/3_Adventure/Kayaking_1.jpg"
+              alt="Kayaking_Ladakh "
+            />
+            <h3>Kayaking – Zanskar River</h3>
+            <h6>Ladakh</h6>
+            <p>
+              Paddle through serene lagoons in icy rivers in Ladakh for contrast
+              experiences. Combines adventure with peace, great for nature
+              lovers.
+            </p>
+            <button onclick="openModal('kayakingModal')">Read More</button>
+          </div>
+
+          <!-- Surfing   -->
+          <div class="place-card">
+            <img src="./images/3_Adventure/Surfing_1.jpg" alt="Surfing" />
+            <h3>Surfing</h3>
+            <h6>Kovalam (Kerala) / Pondicherry</h6>
+            <p>
+              Ride the waves on golden beaches with vibrant surf schools.
+              Kovalam is India’s surfing hub; Pondicherry is beginner-friendly.
+            </p>
+            <button onclick="openModal('surfingModal')">Read More</button>
+          </div>
+
+          <!-- Snorkeling    -->
+          <div class="place-card">
+            <img src="./images/3_Adventure/Snorkeling_1.jpg" alt="Snorkeling" />
+            <h3>Snorkeling</h3>
+            <h6>Lakshadweep / Andaman Islands</h6>
+            <p>
+              Swim close to vibrant reefs, sea turtles, and exotic marine life.
+              Crystal-clear lagoons & shallow waters – perfect for non-swimmers.
+            </p>
+            <button onclick="openModal('snorkelingModal')">Read More</button>
+          </div>
+        </div>
+      </div>
+      <p id="noResults" style="display: none; text-align: center">
+        No matching places found.
+      </p>
+    </section>
+
+    <!----------------------MODALS---------------------->
+    <!------------------CHADAR TREK MODAL------------------>
+    <div id="chadarModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('chadarModal')">&times;</span>
+        <h2>❄️ Chadar Trek – Ladakh, Jammu & Kashmir</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/3_Adventure/Chadar_1.jpg" alt="Chadar Trek" />
+          <img src="./images/3_Adventure/Chadar_2.jpg" alt="Chadar Trek" />
+          <p>
+            The Chadar Trek is one of the most iconic and thrilling winter treks
+            in India, where adventurers walk on the frozen Zanskar River
+            surrounded by towering Himalayan cliffs. It’s called “Chadar”
+            (meaning blanket) because the river forms a thick ice blanket in
+            peak winter. For thrill-seekers, it’s a once-in-a-lifetime
+            experience—walking on ice, camping in caves, and witnessing frozen
+            waterfalls.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The trek is world-famous because it combines natural beauty,
+              adventure, and survival in extreme cold.
+            </li>
+            <li>Frozen Nerak Waterfall along the trek is a major highlight.</li>
+            <li>
+              It’s not just a trek—it’s about experiencing the raw, untouched
+              beauty of Ladakh in winter.
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Chadar_5.jpg" alt="Chadar Trek" />
+          <img src="./images/3_Adventure/Chadar_4.jpg" alt="Chadar Trek" />
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              January to February – when the Zanskar River freezes enough to
+              allow trekking.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Butter Tea (Po Cha) – Salty, warm, and perfect for the cold.
+            </li>
+            <li>Thukpa – Traditional noodle soup.</li>
+            <li>Momos – Steamed dumplings filled with meat or veggies</li>
+            <li>Skyu – A Ladakhi pasta dish.</li>
+            <li>Chhurpi (Yak cheese) snacks.</li>
+          </ul>
+          <img src="./images/3_Adventure/Chadar_3.jpg" alt="Chadar Trek" />
+          <img src="./images/3_Adventure/Chadar_8.jpg" alt="Chadar Trek" />
+          <h2>Roadmap for (10 days)</h2>
+          <h3>Day 1–2:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Leh (altitude acclimatization is a must). Visit
+              monasteries like Thiksey & Hemis, and local Leh Market.
+            </li>
+          </ul>
+          <h3>Day 3–8</h3>
+          <ul class="guide-list">
+            <li>
+              Begin Chadar Trek → Walk on frozen river → Camps at Shingra Koma,
+              Tibb Cave, Nerak Waterfall → Experience survival in Himalayan
+              wilderness.
+            </li>
+          </ul>
+          <h3>Day 9–10:</h3>
+          <ul class="guide-list">
+            <li>Return to Leh, rest, shop for handicrafts, try local food.</li>
+          </ul>
+          <h3>Optional Extension:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Pangong Lake (if roads allow) or Magnetic Hill & Gurudwara
+              Pathar Sahib.
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Chadar_7.jpg" alt="Chadar Trek" />
+          <img src="./images/3_Adventure/Chadar_6.webp" alt="Chadar Trek" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Physical fitness is a must – the trek is challenging (10–12 km per
+              day in freezing conditions).
+            </li>
+            <li>
+              Carry layered clothing, thermals, gumboots, and sleeping bags
+              rated for –20°C.
+            </li>
+            <li>Acclimatize in Leh for at least 2 days before starting.</li>
+            <li>
+              Respect local culture, avoid littering in fragile ecosystems.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="chadarWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------ROOPKUND TREK MODAL------------------>
+    <div id="roopkundModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('roopkundModal')">&times;</span>
+        <h2>🏔️ Roopkund Trek – Uttarakhand</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/3_Adventure/Roopkund_1.jpg" alt="Roopkund Trek" />
+          <img src="./images/3_Adventure/Roopkund_2.jpg" alt="Roopkund Trek" />
+          <p>
+            Roopkund, famously called the “Skeleton Lake”, is one of India’s
+            most mysterious and adventurous high-altitude treks. Nestled at
+            ~16,500 ft in the Chamoli district, it attracts trekkers for its
+            alpine meadows, snow-clad peaks, glacial lake, and spine-chilling
+            mystery of human skeletons lying at the lakebed for centuries. For
+            adventure seekers, this trek offers natural beauty + thrill +
+            history all in one.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The lake is known for the hundreds of skeletons discovered around
+              it, dating back to the 9th century.
+            </li>
+            <li>
+              The trek is part of the ancient route to Nanda Devi Raj Jat Yatra,
+              a sacred pilgrimage held once every 12 years.
+            </li>
+            <li>
+              Speciality for tourists: Snow peaks like Trishul & Nanda Ghunti,
+              lush meadows of Bedni Bugyal & Ali Bugyal, mysterious aura of the
+              skeletons, and panoramic Himalayan views.
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Roopkund_8.jpg" alt="Roopkund Trek" />
+          <img src="./images/3_Adventure/Roopkund_4.jpg" alt="Roopkund Trek" />
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              May – June (Spring/Summer) → Meadows are green, snow still
+              visible.
+            </li>
+            September – October (Autumn) → Clear skies, post-monsoon freshness.
+          </ul>
+          <p class="tip">
+            ⚠️ Not recommended in winters → trails covered in deep snow.
+          </p>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Mandua ki Roti & Bhatt ki Churkani – Local Garhwali cuisine.
+            </li>
+            <li>Aloo Ke Gutke – Spiced potatoes with pahadi flavors.</li>
+            <li>
+              Chainsoo & Kafuli – Protein-rich pahadi dals and spinach curry.
+            </li>
+            <li>Bal Mithai – A local sweet delicacy from Almora.</li>
+            <li>
+              Trekkers usually get simple vegetarian meals (dal, rice, chapati)
+              during the journey.
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Roopkund_7.jpg" alt="Roopkund Trek" />
+          <img src="./images/3_Adventure/Roopkund_3.jpg" alt="Roopkund Trek" />
+          <h2>Roadmap for (6 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Reach Kathgodam (nearest railway station) → Drive to Lohajung Base
+              Camp.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>Trek from Lohajung → Didna Village (intro to local life).</li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Didna → Ali Bugyal & Bedni Bugyal (vast green meadows, amazing for
+              photography).
+            </li>
+          </ul>
+          <h3>Day 4:</h3>
+          <ul class="guide-list">
+            <li>Bedni Bugyal → Bhagwabasa (steeper climb, snow patches).</li>
+          </ul>
+          <h3>Day 5:</h3>
+          <ul class="guide-list">
+            <li>Bhagwabasa → Roopkund Lake → Return to Bedni Bugyal.</li>
+          </ul>
+          <h3>Day 6:</h3>
+          <ul class="guide-list">
+            <li>Bedni Bugyal → Lohajung → Return to Kathgodam.</li>
+          </ul>
+          <img src="./images/3_Adventure/Roopkund_5.jpg" alt="Roopkund Trek" />
+          <img src="./images/3_Adventure/Roopkund_6.webp" alt="Roopkund Trek" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Difficulty level: Moderate to Difficult – suitable for fit
+              trekkers.
+            </li>
+            <li>
+              Carry trekking gear, good shoes, and warm layers (temperatures
+              drop sharply).
+            </li>
+            <li>Always trek with a certified guide / trekking group.</li>
+            <li>
+              Acclimatization is key → avoid rushing to prevent altitude
+              sickness.
+            </li>
+            <li>
+              Respect the lake – skeletons are preserved heritage, don’t
+              touch/disturb them.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="roopkundWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------HAMPTA PASS TREK MODAL------------------>
+    <div id="hamptaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('hamptaModal')">&times;</span>
+        <h2>🏔️ Hampta Pass Trek – Himachal Pradesh</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/3_Adventure/Hampta_1.webp"
+            alt=" Hampta Pass Trek"
+          />
+          <img
+            src="./images/3_Adventure/Hampta_2.webp"
+            alt=" Hampta Pass Trek"
+          />
+          <p>
+            Hampta Pass is one of the most dramatic and scenic treks in the
+            Indian Himalayas. It connects the lush green Kullu Valley with the
+            stark, desert-like landscapes of Lahaul & Spiti Valley. Trekkers
+            experience meadows, waterfalls, glaciers, pine forests, and barren
+            mountains—all in one trek, making it perfect for both beginners and
+            experienced adventurers.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The pass was historically used by shepherds (Gaddis) to cross from
+              Kullu to Lahaul in search of grazing lands.
+            </li>
+            <li>
+              It’s special because of the sudden landscape transition—from apple
+              orchards and forests to barren Spiti deserts in just a few days.
+            </li>
+            <li>
+              Trekkers are attracted to its alpine meadows filled with
+              wildflowers, high-altitude campsites, Chandratal Lake, and 360°
+              Himalayan views.
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Hampta_3.jpg" alt="Hampta Pass Trek" />
+          <img
+            src="./images/3_Adventure/Hampta_4.webp"
+            alt="Hampta Pass Trek"
+          />
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              Mid-June to September (after snow melts, before winter sets in).
+            </li>
+            <li>July–August: Lush greenery & wildflowers.</li>
+            <li>September: Clear skies, stunning mountain views.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Siddu – Steamed Himachali bread stuffed with walnut/poppy seeds.
+            </li>
+            <li>Thukpa & Momos – Tibetan influence in Spiti.</li>
+            <li>Trout Fish – Local delicacy from Kullu.</li>
+            <li>Chha Gosht – Lamb curry with yogurt & spices.</li>
+            <li>Butter Tea (Chhurpi) – Salty tea loved in Spiti.</li>
+          </ul>
+          <img src="./images/3_Adventure/Hampta_6.jpg" alt="Hampta Pass Trek" />
+          <img
+            src="./images/3_Adventure/Hampta_7.webp"
+            alt="Hampta Pass Trek"
+          />
+          <h2>Roadmap for (5-6 days)</h2>
+          <p>Manali → Hampta Pass → Spiti</p>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Manali (acclimatization) → explore Hadimba Temple, Mall
+              Road.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Drive to Jobra (trek start) → trek to Chika campsite (lush
+              meadows, Rani Nallah stream).
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Chika → Balu Ka Ghera (base of Hampta Pass, surrounded by
+              snow-clad peaks).
+            </li>
+          </ul>
+          <h3>Day 4:</h3>
+          <ul class="guide-list">
+            <li>
+              Balu Ka Ghera → Hampta Pass (14,000 ft) → descend to Shea Goru
+              (barren Spiti-like landscape).
+            </li>
+          </ul>
+          <h3>Day 5:</h3>
+          <ul class="guide-list">
+            <li>
+              Shea Goru → Chatru (roadhead in Spiti Valley) → drive to
+              Chandratal Lake (moon-shaped lake, overnight camp).
+            </li>
+          </ul>
+          <h3>Day 6:</h3>
+          <ul class="guide-list">
+            <li>Chandratal → drive back to Manali via Rohtang/Atal Tunnel.</li>
+          </ul>
+          <img src="./images/3_Adventure/Hampta_8.jpg" alt="Hampta Pass Trek" />
+          <img
+            src="./images/3_Adventure/Hampta_5.webp"
+            alt="Hampta Pass Trek"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Carry good trekking shoes, warm layers, and rain gear.</li>
+            <li>
+              Oxygen levels drop—do acclimatization in Manali before starting.
+            </li>
+            <li>
+              Oxygen levels drop—do acclimatization in Manali before starting.
+            </li>
+            <li>Network is patchy—carry offline maps/music/books.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="hamptaWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------VALLEY OF FLOWERS TREK MODAL------------------>
+    <div id="flowersModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('flowersModal')">&times;</span>
+        <h2>🌺 Hampta Pass Trek Trek – Uttarakhand</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/3_Adventure/Valley_1.jpg" alt="Hampta Pass Trek" />
+          <img src="./images/3_Adventure/Valley_2.jpg" alt="Hampta Pass Trek" />
+          <p>
+            The Valley of Flowers is a UNESCO World Heritage Site and one of
+            India’s most stunning Himalayan treks. Famous for its endless
+            carpets of alpine flowers, snow-capped peaks, and pristine
+            landscapes, it feels like stepping into a natural wonderland. It’s a
+            dream for nature lovers, photographers, trekkers, and spiritual
+            seekers alike.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Locals long believed it to be a land of fairies due to its
+              enchanting beauty.
+            </li>
+            <li>
+              Home to rare Himalayan flora like the blue poppy, cobra lily, and
+              Brahma Kamal (sacred flower).
+            </li>
+            <li>
+              Speciality: Short trekking season (July–September) when the valley
+              is in full bloom.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              Mid-July to Early September – Peak flowering season, vibrant
+              meadows.
+            </li>
+            <li>Avoid winters – heavy snow makes the valley inaccessible.</li>
+          </ul>
+          <img src="./images/3_Adventure/Valley_3.jpg" alt="Hampta Pass Trek" />
+          <img src="./images/3_Adventure/Valley_4.jpg" alt="Hampta Pass Trek" />
+          <p class="highlight">🎯 Things That Attract Tourists:</p>
+          <ul class="guide-list">
+            <li>Meadows covered with over 600 species of flowers.</li>
+            <li>Stunning Himalayan views of Nilgiri Parvat & Ratban Parvat.</li>
+            <li>Trekking through waterfalls, streams, and lush forests.</li>
+            <li>Spiritual visit to Hemkund Sahib and its glacial lake.</li>
+            <li>
+              Rare wildlife: snow leopards, Himalayan black bears, and musk deer
+              (if lucky).
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <p>
+              Since the valley is a trekking zone, food is simple and mostly at
+              base camps & villages:
+            </p>
+            <li>Garhwali Cuisine like Aloo ke Gutke, Phaanu, Chainsoo.</li>
+            <li>
+              Kachmauli (stuffed goat), Mandua ki Roti, Jhangora ki Kheer (local
+              dessert).
+            </li>
+            <li>In Govindghat/Joshimath: momos, thukpa, parathas, and chai.</li>
+          </ul>
+          <img src="./images/3_Adventure/Valley_8.jpg" alt="Hampta Pass Trek" />
+          <img src="./images/3_Adventure/Valley_7.jpg" alt="Hampta Pass Trek" />
+          <h2>Roadmap for (5 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>Reach Rishikesh/Haridwar → Joshimath (via road, 9–10 hrs).</li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Drive to Govindghat (1 hr) → trek to Ghangaria (13 km), base camp
+              for Valley of Flowers.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Ghangaria → Valley of Flowers (3–4 km trek) → explore the meadows
+              → return to Ghangaria.
+            </li>
+          </ul>
+          <h3>Day 4:</h3>
+          <ul class="guide-list">
+            <li>
+              Ghangaria → Hemkund Sahib (6 km steep trek) → return to Ghangaria.
+            </li>
+          </ul>
+          <h3>Day 5:</h3>
+          <ul class="guide-list">
+            <li>Trek back to Govindghat → Joshimath → Rishikesh/Haridwar.</li>
+          </ul>
+          <img
+            src="./images/3_Adventure/Valley_5.webp"
+            alt="Hampta Pass Trek"
+          />
+          <img src="./images/3_Adventure/Valley_6.jpg" alt="Hampta Pass Trek" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Trek Difficulty: Moderate; suitable for beginners with good
+              stamina.
+            </li>
+            <li>
+              Carry rain gear & trekking shoes – weather is unpredictable.
+            </li>
+            <li>
+              Stay at Ghangaria base camp, no overnight stays allowed in the
+              valley.
+            </li>
+            <li>
+              Carry snacks, but avoid littering – it’s a protected national
+              park.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="valleyFlowersWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------RAJMACHI TREK MODAL------------------>
+    <div id="rajmachiModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('rajmachiModal')">&times;</span>
+        <h2>🏞️ Rajmachi Trek – Maharashtra, Western Ghats</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/3_Adventure/Rajmachi_1.jpg" alt="Rajmachi Trek" />
+          <img src="./images/3_Adventure/Rajmachi_3.jpg" alt="Rajmachi Trek" />
+          <p>
+            Rajmachi is one of the most popular treks in the Western Ghats,
+            ideal for beginners and experienced trekkers alike. It combines lush
+            green landscapes, ancient forts, and stunning views of the Sahyadri
+            mountains. The trek is perfect for adventure enthusiasts,
+            photographers, and nature lovers wanting to experience the monsoon
+            magic of the Western Ghats.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Rajmachi consists of two forts: Shrivardhan Fort and Manaranjan
+              Fort, built during the Maratha period to guard trade routes.
+            </li>
+            <li>
+              It holds historical significance, witnessing battles and strategic
+              defenses during the era of Shivaji Maharaj.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              Monsoon (July–September): Green landscapes, waterfalls in full
+              flow.
+            </li>
+            <li>
+              Winter (November–February): Pleasant weather, ideal for camping.
+            </li>
+            <li>Avoid summer months as it can get hot and dusty.</li>
+          </ul>
+          <img src="./images/3_Adventure/Rajmachi_6.jpg" alt="Rajmachi Trek" />
+          <img src="./images/3_Adventure/Rajmachi_4.jpg" alt="Rajmachi Trek" />
+          <p class="highlight">Attracts Tourists:</p>
+          <ul class="guide-list">
+            <li>Scenic monsoon waterfalls along the trek.</li>
+            <li>Starry nights and camping experiences in the fort plateau.</li>
+            <li>Rich flora and fauna, including rare birds and butterflies.</li>
+            <li>
+              Combination of history + nature + adventure, making it a complete
+              trek experience.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Poha, Vada Pav, Bhajiya – Quick snacks from local stalls.</li>
+            <li>Missal Pav – Spicy Maharashtrian delight.</li>
+            <li>
+              Tea / Masala Chai – Perfect by the waterfalls or trekking spots.
+            </li>
+            <li>
+              Packed meals: Travelers often carry peanuts, biscuits, and fruits
+              for energy during the trek.
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Rajmachi_5.jpg" alt="Rajmachi Trek" />
+          <img src="./images/3_Adventure/Rajmachi_7.jpg" alt="Rajmachi Trek" />
+          <h2>Roadmap for Travelers</h2>
+          <p>Option 1 – Overnight Trek:</p>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive at Lonavala or Karjat → Drive to Kokan Kada / Kondhane
+              village base → Start trek to Rajmachi Fort → Set up camp → Enjoy
+              sunset views.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Explore Shrivardhan & Manaranjan Forts, visit small lakes and
+              watchtowers → Trek down → Return to Lonavala/Karjat.
+            </li>
+          </ul>
+          <p>Option 2 – One-Day Trek (for beginners):</p>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Start early from Lonavala → Trek 8–10 km uphill → Explore forts →
+              Enjoy views → Return by evening.
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Rajmachi_8.jpg" alt="Rajmachi Trek" />
+          <img src="./images/3_Adventure/Rajmachi_2.jpg" alt="Rajmachi Trek" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Wear sturdy trekking shoes and carry a raincoat in monsoon.</li>
+            <li>
+              Carry water and snacks, though some tea stalls are on route.
+            </li>
+            <li>Camping gear can be rented from Lonavala.</li>
+            <li>
+              Keep mobile/photography gear ready—sunrise, sunset, and waterfalls
+              are spectacular.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="rajmachiWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------KEDARKANTHA TREK MODAL------------------>
+    <div id="kedarkanthaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('kedarkanthaModal')"
+          >&times;</span
+        >
+        <h2>🏔️ Kedarkantha Trek – Uttarakhand</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/3_Adventure/Kedarkantha_2.webp"
+            alt="Kedarkantha Trek"
+          />
+          <img
+            src="./images/3_Adventure/Kedarkantha_3.jpeg"
+            alt="Kedarkantha Trek"
+          />
+          <p>
+            Kedarkantha is one of the most popular winter treks in India,
+            offering stunning snow-covered landscapes, pine forests, and
+            Himalayan panoramas. Ideal for beginners and adventure enthusiasts
+            alike, it provides a perfect blend of serenity, thrill, and natural
+            beauty.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Named after Lord Shiva, the summit has a small Shiva temple,
+              giving spiritual significance to the trek.
+            </li>
+            <li>
+              Historically, this region was part of Uttarkashi’s remote
+              Himalayan villages, where locals still follow traditional
+              lifestyles.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>December to April – Snow-covered trekking during winters.</li>
+            <li>May to June – Summer trek, lush green trails.</li>
+            <li>
+              Avoid monsoon (July–September) – Risky due to landslides and
+              slippery trails.
+            </li>
+          </ul>
+          <img
+            src="./images/3_Adventure/Kedarkantha_4.webp"
+            alt="Kedarkantha Trek"
+          />
+          <img
+            src="./images/3_Adventure/Kedarkantha_5.jpg"
+            alt="Kedarkantha Trek"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Snow trekking in winters – beginner-friendly yet adventurous.
+            </li>
+            <li>
+              Panoramic Himalayan views – peaks like Swargarohini, Black Peak,
+              and Bandarpoonch visible.
+            </li>
+            <li>
+              Sunrise & sunset from the summit – breathtaking photo
+              opportunities.
+            </li>
+            <li>
+              Village interaction – experience local Garhwali culture in Sankri
+              and step villages.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Rajma-Chawal – Hearty meal after a trek.</li>
+            <li>
+              Parathas with butter / local ghee – Energy-packed traditional
+              breakfast.
+            </li>
+            <li>
+              Local Garhwali delicacies – Kafuli (green leafy curry), Aloo ke
+              Gutke.
+            </li>
+            <li>Tea & Maggi – Popular in base camps, especially in winters.</li>
+          </ul>
+          <img src="./images/1_Natural/Nandi_7.jpg" alt="Kedarkantha Trek" />
+          <img
+            src="./images/3_Adventure/Kedarkantha_7.jpg"
+            alt="Kedarkantha Trek"
+          />
+          <h2>Roadmap for (4 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Reach Dehradun / Rishikesh → Drive to Sankri village (base camp
+              for trek).
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Sankri → Juda-ka-Talab → Camp at Kedarkantha Base (forest &
+              meadows).
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Base → Summit of Kedarkantha → Enjoy panoramic views → Descend to
+              Base → Camp overnight.
+            </li>
+          </ul>
+          <h3>Day 4:</h3>
+          <ul class="guide-list">
+            <li>Base → Sankri village → Drive back to Rishikesh / Dehradun.</li>
+          </ul>
+          <img
+            src="./images/3_Adventure/Kedarkantha_8.jpg"
+            alt="Kedarkantha Trek"
+          />
+          <img
+            src="./images/3_Adventure/Kedarkantha_6.jpg"
+            alt="Kedarkantha Trek"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Carry thermal wear, trekking shoes, gloves, and trekking poles.
+            </li>
+            <li>
+              Acclimatize at Sankri before ascending to avoid altitude sickness.
+            </li>
+            <li>Hire a local guide for safe trekking and cultural insights.</li>
+            <li>
+              Keep camera ready—sunrise and snow landscapes are picture-perfect.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="kedarkanthaWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Jim Corbett National Park MODAL------------------>
+    <div id="JimModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('JimModal')">&times;</span>
+        <h2>🐅 Jim Corbett National Park – Uttarakhand</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/3_Adventure/Jim_1.jpg" alt="Jim Corbett" />
+          <img src="./images/3_Adventure/Jim_2.jpg" alt="Jim Corbett" />
+          <p>
+            Jim Corbett National Park is India’s first national park
+            (established in 1936) and a paradise for wildlife lovers. It’s famed
+            for its Bengal tigers, leopards, elephants, and over 600 bird
+            species. For travelers, it’s a perfect mix of adventure, nature, and
+            photography, offering a rare chance to see India’s wildlife up close
+            in their natural habitat.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Originally a hunting ground for the British, it was declared a
+              national park to protect tigers and wildlife.
+            </li>
+            <li>
+              Tigers are the star attraction, but park is also home to
+              elephants, sambar deer, wild boars, sloth bears, and many
+              reptiles.
+            </li>
+            <li>
+              Birdwatching heaven with species like hill mynas, kingfishers, and
+              eagles.
+            </li>
+            <li>
+              Eco-tourism initiatives and safari experiences make it
+              tourist-friendly.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>November to June – Cool and dry, ideal for safaris.</li>
+            <li>
+              Monsoon (July–September) – Park remains closed due to heavy rains
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Jim_3.jpg" alt="Jim Corbett" />
+          <img src="./images/3_Adventure/Jim_4.jpg" alt="Jim Corbett" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Jeep Safari in Dhikala Zone – Best chance to spot tigers and
+              elephants.
+            </li>
+            <li>Birdwatching at Jhirna or Bijrani Zones.</li>
+            <li>
+              Visit Corbett Museum – Learn about Jim Corbett’s life and
+              conservation work.
+            </li>
+            <li>
+              River Activities – Some resorts offer rafting and fishing in Kosi
+              River.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Aloo ke Gutke – Spicy potato dish.</li>
+            <li>
+              Kafuli – Green leafy vegetable curry, traditional Garhwali food.
+            </li>
+            <li>
+              Local Thalis at resorts – Include rice, roti, curries, and
+              jaggery-based desserts.
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Jim_5.webp" alt="Jim Corbett" />
+          <img src="./images/3_Adventure/Jim_6.jpg" alt="Jim Corbett" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Ramnagar (gateway town) → check-in at resort → evening
+              nature walk.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Early morning Jeep Safari in Dhikala or Bijrani → lunch → visit
+              Corbett Museum → evening birdwatching.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Optional river activities / village visit → short trek in forested
+              trails → depart.
+            </li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Book safari tickets in advance (online or via resorts).</li>
+            <li>
+              Carry binoculars, camera, sunscreen, and comfortable trekking
+              shoes.
+            </li>
+            <li>Respect wildlife rules – do not feed animals or litter.</li>
+            <li>Early morning safaris give the best wildlife sightings.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="corbettWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Ranthambore National Park MODAL------------------>
+    <div id="ranthamboreModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('ranthamboreModal')"
+          >&times;</span
+        >
+        <h2>🐅 Ranthambore National Park – Rajasthan</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/3_Adventure/Ranthambore_1.webp"
+            alt="Ranthambore National Park"
+          />
+          <img
+            src="./images/3_Adventure/Ranthambore_6.jpg"
+            alt="Ranthambore National Park"
+          />
+          <p>
+            Ranthambore is one of India’s most famous wildlife sanctuaries,
+            renowned for its Royal Bengal Tigers in natural habitat. It combines
+            wildlife adventure with historic charm, as the park also houses the
+            Ranthambore Fort, a UNESCO heritage site. It’s perfect for wildlife
+            photographers, nature lovers, and adventure-seekers.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Ranthambore Fort, dating back to the 10th century, stands inside
+              the park, offering panoramic views and historical insight.
+            </li>
+            <li>
+              Known for big cats, especially tigers, but also home to leopards,
+              sloth bears, marsh crocodiles, striped hyenas, and over 300
+              species of birds.
+            </li>
+            <li>
+              The park’s combination of dense forests, lakes, and ruins attracts
+              tourists who want a mix of wildlife, photography, and heritage
+              exploration.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to June – Avoid monsoon (July–September) as park remains
+              closed due to heavy rains.
+            </li>
+            <li>March–June is ideal for tiger spotting near waterholes.</li>
+          </ul>
+          <img
+            src="./images/3_Adventure/Ranthambore_3.jpg"
+            alt="Ranthambore National Park"
+          />
+          <img
+            src="./images/3_Adventure/Ranthambore_2.jpg"
+            alt="Ranthambore National Park"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Jeep Safari / Canter Safari – Explore the park early morning or
+              late afternoon for tiger sightings.
+            </li>
+            <li>
+              Ranthambore Fort – Explore ancient ruins, temples, and watch the
+              sunset over the forest.
+            </li>
+            <li>
+              Padam Talao & Rajbagh Talao – Lakes inside the park, great for
+              spotting wildlife and birdwatching.
+            </li>
+            <li>
+              Photography & Nature Walks – The park’s landscapes are stunning.
+            </li>
+            <li>
+              Local Village Visit – Experience Rajasthani culture and crafts.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Rajasthani Thali – Dal Baati Churma, Gatte Ki Sabzi, Ker Sangri.
+            </li>
+            <li>Laal Maas – Spicy mutton dish, a Rajasthani specialty.</li>
+            <li>
+              Sweet Treats – Ghevar and Mawa Kachori, perfect for festival
+              snacks.
+            </li>
+          </ul>
+          <img
+            src="./images/4_Urban/Dal_Baati_6.webp"
+            alt="Ranthambore National Park"
+          />
+          <img
+            src="./images/4_Urban/Dal_Baati_1.jpg"
+            alt="Ranthambore National Park"
+          />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Sawai Madhopur → Check-in → Evening stroll in local
+              markets.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Early morning jeep safari → Afternoon visit to Ranthambore Fort →
+              Sunset at Padam Talao.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning safari → Birdwatching near lakes → Explore local villages
+              → Depart for Jaipur / next destination.
+            </li>
+          </ul>
+          <img
+            src="./images/3_Adventure/Ranthambore_5.jpeg"
+            alt="Ranthambore National Park"
+          />
+          <img
+            src="./images/3_Adventure/Ranthambore_4.jpg"
+            alt="Ranthambore National Park"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Safari tickets often sell out—book in advance.</li>
+            <li>Carry binoculars, camera, sunscreen, and hats.</li>
+            <li>Respect park rules; do not feed or disturb wildlife.</li>
+            <li>Stay in Sawai Madhopur for easy access to safari zones.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="ranthamboreWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Kaziranga National Park MODAL------------------>
+    <div id="kazirangaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('kazirangaModal')"
+          >&times;</span
+        >
+        <h2>🌿 Kaziranga National Park – Assam</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/3_Adventure/Kaziranga_2.jpg"
+            alt=" Kaziranga National Park"
+          />
+          <img
+            src="./images/3_Adventure/Kaziranga_1.jpg"
+            alt=" Kaziranga National Park"
+          />
+          <p>
+            Kaziranga is a UNESCO World Heritage Site and one of India’s most
+            famous wildlife sanctuaries. It is home to the largest population of
+            the Great Indian One-Horned Rhinoceros. Nature lovers, wildlife
+            photographers, and adventure seekers flock here for the chance to
+            see tigers, elephants, swamp deer, wild buffalo, and over 450
+            species of birds in their natural habitat. It’s a perfect blend of
+            adventure and nature immersion.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Established as a reserve forest in 1905, it became a National Park
+              in 1974.
+            </li>
+            <li>
+              UNESCO recognized it in 1985 for its unique ecosystem and
+              biodiversity.
+            </li>
+            <li>
+              The park is famous for flooded grasslands and tall elephant
+              grasses, giving it a wild, untouched charm.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              November to April – Winter and early summer are ideal; roads are
+              accessible, and wildlife is easier to spot.
+            </li>
+            <li>Monsoon (June–September) – Park is closed due to flooding.</li>
+          </ul>
+          <img
+            src="./images/3_Adventure/Kaziranga_3.jpg"
+            alt=" Kaziranga National Park"
+          />
+          <img
+            src="./images/3_Adventure/Kaziranga_4.jpg"
+            alt=" Kaziranga National Park"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Jeep safaris & elephant rides – for close wildlife encounters.
+            </li>
+            <li>
+              Birdwatching paradise – migratory birds from Siberia and Central
+              Asia visit in winter.
+            </li>
+            <li>
+              Photography hotspots – sunrise and misty riverbanks create
+              stunning scenes.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Assamese Thali – Rice, dal, fish curry, bamboo shoot, green leafy
+              vegetables.
+            </li>
+            <li>
+              Pitika – Mashed potato or roasted eggplant with mustard oil and
+              spices.
+            </li>
+            <li>Pongal (local variant during festivals) – Savory rice dish.</li>
+            <li>
+              Tea & local snacks – Assam is famous for its tea plantations; try
+              fresh tea with biscuits.
+            </li>
+          </ul>
+          <img
+            src="./images/3_Adventure/Kaziranga_5.jpg"
+            alt=" Kaziranga National Park"
+          />
+          <img
+            src="./images/3_Adventure/Kaziranga_6.jpg"
+            alt=" Kaziranga National Park"
+          />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Guwahati → Travel to Kaziranga (approx. 4–5 hrs) →
+              Evening at resort, local market stroll.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning Jeep Safari (main grasslands) → Afternoon Elephant Safari
+              → Birdwatching at sunset.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Explore Tea gardens near Kaziranga or nearby Orchid & Butterfly
+              parks → Evening drive back to Guwahati.
+            </li>
+          </ul>
+          <img
+            src="./images/3_Adventure/Kaziranga_7.jpg"
+            alt=" Kaziranga National Park"
+          />
+          <img
+            src="./images/3_Adventure/Kaziranga_8.jpg"
+            alt=" Kaziranga National Park"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Book safaris in advance, as slots fill quickly.</li>
+            <li>
+              Carry binoculars, camera, insect repellent, and comfortable
+              clothing.
+            </li>
+            <li>Respect park rules—no littering, no loud noises.</li>
+            <li>Early mornings are best for wildlife spotting.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="kazirangaWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Gir National Park MODAL------------------>
+    <div id="girModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('girModal')">&times;</span>
+        <h2>🦁 Gir National Park – Gujarat</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/3_Adventure/Gir_2.jpg" alt="Gir National Park" />
+          <img src="./images/3_Adventure/Gir_1.png" alt="Gir National Park" />
+          <p>
+            Gir National Park is the only natural habitat of the Asiatic Lion in
+            the world, making it a must-visit destination for wildlife
+            enthusiasts. Spread over 1,412 sq km, it’s a perfect blend of dry
+            deciduous forests, grasslands, and water bodies, offering a true
+            safari experience. For travellers, it’s exciting, educational, and
+            full of adventure, with opportunities to see lions, leopards,
+            hyenas, and over 300 bird species in their natural habitat.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The park has been central to the conservation of Asiatic lions,
+              which were on the brink of extinction in the early 20th century.
+            </li>
+            <li>
+              Tourists are attracted not only to lions but also to unique flora,
+              diverse wildlife, and eco-tourism experiences.
+            </li>
+            <li>
+              Nearby Somnath Temple and Junagadh add cultural and historical
+              value to the trip.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October to March – Pleasant weather and ideal for safaris.</li>
+            <li>
+              Avoid monsoon (July–September) due to muddy and slippery roads.
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Gir_3.jpg" alt="Gir National Park" />
+          <img src="./images/3_Adventure/Gir_4.jpeg" alt="Gir National Park" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Jeep Safari – Explore lions, leopards, antelopes, jackals, and
+              wild boars.
+            </li>
+            <li>
+              Devaliya Safari Park – A fenced sanctuary for safe sightings of
+              lions.
+            </li>
+            <li>
+              Birdwatching – Spot species like eagles, peacocks, and painted
+              storks.
+            </li>
+            <li>
+              Cultural Stops Nearby – Somnath Temple, Junagadh Fort, and Girnar
+              Hills.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Gujarati Thali – A wholesome platter with dal, roti, rice, and
+              vegetables.
+            </li>
+            <li>Dhokla & Khandvi – Popular snacks for a quick bite.</li>
+            <li>
+              Sev Usal / Farsan – Local street-food delights in nearby towns.
+            </li>
+            <li>Coastal Seafood (Somnath) – Fresh fish and prawn dishes.</li>
+          </ul>
+          <img src="./images/3_Adventure/Gir_6.jpg" alt="Gir National Park" />
+          <img src="./images/3_Adventure/Gir_7.webp" alt="Gir National Park" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Sasan Gir → Check-in → Evening nature walk or visit
+              Devaliya Safari Park.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Early morning Jeep Safari in Gir National Park → Return by
+              afternoon → Visit Somnath Temple → Try local Gujarati cuisine.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Junagadh & Girnar Hills → Explore local markets → Depart.
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Gir_8.jpg" alt="Gir National Park" />
+          <img src="./images/3_Adventure/Gir_9.png" alt="Gir National Park" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Safari timings are strict; book jeep safaris in advance.</li>
+            <li>Carry binoculars, camera, and comfortable walking shoes.</li>
+            <li>Respect wildlife rules—no littering or loud noises.</li>
+            <li>
+              Best for nature lovers, photographers, and families wanting an
+              adventurous yet peaceful escape.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="girWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Sundarbans National Park MODAL------------------>
+    <div id="sundarbansModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('sundarbansModal')"
+          >&times;</span
+        >
+        <h2>🌿 Sundarbans National Park – West Bengal</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/3_Adventure/Sundarbans_1.jpg"
+            alt="Sundarbans National Park"
+          />
+          <img
+            src="./images/3_Adventure/Sundarbans_2.jpg"
+            alt="Sundarbans National Park"
+          />
+          <p>
+            Sundarbans is the largest mangrove forest in the world and a UNESCO
+            World Heritage Site. It’s a unique ecosystem where rivers meet the
+            sea, creating a labyrinth of islands, tidal rivers, and wetlands.
+            Tourists visit to experience wildlife safaris, birdwatching, and the
+            thrill of spotting the Royal Bengal Tiger in its natural habitat.
+            Nature lovers and adventure seekers will find it magical and serene.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Named after the “Sundari” tree, a mangrove species abundant here.
+            </li>
+            <li>
+              Historically, it has been home to fishermen, honey collectors, and
+              local communities who live sustainably amidst the forests.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather, ideal for boat safaris and
+              wildlife spotting.
+            </li>
+            <li>
+              Monsoon (June–September) – Roads and rivers are flooded; not
+              recommended.
+            </li>
+          </ul>
+          <img
+            src="./images/3_Adventure/Sundarbans_3.jpg"
+            alt="Sundarbans National Park"
+          />
+          <img
+            src="./images/3_Adventure/Sundarbans_6.jpg"
+            alt="Sundarbans National Park"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Only place where you can see tigers swimming in rivers.</li>
+            <li>
+              Rich biodiversity: crocodiles, estuarine dolphins, snakes, and
+              over 260 species of birds.
+            </li>
+            <li>
+              Iconic mangrove trails, creeks, and dense forests offer
+              photography and eco-tourism opportunities.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Hilsa Fish Curry – signature Bengal delicacy.</li>
+            <li>Prawn Malai Curry & Crab Curry – fresh from local rivers.</li>
+            <li>
+              Coconut and local honey-based dishes – traditional Sundarbans
+              specialty.
+            </li>
+          </ul>
+          <img
+            src="./images/3_Adventure/Sundarbans_5.jpg"
+            alt="Sundarbans National Park"
+          />
+          <img
+            src="./images/3_Adventure/Sundarbans_4.jpg"
+            alt="Sundarbans National Park"
+          />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Kolkata → Overnight stay → Visit Howrah Bridge, Victoria
+              Memorial for a brief city tour.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Travel to Godkhali / Sajnekhali entry points of Sundarbans → Board
+              boat safari → Watch mangrove wildlife → Overnight stay in
+              eco-lodge or forest guesthouse.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Early morning nature cruise → Spot tigers, crocodiles, and birds →
+              Visit Sajnekhali Mangrove Interpretation Center → Return to
+              Kolkata.
+            </li>
+          </ul>
+          <img
+            src="./images/3_Adventure/Sundarbans_7.jpg"
+            alt="Sundarbans National Park"
+          />
+          <img
+            src="./images/3_Adventure/Sundarbans_8.jpg"
+            alt="Sundarbans National Park"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Book boat safaris in advance; guided tours are a must.</li>
+            <li>Book boat safaris in advance; guided tours are a must.</li>
+            <li>
+              Follow safety rules strictly—tigers and crocodiles are dangerous.
+            </li>
+            <li>
+              Respect the ecosystem—avoid littering or disturbing wildlife.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="sundarbansWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Periyar National Park MODAL------------------>
+    <div id="periyarModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('periyarModal')">&times;</span>
+        <h2>🐘 Periyar National Park – Kerala</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/3_Adventure/Periyar_2.webp"
+            alt="Periyar National Park"
+          />
+          <img
+            src="./images/3_Adventure/Periyar_3.jpg"
+            alt="Periyar National Park"
+          />
+          <p>
+            Periyar National Park is one of India’s most famous wildlife
+            sanctuaries, located in the picturesque Thekkady region of Kerala.
+            It is renowned for its rich biodiversity, lush forests, and the
+            Periyar Lake, which offers a unique way to spot wildlife. For
+            travelers, it’s a perfect blend of nature, adventure, and
+            tranquility, making it ideal for wildlife enthusiasts,
+            photographers, and families.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Named after the Periyar River, which flows through the park,
+              forming a beautiful lake.
+            </li>
+            <li>
+              Famous for its herds of wild elephants, tigers, leopards, gaur
+              (Indian bison), and many bird species.
+            </li>
+            <li>
+              Periyar Lake boat cruises offer tourists a chance to see wildlife
+              up close, including elephants drinking at the lake’s edge.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Pleasant weather, ideal for boating and
+              trekking.
+            </li>
+            <li>
+              Avoid monsoon (June–September) as heavy rains can restrict
+              activities.
+            </li>
+          </ul>
+          <img
+            src="./images/3_Adventure/Periyar_1.jpg"
+            alt="Periyar National Park"
+          />
+          <img
+            src="./images/3_Adventure/Periyar_4.jpg"
+            alt="Periyar National Park"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Periyar Lake Boat Cruise – Watch elephants, deer, and other
+              wildlife from the water.
+            </li>
+            <li>
+              Nature & Trekking Trails – Short guided treks through forest
+              paths.
+            </li>
+            <li>
+              Bamboo Rafting & Jungle Safari – Adventure and wildlife spotting.
+            </li>
+            <li>
+              Spice Plantations – Explore Kerala’s famous spices like cardamom,
+              pepper, and cinnamon.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Kerala Sadya – Traditional vegetarian feast served on a banana
+              leaf.
+            </li>
+            <li>
+              Appam & Stew – Soft rice pancakes with coconut milk-based stew.
+            </li>
+            <li>
+              Spicy Kerala Fish Curry – Freshwater fish cooked in local spices.
+            </li>
+            <li>Banana Chips & Tapioca Snacks – Popular local munchies.</li>
+          </ul>
+          <img
+            src="./images/3_Adventure/Periyar_5.jpg"
+            alt="Periyar National Park"
+          />
+          <img
+            src="./images/3_Adventure/Periyar_6.jpg"
+            alt="Periyar National Park"
+          />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Thekkady → Check-in → Evening Periyar Lake boat cruise.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning trek in the wildlife sanctuary → Visit spice plantations →
+              Optional elephant ride.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Bamboo rafting or jungle safari → Explore nearby villages and
+              local markets → Depart.
+            </li>
+          </ul>
+          <img
+            src="./images/3_Adventure/Periyar_7.jpg"
+            alt="Periyar National Park"
+          />
+          <img
+            src="./images/3_Adventure/Periyar_8.jpg"
+            alt="Periyar National Park"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Carry binoculars and camera for wildlife spotting.</li>
+            <li>
+              Wear comfortable trekking shoes and light clothing for boat
+              cruises.
+            </li>
+            <li>
+              Book guided tours to ensure safety and proper wildlife viewing.
+            </li>
+            <li>
+              Respect wildlife – no littering, no loud noises, and maintain
+              distance.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="periyarWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Scuba Diving MODAL------------------>
+    <div id="scubaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('scubaModal')">&times;</span>
+        <h2>🤿 Scuba Diving – Andaman & Nicobar Islands / Goa</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/3_Adventure/Scuba_1.jpg" alt="Scuba Diving" />
+          <img src="./images/3_Adventure/Scuba_2.jpg" alt="Scuba Diving" />
+          <p>
+            Scuba diving in India offers an underwater adventure like no other!
+            From vibrant coral reefs to exotic marine life, it’s a must-try for
+            adventure seekers and nature lovers. The Andaman Islands are
+            considered India’s top scuba diving destination, while Goa offers
+            easier access for beginners with thrilling coastal dives. It’s
+            perfect for snorkelers, adventure tourists, and photographers who
+            want to explore the colorful underwater world.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Underwater photography & night diving are major attractions.
+            </li>
+            <li>
+              Clear waters in Andaman allow visibility up to 30 meters, making
+              it perfect for beginners and pros alike.
+            </li>
+            <li>
+              Diving packages include PADI certification courses for
+              first-timers.
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Scuba_3.jpg" alt="Scuba Diving" />
+          <img src="./images/3_Adventure/Scuba_4.webp" alt="Scuba Diving" />
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to May – Calm seas, good visibility, and pleasant weather.
+            </li>
+            <li>
+              Monsoon season (June–September) is not recommended due to rough
+              seas.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Andaman: Fresh seafood – lobster, crab, prawns, and fish curry.
+            </li>
+            <li>
+              Goa: Goan fish curry, prawn balchao, bebinca (traditional
+              dessert).
+            </li>
+            <li>
+              Both places also offer tropical fruits – coconut water, pineapple,
+              and mangoes.
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Scuba_6.webp" alt="Scuba Diving" />
+          <img src="./images/3_Adventure/Scuba_7.jpg" alt="Scuba Diving" />
+          <h2>Roadmap for (4 days)</h2>
+          <p>Andaman & Nicobar Islands:</p>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Port Blair → Cellular Jail visit & light & sound show.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>Ferry to Havelock Island → Radhanagar Beach relaxation.</li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Scuba Diving session at Elephant Beach / Lighthouse Bay → Sunset
+              at beach.
+            </li>
+          </ul>
+          <h3>Day 4:</h3>
+          <ul class="guide-list">
+            <li>Snorkeling at Neil Island → Departure to Port Blair.</li>
+          </ul>
+          <p>Goa:</p>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>Arrive in Goa → Relax at Baga/Calangute Beach.</li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Scuba Diving at Grande Island → Dolphin spotting in the evening.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>Visit Fort Aguada & beaches → Explore Goan cuisine.</li>
+          </ul>
+          <h3>Day 4:</h3>
+          <ul class="guide-list">
+            <li>Water sports / leisure → Departure.</li>
+          </ul>
+          <img src="./images/3_Adventure/Scuba_5.jpg" alt="Scuba Diving" />
+          <img src="./images/3_Adventure/Scuba_8.jpg" alt="Scuba Diving" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Bring swimwear, sunscreen, and underwater cameras.</li>
+            <li>Always follow diving instructor safety rules.</li>
+            <li>
+              Beginners can take introductory dives, while certified divers can
+              explore deeper reefs and wrecks.
+            </li>
+            <li>
+              Carry light cash in Andaman for small local shops; card payments
+              may not work everywhere.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="scubaWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------River Rafting MODAL------------------>
+    <div id="riverModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('riverModal')">&times;</span>
+        <h2>🌊 River Rafting – Rishikesh, Uttarakhand</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/3_Adventure/River_1.jpg" alt="River Rafting" />
+          <img src="./images/3_Adventure/River_2.jpg" alt="River Rafting" />
+          <p>
+            Rishikesh, known as the “Yoga Capital of the World”, is also India’s
+            adventure hub. River rafting on the Ganga River here is
+            world-famous, attracting thrill-seekers from across the globe.
+            Imagine navigating roaring rapids amid the majestic Himalayas,
+            surrounded by serene forests and temples—it’s both
+            adrenaline-pumping and spiritually refreshing.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Rishikesh has been a spiritual and pilgrimage center for
+              centuries, with references in the Mahabharata and ancient Puranas.
+            </li>
+            <li>
+              The Ganga River is sacred, and rafting here combines adventure
+              with scenic spirituality.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              September to June – Avoid monsoon (July–August) due to high water
+              levels.
+            </li>
+            <li>
+              October–March – Cool, pleasant, and perfect for adventure plus
+              sightseeing.
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/River_3.jpg" alt="River Rafting" />
+          <img src="./images/3_Adventure/River_4.jpg" alt="River Rafting" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              River Rafting – Choose from short (9 km) to long (26 km)
+              stretches.
+            </li>
+            <li>Camping on Ganga banks – Bonfires, music, and stargazing.</li>
+            <li>Bungee Jumping & Zip-lining – For adventure lovers.</li>
+            <li>
+              Yoga & Meditation Retreats – Evening sessions along the riverside.
+            </li>
+            <li>
+              Visit Temples & Ashrams – Triveni Ghat, Neelkanth Mahadev Temple,
+              and Beatles Ashram.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Aloo Puri & Chole Bhature – Local breakfast favorites.</li>
+            <li>Malai Momos & Maggi – Popular among adventure tourists.</li>
+            <li>Thali meals – For authentic North Indian vegetarian dishes.</li>
+          </ul>
+          <img src="./images/4_Urban/Chole_Bhature_1.jpg" alt="River Rafting" />
+          <img src="./images/3_Adventure/River_6.jpg" alt="River Rafting" />
+          <h2>Roadmap for (4 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Rishikesh → Evening stroll at Triveni Ghat, attend Ganga
+              Aarti.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning river rafting → Afternoon visit Lakshman Jhula & Ram Jhula
+              → Evening café hopping by the river.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Adventure activities – bungee jump / zipline → Explore nearby
+              waterfalls or Neelkanth Mahadev Temple.
+            </li>
+          </ul>
+          <h3>Day 4:</h3>
+          <ul class="guide-list">
+            <li>
+              Yoga/meditation session → Depart or continue to Haridwar (30 km
+              away) for more cultural experiences.
+            </li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Book rafting packages from reputed operators; safety gear is
+              mandatory.
+            </li>
+            <li>Carry quick-dry clothes and a waterproof bag.</li>
+            <li>
+              Beginners should choose Grade I–II rapids; advanced rafters can go
+              for Grade III–IV.
+            </li>
+            <li>Don’t forget sunscreen and sunglasses with a strap!</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="raftingWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Parasailing MODAL------------------>
+    <div id="parasailingModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('parasailingModal')"
+          >&times;</span
+        >
+        <h2>🪂 Parasailing – Goa</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/3_Adventure/Parasailing_1.jpg" alt="Parasailing" />
+          <img src="./images/3_Adventure/Parasailing_2.jpg" alt="Parasailing" />
+          <p>
+            Parasailing in Goa is one of the most thrilling ways to enjoy the
+            coastline. Imagine soaring high above the Arabian Sea, getting a
+            bird’s-eye view of golden beaches, palm groves, and colorful boats.
+            It’s ideal for adventure enthusiasts, couples, and solo travelers
+            looking for an unforgettable adrenaline rush combined with scenic
+            beauty.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Parasailing emerged in Goa as part of water sports tourism, mainly
+              in Baga, Calangute, and Colva beaches.
+            </li>
+            <li>The aerial view of beaches and coastline is unmatched.</li>
+            <li>Perfect photo opportunities for travelers.</li>
+            <li>
+              Can be combined with other water sports like jet-skiing, banana
+              boat rides, and scuba diving.
+            </li>
+            <li>
+              Safety is a priority—trained instructors and modern equipment
+              ensure a safe experience for beginners.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              November to February – Pleasant weather, calm seas, ideal for
+              water sports.
+            </li>
+            <li>Avoid monsoon (June–September) as seas are rough.</li>
+          </ul>
+          <img src="./images/3_Adventure/Parasailing_5.jpg" alt="Parasailing" />
+          <img src="./images/1_Natural/radhanagar_3.jpg" alt="Parasailing" />
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Goan Fish Curry with rice – Must-try coastal delicacy.</li>
+            <li>
+              Prawn Balchão & Vindaloo – Traditional Portuguese-influenced Goan
+              dishes.
+            </li>
+            <li>Feni – Local cashew or coconut liquor.</li>
+            <li>
+              Beach shacks snacks: seafood platters, coconut water, and fried
+              calamari.
+            </li>
+          </ul>
+          <h2>Roadmap for (4 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Goa → Relax at your beach resort → Sunset at Baga Beach.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning Parasailing at Baga or Calangute Beach → Jet-skiing or
+              banana boat rides → Beach shacks for lunch → Explore Fort Aguada
+              in evening.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Panjim city → Explore Portuguese architecture & churches →
+              Sunset cruise on Mandovi River → Local market shopping.
+            </li>
+          </ul>
+          <h3>Day 4:</h3>
+          <ul class="guide-list">
+            <li>
+              Optional: Scuba diving at Grande Island / Day trip to South Goa
+              beaches → Departure.
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Parasailing_3.jpg" alt="Parasailing" />
+          <img src="./images/3_Adventure/Parasailing_4.jpg" alt="Parasailing" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Wear comfortable swimwear and sunscreen.</li>
+            <li>Keep cameras secured—some operators provide action cams.</li>
+            <li>Book parasailing in advance during peak season (Dec–Jan).</li>
+            <li>
+              Combine beach hopping + water sports for the ultimate Goa
+              adventure.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="parasailingWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Kayaking – Zanskar River MODAL------------------>
+    <div id="kayakingModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('kayakingModal')">&times;</span>
+        <h2>🛶 Kayaking – Zanskar River (Ladakh)</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/3_Adventure/Kayaking_1.jpg" alt="Zanskar River" />
+          <img src="./images/3_Adventure/Kayaking_2.jpg" alt="Zanskar River" />
+          <p>
+            Kayaking in India offers adventure, nature, and serenity, all rolled
+            into one. Whether you’re gliding through the tranquil Kerala
+            backwaters or navigating the thrilling rapids of the Zanskar River,
+            it’s an experience that blends scenic beauty, culture, and
+            adrenaline.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Zanskar River is famous for white-water kayaking with rapids
+              ranging from Class II to IV, attracting adventure seekers
+              worldwide.
+            </li>
+            <li>
+              Flows through dramatic Himalayan landscapes—gorges, cliffs, and
+              monasteries.
+            </li>
+            <li>
+              Locals practice subsistence farming, and visitors witness
+              traditional Ladakhi culture along the riverbanks.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              June to September – Rivers are navigable; weather is safe for
+              adventure
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Kayaking_3.webp" alt="Zanskar River" />
+          <img src="./images/3_Adventure/Kayaking_6.webp" alt="Zanskar River" />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>Kayak through Phuktal and Stongde villages.</li>
+            <li>
+              Combine kayaking with river camping for an immersive adventure.
+            </li>
+            <li>
+              Experience stunning Himalayan sunsets and remote landscapes
+              untouched by mass tourism.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Thukpa – Tibetan-style noodle soup.</li>
+            <li>Momos – Steamed or fried dumplings.</li>
+            <li>Butter Tea & Chhang – Traditional Ladakhi beverages.</li>
+          </ul>
+          <img src="./images/3_Adventure/Chadar_8.jpg" alt="Zanskar River" />
+          <img src="./images/3_Adventure/Kayaking_5.webp" alt="Zanskar River" />
+          <h2>Roadmap for (4-5 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>Arrive in Leh → Acclimatize → Explore Leh markets</li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Travel to starting point (Padum/Chilling) → Kayak preparation &
+              safety briefing
+            </li>
+          </ul>
+          <h3>Day 3-4:</h3>
+          <ul class="guide-list">
+            <li>
+              Kayaking expedition with river camping → Explore villages and
+              monasteries
+            </li>
+          </ul>
+          <h3>Day 5:</h3>
+          <ul class="guide-list">
+            <li>Return to Leh → Sightseeing / Departure</li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Acclimatize properly; carry warm clothes, waterproof gear, and
+              safety equipment.
+            </li>
+            <li>Book guided kayaking tours for safety and local insights.</li>
+            <li>Respect local culture and avoid disturbing wildlife.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="zanskarWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Surfing MODAL------------------>
+    <div id="surfingModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('surfingModal')">&times;</span>
+        <h2>🌊 Surfing – Kerala & Pondicherry</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/3_Adventure/Surfing_1.jpg" alt="Surfing" />
+          <img src="./images/3_Adventure/Surfing_2.jpg" alt="Surfing" />
+          <p>
+            Kovalam and Pondicherry are among India’s top surfing destinations,
+            perfect for beginners and adventure seekers alike. Both offer
+            pristine beaches, calm to moderate waves, and a vibrant coastal
+            culture. Surfing here is not just a sport—it’s an experience of sun,
+            sand, and sea vibes, combined with local food, culture, and scenic
+            beauty.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Both destinations offer surf schools with certified instructors,
+              making it safe for beginners.
+            </li>
+            <li>
+              Speciality: Sunset views, calm waters, palm-fringed beaches, and a
+              mix of adventure + relaxation.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              Kovalam: November to February – pleasant weather, good waves.
+            </li>
+            <li>
+              Pondicherry: October to March – moderate waves, ideal for surfing.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Kovalam: Fresh seafood, Kerala Sadya (traditional vegetarian
+              feast), Kerala-style coconut-based curries.
+            </li>
+            <li>
+              Pondicherry: French bakeries (croissants, baguettes), seafood,
+              local Tamil cuisine, Creole fusion dishes.
+            </li>
+            <li>
+              Beach snacks: Fresh coconut water, fried seafood, and dosa along
+              the shore.
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Surfing_6.jpg" alt="Surfing" />
+          <img src="./images/3_Adventure/Surfing_5.jpg" alt="Surfing" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <p>Kovalam (Kerala)</p>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive in Trivandrum → Check-in at Kovalam → Sunset at Lighthouse
+              Beach.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning surfing session → Visit Samudra Beach & Hawa Beach →
+              Evening Ayurvedic massage.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Day trip to Padmanabhaswamy Temple or Varkala Cliff → Evening
+              local shopping.
+            </li>
+          </ul>
+          <p>Pondicherry</p>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive → Check-in → Walk along Promenade Beach → Evening cafes at
+              French Quarter.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Surfing at Serenity or Paradise Beach → Explore Auroville &
+              Matrimandir → Beachside dinner.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Cycle through French Quarter streets, local markets → Depart
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Surfing_3.jpg" alt="Surfing" />
+          <img src="./images/3_Adventure/Surfing_4.jpg" alt="Surfing" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Book surfing lessons in advance, especially during peak season.
+            </li>
+            <li>Carry sunscreen, rash guards, and flip-flops.</li>
+            <li>
+              Try to combine surfing with local sightseeing for a full coastal
+              experience.
+            </li>
+            <li>
+              Early morning surfing is recommended for calm waves and peaceful
+              experience.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="surfingWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------Snorkeling MODAL------------------>
+    <div id="snorkelingModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('snorkelingModal')"
+          >&times;</span
+        >
+        <h2>🌊 Snorkeling – Lakshadweep / Andaman Islands</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/3_Adventure/Snorkeling_3.jpg" alt="Snorkeling" />
+          <img src="./images/3_Adventure/Snorkeling_4.jpg" alt="Snorkeling" />
+          <p>
+            Snorkeling in Lakshadweep or Andaman Islands is a paradise for
+            marine adventure lovers. With crystal-clear turquoise waters,
+            vibrant coral reefs, and diverse marine life, these islands offer an
+            unforgettable underwater experience. Whether you’re a beginner or an
+            experienced snorkeler, the islands’ calm lagoons and rich
+            biodiversity make it a must-visit destination for adventure,
+            photography, and relaxation.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Both islands offer spectacular underwater visibility, with
+              tropical fish, sea cucumbers, turtles, and sometimes even reef
+              sharks! The coral formations are vibrant and protected.
+            </li>
+            <li>
+              Tourists love these islands for adventure + serene island vibe +
+              untouched natural beauty.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to May – Clear waters, ideal for snorkeling, diving, and
+              other water sports.
+            </li>
+            <li>
+              Avoid monsoon (June–September) due to rough seas and limited
+              visibility.
+            </li>
+          </ul>
+          <img src="./images/3_Adventure/Snorkeling_5.webp" alt="Snorkeling" />
+          <img src="./images/3_Adventure/Snorkeling_6.jpg" alt="Snorkeling" />
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Seafood – Fresh lobster, crab, prawns, and local fish
+              preparations.
+            </li>
+            <li>
+              Coconut-based dishes – Coconut rice, coconut curries, and
+              toddy-based sweets.
+            </li>
+            <p>Local delicacies:</p>
+            <li>Andaman: Fish curry, roushti (smoked fish).</li>
+            <li>Lakshadweep: Tuna fish curry, coconut laddoos.</li>
+          </ul>
+          <h2>Roadmap for (3-4 days)</h2>
+          <p>Andaman Islands</p>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive at Port Blair → Cellular Jail visit → Light and sound show.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Havelock Island → Snorkeling at Elephant Beach → Relax at
+              Radhanagar Beach.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Neil Island → Snorkeling at Bharatpur Beach → Explore natural rock
+              formations.
+            </li>
+          </ul>
+          <h3>Day 4:</h3>
+          <ul class="guide-list">
+            <li>Optional scuba diving or boat tour → Return to Port Blair.</li>
+          </ul>
+          <p>Lakshadweep</p>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrive at Agatti Island → Relax at lagoon → Sunset photography.
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Bangaram Island → Snorkeling / glass-bottom boat ride → Island
+              hopping.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Minicoy Island → Explore lighthouse → Snorkeling at coral reefs.
+            </li>
+          </ul>
+          <h3>Day4:</h3>
+          <ul class="guide-list">
+            <li>Leisure beach day → Return to mainland.</li>
+          </ul>
+          <img src="./images/3_Adventure/Snorkeling_2.jpg" alt="Snorkeling" />
+          <img src="./images/3_Adventure/Snorkeling_1.jpg" alt="Snorkeling" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Wear eco-friendly reef-safe sunscreen.</li>
+            <li>Always follow safety instructions from guides.</li>
+            <li>Carry swimwear, goggles, and waterproof cameras.</li>
+            <li>Respect marine life; avoid touching corals or fish.</li>
+            <li>Book permits in advance (required in Lakshadweep).</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="snorkelingWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!--  footer  -->
+    <footer>
+      <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="categories.html">Categories</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: info@indiscapes.com</p>
+          <p>Phone: +91 9876543210</p>
+          <p>Location: Hyderabad, India</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>© 2025 IndiScapes | All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!--   Javascript  -->
+    <script src="script.js"></script>
+  </body>
+</html>

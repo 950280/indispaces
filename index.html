@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>indiscapes website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!--  nav bar  -->
+    <header>
+      <nav class="navbar">
+        <!--  logo  -->
+        <div class="nav-left">
+          <img
+            src="./images/logo_2.png"
+            alt="logo"
+            width="180px"
+            height="60px"
+          />
+        </div>
+        <!------------   nav items  ------------->
+        <!--  big screens  -->
+        <ul class="nav-right">
+          <li>
+            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="about.html" target="_blank"
+              ><i class="fa fa-info-circle"></i> About</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" target="_blank"
+              ><i class="fa fa-envelope"></i> Contact</a
+            >
+          </li>
+        </ul>
+
+        <!--     search    -->
+        <div class="nav-center">
+          <form id="searchForm">
+            <input
+              type="text"
+              placeholder="search places"
+              id="searchInput"
+              onkeyup="searchPlaces()"
+            />
+            <button type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+
+        <!------------  items  ------------->
+        <!--  On small screens  -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+      </nav>
+    </header>
+
+    <!--  slide show  -->
+    <div class="slideshow-container">
+      <h2 class="section-heading">Top 10 Places to Visit in India</h2>
+      <section class="slideshow">
+        <div class="slides">
+          <div class="slide">
+            <img src="./images/top_10/1_Taj_Mahal.jpeg" alt="Taj mahaal" />
+            <p>Taj Mahal, Agra</p>
+          </div>
+          <div class="slide">
+            <img src="./images/top_10/2_Jaipur_Pink_City.jpg" alt="Jaipur" />
+            <p>Jaipur, Rajasthan</p>
+          </div>
+          <div class="slide">
+            <img src="./images/top_10/3_Backwaters_Kerala.avif" alt="Kerala" />
+            <p>Kerala Backwaters</p>
+          </div>
+          <div class="slide">
+            <img src="./images/top_10/4_Goa_Beaches.jpg" alt="Goa" />
+            <p>Goa Beaches</p>
+          </div>
+          <div class="slide">
+            <img src="./images/top_10/5_Varanasi_Ghats.jpg" alt="Varanasi" />
+            <p>Varanasi Ghats</p>
+          </div>
+          <div class="slide">
+            <img src="./images/top_10/6_Ladakh_Jammu.jpg" alt="Ladakh" />
+            <p>Ladakh</p>
+          </div>
+          <div class="slide">
+            <img src="./images/top_10/7_Darjeeling.jpg" alt="Darjeeling" />
+            <p>Darjeeling</p>
+          </div>
+          <div class="slide">
+            <img
+              src="./images/top_10/8_Rann_of_Kutch.jpg"
+              alt="Rann of Kutch"
+            />
+            <p>Rann of Kutch</p>
+          </div>
+          <div class="slide">
+            <img src="./images/top_10/9_Mysore_Palace.webp" alt="Mysore" />
+            <p>Mysore Palace</p>
+          </div>
+          <div class="slide">
+            <img src="./images/top_10/10_Andaman_Nicobar.jpg" alt="Andaman" />
+            <p>Andaman Islands</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!--  categories  -->
+    <main>
+      <h3 class="section-heading">Categories</h3>
+      <section class="category">
+        <!--    box 1     -->
+        <div class="box">
+          <h2>Natural & Scenic</h2>
+          <div class="subtitle">
+            <a href="1_natural.html" target="_blank"
+              ><img src="./images/categories/1_mountains.jpg" alt="mountains" />
+              <p>Mountains & Hill Stations</p></a
+            >
+            <a href="1_natural.html" target="_blank"
+              ><img src="./images/categories/2_Beaches.jpg" alt="beaches" />
+              <p>Beaches & Coastal Spots</p></a
+            >
+            <a href="1_natural.html" target="_blank"
+              ><img
+                src="./images/categories/3_Waterfalls.webp"
+                alt="waterfalls"
+              />
+              <p>Waterfalls & Lakes</p></a
+            >
+            <a href="1_natural.html" target="_blank"
+              ><img
+                src="./images/categories/4_Viewpoints.jpeg"
+                alt="viewpoints"
+              />
+              <p>Viewpoints & Scenic Spots</p></a
+            >
+          </div>
+        </div>
+        <!--    box 2     -->
+        <div class="box">
+          <h2>Heritage & Culture</h2>
+          <div class="subtitle">
+            <a href="2_historical.html" target="_blank"
+              ><img src="./images/categories/5_Temples.jpg" alt="temples" />
+              <p>Temples & Religious Places</p></a
+            >
+            <a href="2_historical.html" target="_blank"
+              ><img src="./images/categories/6_Palaces.jpg" alt="forts" />
+              <p>Palaces & Forts</p></a
+            >
+            <a href="2_historical.html" target="_blank"
+              ><img
+                src="./images/categories/7_Museums.webp"
+                alt="historic sites"
+              />
+              <p>Museums & Historical Sites</p></a
+            >
+            <a href="2_historical.html" target="_blank"
+              ><img src="./images/categories/8_Festivals.png" alt="festivals" />
+              <p>Festivals & Cultural Events</p></a
+            >
+          </div>
+        </div>
+        <!--    box 3     -->
+        <div class="box">
+          <h2>Adventure & Outdoor</h2>
+          <div class="subtitle">
+            <a href="3_adventure.html" target="_blank"
+              ><img src="./images/categories/9_Trekking.avif" alt="trekking" />
+              <p>Trekking & Hiking Trails</p></a
+            >
+            <a href="3_adventure.html" target="_blank"
+              ><img src="./images/categories/10_Wildlife.jpg" alt="wildlife" />
+              <p>Wildlife & National Parks</p></a
+            >
+            <a href="3_adventure.html" target="_blank"
+              ><img
+                src="./images/categories/11_Water_Sports.webp"
+                alt="adventure"
+              />
+              <p>Water Sports & Adventure Activities</p></a
+            >
+          </div>
+        </div>
+        <!--    box 4     -->
+        <div class="box">
+          <h2>Modern & Urban Attractions</h2>
+          <div class="subtitle">
+            <a href="4_modern.html" target="_blank"
+              ><img
+                src="./images/categories/12_Cities_Urban.avif"
+                alt="cities"
+              />
+              <p>Cities & Urban Spots</p></a
+            >
+            <a href="4_modern.html" target="_blank"
+              ><img
+                src="./images/categories/13_parks_gardens.jpg"
+                alt="parks"
+              />
+              <p>Parks & Gardens</p></a
+            >
+            <a href="4_modern.html" target="_blank"
+              ><img src="./images/categories/14_Shopping.webp" alt="shopping" />
+              <p>Shopping Destinations</p></a
+            >
+            <a href="4_modern.html" target="_blank"
+              ><img src="./images/categories/15_food.webp" alt="food" />
+              <p>Food Destinations</p></a
+            >
+          </div>
+        </div>
+        <!--    box 5     -->
+        <div class="box">
+          <h2>Offbeat & Hidden Gems</h2>
+          <div class="subtitle">
+            <a href="5_hidden gems.html" target="_blank"
+              ><img
+                src="./images/categories/16_Towns_Villages.avif"
+                alt="villages"
+              />
+              <p>Underrated Towns & Villages</p></a
+            >
+            <a href="5_hidden gems.html" target="_blank"
+              ><img
+                src="./images/categories/17_unique_wonders.webp"
+                alt="natural wonders"
+              />
+              <p>Unique Natural Wonders</p></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--  footer  -->
+    <footer>
+      <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="categories.html">Categories</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: info@indiscapes.com</p>
+          <p>Phone: +91 9876543210</p>
+          <p>Location: Hyderabad, India</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>© 2025 IndiScapes | All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!--   Javascript  -->
+    <script src="script.js"></script>
+  </body>
+</html>

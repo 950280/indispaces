@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | indiscapes website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!--  nav bar  -->
+    <header>
+      <nav class="navbar">
+        <!--  logo  -->
+        <div class="nav-left">
+          <img
+            src="./images/logo_2.png"
+            alt="logo"
+            width="180px"
+            height="60px"
+          />
+        </div>
+        <!------------   nav items  ------------->
+        <!--  big screens  -->
+        <ul class="nav-right">
+          <li>
+            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="about.html"><i class="fa fa-info-circle"></i> About</a>
+          </li>
+          <li>
+            <a href="contact.html"><i class="fa fa-envelope"></i> Contact</a>
+          </li>
+        </ul>
+
+        <!--     search    -->
+        <div class="nav-center">
+          <form id="searchForm">
+            <input
+              type="text"
+              placeholder="search places"
+              id="searchInput"
+              onkeyup="searchPlaces()"
+            />
+            <button type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+
+        <!------------  items  ------------->
+        <!--  On small screens  -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+      </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <h1>Connect With Indispaces</h1>
+      <p>
+        We’d love to hear from you! Share feedback, suggest your favorite
+        places, or just say hello 👋
+      </p>
+
+      <form id="contactForm">
+        <!-- User Info -->
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+
+        <!-- Feedback -->
+        <textarea
+          name="feedback"
+          rows="4"
+          placeholder="Your Feedback or Message"
+        ></textarea>
+
+        <!-- Suggest Place -->
+        <textarea
+          name="suggestion"
+          rows="3"
+          placeholder="Suggest a Place You Love"
+        ></textarea>
+
+        <!-- Favorite Type Poll -->
+        <label class="poll-label">What kind of places do you enjoy most?</label>
+        <select name="favType" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="Beaches">Beaches 🏖️</option>
+          <option value="Mountains">Mountains ⛰️</option>
+          <option value="Heritage">Heritage Sites 🏛️</option>
+          <option value="Cities">Cities 🌆</option>
+        </select>
+
+        <!-- Submit -->
+        <button type="submit">Send</button>
+      </form>
+
+      <!-- Confirmation -->
+      <div id="formMessage"></div>
+    </section>
+
+    <!--  footer  -->
+    <footer>
+      <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="categories.html">Categories</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: info@indiscapes.com</p>
+          <p>Phone: +91 9876543210</p>
+          <p>Location: Hyderabad, India</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="javascript:void(0)"><i class="fa fa-facebook"></i></a>
+            <a href="javascript:void(0)"><i class="fa fa-instagram"></i></a>
+            <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
+            <a href="javascript:void(0)"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>© 2025 IndiScapes | All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!--   Javascript  -->
+    <script src="script.js"></script>
+    <!-- Scroll to top button -->
+    <button id="scrollTopBtn" title="Go to top">↑</button>
+  </body>
+</html>

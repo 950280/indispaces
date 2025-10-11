@@ -1,0 +1,3436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Natural & Scenic | indiscapes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!--  nav bar  -->
+    <header>
+      <nav class="navbar">
+        <!--  logo  -->
+        <div class="nav-left">
+          <img
+            src="./images/logo_2.png"
+            alt="logo"
+            width="180px"
+            height="60px"
+          />
+        </div>
+        <!------------   nav items  ------------->
+        <!--  big screens  -->
+        <ul class="nav-right">
+          <li>
+            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="about.html" target="_blank"
+              ><i class="fa fa-info-circle"></i> About</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" target="_blank"
+              ><i class="fa fa-envelope"></i> Contact</a
+            >
+          </li>
+        </ul>
+
+        <!--     search    -->
+        <div class="nav-center">
+          <form id="searchForm">
+            <input
+              type="text"
+              placeholder="search places"
+              id="searchInput"
+              onkeyup="searchPlaces()"
+            />
+            <button type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+
+        <!------------  items  ------------->
+        <!--  On small screens  -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+      </nav>
+    </header>
+
+    <!----------category 1----------->
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+      <img
+        src="./images/1_Natural/natural_page_cover.jpg"
+        alt="India Landscape"
+      />
+      <div class="hero-text">
+        <h1>Natural & Scenic</h1>
+        <p>
+          Experience the breathtaking beauty of nature, from mountains to serene
+          lakes.
+        </p>
+      </div>
+    </section>
+
+    <!-- Subcategories -->
+    <section class="subcategory">
+      <h2>Mountains & Hill Stations</h2>
+      <div class="placesContainer">
+        <div class="places-grid">
+          <!-- Shimla and manali Card -->
+          <div class="place-card">
+            <img
+              src="./images/1_Natural/Manali_2.webp"
+              alt="Shimla hills in Himachal pradesh "
+            />
+            <h3>Shimla & Manali</h3>
+            <h6>Himachal Pradesh</h6>
+            <p>
+              British-era summer capital, family-friendly destination. Vibe:
+              Relaxed, heritage-rich, popular for family trips + honeymooners
+            </p>
+            <button onclick="openModal('shimlaModal','Shimla')">
+              Read More
+            </button>
+          </div>
+
+          <!-- Darjeeling -->
+          <div class="place-card">
+            <img
+              src="./images/1_Natural/darjeeling_1.webp"
+              alt="Darjeeling in west bengal"
+            />
+            <h3>Darjeeling</h3>
+            <h6>West Bengal</h6>
+            <p>
+              Queen of the Hills,world-famous Darjeeling tea. Vibe: Peaceful,
+              cultural, tea-lover’s paradise.
+            </p>
+            <button onclick="openModal('darjeelingModal','Darjeeling')">
+              Read More
+            </button>
+          </div>
+
+          <!-- Leh–Ladakh  -->
+          <div class="place-card">
+            <img src="./images/1_Natural/ladakh_1.webp" alt="Leh–Ladakh" />
+            <h3>Leh–Ladakh</h3>
+            <h6>Jammu & Kashmir</h6>
+            <p>
+              Adventure motorbiking, Tibetan culture, cold desert landscapes.
+              Vibe: Adventurous, spiritual, once-in-a-lifetime experience.
+            </p>
+            <button onclick="openModal('ladakhModal','Ladakh')">
+              Read More
+            </button>
+          </div>
+
+          <!--  Ooty  -->
+          <div class="place-card">
+            <img src="./images/1_Natural/ooty_1.jpg" alt="Ooty" />
+            <h3>Ooty</h3>
+            <h6>Tamil Nadu</h6>
+            <p>
+              Nilgiri charm + chocolates + heritage railway. Vibe: Calm,
+              nature-filled, perfect for couples & families.
+            </p>
+            <button onclick="openModal('ootyModal','Ooty')">Read More</button>
+          </div>
+
+          <!-- munnar  -->
+          <div class="place-card">
+            <img src="./images/1_Natural/munnar_1.webp" alt="munnar" />
+            <h3>Munnar</h3>
+            <h6>Kerala</h6>
+            <p>
+              Famous for tea tourism, spice gardens, and the rare Neelakurinji
+              flowers that bloom once every 12 years. Calm, romantic, refreshing
+              – perfect for couples, photographers, and nature lovers.
+            </p>
+            <button onclick="openModal('munnarModal','Munnar')">
+              Read More
+            </button>
+          </div>
+
+          <!-- Nainital  -->
+          <div class="place-card">
+            <img src="./images/1_Natural/Nainital_1.jpg" alt="Nainital" />
+            <h3>Nainital</h3>
+            <h6>Uttarakhand</h6>
+            <p>
+              A charming lake town with the beautiful Naini Lake for boating,
+              surrounded by hills. Snow View Point and ropeway rides make it
+              family-friendly.
+            </p>
+            <button onclick="openModal('nainitalModal','Nainital')">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+      <p
+        id="noResults"
+        style="display: none; text-align: center; color: gray; margin-top: 20px"
+      >
+        No matching places found.
+      </p>
+    </section>
+
+    <!-------------Beaches & Coastal Spots----------->
+    <section class="subcategory">
+      <h2>Beaches & Coastal Spots</h2>
+      <div class="placesContainer">
+        <div class="places-grid">
+          <!-- Goa Beaches (Goa) -->
+          <div class="place-card">
+            <img src="./images/1_Natural/goa_1.webp" alt="Goa Beach" />
+            <h3>Goa Beaches</h3>
+            <h6>Goa</h6>
+            <p>
+              Baga for nightlife, Calangute for families, Palolem for peace.
+              Portuguese influence in food, churches, and culture.
+            </p>
+            <button onclick="openModal('goabeachModal','Goa Beaches')">
+              Read More
+            </button>
+          </div>
+
+          <!-- Radhanagar Beach -->
+          <div class="place-card">
+            <img
+              src="./images/1_Natural/radhanagar_1.jpg"
+              alt="Radhanagar Beach"
+            />
+            <h3>Radhanagar Beach</h3>
+            <h6>Andaman & Nicobar</h6>
+            <p>
+              Scuba diving, snorkeling, breathtaking sunsets. Part of the scenic
+              Andaman Islands, rich in marine life.
+            </p>
+            <button onclick="openModal('radhanagarModal','Radhanagar Beach')">
+              Read More
+            </button>
+          </div>
+
+          <!-- Varkala Beach (Kerala)  -->
+          <div class="place-card">
+            <img src="./images/1_Natural/varkala_1.webp" alt="Varkala Beach" />
+            <h3>Varkala Beach</h3>
+            <h6>Kerala</h6>
+            <p>
+              Ayurvedic spas, yoga retreats, mineral springs. Locals believe the
+              waters here have healing powers.
+            </p>
+            <button onclick="openModal('varkalaModal','Varkala Beach')">
+              Read More
+            </button>
+          </div>
+
+          <!--  Marina Beach    -->
+          <div class="place-card">
+            <img src="./images/1_Natural/marina_1.jpg" alt="Marina Beach" />
+            <h3>Marina Beach</h3>
+            <h6>Tamil Nadu</h6>
+            <p>
+              Street food (sundal, bajji), kite flying, local life. Also a
+              historic spot for political and cultural events.
+            </p>
+            <button onclick="openModal('marinaModal','Marina Beach')">
+              Read More
+            </button>
+          </div>
+
+          <!-- Kovalam Beach (Kerala)  -->
+          <div class="place-card">
+            <img src="./images/1_Natural/kovalam_1.jpg" alt="Kovalam Beach" />
+            <h3>Kovalam Beach</h3>
+            <h6>Kerala</h6>
+            <p>
+              Ayurveda massages, Lighthouse Beach, calm waters. Once a quiet
+              fishing village, now an international tourist hub.
+            </p>
+            <button onclick="openModal('kovalamModal','Kovalam Beach')">
+              Read More
+            </button>
+          </div>
+
+          <!-- Puri Beach (Odisha)  -->
+          <div class="place-card">
+            <img
+              src="./images/1_Natural/puri_1.jpg"
+              alt="Puri Beach (Odisha)"
+            />
+            <h3>Puri Beach</h3>
+            <h6>Odisha</h6>
+            <p>
+              Sand art, Rath Yatra festival, sunrise views.Deeply tied to
+              centuries-old Jagannath traditions.
+            </p>
+            <button onclick="openModal('puriModal','Puri Beach')">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+      <p
+        id="noResults"
+        style="display: none; text-align: center; color: gray; margin-top: 20px"
+      >
+        No matching places found.
+      </p>
+    </section>
+
+    <!------------- Waterfalls & Lakes ----------->
+    <section class="subcategory">
+      <h2>Waterfalls & Lakes</h2>
+      <div class="placesContainer">
+        <div class="places-grid">
+          <!-- Dudhsagar Falls – Goa -->
+          <div class="place-card">
+            <img
+              src="./images/1_Natural/Dudhsagar_1.jpg"
+              alt="Dudhsagar Falls"
+            />
+            <h3>Dudhsagar Falls</h3>
+            <h6>Goa</h6>
+            <p>
+              Four-tiered waterfall looking like “streams of milk” rushing down.
+              Surrounded by forests and railway tracks.
+            </p>
+            <button onclick="openModal('dudhsagarModal','Dudhsagar Falls')">
+              Read More
+            </button>
+          </div>
+
+          <!-- Jog Falls – Karnataka  -->
+          <div class="place-card">
+            <img src="./images/1_Natural/jog_1.jpg" alt="Jog Falls" />
+            <h3>Jog Falls</h3>
+            <h6>Karnataka</h6>
+            <p>
+              India’s second-highest waterfall, with water thundering down in
+              four cascades.
+            </p>
+            <button onclick="openModal('jogModal','Jog Falls')">
+              Read More
+            </button>
+          </div>
+
+          <!-- Athirappilly Falls – Kerala  -->
+          <div class="place-card">
+            <img
+              src="./images/1_Natural/Athirappilly_1.jpg"
+              alt="Athirappilly Falls"
+            />
+            <h3>Athirappilly Falls</h3>
+            <h6>Kerala</h6>
+            <p>
+              Called the “Niagara of India,” set amidst lush greenery. Popular
+              Bollywood shooting spot.
+            </p>
+            <button
+              onclick="openModal('athirappillyModal','Athirappilly Falls')"
+            >
+              Read More
+            </button>
+          </div>
+
+          <!-- Dal Lake – Srinagar, Jammu & Kashmir  -->
+          <div class="place-card">
+            <img src="./images/1_Natural/Dal_1.jpg" alt="Dal Lake" />
+            <h3>Dal Lake</h3>
+            <h6>Srinagar</h6>
+            <p>
+              Known as the “Jewel of Kashmir,” surrounded by mountains and
+              gardens.
+            </p>
+            <button onclick="openModal('dalModal','Dal Lake')">
+              Read More
+            </button>
+          </div>
+
+          <!-- Loktak Lake – Manipur  -->
+          <div class="place-card">
+            <img src="./images/1_Natural/Loktak_1.webp" alt="Loktak Lake" />
+            <h3>Loktak Lake</h3>
+            <h6>Manipur</h6>
+            <p>
+              Asia’s only floating lake, with unique circular “phumdis”
+              (floating islands).
+            </p>
+            <button onclick="openModal('loktakModal','Loktak Lake')">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+      <p
+        id="noResults"
+        style="display: none; text-align: center; color: gray; margin-top: 20px"
+      >
+        No matching places found.
+      </p>
+    </section>
+
+    <!---------------Viewpoints & Scenic Spots-------------->
+    <section class="subcategory">
+      <h2>Viewpoints & Scenic Spots</h2>
+      <div class="placesContainer">
+        <div class="places-grid">
+          <!-- Tiger Hill – Darjeeling, West Bengal -->
+          <div class="place-card">
+            <img src="./images/1_Natural/tiger_hill_1.webp" alt="Tiger Hill" />
+            <h3>Tiger Hill</h3>
+            <h6>Darjeeling</h6>
+            <p>
+              Famous for breathtaking sunrise views over Mt. Kanchenjunga and on
+              clear days, even Mt. Everest.
+            </p>
+            <button onclick="openModal('tigerhillModal','Tiger Hill')">
+              Read More
+            </button>
+          </div>
+
+          <!-- Nandi Hills – Karnataka  -->
+          <div class="place-card">
+            <img src="./images/1_Natural/Nandi_1.jpg" alt="Nandi Hills" />
+            <h3>Nandi Hills</h3>
+            <h6>Karnataka</h6>
+            <p>
+              A quick getaway from Bangalore, popular for sunrise, cool breeze,
+              and panoramic city views.
+            </p>
+            <button onclick="openModal('nandiModal','Nandi Hills')">
+              Read More
+            </button>
+          </div>
+
+          <!-- Echo Point – Munnar, Kerala  -->
+          <div class="place-card">
+            <img src="./images/1_Natural/Echo_1.jpg" alt="Echo Point" />
+            <h3>Echo Point</h3>
+            <h6>Munnar</h6>
+            <p>
+              Known for its natural echo phenomenon and lush green tea estates
+              around.
+            </p>
+            <button onclick="openModal('echoModal','Echo Point')">
+              Read More
+            </button>
+          </div>
+
+          <!-- Sunset Point – Kanyakumari, Tamil Nadu  -->
+          <div class="place-card">
+            <img
+              src="./images/1_Natural/Kanyakumari_1.jpg"
+              alt="Sunset Point – Kanyakumari"
+            />
+            <h3>Sunset Point – Kanyakumari</h3>
+            <h6>Tamil Nadu</h6>
+            <p>
+              Only place in India where you can see sunrise and sunset over the
+              ocean at the same spot. Associated with Swami Vivekananda’s
+              meditation on the nearby rock.
+            </p>
+            <button onclick="openModal('kanyakumariModal','Kanyakumari')">
+              Read More
+            </button>
+          </div>
+
+          <!-- Jaivana Cannon Viewpoint – Nahargarh Fort, Jaipur, Rajasthan  -->
+          <div class="place-card">
+            <img
+              src="./images/1_Natural/Jaivana_1.webp"
+              alt="Jaivana Cannon Viewpoint – Nahargarh Fort"
+            />
+            <h3>Jaivana Cannon Viewpoint</h3>
+            <h6>Jaipur</h6>
+            <p>
+              Overlooks the Pink City with stunning sunset and night views of
+              Jaipur lights. Fort built in 1734 by Maharaja Sawai Jai Singh II
+              as a defense post.
+            </p>
+            <button onclick="openModal('jaivanaModal','Jaivana Cannon')">
+              Read More
+            </button>
+          </div>
+
+          <!-- Bomdila Viewpoint – Arunachal Pradesh  -->
+          <div class="place-card">
+            <img
+              src="./images/1_Natural/Bomdila_1.jpg"
+              alt="Bomdila Viewpoint"
+            />
+            <h3>Bomdila Viewpoint</h3>
+            <h6>Arunachal Pradesh</h6>
+            <p>
+              Offers panoramic Himalayan views including snow-clad Gorichen
+              Peak. Bomdila was historically influenced by Tibetan culture and
+              Buddhism.
+            </p>
+            <button onclick="openModal('bomdilaModal','Bomdila Viewpoint')">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+      <p
+        id="noResults"
+        style="display: none; text-align: center; color: gray; margin-top: 20px"
+      >
+        No matching places found.
+      </p>
+    </section>
+
+    <!--------------------------MODALS------------------------>
+    <!-- 🌄 Mountains & Hill Stations Modal -->
+    <!------------------SHIMLA MODAL------------------>
+    <div id="shimlaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('shimlaModal')">&times;</span>
+        <h2>Shimla & Manali – The Charm of Himachal</h2>
+        <h3 class="heading">🌲 Shimla – The Queen of Hills</h3>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/shimla_1.jpg" alt="shimla" />
+          <img src="./images/1_Natural/shimla_2.jpg" alt="shimla" />
+          <p>
+            History: Shimla, the “Queen of Hills,” was a sleepy village until
+            the British made it their summer capital in the 19th century. Its
+            colonial architecture, old churches, and charming streets still
+            reflect that heritage. The town is surrounded by pine forests and
+            offers spectacular views of the Himalayan ranges.
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The toy train (Kalka–Shimla Railway) is a UNESCO World Heritage
+              route, offering scenic rides through tunnels, bridges, and hills.
+            </li>
+            <li>Ice skating at the open-air rink (Asia’s only natural one).</li>
+            <li>Shopping & local crafts on Mall Road.</li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>March–June: Pleasant weather, perfect for sightseeing.</li>
+            <li>December–January: For magical snowy mornings.</li>
+          </ul>
+
+          <p class="highlight">Must-Do Experiences:</p>
+          <ul class="guide-list">
+            <li>
+              Take a leisurely stroll on The Ridge and enjoy panoramic mountain
+              views.
+            </li>
+            <li>
+              Visit Jakhoo Temple and meet playful monkeys with a view of Shimla
+              town.
+            </li>
+            <li>
+              Go to Kufri for snow sports, horse riding, or simple fun in the
+              snow.
+            </li>
+            Sip hot chocolate at a café on Mall Road and watch the colonial
+            architecture.
+          </ul>
+          <img src="./images/1_Natural/Shimla_3.jpg" alt="shimla" />
+          <img src="./images/1_Natural/shimla_4.jpg" alt="shimla" />
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Himachali Dham (traditional thali), Siddu, Chana Madra.</li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Explore on foot; cars are limited in the town center.</li>
+            <li>Book the toy train in advance, especially during summer.</li>
+          </ul>
+          <p class="tip">
+            📸 <strong>Pro Tip:</strong> Sunrise from Jakhoo Hill is
+            Insta-worthy — golden light over white peaks.
+          </p>
+        </div>
+        <!-- Row 2 -->
+        <div class="modal-row">
+          <h3 class="heading">🏔️ Manali – Adventure & Serenity in One Place</h3>
+          <p>
+            History: Nestled in the Kullu Valley, Manali has been a hub for
+            travelers and adventurers for decades. It’s named after "Sage Manu",
+            who is believed to have meditated here. Manali blends natural
+            beauty, adventure, and a touch of hippie culture, making it a
+            hotspot for backpackers, honeymooners, and nature lovers alike.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Adventure sports: paragliding, skiing, zorbing, river rafting.
+            </li>
+            <li>
+              Gateway to high-altitude destinations like Rohtang Pass and
+              Leh–Ladakh.
+            </li>
+            <li>
+              Old Manali: Cafés, markets, and a relaxed vibe attract young
+              travelers.
+            </li>
+            <li>
+              Snow-capped peaks & valleys: perfect for photography and nature
+              walks.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/Manali_2.webp" alt="manali" />
+          <img src="./images/1_Natural/manali_3.jpg" alt="manali" />
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>March–June: trekking, paragliding, sightseeing.</li>
+            <li>
+              December–February: snow activities and cozy winter experiences.
+            </li>
+          </ul>
+
+          <p class="highlight">Must-Do Experiences:</p>
+          <ul class="guide-list">
+            <li>
+              Drive to Rohtang Pass for snow, glaciers, and scenic drives.
+            </li>
+            <li>
+              Explore Solang Valley for adventure sports or just snow-filled
+              fun.
+            </li>
+            <li>
+              Visit Hadimba Temple and experience the serene cedar forest.
+            </li>
+            <li>
+              Wander in Old Manali for boutique shopping and café culture.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/manali_4.jpg" alt="manali" />
+          <img src="./images/1_Natural/manali_5.webp" alt="manali" />
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Local trout fish, Momos, Thukpa, Himachali Rajma Chawal.</li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Carry warm clothes even in summer evenings.</li>
+            <li>
+              Rohtang Pass permits are limited and need online booking in
+              advance.
+            </li>
+            <li>Roads can be steep and curvy; plan extra travel time.</li>
+          </ul>
+          <p class="tip">
+            📸 <strong>Pro Tip:</strong> Sunrise from Jakhoo Hill is
+            Insta-worthy — golden light over white peaks.
+          </p>
+        </div>
+        <!-- Row 3 -->
+        <div class="modal-row">
+          <p>
+            Shimla gives you the charm of history and cozy walks, while Manali
+            thrills you with snow, adventure, and free-spirited vibes. Together,
+            they’re the perfect “romantic + adventure” combo in Himachal.
+          </p>
+          <img src="./images/1_Natural/manali_8.webp" alt="manali" />
+          <img src="./images/1_Natural/Manali_6.jpg" alt="manali" />
+          <h3>🚗 How to Reach</h3>
+          <ul class="guide-list">
+            <li>
+              Nearest Airport: Chandigarh (for Shimla), Bhuntar (for Manali).
+            </li>
+            <li>
+              From Delhi: Overnight Volvo buses are the most popular (7–10 hrs).
+            </li>
+          </ul>
+          <h2>🗺️ 7-Day Shimla & Manali Roadmap</h2>
+          <h3>Day 1: Arrival in Shimla</h3>
+          <ul class="guide-list">
+            <li>
+              Reach Shimla: By toy train (Kalka–Shimla) or road from
+              Chandigarh/Delhi.
+            </li>
+            <li>
+              Activities: Walk on Mall Road (shops, cafés, street vibes). Visit
+              The Ridge for panoramic mountain views. Evening coffee at a café
+              and enjoy the sunset.
+            </li>
+            <li>Stay: Shimla town</li>
+          </ul>
+          <h3>Day 2: Shimla Local Sightseeing</h3>
+          <ul class="guide-list">
+            <li>Morning: Visit Jakhoo Temple (monkeys & mountain views).</li>
+            <li>
+              Afternoon: Explore Christ Church & Scandal Point. Optional: Short
+              trek to Kufri (snow sports, horse rides).
+            </li>
+            <li>Evening: Relax at Mall Road or try local street food</li>
+          </ul>
+          <h3>Day 3: Shimla Surroundings / Adventure</h3>
+          <ul class="guide-list">
+            <li>
+              Excursion Options: Chail Palace (historic charm & nature).
+              Naldehra (golf course, scenic views).
+            </li>
+            <li>Evening: Relax & enjoy Himachali Dham dinner.</li>
+            <li>
+              Tip: Start early for day trips to make the most of light & views.
+            </li>
+          </ul>
+          <h3>Day 4: Travel to Manali</h3>
+          <ul class="guide-list">
+            <li>
+              Route: Shimla → Manali (7–8 hours by road, optional stops in
+              Kullu).
+            </li>
+            <li>
+              Activities en route: Stop at Kullu town (local markets, river
+              views).
+            </li>
+            <li>
+              Evening in Manali: Check into hotel, short walk in Old Manali for
+              cafés & street vibes.
+            </li>
+          </ul>
+          <h3>Day 5: Manali Local Sightseeing</h3>
+          <ul class="guide-list">
+            <li>
+              Morning: Visit Hadimba Temple and surrounding cedar forests.
+              Explore Manali Sanctuary / Van Vihar.
+            </li>
+            <li>
+              Afternoon: Solang Valley: adventure sports like zorbing,
+              paragliding, or ropeway.
+            </li>
+            <li>
+              Evening: Relax in Old Manali, try trout fish at a local
+              restaurant.
+            </li>
+          </ul>
+          <h3>Day 6: Rohtang Pass / Snow Adventure</h3>
+          <ul class="guide-list">
+            <li>
+              Full day: Early morning drive to Rohtang Pass (snow, glaciers,
+              photography). Optional: Snow activities – skiing, snowball fights,
+              or sledging.
+            </li>
+            <li>Evening: Return to Manali, relax & enjoy local cafés.</li>
+            <li>
+              Tip: Check Rohtang Pass permits in advance; road may be closed
+              during heavy snowfall.
+            </li>
+          </ul>
+          <h3>Day 7: Departure</h3>
+          <ul class="guide-list">
+            <li>Morning: Leisurely breakfast in Manali.</li>
+            <li>
+              Optional: Short visit to Vashisht Hot Springs for relaxation.
+            </li>
+            <li>
+              Travel back: Drive/train to nearest city (Delhi/Chandigarh) for
+              onward journey.
+            </li>
+          </ul>
+          <p>
+            <img src="./images/1_Natural/shimla_5.jpg" alt="manali" />
+            <img src="./images/1_Natural/shimla_6.jpg" alt="manali" />
+            ✅<strong>Tips for the Roadmap:</strong> Always start early to cover
+            maximum spots and avoid traffic. Carry warm clothes even in summer
+            for mornings/evenings. Keep local cash handy for small shops &
+            mountain rides. Combine sightseeing & adventure to balance
+            relaxation & thrill.
+          </p>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="shimlaWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="manaliWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+    <!------------------DARJEELING MODAL------------------>
+    <div id="darjeelingModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('darjeelingModal')"
+          >&times;</span
+        >
+        <h2>🌄 Darjeeling – The Queen of Hills</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/darjeeling_1.webp" alt="darjeeling" />
+          <img src="./images/1_Natural/darjeeling_3.jpg" alt="darjeeling" />
+          <p>
+            Darjeeling, often called the “Queen of the Hills,” is a charming
+            hill station in West Bengal, nestled in the foothills of the
+            Himalayas. Famous for its breathtaking views of the Kanchenjunga,
+            the third-highest mountain in the world, Darjeeling is a perfect
+            blend of natural beauty, colonial charm, and cultural richness.
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Originally a small trading village, Darjeeling became a British
+              summer resort in the 19th century.
+            </li>
+            <li>
+              Known for its Darjeeling Tea, considered one of the finest teas in
+              the world. Visiting tea estates is a must!
+            </li>
+            <li>
+              The town also has a unique mix of cultures – Nepali, Tibetan, and
+              Bengali influences create a colorful, vibrant atmosphere.
+            </li>
+            <li>
+              Famous for its Himalayan Railway (Toy Train), a UNESCO World
+              Heritage Site, which gives a scenic ride through lush hills and
+              tunnels.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              March to May: Pleasant weather, ideal for sightseeing and
+              trekking.
+            </li>
+            <li>
+              October to November: Clear skies for perfect views of
+              Kanchenjunga.
+            </li>
+            <li>
+              Avoid monsoon (June to September): Heavy rainfall may cause
+              landslides and disrupt travel.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/tiger_hill_1.webp" alt="darjeeling" />
+          <img src="./images/1_Natural/darjeeling_6.jpg" alt="shimla" />
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Momos & Thukpa: Tibetan dumplings and noodle soup.</li>
+            <li>
+              Darjeeling Tea: Sip at local cafes or estates for the freshest
+              tea.
+            </li>
+            <li>
+              Local sweets: Try chhurpi (Himalayan cheese) and sel roti (rice
+              doughnuts).
+            </li>
+          </ul>
+          <img src="./images/1_Natural/darjeeling_5.webp" alt="Tiger Hill" />
+          <img src="./images/3_Adventure/Chadar_8.jpg" alt="Tiger Hill" />
+
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1 – Explore Darjeeling Town</h3>
+          <ul class="guide-list">
+            <li>Tiger Hill: Sunrise view over Kanchenjunga – iconic!</li>
+            <li>
+              Batasia Loop: Famous railway loop with panoramic views of
+              mountains.
+            </li>
+            <li>
+              Darjeeling Mall & Chowrasta: Heart of the town – shop, stroll, and
+              enjoy local snacks.
+            </li>
+            <li>
+              Padmaja Naidu Himalayan Zoological Park: See rare snow leopards,
+              red pandas, and Himalayan wildlife.
+            </li>
+          </ul>
+          <h3>Day 2 – Tea & Monasteries</h3>
+          <ul class="guide-list">
+            <li>
+              Happy Valley Tea Estate: Walk through lush tea gardens, see
+              tea-making process.
+            </li>
+            <li>
+              Ghoom Monastery: Peaceful Tibetan monastery with rich heritage.
+            </li>
+            <li>
+              Peace Pagoda: Stunning white stupa offering serenity and mountain
+              views.
+            </li>
+            <li>
+              Japanese Temple: Hidden gem with beautiful architecture and calm
+              ambiance.
+            </li>
+          </ul>
+          <h3>Day 3 – Adventure & Local Culture</h3>
+          <ul class="guide-list">
+            <li>
+              Himalayan Mountaineering Institute: Learn mountaineering history
+              and see museum exhibits.
+            </li>
+            Rock Garden & Ropeway: Scenic waterfall views and aerial ride over
+            the hills.
+            <li>
+              Local Markets: Handicrafts, woolens, souvenirs, and traditional
+              snacks like momo and thukpa.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/darjeeling_7.webp" alt="Tiger Hill" />
+          <img src="./images/1_Natural/darjeeling_8.jpg" alt="Tiger Hill" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Carry warm clothes, even in summer mornings and evenings can be
+              chilly.
+            </li>
+            <li>Hire local taxis or shared jeeps for hilly routes.</li>
+            <li>Start early for sunrise spots to avoid crowds.</li>
+            <li>
+              Respect local culture and monasteries – photography may be
+              restricted in some areas.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="darjeelingWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+    <!------------------LEH-LADAKH MODAL------------------>
+    <div id="ladakhModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('ladakhModal')">&times;</span>
+        <h2>🌄 Leh–Ladakh, Jammu & Kashmir</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/ladakh_1.webp" alt="Leh–Ladakh" />
+          <img src="./images/1_Natural/ladakh_2.webp" alt="Leh–Ladakh" />
+          <p>
+            Leh–Ladakh is called the “Land of High Passes”. Nestled in the
+            northernmost region of India, it’s famous for its stunning
+            landscapes—snow-capped mountains, crystal-clear lakes, barren
+            valleys, and Buddhist monasteries. The region feels like a peaceful,
+            mystical escape from city life. Adventure seekers love it for
+            trekking, river rafting, and biking on rugged mountain roads, while
+            culture enthusiasts are drawn to its monastic heritage and unique
+            Tibetan-influenced lifestyle.
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Leh–Ladakh isn’t just a destination—it’s an experience of peace,
+              adventure, and natural beauty. From serene monasteries to
+              thrilling high passes and sparkling lakes, it’s perfect for
+              photographers, travelers seeking solitude, and adventure lovers
+              alike.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              Summer: June to September – roads are open, weather is pleasant,
+              and lakes are fully visible.
+            </li>
+            <li>
+              Winter: October to February – extremely cold, many areas
+              inaccessible, but great for snow lovers and solitude.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/ladakh_3.jpg" alt="Leh–Ladakh" />
+          <img src="./images/1_Natural/ladakh_5.jpg" alt="Leh–Ladakh" />
+          <p class="highlight">Specialties / Things to Try:</p>
+          <ul class="guide-list">
+            <li>
+              Food: Thukpa (noodle soup), Momos (dumplings), Butter Tea, Skyu
+              (traditional Ladakhi pasta).
+            </li>
+            <li>Shopping: Pashmina shawls, prayer flags, local handicrafts.</li>
+            <li>
+              Experience: Attend a local festival if your trip coincides (Hemis
+              festival is famous in July).
+            </li>
+          </ul>
+          <img src="./images/1_Natural/ladakh_8.jpg" alt="Leh–Ladakh" />
+          <img src="./images/1_Natural/ladakh_6.webp" alt="Leh–Ladakh" />
+          <h2>Roadmap for (5-7 days)</h2>
+          <h3>Day 1: Leh Town</h3>
+          <ul class="guide-list">
+            <li>Explore Leh Palace and Shanti Stupa.</li>
+            <li>
+              Stroll through Leh Market and try local snacks like Thukpa and
+              Momos.
+            </li>
+          </ul>
+          <h3>Day 2: Monasteries & Culture</h3>
+          <ul class="guide-list">
+            <li>Hemis Monastery – the largest and most famous.</li>
+            <li>
+              Thiksey Monastery – panoramic views and giant Buddha statue.
+            </li>
+            <li>Shey Palace & Monastery – historic royal seat.</li>
+          </ul>
+          <h3>Day 3: Nubra Valley (via Khardung La Pass)</h3>
+          <ul class="guide-list">
+            <li>One of the highest motorable passes in the world.</li>
+            <li>Visit Diskit Monastery and see the giant Buddha.</li>
+            <li>
+              Explore sand dunes at Hunder and ride double-humped Bactrian
+              camels.
+            </li>
+          </ul>
+          <h3>Day 4: Pangong Lake</h3>
+          <ul class="guide-list">
+            <li>Famous blue lake featured in Bollywood movies.</li>
+            <li>Perfect for photography and camping by the shore.</li>
+          </ul>
+          <h3>Day 5: Tso Moriri Lake (optional)</h3>
+          <ul class="guide-list">
+            <li>Quieter, less crowded high-altitude lake.</li>
+            <li>Ideal for nature lovers and birdwatchers.</li>
+          </ul>
+          <h3>Day 6–7: Adventure & Local Life</h3>
+          <ul class="guide-list">
+            <li>
+              Try biking, river rafting, or trekking if you’re adventurous.
+            </li>
+            <li>
+              Visit local markets in Leh for handicrafts, pashmina shawls, and
+              souvenirs.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/Ladakh_4.jpg" alt="Leh–Ladakh" />
+          <img src="./images/1_Natural/ladakh_7.jpeg" alt="Leh–Ladakh" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Acclimatize for 2–3 days in Leh to prevent altitude sickness.
+            </li>
+            <li>
+              Carry warm clothing, even in summer—it gets chilly at night.
+            </li>
+            <li>Roads are rough; self-drive bikes or taxis are common.</li>
+            <li>Keep photocopies of permits if visiting restricted areas.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="lehWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------OOTY MODAL------------------>
+    <div id="ootyModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('ootyModal')">&times;</span>
+        <h2>🌄 Ooty (Udhagamandalam), Tamil Nadu – “Queen of Hills”</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/ooty_1.jpg" alt="Ooty" />
+          <img src="./images/1_Natural/ooty_5.jpg" alt="Ooty" />
+          <p>
+            Ooty is one of India’s most enchanting hill stations, known for its
+            cool climate, lush green landscapes, rolling tea gardens, and
+            colonial charm. Nestled in the Nilgiri Hills, it offers a perfect
+            escape from city chaos, with serene lakes, botanical gardens, and
+            breathtaking viewpoints.
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Originally inhabited by the Toda tribe, Ooty became a popular
+              summer retreat during British rule in the 19th century.
+            </li>
+            <li>
+              Its name, Udhagamandalam, is less known; “Ooty” is short and
+              sweet, widely used by tourists.
+            </li>
+            <li>
+              Famous for its Nilgiri Tea, vibrant flower shows, and toy train
+              rides that offer panoramic hill views.
+            </li>
+            <li>
+              Known for its crisp mountain air, botanical richness, and wildlife
+              sanctuaries.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/ooty_4.avif" alt="Ooty" />
+          <img src="./images/1_Natural/ooty_3.webp" alt="Ooty" />
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October to June is ideal.</li>
+            <li>March to June for pleasant weather and full bloom gardens.</li>
+            <li>
+              October to November for cool, misty mornings and fewer crowds.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Try Nilgiri Tea, homemade chocolates, eucalyptus oils, and local
+              bakery items.
+            </li>
+            <li>
+              Restaurants offer both South Indian delights and continental food
+              with hill-view seating.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/tiger_hill_7.jpg" alt="Ooty" />
+          <img src="./images/1_Natural/ooty_6.jpg" alt="Ooty" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1 – Central Ooty & Relaxation:</h3>
+          <ul class="guide-list">
+            <li>Morning: Ooty Lake (boating)</li>
+            <li>Late Morning: Botanical Gardens & Rose Garden</li>
+            <li>Afternoon: Lunch in town + local markets</li>
+            <li>
+              Evening: Stroll on the Ooty Main Street for shopping and snacks
+            </li>
+          </ul>
+          <h3>Day 2 – Scenic Views & Adventure:</h3>
+          <ul class="guide-list">
+            <li>Morning: Doddabetta Peak (sunrise if possible)</li>
+            <li>Midday: Tea Estates + Tea Factory visit</li>
+            <li>Afternoon: Pykara Lake & Waterfalls</li>
+            <li>Evening: Enjoy a quiet hill sunset at a viewpoint</li>
+          </ul>
+          <h3>Day 3 – Optional / Nature Immersion:</h3>
+          <ul class="guide-list">
+            <li>
+              Morning: Emerald Lake or Mudumalai Wildlife Sanctuary for wildlife
+              lovers
+            </li>
+            <li>
+              Afternoon: Relax in local cafes, try homemade chocolates, or take
+              a toy train ride to Coonoor
+            </li>
+          </ul>
+          <img src="./images/1_Natural/ooty_2.jpg" alt="Ooty" />
+          <img src="./images/1_Natural/ooty_7.jpg" alt="Ooty" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Carry a light jacket, even in summer—it gets chilly in
+              mornings/evenings.
+            </li>
+            <li>
+              Roads can be winding; prefer hiring local taxis or self-drive
+              cautiously.
+            </li>
+            <li>Stay hydrated; try local fresh fruits sold in markets.</li>
+            <li>Plan for a 2–3 day trip to cover major spots comfortably.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="ootyWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------MUNNAR MODAL------------------>
+    <div id="munnarModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('munnarModal')">&times;</span>
+        <h2>🌄 Munnar, Kerala – The Queen of Hills</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/munnar_1.webp" alt="Munnar" />
+          <img src="./images/1_Natural/munnar_2.webp" alt="Munnar" />
+          <p>
+            Munnar is a serene hill station nestled in the Western Ghats of
+            Kerala, famous for its endless tea plantations, misty mountains, and
+            cool climate. It’s perfect for nature lovers, honeymooners, and
+            adventure seekers alike. The lush greenery, rolling hills, and
+            tranquil waterfalls make it a photographer’s paradise.
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Originally a summer resort for the British, Munnar grew around tea
+              plantations established in the late 19th century.
+            </li>
+            <li>
+              It’s known as the “Kashmir of South India” because of its scenic
+              beauty.
+            </li>
+            <li>
+              Munnar’s tea estates are world-famous; the aroma of fresh tea
+              leaves is a unique attraction.
+            </li>
+            <li>
+              Rich biodiversity: Home to endangered species like the Nilgiri
+              Tahr in Eravikulam National Park.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              September to March – Pleasant weather, ideal for sightseeing and
+              trekking.
+            </li>
+            <li>
+              Avoid June-August if heavy monsoon rains are not your thing
+              (though waterfalls look spectacular).
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Try Kerala Sadya, Appam with Stew, and local spiced teas.</li>
+            <li>
+              Street-side snacks like banana chips and fresh cardamom tea are
+              must-tries.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/Kanyakumari_6.jpg" alt="Munnar" />
+          <img src="./images/1_Natural/munnar_7.avif" alt="Munnar" />
+          <p class="highlight">Must-Visit Attractions:</p>
+          <ul class="guide-list">
+            <li>
+              Tea Gardens & Tea Museum – Learn about tea processing and enjoy
+              scenic walks.
+            </li>
+            <li>
+              Eravikulam National Park – Spot the Nilgiri Tahr and enjoy
+              panoramic views.
+            </li>
+            <li>
+              Mattupetty Dam & Lake – Boating and lush green surroundings.
+            </li>
+            <li>
+              Anamudi Peak – The highest peak in South India, perfect for
+              trekking.
+            </li>
+            <li>
+              Top Station – For breathtaking views of the Western Ghats and
+              valley of clouds.
+            </li>
+            <li>
+              Attukal & Lakkam Waterfalls – Perfect for nature photography.
+            </li>
+            <li>
+              Chinnar Wildlife Sanctuary – Spot rare wildlife and enjoy jungle
+              trekking.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/munnar_6.webp" alt="Munnar" />
+          <img src="./images/1_Natural/munnar_9.webp" alt="Munnar" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Arrival → Check-in → Tea Gardens → Tea Museum → Sunset at
+              Mattupetty Dam
+            </li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Eravikulam National Park → Anamudi Peak → Top Station → Evening at
+              local market
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Attukal / Lakkam Waterfalls → Chinnar Wildlife Sanctuary →
+              Departure
+            </li>
+          </ul>
+          <img src="./images/1_Natural/munnar_3.jpg" alt="Munnar" />
+          <img src="./images/1_Natural/munnar_4.jpg" alt="Munnar" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Carry warm clothes; evenings can get chilly even in summer.</li>
+            <li>
+              Hire local guides for treks and wildlife exploration for safety.
+            </li>
+            <li>Early mornings are perfect for misty landscape photography.</li>
+            <li>Book stay in tea estate resorts for a unique experience.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="munnarWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------NAINITAL MODAL------------------>
+    <div id="nainitalModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('nainitalModal')">&times;</span>
+        <h2>🌄 Nainital – The Lake District of India</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/Nainital_1.jpg" alt="Nainital" />
+          <img src="./images/1_Natural/Nainital_2.jpg" alt="Nainital" />
+          <p>
+            Nainital, nestled in the Kumaon Hills of Uttarakhand, is a charming
+            hill station famous for its serene Naini Lake, lush forests, and
+            pleasant weather. Known as the “Lake District of India,” it offers a
+            perfect blend of natural beauty, colonial charm, and adventure. The
+            town attracts honeymooners, families, and nature lovers alike.
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The town is named after the Naini Devi Temple, a sacred spot for
+              Hindus, believed to be one of the 51 Shakti Peeths.
+            </li>
+            <li>
+              Its hilltop setting, surrounded by the Kainchi, Snow, and Naina
+              peaks, makes it incredibly scenic.
+            </li>
+            <li>
+              Speciality: The boating culture on Naini Lake, quaint markets,
+              colonial architecture, and local crafts like woollens and
+              handicrafts attract tourists from all over.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              March to June: Pleasant weather, perfect for sightseeing and
+              boating.
+            </li>
+            <li>
+              September to November: Clear skies, vibrant landscapes, ideal for
+              photography.
+            </li>
+            <li>
+              Avoid monsoons (July-August) due to landslides and heavy rain.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/Nainital_3.webp" alt="Nainital" />
+          <img src="./images/1_Natural/Nainital_4.jpg" alt="Nainital" />
+          <p class="highlight">Must-Visit Attractions:</p>
+          <ul class="guide-list">
+            <li>Naini Lake: Boating and lakeside walks are a must.</li>
+            <li>Naina Devi Temple: Spiritual and scenic spot.</li>
+            <li>Mall Road: Shops, cafes, and local food.</li>
+            <li>
+              Snow View Point: Stunning Himalayan panorama, accessible by
+              ropeway.
+            </li>
+            <li>
+              Tiffin Top / Dorothy’s Seat: Perfect for trekking and sunset
+              views.
+            </li>
+            <li>Eco Cave Gardens: Fun for families and kids.</li>
+            <li>Nainital Zoo: Home to Himalayan species like snow leopards.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Try Bhatt ki Churdkani, Bal Mithai (famous local sweet), and
+              street snacks at Mall Road.
+            </li>
+            <li>Cozy cafes by the lake offer local Kumaoni cuisine.</li>
+          </ul>
+          <img src="./images/1_Natural/Nainital_7.png" alt="Nainital" />
+          <img src="./images/1_Natural/Nainital_6.webp" alt="Nainital" />
+          <h2>Roadmap for (2 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>Morning: Arrival, Naini Lake boat ride</li>
+            <li>
+              Afternoon: Naina Devi Temple → Mall Road for lunch & shopping
+            </li>
+            <li>Evening: Sunset at Tiffin Top</li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>Morning: Snow View Point via Ropeway</li>
+            <li>Late Morning: Eco Cave Gardens → Nainital Zoo</li>
+            <li>
+              Afternoon: Explore nearby viewpoints or do a short trek (like
+              Kilbury Bird Sanctuary)
+            </li>
+            <li>Evening: Leisure walk by the lake, local food tasting</li>
+          </ul>
+          <img src="./images/1_Natural/Nainital_5.jpg" alt="Nainital" />
+          <img src="./images/1_Natural/Nainital_8.jpg" alt="Nainital" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Stay near Mall Road or Naini Lake for convenience.</li>
+            <li>
+              Prefer small vehicles or walk for local sightseeing; roads are
+              narrow.
+            </li>
+            <li>Carry light woolens even in summer mornings/evenings.</li>
+            <li>Early morning boat rides give the best tranquil experience.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="nainitalWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------GOA BEACH MODAL------------------>
+    <div id="goabeachModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('goabeachModal')">&times;</span>
+        <h2>🌊 Goa Beaches – The Sun, Sand & Serenity</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/goa_1.webp" alt="goa beach" />
+          <img src="./images/1_Natural/goa_5.jpg" alt="goa beach" />
+          <p>
+            Goa isn’t just beaches; it’s a vibrant blend of sun-kissed shores,
+            rich history, Portuguese architecture, and a lively cultural scene.
+            From serene stretches to party hubs, Goa’s beaches offer something
+            for every travele
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Goa is famous for its beach parties, water sports, seafood,
+              sunsets, and a laid-back vibe that blends Indian and Portuguese
+              cultures. Each beach has its unique personality: some are lively,
+              others tranquil.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March: Cool, sunny days perfect for beach fun and
+              sightseeing.
+            </li>
+            <li>Avoid: June to September – heavy monsoons, rough seas.</li>
+          </ul>
+          <img src="./images/1_Natural/goa_4.jpg" alt="goa beach" />
+          <img src="./images/1_Natural/goa_3.jpg" alt="goa beach" />
+          <p class="highlight">🌟 Why Visit?</p>
+          <ul class="guide-list">
+            <li>Relax on soft golden sands.</li>
+            <li>Experience vibrant nightlife and beach parties.</li>
+            <li>
+              Try water sports like parasailing, jet skiing, and banana boat
+              rides.
+            </li>
+            <li>
+              Explore local markets for souvenirs, jewelry, and handicrafts.
+            </li>
+            <li>
+              Savor Goan cuisine: seafood, feni (local liquor), and spicy
+              curries.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Try Goan fish curry, prawn balchao, and bebinca (dessert).</li>
+            <li>
+              Chill at beach shacks with fresh coconut water or feni while
+              watching the sunset.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/goa_fish_7.jpg" alt="goa beach" />
+          <img src="./images/1_Natural/goa_8.jpg" alt="goa beach" />
+          <h2>Roadmap for Travelling</h2>
+          <h3>1–2 Days Itinerary:</h3>
+          <ul class="guide-list">
+            <li>Calangute Beach: Party vibes, shopping, restaurants.</li>
+            <li>Baga Beach: Nightlife hotspot, beach shacks, water sports.</li>
+            <li>Anjuna Beach: Famous for flea market, bohemian vibe.</li>
+            <li>Vagator Beach: Sunset point, scenic cliffs.</li>
+            <li>
+              Palolem Beach (South Goa): Serene, perfect for relaxation & yoga.
+            </li>
+          </ul>
+          <h3>Extras if you have more days:</h3>
+          <ul class="guide-list">
+            <li>Chapora Fort – amazing view of Vagator Beach.</li>
+            <li>Dudhsagar Waterfalls – day trip for nature lovers.</li>
+            <li>
+              Old Goa – churches like Basilica of Bom Jesus & Se Cathedral.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/goa_7.jpg" alt="goa beach" />
+          <img src="./images/1_Natural/goa_6.webp" alt="goa beach" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Rent a scooter or bike – easiest way to hop between beaches.
+            </li>
+            <li>Carry sunscreen, hat, and swimwear.</li>
+            <li>
+              Respect local rules: avoid littering, follow safety for water
+              sports.
+            </li>
+            <li>
+              Try early mornings for quiet beach walks and stunning sunrises.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="goaWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------RADHANAGAR BEACH MODAL------------------>
+    <div id="radhanagarModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('radhanagarModal')"
+          >&times;</span
+        >
+        <h2>🌊 Radhanagar Beach, Havelock Island</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/1_Natural/radhanagar_2.jpg"
+            alt="Radhanagar Beach"
+          />
+          <img
+            src="./images/1_Natural/radhanagar_1.jpg"
+            alt="Radhanagar Beach"
+          />
+          <p>
+            Radhanagar Beach, often called “Beach No. 7”, is one of the most
+            stunning beaches in Asia and has earned global recognition for its
+            pristine white sands, crystal-clear turquoise waters, and
+            mesmerizing sunsets. It’s the perfect place for relaxation,
+            swimming, sunbathing, and photography. Its untouched beauty gives a
+            tropical paradise vibe, making it a must-visit in the Andaman
+            Islands.
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The beach is part of Havelock Island, named after British General
+              Sir Henry Havelock.
+            </li>
+            <li>
+              Surrounded by lush tropical forests, it’s protected under the
+              Andaman & Nicobar Islands’ eco-preservation programs.
+            </li>
+            <li>
+              The beach is famous for silky white sand, calm waters, and a wide
+              stretch of shoreline that allows visitors to stroll freely.
+            </li>
+            <li>
+              Radhanagar Beach is renowned for its incredible sunsets, making it
+              a romantic spot for couples and a favorite for photographers.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to May – pleasant weather, calm seas, and perfect for
+              beach activities.
+            </li>
+            <li>
+              Avoid monsoon (June to September) due to heavy rainfall and strong
+              winds.
+            </li>
+          </ul>
+          <img
+            src="./images/1_Natural/radhanagar_5.jpg"
+            alt="Radhanagar Beach"
+          />
+          <img
+            src="./images/1_Natural/radhanagar_4.jpg"
+            alt="Radhanagar Beach"
+          />
+          <p class="highlight">Activities / Things to Do:</p>
+          <ul class="guide-list">
+            <li>Swim and relax in the calm waters 🌊</li>
+            <li>Sunset photography and nature walks 📸</li>
+            <li>Beachside picnic and relaxation under palm trees 🏖️</li>
+            <li>Spot exotic birds and explore nearby forest trails 🦜</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Fresh seafood like fish curry, prawns, lobsters 🍤</li>
+            <li>Coconut-based dishes and tropical fruits 🥭</li>
+            <li>Try small beachside shacks for authentic Andaman flavors</li>
+          </ul>
+          <img
+            src="./images/1_Natural/radhanagar_3.jpg"
+            alt="Radhanagar Beach"
+          />
+          <img
+            src="./images/1_Natural/radhanagar_8.jpg"
+            alt="Radhanagar Beach"
+          />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>Arrive at Havelock Island (ferry from Port Blair)</li>
+            <li>Visit Radhanagar Beach in the afternoon for sunset</li>
+            <li>Dinner at a beachside café</li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>Morning: Elephant Beach (snorkeling & water sports)</li>
+            <li>
+              Afternoon: Relax at Radhanagar or explore nearby Kalapathar Beach
+            </li>
+            <li>Evening: Sunset at Radhanagar or local cafes</li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Optional: Scuba diving or snorkeling at Elephant Beach or dive
+              centers
+            </li>
+            <li>Explore local markets, buy shells & souvenirs</li>
+            <li>Depart for Port Blair</li>
+          </ul>
+          <img
+            src="./images/1_Natural/radhanagar_6.jpg"
+            alt="Radhanagar Beach"
+          />
+          <img
+            src="./images/1_Natural/radhanagar_7.jpeg"
+            alt="Radhanagar Beach"
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Carry sunscreen, sunglasses, and beachwear 🕶️</li>
+            <li>Respect nature, avoid littering 🏖️</li>
+            <li>
+              Best to stay in beachside cottages or eco-resorts for easy access
+              to sunrise/sunset views
+            </li>
+            <li>Book ferries in advance, especially during peak season</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="radhanagarWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------VARKALA BEACH MODAL------------------>
+    <div id="varkalaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('varkalaModal')">&times;</span>
+        <h2>🌊 Varkala Beach (Kerala) – "The Cliff Beach Paradise"</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/varkala_1.webp" alt="Varkala " />
+          <img src="./images/1_Natural/varkala_7.jpg" alt="Varkala " />
+          <p class="highlight">📖 History & Importance</p>
+          <ul class="guide-list">
+            <li>
+              Varkala is known for its dramatic cliffs right beside the Arabian
+              Sea — a rare sight in Kerala.
+            </li>
+            <li>
+              The beach is also called Papanasam Beach, as locals believe taking
+              a dip here washes away sins.
+            </li>
+            <li>
+              Close by is the Janardhana Swamy Temple (over 2000 years old),
+              making it both a spiritual and tourist spot.
+            </li>
+            <li>
+              It’s also famous as a yoga and Ayurveda hub, attracting travelers
+              seeking relaxation and healing.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              November to March → Pleasant weather, perfect for beach walks &
+              activities.
+            </li>
+            <li>Avoid June–August (heavy monsoon).</li>
+          </ul>
+          <img src="./images/1_Natural/varkala_3.jpg" alt="Varkala " />
+          <img src="./images/1_Natural/varkala_4.jpg" alt="Varkala " />
+          <p class="highlight">✨Speciality:</p>
+          <ul class="guide-list">
+            <li>
+              Cliffside Cafes & Views – Sunset from the cliff is unforgettable.
+            </li>
+            <li>Ayurveda & Yoga retreats – Perfect for wellness seekers.</li>
+            <li>
+              Backpackers’ vibe – Mix of international travelers, beach shacks,
+              and live music.
+            </li>
+            <li>
+              Water sports & activities – Surfing, paragliding, parasailing.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Kerala-style fish curry & appam</li>
+            <li>Toddy (local coconut drink)</li>
+            <li>Fresh seafood grills at cliffside cafes.</li>
+          </ul>
+          <img src="./images/1_Natural/varkala_8.jpg" alt="Varkala " />
+          <img src="./images/1_Natural/varkala_9.webp" alt="Varkala " />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1 – Varkala Beach & Cliff</h3>
+          <ul class="guide-list">
+            <li>
+              Walk along the cliff cafes, shop souvenirs, and watch the sunset.
+            </li>
+          </ul>
+          <h3>Day 2 – Heritage & Wellness</h3>
+          <ul class="guide-list">
+            <li>
+              Visit Janardhana Swamy Temple, take an Ayurvedic spa or yoga
+              session, relax at beach.
+            </li>
+            <li>Evening: Try Kerala seafood at cliffside restaurants.</li>
+          </ul>
+          <h3>Day 3 (Optional) – Explore Nearby</h3>
+          <ul class="guide-list">
+            <li>Day 3 (Optional) – Explore Nearby</li>
+            <li>Ponnumthuruthu Island (quiet backwaters & temple).</li>
+            <li>
+              Short trips to Kappil Beach & Backwaters (serene, less crowded).
+            </li>
+          </ul>
+          <img src="./images/1_Natural/varkala_5.webp" alt="Varkala " />
+          <img src="./images/1_Natural/varkala_6.jpg" alt="Varkala " />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Stay in cliffside homestays or beach resorts for best experience.
+            </li>
+            <li>Carry light cotton clothes & sunscreen.</li>
+            <li>
+              Evenings are lively; mornings are peaceful for yoga/meditation.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="varkalaWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------MARINA BEACH MODAL------------------>
+    <div id="marinaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('marinaModal')">&times;</span>
+        <h2>🌊 Marina Beach – Chennai, Tamil Nadu</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/marina_2.jpg" alt="marina beach" />
+          <img src="./images/1_Natural/marina_7.jpg" alt="marina beach" />
+          <p>
+            World’s second-longest urban beach (about 13 km). A cultural
+            landmark of Chennai – it’s not just sand and sea, but history,
+            monuments, and vibrant local life. Perfect blend of sunset views,
+            street food, colonial-era architecture, and memorials.
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The beach has witnessed many political rallies, social movements,
+              and cultural events in Tamil Nadu’s history.
+            </li>
+            <li>
+              The statues along the promenade celebrate Tamil poets, freedom
+              fighters, and famous personalities.
+            </li>
+            <li>
+              Unique charm → evening buzz with locals, kites, horse rides, and
+              authentic street food.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              November to February → Pleasant weather, perfect for walking and
+              exploring.
+            </li>
+            <li>
+              Early morning or evening → To enjoy sunrise/sunset without the
+              harsh sun.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/marina_3.jpg" alt="marina beach" />
+          <img src="./images/1_Natural/marina_5.jpg" alt="marina beach" />
+          <p class="highlight">🎯 Must-Do Things at Marina</p>
+          <ul class="guide-list">
+            <li>Walk along the promenade and enjoy the sea breeze.</li>
+            <li>Visit MGR & Anna Memorials.</li>
+            <li>Explore Triumph of Labour statue – iconic photo spot.</li>
+            <li>
+              Try street snacks like sundal, murukku, bajji, roasted corn.
+            </li>
+            <li>Watch a sunset by the lighthouse.</li>
+            <li>
+              Explore nearby colonial buildings – University of Madras,
+              Presidency College.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Sundal & Murukku → Marina classics.</li>
+            <li>Fresh roasted corn with masala.</li>
+            <li>Fish fry & seafood stalls around Triplicane.</li>
+            <li>Famous Chennai filter coffee at nearby cafés.</li>
+          </ul>
+          <img src="./images/1_Natural/Kanyakumari_7.jpg" alt="marina beach" />
+          <img src="./images/1_Natural/marina_9.jpg" alt="marina beach" />
+          <h2>Roadmap for (Half-Day plan)</h2>
+          <ul class="guide-list">
+            <li>Start Morning – Sunrise at Marina 🌅</li>
+            <li>
+              Breakfast – Idli/Dosa at a local mess (like Ratna Café,
+              Triplicane).
+            </li>
+            <li>
+              Walk Along Beach – Visit MGR & Anna Memorials, Labour statue.
+            </li>
+            <li>
+              Explore Colonial Side – University of Madras, Presidency College.
+            </li>
+            <li>Noon/Lunch – Try seafood at Marina or nearby hotels.</li>
+            <li>
+              Evening – Lighthouse view + snacks (sundal, bajji, murukku).
+            </li>
+            <li>
+              Wrap Up – Watch the vibrant sunset and street performances.Wrap Up
+              – Watch the vibrant sunset and street performances.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/marina_4.webp" alt="marina beach" />
+          <img src="./images/1_Natural/marina_6.jpg" alt="marina beach" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Swimming is not safe due to strong currents.</li>
+            <li>Best enjoyed on foot – wear light, comfy clothes.</li>
+            <li>Evenings can get crowded, so keep valuables safe.</li>
+            <li>Carry water – Chennai is hot most of the year.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="marinaWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------KOVALAM MODAL------------------>
+    <div id="kovalamModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('kovalamModal')">&times;</span>
+        <h2>🌊 Kovalam Beach, Kerala – A Tropical Paradise</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/kovalam_1.jpg" alt="Kovalam Beach" />
+          <img src="./images/1_Natural/kovalam_3.jpg" alt="Kovalam Beach" />
+          <p>
+            Kovalam is known as the “Paradise of the South”, a world-renowned
+            beach town near Thiruvananthapuram. It’s one of the first beaches in
+            India that attracted international tourists (since the 1930s) and
+            became a hippie hotspot in the 1970s. Today, it’s a blend of calm
+            blue waters, Ayurvedic retreats, seafood shacks, and a laid-back
+            vibe.
+          </p>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              September – March → Pleasant weather, perfect for sunbathing &
+              sightseeing.
+            </li>
+            <li>
+              Monsoon (June–August) → Lush greenery & Ayurvedic therapies (rainy
+              but magical).
+            </li>
+          </ul>
+          <img src="./images/1_Natural/kovalam_6.jpg" alt="Kovalam Beach" />
+          <img src="./images/1_Natural/kovalam_4.jpg" alt="Kovalam Beach" />
+          <p class="highlight">🌟 Specialties that Attract:</p>
+          <ul class="guide-list">
+            <li>
+              Golden crescent beaches – Kovalam has 3 curved beaches: Lighthouse
+              Beach (bustling & famous), Hawah Beach (quiet & serene), and
+              Samudra Beach (peaceful & local).
+            </li>
+            <li>
+              Ayurveda & Yoga – Kovalam is one of India’s hubs for authentic
+              Ayurvedic massages & wellness.
+            </li>
+            <li>
+              Water Sports – Surfing, parasailing, catamaran rides, snorkeling.
+            </li>
+            <li>
+              History – Once a fishing village, transformed into a hippie haven,
+              now a global tourist spot.
+            </li>
+            <li>
+              Food – Fresh seafood grills, Kerala-style curries, coconut-based
+              delicacies.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Kerala Fish Curry with coconut milk</li>
+            <li>Karimeen (Pearl Spot) Fry 🐟</li>
+            <li>Prawn roast</li>
+            <li>Freshly tapped coconut water</li>
+          </ul>
+          <img src="./images/1_Natural/kovalam_2.jpg" alt="Kovalam Beach" />
+          <img
+            src="./images/1_Natural/Athirappilly_6.jpg"
+            alt="Kovalam Beach"
+          />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>
+              Lighthouse Beach – climb the lighthouse for panoramic views 🌅
+            </li>
+            <li>Hawah Beach – sunset walk</li>
+            <li>Try beachside seafood dinner 🦀</li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>Morning yoga or Ayurveda session 🧘‍♀️</li>
+            <li>Samudra Beach – peaceful vibes</li>
+            <li>
+              Visit Vizhinjam Rock Cut Cave Temple (7th century) & fishing
+              harbor
+            </li>
+            <li>Evening: Shopping for handicrafts & spices</li>
+          </ul>
+          <h3>Day 3 (Nearby Excursions):</h3>
+          <ul class="guide-list">
+            <li>Padmanabhaswamy Temple (Trivandrum – 16 km)</li>
+            <li>Poovar Island (backwaters + mangroves – 18 km)</li>
+            <li>Vellayani Lake (boating + lotus blooms – seasonal)</li>
+          </ul>
+          <img src="./images/1_Natural/kovalam_5.jpg" alt="Kovalam Beach" />
+          <img src="./images/1_Natural/kovalam_7.jpg" alt="Kovalam Beach" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Carry sunscreen & hats (sun is strong).</li>
+            <li>Bargain a little at beachside shops.</li>
+            <li>Try an Ayurvedic spa—it’s a Kovalam signature.</li>
+            <li>
+              Early mornings & evenings are the most beautiful at the beach.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="kovalamWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------PURI BEACH MODAL------------------>
+    <div id="puriModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('puriModal')">&times;</span>
+        <h2>🌊 Puri Beach, Odisha – The Soulful Seaside</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/puri_2.webp" alt="Puri Beach" />
+          <img src="./images/1_Natural/puri_8.jpg" alt="Puri Beach" />
+          <p>
+            Puri Beach is one of India’s most iconic beaches, located on the Bay
+            of Bengal. It’s famous for its golden sand, sunrise & sunset views,
+            vibrant beach life, spiritual vibes, and proximity to the Jagannath
+            Temple. It attracts both pilgrims and leisure travellers.
+          </p>
+
+          <p class="highlight">History & Culture:</p>
+          <ul class="guide-list">
+            <li>Puri is one of the Char Dham pilgrimage sites in Hinduism.</li>
+            <li>
+              The beach has long been a gathering spot for devotees, artists,
+              and travelers.
+            </li>
+            <li>
+              It’s known for the Puri Beach Festival, showcasing sand art,
+              Odissi dance, and local crafts.
+            </li>
+            <li>
+              World-renowned sand artist Sudarsan Pattnaik has made Puri Beach
+              globally famous with his sand sculptures.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October – February → Pleasant weather, perfect for beach walks &
+              sightseeing.
+            </li>
+            <li>Avoid May–June → Very hot and humid.</li>
+            <li>
+              July–September (monsoon) → Rough seas but lush greenery in the
+              surroundings.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/puri_5.jpg" alt="Puri Beach" />
+          <img src="./images/1_Natural/puri_6.jpg" alt="Puri Beach" />
+          <p class="highlight">🎯 What to Do at Puri Beach:</p>
+          <ul class="guide-list">
+            <li>Enjoy sunrise/sunset with fishing boats in the background.</li>
+            <li>
+              Walk along the shore for a mix of spirituality & relaxation.
+            </li>
+            <li>Watch local fishermen at work.</li>
+            <li>
+              Visit stalls for shell jewelry, handicrafts & street seafood
+              snacks.
+            </li>
+            <li>Experience Sand Art Park nearby.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Mahaprasad of Jagannath Temple (a divine 56-item feast).</li>
+            <li>
+              Seafood snacks (fried prawns, crabs, fish fries at beach stalls).
+            </li>
+            <li>Traditional sweets like Khaja and Chhena Poda.</li>
+          </ul>
+          <img src="./images/1_Natural/Athirappilly_6.jpg" alt="Puri Beach" />
+          <img src="./images/1_Natural/puri_9.jpg" alt="Puri Beach" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1 – Puri Town & Beach</h3>
+          <ul class="guide-list">
+            <li>Jagannath Temple (darshan & Mahaprasad)</li>
+            <li>Evening stroll at Puri Beach</li>
+          </ul>
+          <h3>Day 2 – Excursions</h3>
+          <ul class="guide-list">
+            <li>Konark Sun Temple (UNESCO site, ~35 km away)</li>
+            <li>Chandrabhaga Beach near Konark</li>
+            <li>Back to Puri for sunset</li>
+          </ul>
+          <h3>Day 3 – Nature & Culture</h3>
+          <ul class="guide-list">
+            <li>
+              Chilika Lake (Satapada) – boat ride, spot dolphins (~50 km from
+              Puri)
+            </li>
+            <li>Return and enjoy a relaxed evening at Puri Beach</li>
+          </ul>
+          <img src="./images/1_Natural/puri_3.jpg" alt="Puri Beach" />
+          <img src="./images/1_Natural/puri_7.jpg" alt="Puri Beach" />
+          <p class="highlight">✨ Why Visit?</p>
+          <ul class="guide-list">
+            <li>
+              Puri Beach offers a rare blend of spirituality, culture, history,
+              and seaside fun. Whether you’re a pilgrim, a backpacker, or a
+              family traveler – Puri has something that pulls you back again.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="puriWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------DUDHSAGAR FALLS MODAL------------------>
+    <div id="dudhsagarModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('dudhsagarModal')"
+          >&times;</span
+        >
+        <h2>🌊 Dudhsagar Falls – Goa</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/1_Natural/Dudhsagar_2.jpg"
+            alt="Dudhsagar Falls "
+          />
+          <img
+            src="./images/1_Natural/Dudhsagar_3.jpg"
+            alt="Dudhsagar Falls "
+          />
+          <p>
+            One of India’s tallest waterfalls (approx. 310m). Name means “Sea of
+            Milk” because of its foamy white cascades. Surrounded by the lush
+            Bhagwan Mahavir Wildlife Sanctuary. Featured in Bollywood movies
+            (like Chennai Express), which boosted its popularity.
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              The falls are tied to a local legend: A princess used to bathe
+              here and pour milk into a stream, which is said to have given the
+              waterfall its “milky” look.
+            </li>
+            <li>
+              Speciality: The iconic view of the railway bridge cutting across
+              the waterfall – one of the most photographed sights in India.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              Monsoon (June–Sept): For full force and greenery (but trekking is
+              risky).
+            </li>
+            <li>
+              Post-Monsoon / Winter (Oct–Feb): Best for trekking, jeep safari,
+              and photography.
+            </li>
+          </ul>
+          <img
+            src="./images/1_Natural/Dudhsagar_4.jpeg"
+            alt="Dudhsagar Falls "
+          />
+          <img
+            src="./images/1_Natural/Dudhsagar_5.jpg"
+            alt="Dudhsagar Falls "
+          />
+          <p class="highlight">🎯 Things to Do:</p>
+          <ul class="guide-list">
+            <li>Jeep safari through Bhagwan Mahavir Sanctuary.</li>
+            <li>Trekking (from Castle Rock or Kulem railway station).</li>
+            <li>
+              Take the train ride that passes by the falls – unforgettable view!
+            </li>
+            <li>Spot wildlife: monkeys, deer, and rare birds.</li>
+          </ul>
+          <p class="highlight">Food to Try:</p>
+          <ul class="guide-list">
+            <li>Goan seafood thalis, fish curry rice.</li>
+            <li>Local snacks at roadside stalls (bhaji-pao, mirchi bhaji).</li>
+          </ul>
+          <img
+            src="./images/1_Natural/Dudhsagar_9.jpg"
+            alt="Dudhsagar Falls "
+          />
+          <img src="./images/4_Urban/goa_fish_9.jpg" alt="Dudhsagar Falls " />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1 (Dudhsagar Main Visit):</h3>
+          <ul class="guide-list">
+            <li>
+              Start early from Goa/Kulem → Jeep Safari / Trek → Dudhsagar Falls
+              → Relax by the natural pools → Return by evening.
+            </li>
+          </ul>
+          <h3>Day 2 (Nearby Attractions):</h3>
+          <ul class="guide-list">
+            <li>
+              Tambdi Surla Temple (13th century Shiva temple, hidden in forest).
+            </li>
+            <li>Bhagwan Mahavir Sanctuary (nature & wildlife).</li>
+            <li>Relax at Mollem town for authentic Goan food.</li>
+          </ul>
+          <h3>Day 3 (If extending trip):</h3>
+          <ul class="guide-list">
+            <li>
+              Head towards South Goa beaches (Palolem, Colva) for a calm beach
+              vibe after the adventure.
+            </li>
+          </ul>
+          <img
+            src="./images/1_Natural/Dudhsagar_6.webp"
+            alt="Dudhsagar Falls "
+          />
+          <img
+            src="./images/1_Natural/Dudhsagar_7.jpg"
+            alt="Dudhsagar Falls "
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Wear sports shoes / trekking shoes.</li>
+            <li>Carry snacks, water, and raincoat (if monsoon).</li>
+            <li>
+              Jeep safaris have timings (usually 9 AM – 3 PM), plan early.
+            </li>
+            <li>
+              No direct vehicle access to the falls, jeep or trek is a must.
+            </li>
+          </ul>
+          <p>
+            ✨ Overall: Dudhsagar is not just a waterfall, it’s an experience –
+            blending adventure, history, and natural beauty. Perfect for nature
+            lovers, trekkers, and anyone who wants to see Goa beyond beaches.
+          </p>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="dudhsagarWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------JOG FALLS MODAL------------------>
+    <div id="jogModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('jogModal')">&times;</span>
+        <h2>🌊 Jog Falls – Karnataka</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/jog_1.jpg" alt="Jog Falls" />
+          <img src="./images/1_Natural/Jog_2.avif" alt="Jog Falls" />
+          <p>
+            Jog Falls, also called Gerusoppa Falls, is India’s second-highest
+            plunge waterfall (253 meters). Formed by the Sharavathi River, it’s
+            a dramatic drop where water splits into four distinct streams –
+            Raja, Rani, Roarer, and Rocket. The name “Jog” comes from the
+            Kannada word “joga” meaning “falls”. The site gained popularity
+            during the British era when they described it as “the Niagara of
+            India”.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Monsoon magic: During July–September, the falls roar at full
+              force, creating clouds of mist and rainbows.
+            </li>
+            <li>
+              Trekking: The 1,400 steps down to the base offer a thrilling
+              adventure.
+            </li>
+            <li>Photography: Sunrise and sunset views are breathtaking.</li>
+            <li>
+              Eco-beauty: Surrounded by lush Western Ghats forests, it’s a
+              paradise for nature lovers.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>Monsoon (July–September): Falls at peak flow, very grand.</li>
+            <li>
+              Post-monsoon (October–January): Good for trekking & clear views.
+            </li>
+            <li>
+              Avoid summer (March–May): Water is thin and less impressive.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/jog_3.jpg" alt="Jog Falls" />
+          <img src="./images/1_Natural/jog_4.jpg" alt="Jog Falls" />
+          <p class="highlight">🎯 Must-Do Experiences:</p>
+          <ul class="guide-list">
+            <li>View from Watkins Platform & British Bungalow Point.</li>
+            <li>Trek down to the base for a misty close-up.</li>
+            <li>Sunset view at Jog Falls viewpoint.</li>
+            <li>
+              Visit nearby Sharavathi Valley Wildlife Sanctuary for nature
+              trails.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Local cuisine: Try Udupi-style meals, fish curry, and jackfruit
+              dishes.
+            </li>
+            <li>
+              Stay: Nearby towns like Sagar and Shimoga have budget and
+              mid-range hotels.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/Jog_5.JPG" alt="Jog Falls" />
+          <img src="./images/1_Natural/Jog_6.webp" alt="Jog Falls" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>Reach Shimoga (hub town).</li>
+            <li>Drive to Jog Falls (≈100 km, ~2.5 hrs).</li>
+            <li>Enjoy sunset view at the main viewpoint.</li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>Early morning trek down to the base.</li>
+            <li>
+              Explore nearby Linganamakki Dam (huge hydroelectric project).
+            </li>
+            <li>
+              Visit Sharavathi Valley Wildlife Sanctuary for greenery &
+              birdwatching.
+            </li>
+          </ul>
+          <h3>Day 3 (Optional):</h3>
+          <ul class="guide-list">
+            <li>Head to Sagara town (known for Marikamba Temple).</li>
+            <li>Explore Honnemaradu Lake (water activities, kayaking).</li>
+            <li>
+              Continue to Murudeshwar (beach + tallest Shiva statue, ~2 hrs
+              drive).
+            </li>
+          </ul>
+          <img src="images/1_Natural/Jog_7.jpeg" alt="Jog Falls" />
+          <img src="images/1_Natural/Jog_8.jpg" alt="Jog Falls" />
+          <p class="highlight">✨ Quick Tip:</p>
+          <ul class="guide-list">
+            <li>
+              Carry raincoats/umbrellas in monsoon, wear good trekking shoes,
+              and keep some snacks since food stalls near the falls are limited.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="jogWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------ATHIRAPPILLY FALLS MODAL------------------>
+    <div id="athirappillyModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('athirappillyModal')"
+          >&times;</span
+        >
+        <h2>🌊 Athirappilly Falls – Kerala</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/1_Natural/Athirappilly_1.jpg"
+            alt="Athirappilly Falls"
+          />
+          <img
+            src="./images/1_Natural/Athirappilly_2.avif"
+            alt="Athirappilly Falls"
+          />
+          <p>
+            Known as the "Niagara of India", Athirappilly is the largest
+            waterfall in Kerala, cascading from 80 ft into the lush Sholayar
+            ranges of the Western Ghats.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Featured in many Bollywood movies like Guru, Dil Se, Raavan (and
+              Malayalam hits too).
+            </li>
+            <li>
+              The waterfall is surrounded by evergreen forests that are part of
+              the Parambikulam Tiger Reserve ecosystem – home to endangered
+              hornbills, elephants, and rare wildlife.
+            </li>
+            <li>
+              Historically, the Chalakudy river where the falls originate has
+              been a lifeline for local communities and tribal settlements for
+              centuries.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              Monsoon (June–September): Waterfall at its most powerful, misty
+              and dramatic.
+            </li>
+            <li>
+              Winter (October–February): Pleasant weather, great for trekking
+              and photography.
+            </li>
+            <li>Avoid peak summer (March–May) – it gets dry and hot.</li>
+          </ul>
+          <img
+            src="./images/1_Natural/Athirappilly_4.jpg"
+            alt="Athirappilly Falls"
+          />
+          <img
+            src="./images/1_Natural/Athirappilly_3.jpg"
+            alt="Athirappilly Falls"
+          />
+          <p class="highlight">🎯 Must-Do / Attractions:</p>
+          <ul class="guide-list">
+            <li>
+              Athirappilly Waterfall viewpoint – short walk through thick
+              greenery.
+            </li>
+            <li>
+              Vazhachal Falls – just 5 km upstream, calmer but equally scenic.
+            </li>
+            <li>
+              Charpa Falls – roadside waterfall that gushes right onto the road
+              during monsoon.
+            </li>
+            <li>
+              Jungle Safari (Sholayar ranges) – guided forest trip with a chance
+              to spot animals.
+            </li>
+            <li>Birdwatching – paradise for hornbill lovers!</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Local Kerala dishes in roadside eateries: Puttu & Kadala Curry,
+              Karimeen Fry (Pearl Spot fish).
+            </li>
+            <li>
+              Sip fresh toddy (palm wine) from local shops if you’re
+              adventurous.
+            </li>
+          </ul>
+          <img
+            src="./images/1_Natural/Athirappilly_5.jpg"
+            alt="Athirappilly Falls"
+          />
+          <img
+            src="./images/1_Natural/Athirappilly_6.jpg"
+            alt="Athirappilly Falls"
+          />
+          <h2>Roadmap for (2 days)</h2>
+          <h3>
+            If you’re starting from Kochi (Cochin) (around 70 km / 2 hrs):
+          </h3>
+          <ul class="guide-list">
+            <li>Athirappilly Falls – start early, enjoy the misty falls.</li>
+            <li>Charpa Falls – quick stop on the way.</li>
+            <li>Vazhachal Falls – relax in the serene atmosphere.</li>
+            <li>
+              Jungle Safari (Optional) – half-day guided trip into Sholayar
+              forests.
+            </li>
+            <li>Stay Overnight – in eco-resorts / homestays near the river.</li>
+          </ul>
+          <h3>Next Day:</h3>
+          <ul class="guide-list">
+            <li>Visit Thumboormuzhy Dam & Butterfly Garden.</li>
+            <li>Head towards Sholayar Dam (scenic drive).</li>
+            <li>Return to Kochi.</li>
+          </ul>
+          <img
+            src="./images/1_Natural/Athirappilly_7.jpg"
+            alt="Athirappilly Falls"
+          />
+          <img
+            src="./images/1_Natural/Athirappilly_8.webp"
+            alt="Athirappilly Falls"
+          />
+          <p class="highlight">✨ Quick Tip:</p>
+          <ul class="guide-list">
+            <li>
+              Wear good walking shoes (paths are wet & slippery), carry a
+              raincoat in monsoon, and don’t forget your camera – this place is
+              pure magic!
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="athirappillyWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------DAL LAKE MODAL------------------>
+    <div id="dalModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('dalModal')">&times;</span>
+        <h2>🌊 Dal Lake – Jewel of Srinagar</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/Dal_1.jpg" alt="Dal Lake" />
+          <img src="./images/1_Natural/Dal_3.jpg" alt="Dal Lake" />
+          <p>
+            Dal Lake is called the “Jewel of Srinagar” – a breathtaking
+            high-altitude lake surrounded by snow-capped Himalayas and Mughal
+            gardens. It’s world-famous for its shikara rides, floating markets,
+            and houseboats.
+          </p>
+          <p>
+            Mentioned in Mughal chronicles, the lake was loved by emperors like
+            Jahangir & Shah Jahan, who built gardens nearby. British officials
+            (colonial era) were not allowed land in Kashmir, so they built
+            houseboats on Dal Lake – a tradition that continues today.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Shikara Rides – Wooden boats with cushions & canopies (like Venice
+              of India).
+            </li>
+            <li>
+              Floating Markets – Early morning vegetable & flower markets on
+              boats.
+            </li>
+            <li>
+              Houseboats – Stay overnight on intricately carved wooden
+              houseboats.
+            </li>
+            <li>
+              Photography & Sunset Views – The lake reflects mountains and
+              Mughal gardens.
+            </li>
+            <li>
+              Winter Magic – In extreme winters, Dal Lake freezes, attracting
+              skaters & photographers.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              March–June (Spring/Summer): Pleasant weather, blooming tulips &
+              gardens.
+            </li>
+            <li>
+              September–November (Autumn): Crisp air, golden chinar trees.
+            </li>
+            <li>
+              December–February (Winter): Snow lovers’ paradise, frozen Dal Lake
+              views.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/Dal_4.webp" alt="Dal Lake" />
+          <img src="./images/1_Natural/Dal_2.jpg" alt="Dal Lake" />
+          <p class="highlight">🎯 Must-Do Experiences:</p>
+          <ul class="guide-list">
+            <li>
+              🌸 Visit Mughal Gardens: Shalimar Bagh, Nishat Bagh, Chashme
+              Shahi.
+            </li>
+            <li>
+              🕌 Explore Hazratbal Shrine & Shankaracharya Temple (for panoramic
+              Srinagar views).
+            </li>
+            <li>🛶 Morning Shikara ride (best before sunrise).</li>
+            <li>
+              🛍️ Shop for Kashmiri handicrafts (pashmina, carpets, papier-mâché
+              items).
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Try Kashmiri Kahwa (saffron tea), Rogan Josh, and Gustaba.</li>
+          </ul>
+          <img src="./images/4_Urban/Dal_Baati_6.webp" alt="Dal Lake" />
+          <img src="./images/1_Natural/Dal_9.jpg" alt="Dal Lake" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>Shikara ride + floating market (early morning)</li>
+            <li>Explore Mughal Gardens (Shalimar, Nishat, Chashme Shahi)</li>
+            <li>Visit Hazratbal Shrine</li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>Stay in a houseboat on Dal Lake</li>
+            <li>Visit Shankaracharya Temple (sunset views)</li>
+            <li>Local market shopping (Lal Chowk / Polo View)</li>
+          </ul>
+          <h3>Day 3 (Optional nearby trips):</h3>
+          <ul class="guide-list">
+            <li>Gulmarg (skiing & gondola ride) OR</li>
+            <li>Pahalgam (valley of shepherds) OR</li>
+            <li>Sonmarg (golden meadows)</li>
+          </ul>
+          <img src="./images/1_Natural/Dal_5.jpg" alt="Dal Lake" />
+          <img src="./images/1_Natural/Dal_6.jpg" alt="Dal Lake" />
+          <p class="highlight">✨Why Visit:</p>
+          <ul class="guide-list">
+            <li>
+              Dal Lake isn’t just a place – it’s an experience of romance,
+              culture, and Himalayan beauty.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="dalWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------LOKTAK LAKE MODAL------------------>
+    <div id="loktakModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('loktakModal')">&times;</span>
+        <h2>🌊 Loktak Lake – Manipur</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/Loktak_1.webp" alt="Loktak Lake" />
+          <img src="./images/1_Natural/Loktak_2.jpg" alt="Loktak Lake" />
+          <p>
+            Loktak is Northeast India’s largest freshwater lake, often called
+            the “Floating Lake” because of its unique phumdis (floating masses
+            of vegetation, soil, and organic matter). It’s the lifeline of
+            Manipur, providing water, livelihood, and even floating homes.
+          </p>
+
+          <p class="highlight">📜 History & Significance:</p>
+          <ul class="guide-list">
+            <li>
+              Loktak is deeply tied to Manipuri folklore and culture, often
+              appearing in local legends.
+            </li>
+            <li>
+              It sustains Keibul Lamjao National Park, the world’s only floating
+              national park, home to the rare Sangai deer (dancing deer of
+              Manipur).
+            </li>
+            <li>
+              Plays a big role in Manipur’s economy (fishing, hydropower,
+              irrigation).
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October – March → Pleasant weather, migratory birds, clear views
+              of floating islands.
+            </li>
+            <li>Avoid monsoon (June–Sept) due to heavy rains.</li>
+          </ul>
+          <img src="./images/1_Natural/Loktak_4.jpg" alt="Loktak Lake" />
+          <img src="./images/1_Natural/Loktak_5.png" alt="Loktak Lake" />
+          <p class="highlight">🎯 Must-Experience Highlights:</p>
+          <ul class="guide-list">
+            <li>
+              Keibul Lamjao National Park – Spot the endangered Sangai deer.
+            </li>
+            <li>
+              Phumdi Floating Huts & Fishermen Villages – Witness traditional
+              lifestyles on floating islands.
+            </li>
+            <li>
+              INA Memorial (Moirang) – Historical spot where the Indian National
+              Army hoisted its flag in 1944.
+            </li>
+            <li>
+              Sendra Island – A viewpoint offering panoramic views of the lake.
+            </li>
+            <li>
+              Boat Ride on Loktak – The best way to experience the floating
+              paradise.
+            </li>
+            <li>
+              Thanga Island – Famous for homestays and local fishing culture.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Eromba (spicy fish chutney)</li>
+            <li>Nga Atoiba Thongba (fish curry)</li>
+            <li>Fresh fish delicacies caught straight from the lake.</li>
+          </ul>
+          <img src="./images/1_Natural/Loktak_3.jpg" alt="Loktak Lake" />
+          <img src="./images/1_Natural/Loktak_6.jpg" alt="Loktak Lake" />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1 – Imphal → Loktak (45 km, ~1.5 hrs drive)</h3>
+          <ul class="guide-list">
+            <li>Morning: Reach Sendra Island for sunrise views 🌅</li>
+            <li>Afternoon: Boat ride to explore phumdis & floating huts 🚣</li>
+            <li>
+              Evening: Visit Thanga Island for cultural experience + local food
+              🍲
+            </li>
+            <li>Night: Stay at a lakeside homestay 🌙</li>
+          </ul>
+          <h3>Day 2</h3>
+          <ul class="guide-list">
+            <li>Early morning safari at Keibul Lamjao National Park 🦌</li>
+            <li>Visit INA Memorial at Moirang for history buffs 🇮🇳</li>
+            <li>Return to Imphal by evening.</li>
+          </ul>
+          <p class="tip">
+            👉 Quick Tip: Carry binoculars if you love bird-watching—Loktak is a
+            paradise for migratory birds in winter.
+          </p>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="loktakWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+    <!------------------TIGER HILL MODAL------------------>
+    <div id="tigerhillModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('tigerhillModal')"
+          >&times;</span
+        >
+        <h2>🏞 Tiger Hill – Darjeeling</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/tiger_hill_1.webp" alt="Tiger Hill" />
+          <img src="./images/1_Natural/tiger_hill_2.jpg" alt="Tiger Hill" />
+          <p>
+            Famous worldwide for its spectacular sunrise view over the
+            Kanchenjunga range. On clear days, you can even spot Mount Everest
+            in the distance. A UNESCO World Heritage Site experience because
+            it’s part of the Darjeeling Himalayan Railway route.
+          </p>
+          <p class="highlight">🏛️ History & Significance</p>
+          <ul class="guide-list">
+            <li>
+              Tiger Hill has been a sunrise spot since the British colonial era,
+              when Darjeeling was developed as a hill station.
+            </li>
+            <li>
+              The hill is located at 8,482 ft, the highest point in Darjeeling
+              town.
+            </li>
+            <li>
+              The place became iconic because travelers from the 19th century
+              onwards wrote about its “heavenly sunrise,” making it a must-visit
+              for tourists even today.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October to December (clear skies, perfect mountain views).</li>
+            <li>March to April (spring blooms with rhododendrons).</li>
+            <li>
+              Sunrise timings: Usually around 4:30–5:00 AM in summer and
+              5:30–6:00 AM in winter.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/tiger_hill_3.webp" alt="Tiger Hill" />
+          <img src="./images/1_Natural/tiger_hill_4.jpg" alt="Tiger Hill" />
+          <p class="highlight">🎯 What Attracts Tourists:</p>
+          <ul class="guide-list">
+            <li>
+              Sunrise over Kanchenjunga – golden-pink hues lighting up the snow
+              peaks.
+            </li>
+            <li>
+              Panoramic view of Himalayan ranges (Everest, Makalu, Kanchenjunga,
+              and more).
+            </li>
+            <li>
+              Photography paradise – one of the most photographed sunrise points
+              in India.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Try Darjeeling tea sold by locals near the hill.</li>
+            <li>
+              Early morning hot momos & thukpa are a treat after the chilly
+              sunrise wait.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/tiger_hill_8.webp" alt="Tiger Hill" />
+          <img src="./images/1_Natural/tiger_hill_7.jpg" alt="Tiger Hill" />
+          <h2>Roadmap for (2 days)</h2>
+          <h3>Day 1 – Tiger Hill Sunrise & Local Darjeeling</h3>
+          <ul class="guide-list">
+            <li>🌅 Tiger Hill (early morning sunrise).</li>
+            <li>
+              🚂 Batasia Loop (famous spiral track of the Darjeeling Toy Train).
+            </li>
+            <li>
+              🕉️ Ghoom Monastery (oldest Tibetan monastery in Darjeeling).
+            </li>
+            <li>🍵 Tea Garden Visit (learn tea-making, sip fresh brews).</li>
+            <li>
+              🛍️ Evening at Mall Road & Chowrasta (shopping + local food).
+            </li>
+          </ul>
+          <h3>Day 2 – Explore Around</h3>
+          <ul class="guide-list">
+            <li>
+              🐼 Padmaja Naidu Himalayan Zoological Park (snow leopard, red
+              panda).
+            </li>
+            <li>
+              🏞️ Himalayan Mountaineering Institute (HMI) – mountaineering
+              history.
+            </li>
+            <li>🚡 Darjeeling Ropeway (cable car ride with mountain views).</li>
+            <li>
+              🌸 If time permits, visit Peace Pagoda & Japanese Temple for
+              serene views.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/tiger_hill_6.jpg" alt="Tiger Hill" />
+          <img src="./images/1_Natural/tiger_hill_5.jpg" alt="Tiger Hill" />
+          <p class="highlight">✨Why Visit:</p>
+          <ul class="guide-list">
+            <li>
+              So, Tiger Hill is not just a sunrise point – it’s the gateway to
+              experiencing Darjeeling’s charm, blending natural beauty,
+              Himalayan culture, and colonial history.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="tigerHillWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------NANDI HILLS MODAL------------------>
+    <div id="nandiModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('nandiModal')">&times;</span>
+        <h2>🏞 Nandi Hills – Karnataka</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/Nandi_1.jpg" alt="Nandi Hills" />
+          <img src="./images/1_Natural/Nandi_2.jpg" alt="Nandi Hills" />
+          <p>
+            A serene hill station located about 60 km from Bangalore, standing
+            at 4,849 ft above sea level. Known for its breathtaking sunrise,
+            panoramic valley views, and pleasant climate. It’s a favorite
+            weekend getaway for nature lovers, bikers, trekkers, and history
+            buffs.
+          </p>
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Tipu Sultan’s Summer Retreat: The fort atop the hills was once a
+              summer residence of Tipu Sultan. His famous “Tipu Drop” cliff is
+              where prisoners were allegedly pushed off.
+            </li>
+            <li>
+              Religious Significance: The name comes from the ancient Nandi
+              (Bull) temple at the foothills.
+            </li>
+            <li>
+              Ancient temples, forts, and caves make it a blend of spirituality,
+              adventure, and history.
+            </li>
+            <li>It’s also a paradise for photographers and bird watchers.</li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March → Pleasant weather, misty mornings, clear
+              sunrises.
+            </li>
+            <li>Avoid monsoons (June–Sept) → Too cloudy, slippery roads.</li>
+            <li>
+              🌅 Sunrise time: Be there by 5:30–6:00 AM for the magical view.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/Nandi_4.webp" alt="Nandi Hills" />
+          <img src="./images/1_Natural/Nandi_6.jpg" alt="Nandi Hills" />
+          <p class="highlight">🎯 Must-Visit Attractions at Nandi Hills:</p>
+          <ul class="guide-list">
+            <li>Sunrise Point (Nandi Sunrise View) 🌄</li>
+            <li>Tipu’s Drop – adventurous cliff with history</li>
+            <li>Tipu Sultan’s Fort & Summer Palace 🏰</li>
+            <li>
+              Bhoga Nandeeshwara Temple (at the base) – 1,000+ year old temple
+            </li>
+            <li>Amruth Sarovara Lake – calm water reservoir</li>
+            <li>
+              Brahmashram Cave – where sage Ramakrishna Paramahamsa meditated
+            </li>
+            <li>Cycling / Trekking Trails – for adventure seekers</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Small stalls near the hilltop offer chai, bhajjis, maggi, corn,
+              pakoras.
+            </li>
+            <li>
+              On the way from Bangalore, stop at local dhabas / cafes for
+              authentic Karnataka meals.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/Nandi_8.webp" alt="Nandi Hills" />
+          <img src="./images/1_Natural/Nandi_7.jpg" alt="Nandi Hills" />
+          <h2>Roadmap for (1 day)</h2>
+          <h3>Start from Bangalore early morning (around 4 AM)</h3>
+          <ul class="guide-list">
+            <li>Reach Nandi Hills by 5:30 AM – Sunrise Point</li>
+            <li>Walk around – cover Tipu’s Drop & Fort</li>
+            <li>Visit Amruth Sarovara Lake & Caves</li>
+            <li>Drive down and explore Bhoga Nandeeshwara Temple</li>
+            <li>Breakfast / brunch at nearby restaurants</li>
+            <li>
+              Optional: Go cycling/trekking trails if you’re into adventure
+            </li>
+            <li>Return to Bangalore by noon or lunch</li>
+          </ul>
+          <img src="./images/1_Natural/Nandi_3.jpg" alt="Nandi Hills" />
+          <img src="./images/1_Natural/Nandi_5.jpg" alt="Nandi Hills" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              🚗By car/bike: 1.5–2 hr drive from Bangalore (Bangalore–Hyderabad
+              Highway → Nandi Cross → Hill road). Cabs are available too.
+            </li>
+            <li>Entry fee: ₹20 per person (extra for parking).</li>
+            <li>Carry a jacket – it’s chilly in mornings.</li>
+            <li>Try to visit on weekdays to avoid crowds.</li>
+          </ul>
+          <p class="highlight">✨ Why Visit?</p>
+          <ul class="guide-list">
+            <li>
+              If you love sunrises, cool breezes, history, and a quick escape
+              from city chaos, Nandi Hills is the perfect getaway. It combines
+              nature + adventure + history in just a few hours’ drive.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="nandiWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!--------------------ECHO POINT MODAL--------------------->
+    <div id="echoModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('echoModal')">&times;</span>
+        <h2>🌄 Echo Point – Munnar, Kerala</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/Echo_1.jpg" alt="Echo Point" />
+          <img src="./images/1_Natural/Echo_2.jpg" alt="Echo Point" />
+          <p>
+            Echo Point is one of Munnar’s most scenic spots, nestled in the
+            Western Ghats of Kerala. True to its name, it’s famous for the
+            natural echo phenomenon—when you shout, your voice bounces back from
+            the surrounding hills. It’s a serene getaway surrounded by lush tea
+            gardens, pine forests, and rolling hills, making it perfect for
+            nature lovers and photography enthusiasts.
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Munnar itself was a haven for the British during colonial times
+              due to its cool climate and scenic beauty. Echo Point became
+              popular as a tourist attraction because of its unique acoustic
+              phenomenon and panoramic views. Its charm lies in its combination
+              of greenery, misty mountains, and the playful echoes that delight
+              visitors of all ages.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              September to March: Pleasant weather, perfect for sightseeing and
+              outdoor activities.
+            </li>
+            <li>
+              Monsoon season (June–August) offers lush greenery but can be
+              slippery.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/Echo_3.webp" alt="Echo Point" />
+          <img src="./images/1_Natural/Echo_5.webp" alt="Echo Point" />
+          <p class="highlight">Must-do activities:</p>
+          <ul class="guide-list">
+            <li>Test your voice with the echo!</li>
+            <li>
+              Click panoramic photos with the hills and lake in the background.
+            </li>
+            <li>Enjoy a relaxed picnic by the small lake nearby.</li>
+            <li>Horse riding for fun around the open areas.</li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Try Kerala tea from the local tea shops.</li>
+            <li>
+              Freshly made banana chips and spicy snacks sold around the point.
+            </li>
+          </ul>
+          <img src="./images/4_Urban/dosa_5.jpg" alt="Echo Point" />
+          <img src="./images/1_Natural/Echo_6.jpg" alt="Echo Point" />
+          <h2>Roadmap for Travelers</h2>
+          <h3>What to Cover Around Echo Point:</h3>
+          <ul class="guide-list">
+            <li>
+              Mattupetty Dam: Boating and scenic views (15 mins from Echo
+              Point).
+            </li>
+            <li>
+              Kundala Lake: Pedal boating in a tranquil setting (20 mins away).
+            </li>
+            <li>Tea Plantations: Walk through endless green tea estates.</li>
+            <li>
+              Top Station: A viewpoint for sunrise with a panoramic view of the
+              Western Ghats (1–1.5 hrs from Echo Point).
+            </li>
+            <li>
+              Attukal Waterfalls: A hidden gem for nature lovers (30 mins away).
+            </li>
+          </ul>
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Carry light jackets—the mornings and evenings can be chilly.
+            </li>
+            <li>
+              Wear comfortable shoes for walking around hills and uneven
+              terrain.
+            </li>
+            <li>
+              Wear comfortable shoes for walking around hills and uneven
+              terrain.
+            </li>
+            <li>
+              Best visited early in the morning or late afternoon for
+              photography and fewer crowds.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="echoWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------KANYA KUMARI MODAL------------------>
+    <div id="kanyakumariModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('kanyakumariModal')"
+          >&times;</span
+        >
+        <h2>🌅 Sunset Point, Kanyakumari</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/Kanyakumari_1.jpg" alt="Kanyakumari" />
+          <img src="./images/1_Natural/Kanyakumari_4.jpg" alt="Kanyakumari" />
+          <p>
+            Sunset Point is one of the most magical spots in Kanyakumari, where
+            the sun dips gracefully into the Indian Ocean, painting the sky in
+            shades of orange, pink, and purple. It’s a serene experience,
+            perfect for photography, quiet reflection, or simply enjoying
+            nature’s beauty.
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>Offers one of the best sunset views in India.</li>
+            <li>
+              Nearby Vivekananda Rock Memorial and Thiruvalluvar Statue add
+              historical and cultural depth to your visit.
+            </li>
+            <li>
+              The sea breeze, coconut trees, and peaceful promenade make it
+              ideal for a relaxed evening stroll.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October to March – pleasant weather and clear skies.</li>
+            <li>
+              Sunset is best observed around 5:30 PM – 6:30 PM, depending on the
+              season.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/Kanyakumari_2.jpg" alt="Kanyakumari" />
+          <img src="./images/1_Natural/Kanyakumari_3.webp" alt="Kanyakumari" />
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Karimeen (Pearl Spot) Fry – Crispy, flavorful fish fry, a local
+              seafood specialty.
+            </li>
+            <li>
+              Meen Curry – Spicy fish curry served with rice, a South Indian
+              classic.
+            </li>
+            <li>
+              Appam & Stew – Soft, lacy rice pancakes with coconut milk-based
+              vegetable or chicken stew.
+            </li>
+            <li>
+              Parotta & Beef Curry – Flaky layered flatbread with spicy curry.
+            </li>
+            <li>
+              Aloo Bajji / Banana Bajji – Popular street snack, deep-fried and
+              crispy.
+            </li>
+            <li>
+              Sundal – Healthy spiced chickpea salad, often found near temples.
+            </li>
+            <li>
+              Fresh Coconut Water & Tender Coconut Ice Cream – Perfect
+              refreshment by the beach.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/Kanyakumari_5.jpg" alt="Kanyakumari" />
+          <img src="./images/1_Natural/Kanyakumari_6.jpg" alt="Kanyakumari" />
+          <h2>Roadmap for Travelers</h2>
+          <ul class="guide-list">
+            <li>
+              Morning: Start with Kanyakumari Beach and the sunrise (if early
+              riser).
+            </li>
+            <li>
+              Mid-morning: Take a ferry to Vivekananda Rock Memorial and
+              Thiruvalluvar Statue.
+            </li>
+            <li>
+              Lunch: Try local seafood or South Indian thali at nearby
+              restaurants.
+            </li>
+            <li>
+              Afternoon: Visit Kumari Amman Temple and explore local handicrafts
+              at the market.
+            </li>
+            <li>
+              Evening: Head to Sunset Point – enjoy the golden hour, capture
+              photos, relax at beachside cafes.
+            </li>
+            <li>
+              Optional Night: Enjoy a quiet dinner while listening to the waves
+              or a short stroll on the beach.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/Kanyakumari_7.jpg" alt="Kanyakumari" />
+          <img src="./images/1_Natural/Kanyakumari_8.jpg" alt="Kanyakumari" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Wear comfortable shoes for walking along the rocks and beach.
+            </li>
+            <li>Carry water and a light snack.</li>
+            <li>Best for photographers and nature lovers.</li>
+            <li>
+              Try local snacks like ‘Aloo Bajji’ and fresh coconut water from
+              stalls nearby.
+            </li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="sunsetWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------JAIVANA CANNON MODAL------------------>
+    <div id="jaivanaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('jaivanaModal')">&times;</span>
+        <h2>🌄 Jaivana Cannon Viewpoint – Nahargarh Fort, Jaipur, Rajasthan</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img
+            src="./images/1_Natural/Jaivana_4.jpg"
+            alt="Jaivana Cannon Viewpoint "
+          />
+          <img
+            src="./images/2_Historical/Amber_4.jpg"
+            alt="Jaivana Cannon Viewpoint "
+          />
+          <p>
+            The Jaivana Cannon, once the largest cannon in the world on wheels,
+            is the star attraction here. Positioned atop Nahargarh Fort, this
+            viewpoint offers breathtaking panoramic views of Jaipur city,
+            including the bustling streets, pink-hued buildings, and the
+            surrounding Aravalli hills. History lovers will be fascinated by its
+            royal past, while photography enthusiasts will adore the sunsets
+            from this spot.
+          </p>
+
+          <p class="highlight">Historical Significance:</p>
+          <ul class="guide-list">
+            <li>
+              Nahargarh Fort was built in 1734 by Maharaja Sawai Jai Singh II as
+              a retreat and defense fort.
+            </li>
+            <li>
+              The Jaivana Cannon was manufactured in the 18th century and
+              symbolizes Jaipur’s military strength; it was fired only once!
+            </li>
+            <li>
+              The fort itself is perched on a ridge, historically protecting
+              Jaipur alongside Amber Fort and Jaigarh Fort.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>October to March – Pleasant weather for sightseeing.</li>
+            Sunset hours – The city lights and pink tones of Jaipur make for
+            magical views.
+          </ul>
+          <img
+            src="./images/1_Natural/Jaivana_1.webp"
+            alt="Jaivana Cannon Viewpoint "
+          />
+          <img
+            src="./images/1_Natural/Jaivana_3.jpg"
+            alt="Jaivana Cannon Viewpoint "
+          />
+          <p class="highlight">✨Special Attractions:</p>
+          <ul class="guide-list">
+            <li>Jaivana Cannon – Perfect for history buffs and photography.</li>
+            <li>
+              Panoramic city views – Stunning vistas over Jaipur and the
+              surrounding Aravalli ranges.
+            </li>
+            <li>
+              Fort architecture – Step inside the old palaces, courtyards, and
+              balconies with intricate designs.
+            </li>
+            <li>
+              Cafés & viewpoints – Some small eateries offer snacks with a view.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>
+              Try Rajasthani snacks at the fort’s small kiosks: kachoris,
+              samosas, or chai while enjoying the sunset.
+            </li>
+          </ul>
+          <img
+            src="./images/4_Urban/varanasi_7.jpg"
+            alt="Jaivana Cannon Viewpoint "
+          />
+          <img
+            src="./images/1_Natural/Jaivana_8.jpg"
+            alt="Jaivana Cannon Viewpoint "
+          />
+          <h2>Roadmap for Travelers:</h2>
+          <ul class="guide-list">
+            <li>Start at Amber Fort – Explore the grandeur and history.</li>
+            <li>
+              Jaigarh Fort – See the impressive fortifications and the historic
+              cannon.
+            </li>
+            <li>
+              Nahargarh Fort – End your day here at the Jaivana Cannon
+              viewpoint, perfect for sunset.
+            </li>
+            <li>
+              City Palace / Hawa Mahal (optional) – If you have extra time, a
+              quick Jaipur city tour works well.
+            </li>
+          </ul>
+          <img
+            src="./images/1_Natural/Jaivana_5.jpg"
+            alt="Jaivana Cannon Viewpoint "
+          />
+          <img
+            src="./images/1_Natural/Jaivana_6.jpg"
+            alt="Jaivana Cannon Viewpoint "
+          />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>Wear comfortable shoes; some uphill walking is required.</li>
+            <li>Best for photography around late afternoon to sunset.</li>
+            <li>Avoid rainy season; the climb can get slippery.</li>
+          </ul>
+          <p>
+            Visit Jaivana Cannon Viewpoint not just for history but for a
+            perfect sunset, cityscape, and the thrill of standing where kings
+            once strategized. It’s a mix of history, photography, and
+            breathtaking views all in one.
+          </p>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="jaivanaWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!------------------BOMDILA VIEW POINT MODAL------------------>
+    <div id="bomdilaModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('bomdilaModal')">&times;</span>
+        <h2>🌄 Bomdila Viewpoint – Arunachal Pradesh</h2>
+        <!-- Row 1 -->
+        <div class="modal-row">
+          <img src="./images/1_Natural/Bomdila_1.jpg" alt="Bomdila Viewpoint" />
+          <img src="./images/1_Natural/Bomdila_4.jpg" alt="Bomdila Viewpoint" />
+          <p>
+            Bomdila Viewpoint is one of the most breathtaking spots in Arunachal
+            Pradesh. Perched at a high altitude in the East Kameng district, it
+            offers panoramic views of the Eastern Himalayas, including
+            snow-capped peaks and lush green valleys. The place is perfect for
+            nature lovers, photographers, and anyone seeking peace away from
+            city life. Its tranquil beauty and misty mountains make it a
+            must-visit Himalayan escape.
+          </p>
+
+          <p class="highlight">Specialty:</p>
+          <ul class="guide-list">
+            <li>
+              Bomdila town itself is culturally rich, home to the Monpa tribe,
+              known for their unique festivals, traditional crafts, and wooden
+              monasteries.
+            </li>
+            <li>
+              The viewpoint sits near the Bomdila Monastery, which is centuries
+              old and showcases intricate Buddhist architecture.
+            </li>
+            <li>
+              The region is also famous for apple orchards, terraced fields, and
+              colorful local markets.
+            </li>
+            <li>
+              Tourists are attracted to the combination of natural beauty +
+              local Monpa culture, which gives an authentic Himalayan
+              experience.
+            </li>
+          </ul>
+          <p class="highlight">Best Time to Visit:</p>
+          <ul class="guide-list">
+            <li>
+              October to March – Clear skies, perfect for sightseeing and
+              photography.
+            </li>
+            <li>
+              Monsoon season (July–September) is less ideal due to heavy
+              rainfall and slippery roads.
+            </li>
+          </ul>
+          <img src="./images/1_Natural/Bomdila_2.jpg" alt="Bomdila Viewpoint" />
+          <img
+            src="./images/1_Natural/Bomdila_5.webp"
+            alt="Bomdila Viewpoint"
+          />
+          <p class="highlight">Things to Do / Must-See:</p>
+          <ul class="guide-list">
+            <li>
+              Bomdila Viewpoint – Sunrise and sunset views over the Himalayas.
+            </li>
+            <li>
+              Bomdila Monastery – Explore the spiritual and cultural heritage.
+            </li>
+            <li>
+              Local Markets – Buy handmade crafts, carpets, and local produce.
+            </li>
+            <li>
+              Apple Orchards & Nature Walks – Stroll through scenic landscapes.
+            </li>
+            <li>
+              Adventure Activities – Short treks and birdwatching in surrounding
+              hills.
+            </li>
+          </ul>
+          <p class="highlight">Food to try:</p>
+          <ul class="guide-list">
+            <li>Thukpa – Warm, hearty Tibetan-style noodle soup.</li>
+            <li>
+              Momos – Steamed or fried dumplings with veg or chicken stuffing.
+            </li>
+            <li>Gyapa Khazi – Traditional Monpa spicy fried rice dish.</li>
+            <li>
+              Butter Tea (Po Cha) – Unique salty tea made with yak butter.
+            </li>
+            <li>
+              Local Honey & Jam – From nearby orchards, fresh and flavorful.
+            </li>
+            <li>Ema Datshi – Spicy chili and cheese stew (if available).</li>
+          </ul>
+          <img
+            src="./images/3_Adventure/Chadar_8.jpg"
+            alt="Bomdila Viewpoint"
+          />
+          <img
+            src="./images/1_Natural/Bomdila_8.webp"
+            alt="Bomdila Viewpoint"
+          />
+          <h2>Roadmap for (2-3 days)</h2>
+          <h3>Day 1:</h3>
+          <ul class="guide-list">
+            <li>Arrive in Bomdila → Check-in → Visit local markets.</li>
+          </ul>
+          <h3>Day 2:</h3>
+          <ul class="guide-list">
+            <li>
+              Early morning at Bomdila Viewpoint → Bomdila Monastery → Nature
+              walk / apple orchards → Sunset at viewpoint.
+            </li>
+          </ul>
+          <h3>Day 3:</h3>
+          <ul class="guide-list">
+            <li>
+              Short treks in nearby hills → Depart for next destination (e.g.,
+              Tawang or Dirang).
+            </li>
+          </ul>
+          <img src="./images/1_Natural/Bomdila_6.jpg" alt="Bomdila Viewpoint" />
+          <img src="./images/1_Natural/Bomdila_7.jpg" alt="Bomdila Viewpoint" />
+          <p class="highlight">Travel Tips:</p>
+          <ul class="guide-list">
+            <li>
+              Roads can be winding and steep; hire a local driver if possible.
+            </li>
+            <li>Carry warm clothes, even in summer—it can get chilly.</li>
+            <li>Respect local customs when visiting monasteries.</li>
+          </ul>
+        </div>
+        <!-- Weather Section -->
+        <div class="weather-section" id="bomdilaWeather">
+          <h4>Current Weather:</h4>
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </div>
+
+    <!----------  footer  ------------>
+    <footer>
+      <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="categories.html">Categories</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: info@indiscapes.com</p>
+          <p>Phone: +91 9876543210</p>
+          <p>Location: Hyderabad, India</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>© 2025 IndiScapes | All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!--   Javascript  -->
+    <script src="script.js"></script>
+  </body>
+</html>
